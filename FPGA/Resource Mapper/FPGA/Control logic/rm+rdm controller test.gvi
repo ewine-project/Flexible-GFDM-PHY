@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="F8AE964E2714F066BE497F71EAEBD5F7" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]rm+rdm controller test" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="40" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<WhileLoop Bounds="335 115 1480 545" DiagramId="18" Id="17">
+				<LoopIteration Bounds="55 325 15 15" Id="19" />
+				<LoopCondition Bounds="1450 335 15 15" Id="20" />
+				<MethodCall Bounds="305 130 50 50" DomainName="NI.MocCommon" Id="21" Target="fifo\ simulator_32\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L1" Desc="ready for output" />
+							<Parameter Id="L0" Desc="Array" />
+							<Parameter Id="L2" Desc="reset" />
+							<Parameter Id="R0" Desc="element" />
+							<Parameter Id="R1" Desc="valid" />
+							<Parameter Id="R2" Desc="address" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<IsEqualTo0 Bounds="115 315 30 30" Id="35" />
+				<QuotientAndRemainder Bounds="105 260 30 30" Id="39" />
+				<Wire Id="44" Joints="N(212:i0) N(39:y)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LogicalAnd Bounds="255 130 25 20" Id="47" Terminals="o=54, c0t0v=483, c1t0v=497" />
+				<Wire Id="54" Joints="N(47:o) h(10) v(5) N(21:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="63" Joints="N(62:i0) h(286) v(10) N(21:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<RandomNumber Bounds="255 275 30 30" Id="104" />
+				<IsGreater Bounds="305 285 30 30" Id="105" />
+				<Wire Id="106" Joints="N(104:number (0 to 1\)) N(105:x)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="260 305 39.5 16" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="107" Label="108" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0x3FE0000000000000</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<Wire Id="109" Joints="N(107:Out) h(2.75) v(-5) N(105:y)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="107" Bounds="260 305 0 0" Id="108" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>y</p.Text>
+				</NodeLabel>
+				<MethodCall Bounds="305 185 50 50" DomainName="NI.MocCommon" Id="141" Target="fifo\ simulator_32\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L1" Desc="ready for output" />
+							<Parameter Id="L0" Desc="Array" />
+							<Parameter Id="L2" Desc="reset" />
+							<Parameter Id="R0" Desc="element" />
+							<Parameter Id="R1" Desc="valid" />
+							<Parameter Id="R2" Desc="address" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="142" Joints="N(143:i0) N(141:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LogicalAnd Bounds="255 195 25 20" Id="145" Terminals="o=148, c0t0v=483, c1t0v=497" />
+				<Wire Id="148" Joints="N(145:o) h(15) v(-5) N(141:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<IsEqualTo0 Bounds="140 250 30 30" Id="214" />
+				<Wire Id="215" Joints="N(39:x-y*floor(x/y\)) N(214:x)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LogicalOr Bounds="400 365 25 20" Id="225" Terminals="o=581, c0t0v=235, c1t0v=228" />
+				<DataAccessor Bounds="345 375 40 15" DataItem="230" Id="227" Label="229" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<Wire Id="228" Joints="N(227:Value) N(225:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="227" Bounds="181 375 159 14" Id="229" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output always true</p.Text>
+				</NodeLabel>
+				<Wire Id="235" Joints="N(105:x &gt; y?) h(50) v(70) N(225:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<SclRemoteCall Bounds="735 110 180 150" DomainName="NI.LabVIEW.FPGA" Id="314" Target=":USRP:Interactive:rm\ controller\ test\ wrapper\.gcdl" xmlns="http://www.ni.com/LabVIEW.FPGA">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L1" Desc="payload valid" />
+							<Parameter Id="L3" Desc="cc valid" />
+							<Parameter Id="L2" Desc="cc in" />
+							<Parameter Id="L0" Desc="payload in" />
+							<Parameter Id="L9" Desc="ready for output_in" />
+							<Parameter Id="L4" Desc="N-1" />
+							<Parameter Id="L8" Desc="reset" />
+							<Parameter Id="L6" Desc="rm data valid_in" />
+							<Parameter Id="L5" Desc="rm_data_in" />
+							<Parameter Id="L7" Desc="config_in" />
+							<Parameter Id="L10" Desc="enable_in" />
+							<Parameter Id="R7" Desc="ready for config input_out" />
+							<Parameter Id="R5" Desc="idle_out" />
+							<Parameter Id="R6" Desc="empty_out" />
+							<Parameter Id="R4" Desc="n_out" />
+							<Parameter Id="R3" Desc="last sample_out" />
+							<Parameter Id="R2" Desc="first sample_out" />
+							<Parameter Id="R1" Desc="output valid" />
+							<Parameter Id="R0" Desc="output" />
+							<Parameter Id="R9" Desc="payload length [sample]" />
+							<Parameter Id="R8" Desc="payload length [bytes]" />
+							<Parameter Id="R10" Desc="control channel length [samples]" />
+							<Parameter Id="R11" Desc="control channel length [bytes]" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 55" Id="L3" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 45" Id="L2" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 25" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 115" Id="L9" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 65" Id="L4" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 105" Id="L8" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 85" Id="L6" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 75" Id="L5" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 95" Id="L7" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 125" Id="L10" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 95" Id="R7" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 75" Id="R5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 85" Id="R6" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="180 65" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 55" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 45" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 35" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="180 25" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt16" Direction="Output" Hotspot="180 115" Id="R9" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt16" Direction="Output" Hotspot="180 105" Id="R8" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt16" Direction="Output" Hotspot="180 125" Id="R10" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt16" Direction="Output" Hotspot="180 135" Id="R11" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+				</SclRemoteCall>
+				<Wire Id="315" Joints="N(21:R0) N(314:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="316" Joints="N(21:R1) N(314:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="317" Joints="N(141:R0) h(20) v(-35) N(314:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="318" Joints="N(141:R1) h(30) v(-35) N(314:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="305 65 50 50" DomainName="NI.MocCommon" Id="319" Target="fifo\ simulator_32\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L1" Desc="ready for output" />
+							<Parameter Id="L0" Desc="Array" />
+							<Parameter Id="L2" Desc="reset" />
+							<Parameter Id="R0" Desc="element" />
+							<Parameter Id="R1" Desc="valid" />
+							<Parameter Id="R2" Desc="address" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="321" Joints="N(322:i0) N(319:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="324" Joints="N(319:R0) h(65) v(115) h(285) B(3) N(314:L5) B(3) v(150) N(570:L5)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="325" Joints="N(319:R1) h(55) v(115) h(285) B(3) N(314:L6) B(3) v(150) N(570:L6)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="328" Joints="N(329:i0) v(171) h(210) B(2) N(314:L4) B(2) v(150) N(570:L4)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FeedbackNode Bounds="805 20 30 20" EnableTerminalVisible="False" Id="392" />
+				<Wire Id="394" Joints="N(392:output) h(-500) N(319:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="395" Joints="N(314:R0) h(95) B(1) N(25:i0) B(1) v(150) N(570:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="396" Joints="N(314:R1) h(85) B(1) h(440) B(2) N(25:condition) B(2) v(40) N(398:condition) B(1) v(150) N(570:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="397" Joints="N(314:R4) N(398:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="476" Joints="N(19:Output) h(15) B(1) N(35:x) B(1) v(-65) N(39:x) B(1) v(140) N(643:x)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FeedbackNode Bounds="820 400 30 20" EnableTerminalVisible="False" Id="477" />
+				<MethodCall Bounds="545 200 50 30" DomainName="NI.MocCommon" Id="479" Target="toggle_output\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="toggle" />
+							<Parameter Id="L1" Desc="reset" />
+							<Parameter Id="R0" Desc="output" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="480" Joints="N(479:R0) h(10) B(1) h(80) B(2) N(314:L7) B(2) v(150) N(570:L7) B(1) v(225) N(495:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="483" Joints="N(214:x = 0?) h(50) v(-65) B(2) N(145:c0t0v) B(2) v(-65) N(47:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="475 200 50 30" DomainName="NI.MocCommon" Id="484" Target="detect\ rising\ edge\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="in" />
+							<Parameter Id="R0" Desc="out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="485" Joints="N(477:output) h(-350) v(-205) N(484:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="486" Joints="N(484:R0) N(479:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="490" Joints="N(35:x = 0?) h(90) v(-80) B(2) h(305) B(3) h(75) v(-35) h(60) B(6) N(314:L8) B(6) v(150) N(570:L8) B(3) v(-35) N(479:L1) B(2) v(-15) B(12) h(-122) v(-80) N(491:L1) B(12) v(-15) B(16) h(60) v(-10) N(141:L2) B(16) v(-65) B(20) N(21:L2) B(20) v(-65) N(319:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="120 140 50 30" DomainName="NI.MocCommon" Id="491" Target="toggle_output\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="toggle" />
+							<Parameter Id="L1" Desc="reset" />
+							<Parameter Id="R0" Desc="output" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<MethodCall Bounds="55 140 50 30" DomainName="NI.MocCommon" Id="493" Target="detect\ falling\ edge\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="in" />
+							<Parameter Id="R0" Desc="out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="494" Joints="N(493:R0) N(491:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FeedbackNode Bounds="420 420 30 20" EnableTerminalVisible="False" Id="495" />
+				<Wire Id="496" Joints="N(495:output) h(-370) v(-285) N(493:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="497" Joints="N(491:R0) h(25) B(1) h(50) B(2) N(47:c1t0v) B(2) v(65) N(145:c1t0v) B(1) v(125) N(505:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FeedbackNode ArrowDirection="Right" Bounds="420 260 30 20" DelayCount="20" EnableTerminalVisible="False" Id="505" />
+				<Wire Id="507" Joints="N(505:output) h(195) v(-35) N(314:L10)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="530" Joints="N(314:R5) h(15) v(225) N(477:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="538" Joints="N(314:R8) N(539:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="546" Joints="N(314:R9) N(547:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="554" Joints="N(314:R10) N(555:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="562" Joints="N(314:R11) N(563:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<SclRemoteCall Bounds="1035 260 180 130" DomainName="NI.LabVIEW.FPGA" Id="570" Target=":USRP:Interactive:resource\ demapper\ test\ wrapper\.gcdl" xmlns="http://www.ni.com/LabVIEW.FPGA">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L4" Desc="N-1_in" />
+							<Parameter Id="L9" Desc="ready for output_in" />
+							<Parameter Id="L1" Desc="input valid" />
+							<Parameter Id="L0" Desc="sample in" />
+							<Parameter Id="L3" Desc="last sample_in" />
+							<Parameter Id="L2" Desc="first sample_in" />
+							<Parameter Id="L8" Desc="reset" />
+							<Parameter Id="L5" Desc="rm_data_in" />
+							<Parameter Id="L6" Desc="rm data valid_in" />
+							<Parameter Id="L7" Desc="config_in" />
+							<Parameter Id="R2" Desc="control channel_out" />
+							<Parameter Id="R9" Desc="ready for input_out" />
+							<Parameter Id="R1" Desc="payload valid" />
+							<Parameter Id="R0" Desc="payload output" />
+							<Parameter Id="R3" Desc="control channel valid_out" />
+							<Parameter Id="R8" Desc="ready for config input_out" />
+							<Parameter Id="R7" Desc="idle_out" />
+							<Parameter Id="R4" Desc="last sample_out" />
+							<Parameter Id="R5" Desc="first sample_out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="UInt16" Direction="Input" Hotspot="0 65" Id="L4" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 115" Id="L9" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 25" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 55" Id="L3" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 45" Id="L2" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 105" Id="L8" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 75" Id="L5" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 85" Id="L6" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 95" Id="L7" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="180 45" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 105" Id="R9" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 35" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="180 25" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 55" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 95" Id="R8" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 85" Id="R7" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 65" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="180 75" Id="R5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+				</SclRemoteCall>
+				<Wire Id="573" Joints="N(314:R2) h(75) v(150) N(570:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="574" Joints="N(314:R3) h(65) v(150) N(570:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="581" Joints="N(225:o) N(570:L9)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FeedbackNode Bounds="1005 445 30 20" EnableTerminalVisible="False" Id="583" />
+				<Wire Id="584" Joints="N(570:R9) h(14) v(90) N(583:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="585" Joints="N(583:output) h(-280) v(-230) N(314:L9)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="586" Joints="N(570:R0) N(587:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="588" Joints="N(570:R1) N(587:condition)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="589" Joints="N(570:R2) N(590:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="591" Joints="N(570:R3) N(590:condition)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LogicalAnd Bounds="1250 70 25 20" Id="619" Terminals="o=622, c0t0v=621, c1t0v=620" />
+				<Wire Id="620" Joints="N(570:R8) h(13) v(-270) N(619:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="621" Joints="N(314:R7) h(300) v(-130) N(619:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="622" Joints="N(619:o) h(5) v(-50) N(392:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="1245 320 50 30" DomainName="NI.MocCommon" Id="623" Target="detect\ rising\ edge\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="in" />
+							<Parameter Id="R0" Desc="out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="624" Joints="N(570:R4) N(623:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="1325 320 50 30" DomainName="NI.MocCommon" Id="630" Target="limited\ counter\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="increment" />
+							<Parameter Id="L2" Desc="limit" />
+							<Parameter Id="R1" Desc="stop" />
+							<Parameter Id="R0" Desc="number out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="631" Joints="N(623:R0) N(630:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="1265 370 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="633" Label="634" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<Wire Id="635" Joints="N(633:Out) h(5) v(-30) N(630:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="633" Bounds="1265 370 0 0" Id="634" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>limit</p.Text>
+				</NodeLabel>
+				<FeedbackNode ArrowDirection="Right" Bounds="1385 325 30 20" DelayCount="99" EnableTerminalVisible="False" Id="637" />
+				<Wire Id="638" Joints="N(630:R1) N(637:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LogicalOr Bounds="1420 330 25 20" Id="640" Terminals="o=642, c0t0v=641, c1t0v=648" />
+				<Wire Id="641" Joints="N(637:output) N(640:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="642" Joints="N(640:o) N(20:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<IsGreater Bounds="125 465 30 30" Id="643" />
+				<Literal Bounds="50.5 480 49 16" DataType="Int32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="645" Label="646" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>1000</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<Wire Id="647" Joints="N(645:Out) N(643:y)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="645" Bounds="50.5 480 0 0" Id="646" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>y</p.Text>
+				</NodeLabel>
+				<Wire Id="648" Joints="N(643:x &gt; y?) h(1260) v(-135) N(640:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopTunnel AutoIndex="True" Bounds="1471 135 13 20" Docking="Right" Id="25" IsConditional="True" Terminals="o0=596, i0=395, condition=396" TunnelMode="0" />
+				<LoopTunnel Bounds="-4 125 13 10" Docking="Left" Id="62" Terminals="o0=594, i0=63" />
+				<LoopTunnel Bounds="-4 190 13 10" Docking="Left" Id="143" Terminals="o0=460, i0=142" />
+				<LoopTunnel Bounds="-4 280 13 10" Docking="Left" Id="212" Terminals="o0=211, i0=44" />
+				<LoopTunnel Bounds="-4 70 13 10" Docking="Left" Id="322" Terminals="o0=323, i0=321" />
+				<LoopTunnel Bounds="505 -4 10 13" Docking="Top" Id="329" Terminals="o0=524, i0=328" />
+				<LoopTunnel AutoIndex="True" Bounds="1471 175 13 20" Docking="Right" Id="398" IsConditional="True" Terminals="o0=408, i0=397, condition=396" TunnelMode="0" />
+				<LoopTunnel Bounds="1471 215 13 10" Docking="Right" Id="539" Terminals="o0=540, i0=538" />
+				<LoopTunnel Bounds="1471 225 13 10" Docking="Right" Id="547" Terminals="o0=548, i0=546" />
+				<LoopTunnel Bounds="1471 235 13 10" Docking="Right" Id="555" Terminals="o0=556, i0=554" />
+				<LoopTunnel Bounds="1471 245 13 10" Docking="Right" Id="563" Terminals="o0=564, i0=562" />
+				<LoopTunnel AutoIndex="True" Bounds="1471 285 13 20" Docking="Right" Id="587" IsConditional="True" Terminals="o0=592, i0=586, condition=588" TunnelMode="0" />
+				<LoopTunnel AutoIndex="True" Bounds="1471 305 13 20" Docking="Right" Id="590" IsConditional="True" Terminals="o0=593, i0=589, condition=591" TunnelMode="0" />
+			</WhileLoop>
+			<DataAccessor Bounds="2370 230 40 15" DataItem="73" Id="74" Label="94" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="74" Bounds="2415 230 144 14" Id="94" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>multiplexed sample graph</p.Text>
+			</NodeLabel>
+			<ForLoop Bounds="58 173 220 200" DiagramId="124" Id="123">
+				<LoopIteration Bounds="40 135 15 15" Id="127" />
+				<ToUnsignedLongInteger Bounds="95 135 30 10" Id="128" />
+				<Wire Id="129" Joints="N(127:Output) N(128:number)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Add Bounds="140 120 30 30" Id="134" Terminals="o=169, c0t0v=467, c1t0v=135" />
+				<Wire Id="135" Joints="N(128:unsigned 32bit integer) h(5) B(1) N(134:c1t0v) B(1) v(30) N(165:x)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Increment Bounds="175 120 30 30" Id="168" />
+				<Wire Id="169" Joints="N(134:o) N(168:x)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="170" Joints="N(168:x+1) N(137:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Increment Bounds="175 155 30 30" Id="165" />
+				<Wire Id="305" Joints="N(165:x+1) N(306:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="130 65 50 30" DomainName="NI.MocCommon" Id="218" Target="limited\ counter\.gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="increment" />
+							<Parameter Id="L2" Desc="limit" />
+							<Parameter Id="R1" Desc="stop" />
+							<Parameter Id="R0" Desc="number out" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Literal Bounds="80 60 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="299" Label="300" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+				</Literal>
+				<Wire Id="301" Joints="N(299:Out) h(9) v(5) N(218:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="75 85 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="219" Label="221" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<Wire Id="220" Joints="N(219:Out) N(218:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="299" Bounds="80 60 0 0" Id="300" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>increment</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="219" Bounds="75 85 0 0" Id="221" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>limit</p.Text>
+				</NodeLabel>
+				<Wire Id="309" Joints="N(218:R0) h(23) v(-20) N(310:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="467" Joints="N(125:124) h(42) v(120) N(134:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopCount Bounds="1 1 15 15" Docking="Left" Id="125" Terminals="123=626, 124=467" />
+				<LoopTunnel AutoIndex="True" Bounds="210 132 13 10" Docking="Right" Id="137" Terminals="o0=460, i0=170" TunnelMode="0" />
+				<LoopTunnel AutoIndex="True" Bounds="210 167 13 10" Docking="Right" Id="306" Terminals="o0=594, i0=305" TunnelMode="0" />
+				<LoopTunnel AutoIndex="True" Bounds="210 47 13 10" Docking="Right" Id="310" Terminals="o0=323, i0=309" TunnelMode="0" />
+			</ForLoop>
+			<DataAccessor Bounds="2370 250 40 15" DataItem="156" Id="161" Label="163" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="161" Bounds="2415 250 141 14" Id="163" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>multiplexed sample array</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="235 395 40 15" DataItem="173" Id="175" Label="177" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="175" Bounds="125 395 105 14" Id="177" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>write every x cycle</p.Text>
+			</NodeLabel>
+			<Wire Id="211" Joints="N(175:Value) N(212:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="4 220 40 15" DataItem="292" Id="294" Label="296" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="294" Bounds="-36 220 35 14" Id="296" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>length</p.Text>
+			</NodeLabel>
+			<Wire Id="323" Joints="N(310:o0) h(9) B(1) v(-35) N(322:o0) B(1) v(515) N(508:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="2370 290 40 15" DataItem="400" Id="405" Label="407" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="405" Bounds="2415 290 10 14" Id="407" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>n</p.Text>
+			</NodeLabel>
+			<Wire Id="408" Joints="N(398:o0) h(426) B(1) N(405:Value) B(1) v(15) N(409:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="2370 305 40 15" DataItem="411" Id="409" Label="410" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="409" Bounds="2415 305 43 14" Id="410" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>n graph</p.Text>
+			</NodeLabel>
+			<MethodCall Bounds="750 735 50 50" DomainName="NI.MocCommon" Id="508" Target="select\ data_u32\.gvi" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L2" Desc="data_vector" />
+						<Parameter Id="L1" Desc="trainings sequence" />
+						<Parameter Id="L0" Desc="resource map as vector" />
+						<Parameter Id="R0" Desc="tx data symbols" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="UInt32[]" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt32[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@09113e392d29442689b83fffe915abb3" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt32[]" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<Wire Id="524" Joints="N(526:x-1) h(485) N(329:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Decrement Bounds="330 35 30 30" Id="526" />
+			<DataAccessor Bounds="1880 325 40 15" DataItem="533" Id="536" Label="537" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="536" Bounds="1925 325 126 14" Id="537" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>payload length [bytes]</p.Text>
+			</NodeLabel>
+			<Wire Id="540" Joints="N(539:o0) h(56) v(-5) N(536:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="1880 340 40 15" DataItem="541" Id="544" Label="545" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="544" Bounds="1925 340 135 14" Id="545" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>payload length [sample]</p.Text>
+			</NodeLabel>
+			<Wire Id="548" Joints="N(547:o0) N(544:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="1880 355 40 15" DataItem="549" Id="552" Label="553" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="552" Bounds="1925 355 183 14" Id="553" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>control channel length [samples]</p.Text>
+			</NodeLabel>
+			<Wire Id="556" Joints="N(555:o0) h(54) v(5) N(552:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="1880 370 40 15" DataItem="557" Id="560" Label="561" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="560" Bounds="1925 370 168 14" Id="561" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>control channel length [bytes]</p.Text>
+			</NodeLabel>
+			<Wire Id="564" Joints="N(563:o0) h(51) v(10) N(560:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<BuildArray Bounds="2210 390 40 40" Id="254" Terminals="outArray=613, c0t0v=594, c1t0v=592, c2t0v=460, c3t0v=593" VerticalChunkCount="4" />
+			<DataAccessor Bounds="2370 390 40 15" DataItem="262" Id="260" Label="261" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="260" Bounds="2415 390 70 14" Id="261" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>input/output</p.Text>
+			</NodeLabel>
+			<Wire Id="460" Joints="N(137:o0) h(39) B(1) N(143:o0) B(1) v(-215) h(1810) v(320) N(254:c2t0v) B(1) v(450) N(508:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="592" Joints="N(587:o0) N(254:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="593" Joints="N(590:o0) N(254:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="594" Joints="N(306:o0) h(29) B(1) v(-100) B(2) N(62:o0) B(2) v(-165) h(1830) v(315) N(254:c0t0v) B(1) v(405) N(508:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+			<BuildArray Bounds="2195 250 40 20" Id="595" Terminals="outArray=612, c0t0v=596, c1t0v=600" VerticalChunkCount="2" />
+			<Wire Id="596" Joints="N(25:o0) N(595:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="600" Joints="N(508:R0) h(1390) v(-475) N(595:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="2370 415 40 15" DataItem="601" Id="606" Label="608" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="606" Bounds="2415 415 103 14" Id="608" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>input/output array</p.Text>
+			</NodeLabel>
+			<Transpose2DArray Bounds="2285 250 40 20" Id="611" />
+			<Wire Id="612" Joints="N(595:outArray) h(15) B(1) N(611:2D array) B(1) v(-20) N(74:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="613" Joints="N(254:outArray) h(25) B(1) N(260:Value) B(1) v(25) N(616:2D array)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="615" Joints="N(611:transposed array) N(161:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Transpose2DArray Bounds="2290 415 40 20" Id="616" />
+			<Wire Id="617" Joints="N(616:transposed array) N(606:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="626" Joints="N(294:Value) h(5) v(-45) B(2) h(-1) v(-130) N(526:x) B(2) N(125:123)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=73}" Height="[float]400" Id="75" Label="[UIModel]93" Left="[float]91" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]96" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="76" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]87" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 25, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="87" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="77" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]88" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 18, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="88" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Plot HorizontalScale="[UIModel]76" Id="78" Label="[string]FPGA" VerticalScale="[UIModel]77" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="103" LineStroke="[SMSolidColorBrush]#ff7b161a" LineStyle="[LineStyle]Solid" LineThickness="[double]2" />
+				</Plot>
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="79" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="80" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="81" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="82" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="83" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="84" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="85" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="86" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+				<Plot HorizontalScale="[UIModel]76" Id="609" Label="[string]Host" VerticalScale="[UIModel]77" Visibility="[SMVisibility]Visible" />
+			</Graph>
+			<PlotLegend Graph="[UIModel]75" Height="[float]54" Id="89" Left="[float]698" Top="[float]96" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]75" Height="[float]102" Id="90" Left="[float]96" MinHeight="[float]80" Top="[float]525" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]75" Height="[float]50" Id="91" Left="[float]698" MinHeight="[float]50" Top="[float]394" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]75" Height="[float]22" Id="92" Left="[float]96" Top="[float]503" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="93" LabelOwner="[UIModel]75" Left="[float]91" Text="[string]multiplexed sample graph" Top="[float]73" Width="[float]138" xmlns="http://www.ni.com/PanelCommon" />
+			<ArrayViewer ArrayElement="[UIModel]159" BaseName="[string]Array" Columns="[int]2" Dimensions="[int]2" Height="[float]372" Id="162" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]164" Left="[float]787" Orientation="[SMOrientation]Vertical" Rows="[int]15" Top="[float]110" Value="{DataItemBinding Id=156}" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Width="[float]221" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="159" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Left="[float]125" MinHeight="[float]22" Name="[string]Child" Top="[float]247" Value="[uint]0" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="164" LabelOwner="[UIModel]162" Left="[float]787" Text="[string]multiplexed sample array" Top="[float]87" Width="[float]133" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="176" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[int]1" Label="[UIModel]224" Left="[float]139" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]514" UnitAnnotation="[string]" Value="{DataItemBinding Id=173}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="224" LabelOwner="[UIModel]176" Left="[float]139" Text="[string]write every x cycle" Top="[float]491" Width="[float]96" xmlns="http://www.ni.com/PanelCommon" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="231" IsReadOnly="[bool]False" Label="[UIModel]232" Left="[float]254" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]514" TrueContent="[string]On" Value="{DataItemBinding Id=230}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="232" LabelOwner="[UIModel]231" Left="[float]254" Text="[string]ready for output always true" Top="[float]491" Width="[float]150" xmlns="http://www.ni.com/PanelCommon" />
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=262}" Height="[float]400" Id="263" Label="[UIModel]284" Left="[float]91" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]572" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="264" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]277" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 9, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="277" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="265" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]278" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 20, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="278" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Plot HorizontalScale="[UIModel]264" Id="266" Label="[string]payload in" VerticalScale="[UIModel]265" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="279" LineStroke="[SMSolidColorBrush]#ff7b161a" LineStyle="[LineStyle]Solid" LineThickness="[double]2" />
+				</Plot>
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="267" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="268" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="269" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="270" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="271" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="272" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="273" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="274" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+				<Plot HorizontalScale="[UIModel]264" Id="275" Label="[string]payload out" VerticalScale="[UIModel]265" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="287" LineStroke="[SMSolidColorBrush]#ffee1c25" LineStyle="[LineStyle]Solid" LineThickness="[double]1" />
+				</Plot>
+				<Plot HorizontalScale="[UIModel]264" Id="276" Label="[string]cc in" VerticalScale="[UIModel]265" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="288" LineStroke="[SMSolidColorBrush]#ff0076a3" LineStyle="[LineStyle]Solid" LineThickness="[double]2" />
+				</Plot>
+				<Plot HorizontalScale="[UIModel]264" Id="286" Label="[string]cc out" VerticalScale="[UIModel]265" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="289" LineStroke="[SMSolidColorBrush]#ff4c9be0" LineStyle="[LineStyle]Solid" LineThickness="[double]1" />
+				</Plot>
+			</Graph>
+			<Label Height="[float]16" Id="284" LabelOwner="[UIModel]263" Left="[float]91" Text="[string]input/output" Top="[float]549" Width="[float]69" xmlns="http://www.ni.com/PanelCommon" />
+			<PlotLegend Graph="[UIModel]263" Height="[float]106" Id="280" Left="[float]698" Top="[float]572" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]263" Height="[float]102" Id="281" Left="[float]96" MinHeight="[float]80" Top="[float]1001" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]263" Height="[float]50" Id="282" Left="[float]698" MinHeight="[float]50" Top="[float]870" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]263" Height="[float]22" Id="283" Left="[float]96" Top="[float]979" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="295" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[int]1" Label="[UIModel]298" Left="[float]424" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]514" UnitAnnotation="[string]" Value="{DataItemBinding Id=292}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="298" LabelOwner="[UIModel]295" Left="[float]424" Text="[string]length" Top="[float]491" Width="[float]34" xmlns="http://www.ni.com/PanelCommon" />
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=411}" Height="[float]400" Id="412" Label="[UIModel]431" Left="[float]1058" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]96" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="413" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]424" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 25, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="424" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="414" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]425" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 9, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="425" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Plot HorizontalScale="[UIModel]413" Id="415" Label="[string]control channel" VerticalScale="[UIModel]414" Visibility="[SMVisibility]Visible">
+					<PlotRenderer Id="426" LineStroke="[SMSolidColorBrush]#ff7b161a" LineStyle="[LineStyle]Solid" LineThickness="[double]2" />
+				</Plot>
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="416" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="417" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="418" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="419" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="420" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="421" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="422" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="423" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+			</Graph>
+			<Label Height="[float]16" Id="431" LabelOwner="[UIModel]412" Left="[float]1058" Text="[string]n graph" Top="[float]73" Width="[float]42" xmlns="http://www.ni.com/PanelCommon" />
+			<PlotLegend Graph="[UIModel]412" Height="[float]26" Id="427" Left="[float]1665" Top="[float]96" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]412" Height="[float]102" Id="428" Left="[float]1063" MinHeight="[float]80" Top="[float]525" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]412" Height="[float]50" Id="429" Left="[float]1665" MinHeight="[float]50" Top="[float]394" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]412" Height="[float]22" Id="430" Left="[float]1063" Top="[float]503" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ArrayViewer ArrayElement="[UIModel]403" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]348" Id="406" IndexVisibility="[Visibility]Visible" Label="[UIModel]466" Left="[float]1714" Orientation="[SMOrientation]Vertical" Rows="[int]14" Top="[float]148" Value="{DataItemBinding Id=400}" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Width="[float]149" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="403" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Left="[float]53" MinHeight="[float]22" Name="[string]Child" Top="[float]295" Value="[uint]2" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="466" LabelOwner="[UIModel]406" Left="[float]1714" Text="[string]n" Top="[float]125" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="534" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]565" Left="[float]139" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=533}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="565" LabelOwner="[UIModel]534" Left="[float]139" Text="[string]payload length [bytes]" Top="[float]13" Width="[float]119" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="542" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]566" Left="[float]274" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=541}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="566" LabelOwner="[UIModel]542" Left="[float]274" Text="[string]payload length [sample]" Top="[float]13" Width="[float]128" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="550" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]567" Left="[float]570" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=549}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="567" LabelOwner="[UIModel]550" Left="[float]570" Text="[string]control channel length [samples]" Top="[float]13" Width="[float]173" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="558" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]568" Left="[float]409" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=557}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="568" LabelOwner="[UIModel]558" Left="[float]409" Text="[string]control channel length [bytes]" Top="[float]13" Width="[float]159" xmlns="http://www.ni.com/PanelCommon" />
+			<ArrayViewer ArrayElement="[UIModel]604" BaseName="[string]Array" Columns="[int]4" Dimensions="[int]2" Height="[float]348" Id="607" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]610" Left="[float]832" Orientation="[SMOrientation]Horizontal" Rows="[int]14" Top="[float]586" Value="{DataItemBinding Id=601}" Width="[float]346" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="604" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Left="[float]269" MinHeight="[float]22" Name="[string]Child" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]295" Value="[uint]0" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="610" LabelOwner="[UIModel]607" Left="[float]832" Text="[string]input/output array" Top="[float]563" Width="[float]98" xmlns="http://www.ni.com/PanelCommon" />
+		</CPFrontPanel>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[,]" Id="73" Name="multiplexed sample graph" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0,0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[,]" Id="156" Name="multiplexed sample array" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Int32" Id="173" Name="write every x cycle" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>1</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="230" Name="ready for output always true" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>True</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[,]" Id="262" Name="input/output" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0,0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Int32" Id="292" Name="length" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>10</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[]" Id="400" Name="n" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[]" Id="411" Name="n graph" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt16" Id="533" Name="payload length [bytes]" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt16" Id="541" Name="payload length [sample]" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt16" Id="549" Name="control channel length [samples]" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt16" Id="557" Name="control channel length [bytes]" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[,]" Id="601" Name="input/output array" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="fifo\ simulator_32\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 50">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]fifo simulator_32" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]44" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target=":USRP:Interactive:rm\ controller\ test\ wrapper\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 120">
+							<IconPanel Height="[float]120" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]rm controller test wrapper" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]114" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="toggle_output\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 30">
+							<IconPanel Height="[float]30" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]toggle_output" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]24" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="detect\ rising\ edge\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 30">
+							<IconPanel Height="[float]30" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]detect rising edge" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6.75" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]24" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="detect\ falling\ edge\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 30">
+							<IconPanel Height="[float]30" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]detect falling edge" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]24" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target=":USRP:Interactive:resource\ demapper\ test\ wrapper\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 100">
+							<IconPanel Height="[float]100" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]resource demapper test wrapper" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]94" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="limited\ counter\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 30">
+							<IconPanel Height="[float]30" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]limited counter" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6.75" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]24" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="select\ data_u32\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 50">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]select data_u32" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="8.25" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]44" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+		</IconTable>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="09113e392d29442689b83fffe915abb3">
+			<VariableArray>
+				<DereferenceType>
+					<Enumeration>
+						<Members>
+							<EnumerationMember Value="0" Name="Null" />
+							<EnumerationMember Value="1" Name="Pilot" />
+							<EnumerationMember Value="2" Name="Data" />
+						</Members>
+						<DataType>
+							<UInt16 />
+						</DataType>
+					</Enumeration>
+				</DereferenceType>
+			</VariableArray>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1252">
+<title>USRP RIO 40 MHz BW Streaming Sample Projects</title>
+<style>
+
+<!--
+
+/***************************************************/
+
+/* MINIMAL STYLES */
+
+/* The following section defines styles that every HTML Help project should need. */
+
+
+
+/* Specifies White Background color */
+
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+
+P { margin-top:6.00pt; margin-bottom:6.00pt;}
+
+
+
+BR { font-size:4.00pt; }
+
+
+
+/* Use H1 for all topic headings. */
+
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold;  }
+
+
+
+/* Use H2 for second-level headings. */
+
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold;  }
+
+
+
+/* Use H3 for third-level headings. */
+
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* Use H4 for fourth-level headings. */
+
+H4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+
+H5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+H6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+
+
+/* Use the Body style class for normal paragraphs. */
+
+P.Body {  }
+
+
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+
+P.Anchor { font-size:125%;  }
+
+
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+
+P.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt;  }
+
+P.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt;  }
+
+P.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt;  }
+
+P.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt;  }
+
+P.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt;  }
+
+
+
+/* Use the LI style for all list items. */
+
+LI { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+
+OL { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+
+ol ol {list-style-type:lower-alpha}
+
+ol ol ol {list-style-type:decimal}
+
+ol ol ol ol {list-style-type:lower-alpha}
+
+ol ol ol ol ol {list-style-type:decimal}
+
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+ol ol ol ol ol ol ol {list-style-type:decimal}
+
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+
+OL.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+
+OL.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+
+UL { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+
+ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+
+UL.List-Box { list-style-image: none;list-style-type: square}
+
+
+
+Table { font-size:100%; }
+
+
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+
+Table.Borderless { border:none; }
+
+
+
+/* Use the Bordered style class for tables that need borders. */
+
+Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+
+TD { vertical-align:top; padding:3px; }
+
+
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+
+TD.Icon { width:40px; }
+
+
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+
+TH { font-weight:bold; padding:3px; }
+
+
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+
+.Left-Align { text-align:left; }
+
+
+
+/***************************************************/
+
+/* CHARACTER FORMATS */
+
+/* The following section defines character formats that every HTML Help project should need. */
+
+
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+
+/* The following section defines character formats that every HTML Help project should need. */
+
+
+
+/* Use the Dark-Red format for warnings or cautions. */
+
+.Dark-Red { color: #800000 }
+
+
+
+/* Use the Monospace format for code or syntax examples. */
+
+.Monospace { font-family: Courier New; font-size: 100%; }
+
+
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+
+.Monospace-Bold { font-family: Courier New; font-weight: bold; font-size: 100%; }
+
+
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+
+.Monospace-Italic { font-family: Courier New; font-style: italic; font-size: 100%; }
+
+
+
+/* small class */
+
+.smallFont { font-size:87.5%; }
+
+
+
+/* Bold class */
+
+.Bold { font-weight: bold; }
+
+
+
+/* Italic class */
+
+.Italic { font-style: italic; }
+
+
+
+/* Use the Platform format to denote a specific platform. */
+
+.Platform { color: #0000FF; font-weight: bold; }
+
+
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+
+.Symbol { font-family: Symbol; }
+
+
+
+/* Use the Red-text format to call attention to text that needs  information added or edited by techcomm */
+
+.Red-text {color: #FF0000;}
+
+
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+
+.glossButton { font-size:12px; color:black; }
+
+
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+
+.nobreak{white-space:nowrap}
+
+
+
+/* Use for template instructions. */
+
+.instructions{color:red; font-style:italic}
+
+
+
+/*Use for words and text sections that do not need to be localized */
+
+.DNL { }
+
+
+
+/* The following styles define the color of links. */
+
+a:link { color: #007700 }
+
+a:visited { color: #7F007F }
+
+a:link:hover { color: #FF0000 }
+
+a:link:active { color: #FF0000 }
+
+
+
+/***************************************************
+
+** Forms */
+
+
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+
+select { font-size:100%; color:black; }
+
+
+
+/*******************************************************
+
+** Margins **
+
+** Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+
+.noTopMargin { margin-top:0pt;}
+
+.noBottomMargin { margin-bottom:0pt;}
+
+
+
+/***************************************************
+
+** CODE STYLES **
+
+** The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+
+
+P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+
+-->
+</style>
+
+<script type="text/javascript"> // define hyperlinks and function for launching a URL in a browser
+
+var vstgs = "http://www.ni.com/usrp/";
+
+function WWW(url)
+	{
+	var urlWindow;
+	urlWindow = window.open(url, "New", "directories=yes,location=yes,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes");
+	}
+</script>
+
+</HEAD>
+<body>
+
+<h1>USRP RIO 40 MHz BW Streaming Sample Projects</h1>
+
+<p class="Body">The USRP RIO 40&nbsp;MHz BW streaming sample projects demonstrate the following tasks:</p>
+
+<ul>
+	<li>Streaming data from the input port of the NI&nbsp;294x/295x 40&nbsp;MHz device to the host&nbsp;VI</li>
+	<li>Streaming data from the host VI to the output port of the NI&nbsp;294x/295x 40 MHz device</li>
+</ul>
+
+
+<h3>NI&nbsp;294x/295x Connectors</h3>
+
+<p class="Body">Throughout this document, the term <em>input port</em> refers to the RX1 or RX2 connector and <em>output port</em> refers to the TX1 connector.</p>
+
+
+<h2>System Requirements</h2>
+<ul>
+	<li>LabVIEW Communications System Design Suite  2.0</li>
+	<li>NI&nbsp;294x/295x 40&nbsp;MHz  device(s)</li>
+	<li>(Optional) An NI&nbsp;PXI Express chassis with the NI 294x/295x 40 MHz device connected with an NI PXIe - MXI Express Interface kit.</li>
+</ul>
+
+
+<h2>Features</h2>
+<ul>
+	<li>Configures an input and output data stream to and from the host.</li>
+	<li>Applies frequency shifting and decimation on the FPGA to reduce data sent to the host, which can prevent buffer overflow.</li>
+	<li>Supports both continuous and finite acquisitions and generations.</li>
+	<li>Provides synchronization for deterministic response times and MIMO systems.</li>
+</ul>
+
+<h2>Overview</h2>
+
+<p class="Body">The sample projects contain  host VIs that run on the host computer and FPGA VIs that run on the FPGA. Each host VI configures the device input and output ports and configures a data stream between the host VI and the NI&nbsp;294x/295x.</p>
+
+<p class="Body">The sample projects perform the following tasks:</p>
+
+<ul>
+	<li>Streaming data from the host to the device
+		<ol>
+			<li>The host VI writes data to the host-to-target DMA FIFO. You can see this FIFO in <strong>SystemDesigner</strong> in the FIFO resource category on the USRP target.</span></li>
+			<li>The FPGA VI reads from this DMA FIFO, processes the data, and sends it to the output port.</li>
+		</ol>
+	</li>
+	<li>Streaming data from the device to the host
+		<ol>
+			<li>The FPGA VI acquires data from the input port, processes the data, and writes it to the target-to-host DMA FIFO. You can see this FIFO in <strong>SystemDesigner</strong> in the FIFO resource category on the USRP target.</li>
+			<li>The host VI reads from the target-to-host DMA FIFO and displays the data on the host VI panel.</li>
+		</ol>
+	</li>
+</ul>
+
+
+<p class="Body">The output stream uses a Start Trigger to begin generating data to the output port. This stream can operate in the following modes:</p>
+
+<ul>
+    <li><strong>Continuous</strong>&#8212;The host streams data to the FPGA until you stop the application. If the host does not write data to the FPGA quickly enough, the DMA FIFO does not have enough data to be read, and the FPGA reports a buffer underflow.</li>
+    <li><strong>Finite</strong>&#8212;The host periodically sends a block of samples to the FPGA. Specify the size of each block in the <strong>number of samples</strong> control on the host VI panel. A block of data is read on the FPGA when the Start Trigger is asserted.
+
+    <br><br>
+    Enable finite mode by clicking <strong>number of samples is finite</strong> on the host VI panel.</li>
+</ul>
+
+
+<p class="Body">The input stream uses a Start Trigger to begin streaming data acquired from the input port. This stream can operate in the following modes:</p>
+
+<ul>
+	<li><strong>Continuous</strong>&#8212;The FPGA streams data to the host until you stop the application. If the host cannot accept data quickly enough, the DMA FIFO fills too quickly, and the FPGA reports a buffer overflow.</li>
+	<li><strong>Finite</strong>&#8212;The FPGA periodically sends a block of samples to the host. Specify the size of each block in the <strong>number of samples</strong> control on the host VI panel. A block of data is sent when the Start Trigger is asserted.
+
+<br><br>
+Enable finite mode by clicking <strong>number of samples is finite</strong> on the host VI panel.</li>
+</ul>
+
+<h3>Host VIs</h3>
+
+<p class="Body">You can view the host VIs for each sample project in the <strong>Files</strong> pane. The host VIs may include the following files:</span></p>
+
+<ul>
+	    <li><strong>Rx Streaming  (Host).gvi</strong>&#8212;Streams data from the input ports to the host VI.</li>
+    <li><strong>Tx Streaming  (Host).gvi</strong>&#8212;Streams data from the host VI to the output ports.</li>
+    <li><strong>Tx and Rx Streaming (Host).vi</strong>&mdash;Streams data from the input ports to the host VI and from the host VI to the output ports.</strong></li>
+    <li><strong>Rx Streaming Time (Host).vi</strong>&mdash;Streams data from the input ports to the host VI.</li>
+    <li><strong>Tx Streaming Time (Host).vi</strong>&mdash;Streams data from the host VI to the output ports.</li>
+    <li><strong>Tx and Rx Streaming Time (Host).vi</strong>&mdash;Streams data from the input ports to the host VI and from the host VI to the output ports.</strong></li>
+    <li><strong>Multi-Device Rx Streaming Time (Host).vi</strong>&mdash;Synchronizes the time of multiple NI&nbsp;294x/295x devices connected to the same host and synchronously streams data from the input ports of the devices to the host VI. Synchronization helps you correlate data across all devices. This correlation is required for RF MIMO applications. Typically you perform this correlation by ensuring each device starts acquiring and/or generating data at the same time. This host VI uses PPS TRIG IN to synchronize time and the Start Triggers across all devices. You can measure synchronization by measuring the acquired signal power level of each device. </strong></li>
+    <li><strong>Multi-Device Tx Streaming Time (Host).gvi</strong>&mdash;Synchronizes the time of multiple NI&nbsp;294x/295x devices connected to the same host and synchronously streams data from the host VI to the output ports of the devices. Synchronization helps you correlate data across all devices. This correlation is required for RF MIMO applications. This correlation is typically performed by ensuring each device starts acquiring and/or generating data at the same time. This host VI uses PPS TRIG IN to synchronize time and the Start Triggers across all devices. You can measure synchronization by measuring the acquired signal power level of each device.</li>
+    <li><span class="Bold">Multi-Device Tx and Rx Streaming Time (Host)</span>&mdash;Synchronizes the time of multiple NI&nbsp;294x/295x devices connected to the same host and synchronously streams data from the input ports of the devices to the host VI and from the host VI to the output ports of the devices. Synchronization helps you correlate data across all devices, which is required for RF MIMO applications. This correlation is typically performed by ensuring each device starts acquiring and/or generating data at the same time. This host VI uses PPS TRIG IN to synchronize time and the Start Triggers across all devices. You can measure synchronization by measuring the acquired signal power level of each device.</li>
+    <li><strong>Multi-Device Rx Streaming  Signal Sync (Host).gvi</strong>&mdash;Synchronously streams data from the input ports of the devices to the host VI. Synchronization helps you correlate data across all devices, which is required for RF MIMO applications. Typically you perform this correlation by ensuring each device starts acquiring and/or generating data at the same time. This host VI uses PPS TRIG I/O or AUX I/O to synchronize the Start Triggers across all devices. You can measure synchronization by measuring the acquired signal power level of each device.</li>
+    <li><strong>Multi-Device Tx Streaming  Signal Sync (Host).gvi</strong>&mdash;Synchronously streams data from the host VI to the output ports of the devices. Synchronization helps you correlate data across all devices, which is required for RF MIMO applications. This correlation is typically performed by ensuring each device starts acquiring and/or generating data at the same time. This host VI uses PPS TRIG I/O or AUX I/O to synchronize the Start Triggers across all devices. You can measure synchronization by measuring the acquired signal power level of each device.</li>
+    
+</ul>
+
+<h3>FPGA VIs</h3>
+
+<p class="Body">You can view the FPGA VIs in the <strong>Files</strong> pane. The FPGA VIs may include the following files:</p>
+<ul>
+<li><strong>Streaming Xcvr (FPGA).gvi</strong>&#8212;Enables sample generation using the Tx Streaming Engine and sample acquisition using the Rx Streaming Engine. Specify the number of samples to generate using the&nbsp;<strong>tx.samples to generate</strong>&nbsp;parameter. Specify the number of samples to acquire using the&nbsp;<strong>rx.samples to acquire</strong>&nbsp;parameter. Multidevice time-based synchronization is supported through the PPS TRIG IN connector.</li>
+<li><strong>Streaming Xcvr Sync AUX (FPGA).gvi</strong>&mdash;Enables sample generation using the Tx Streaming Engine and sample acquisition using the Rx Streaming Engine. Specify the number of samples to generate using the&nbsp;<strong>tx.samples to generate</strong>&nbsp;parameter. Specify the number of samples to acquire using the&nbsp;<strong>rx.samples to acquire</strong>&nbsp;parameter. Multidevice signal-based synchronization is supported through the AUX I/O connector.</li>
+<li><strong>Streaming Xcvr Sync PPS (FPGA).gvi</strong>&mdash;Enables sample generation using the Tx Streaming Engine and sample acquisition using the Rx Streaming Engine. Specify the number of samples to generate using the&nbsp;<strong>tx.samples to generate </strong>parameter. Specify the number of samples to acquire using the&nbsp;<strong>rx.samples to acquire</strong>&nbsp;parameter. Multidevice signal-based synchronization is supported through the PPS TRIG IN and PPS TRIG OUT connectors.</li>
+</ul>
+
+<h2>Running this Sample Project</h2>
+
+<ol>
+    <li>Launch LabVIEW Communications System Design Suite.</li>
+    <li>Click <strong>New</strong>.</li>
+    <li>Select one of the USRP RIO 40&nbsp;MHz BW project templates.</span></li>
+    <li>(Optional) Name your project and select a location directory where it will be saved. </li>
+    <li>Click <strong>Create</strong>.</li>
+    <li>(Optional) To change the default USRP target, select the USRP target in SystemDesigner and then select the USRP target you are using from the RIO Device section of the Configure toolbar.</li>
+    <li>If you are using a single device configuration:
+        <ol>
+            <li>In the <strong>Files</strong> pane, open a host VI, such as <strong>Rx Streaming (Host).gvi</strong> or <strong>Tx Streaming (Host).gvi</strong>.</li>
+            <li>In the <strong>USRP RIO Device</strong> field on the panel, enter the resource name of your NI&nbsp;294x/295x device.</li>
+        </ol>
+    <br>If you are using a multiple device configuration:
+      <ol>
+            <li>Wire and configure all your devices to use the same Reference Clock. Configuring your devices to use the same Reference Clock ensures that the clocks and triggers are synchronized.</li>
+            <li>For a signal-based configuration, wire the PPS TRIG OUT from one device, the master, to the PPS TRIG IN of all the devices.  For a time-based configuration, wire a common PPS source to the PPS TRIG IN of all the devices. NI recommends that you use an <a href="http://www.ettus.com/product/details/OctoClock-G">Ettus Research OctoClock-G</a> to connect the PPS TRIG lines.</li>
+            <li>In the <strong>Files</strong> pane, open a multidevice host VI, such as <strong>Multi-Device Rx Streaming  (Host).gvi</strong> or <strong>Multi-Device Tx Streaming (Host).gvi</strong>.</li>
+            <li>Update the <strong>RIO Devices</strong> array with the resource names of each NI&nbsp;294x/295x 40 MHz device. The master device must be the first element in the array. Slave devices follow.</li>
+      </ol></li>
+      
+      
+      
+      <li>Click <strong>Run</strong>. The panel displays the acquired or generated data.</li>
+    <li>Click <strong>Stop</strong>.</li>
+    <li>Experiment with different values for the panel controls and click <strong>Run</strong>. You must restart the VI for new settings to take effect.</li>
+</ol>
+
+
+
+<h2>Where to Go from Here</h2>
+
+<p class="Body">Refer to the following locations for information about using the NI&nbsp;294x/295x:</p>
+
+<ul>
+	<li><a href="http://www.ni.com/usrp">ni.com/usrp</a></li>
+	<li><a href="http://www.ni.com/documentation/en/labview-comms/latest/manual/labview-comms-manual/">LabVIEW Communications System Design Suite Manual</a></li>
+</ul>
+<p>&nbsp;</p>
+
+<hr>
+<h2>Important Information</h2>
+<!--Copyright-->
+<p class="Body"><strong>Copyright</strong></p>
+<p class="Body">&#0169; 2015 National Instruments. All rights reserved.</p>
+
+<p class="Body">Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+
+<p class="Body">National Instruments respects the intellectual property of others, and we ask our users to do the same.  NI software is protected by copyright and other intellectual property laws.  Where NI software may be used to reproduce software or other materials belonging to others, you may use NI software only to reproduce materials that you may reproduce in accordance with the terms of any applicable license or other legal restriction.</p>
+
+<p class="Body"><strong>End-User License Agreements and Third-Party Legal Notices</strong></p>
+<p class="Body">You can find end-user license agreements (EULAs) and third-party legal notices in the following locations after installation:</p>
+<ul>
+<li>Notices are located in the <span class="Monospace">&lt;National Instruments&gt;\_Legal Information</span> and <span class="Monospace">&lt;National Instruments&gt;</span> directories.</li>
+<li>EULAs are located in the <span class="Monospace">&lt;National Instruments&gt;\Shared\MDF\Legal\license</span> directory.</li>
+<li>Review <span class="Monospace">&lt;National Instruments&gt;\_Legal Information.txt</span> for information on including legal information in installers built with NI products.</li>
+</ul>
+
+<!--Trademarks-->
+<p><strong>U.S. Government Restricted Rights</strong></p>
+<p>If you are an agency, department, or other entity of the United States Government ("Government"), the use, duplication, reproduction, release, modification, disclosure or transfer of the technical data included in this manual is governed by the Restricted Rights provisions under Federal Acquisition Regulation 52.227-14 for civilian agencies and Defense Federal Acquisition Regulation Supplement Section 252.227-7014 and 252.227-7015 for military agencies.</p>
+<p class="Body"><strong>Trademarks</strong></p>
+
+<p class="Body"><span class="DNL">LabVIEW</span>, <span class="DNL">National Instruments</span>, <span class="DNL">NI</span>, <span class="DNL">ni.com</span>, the <span class="DNL">National Instruments</span> corporate logo, and the Eagle logo are trademarks of <span class="DNL">National Instruments Corporation</span>. Refer to the <em><span class="DNL">Trademark Information</span></em> at <span class="Monospace">ni.com/trademarks</span> for other <a href="http://www.ni.com/trademarks"><span class="DNL">National Instruments</span> trademarks</a>.</p>
+
+<p class="Body">Other product and company names mentioned herein are trademarks or trade names of their respective companies.</p>
+
+<!--Patents-->
+<p class="Body"><strong>Patents</strong></p>
+<p class="Body">For patents covering the National Instruments products/technology, refer to the appropriate location: <strong>Help&#0187;Patents</strong> in your software, the <span class="Monospace">patents.txt</span> file on your media, or the <a href="http://www.ni.com/patents">National Instruments Patent Notice</a> at <span class="Monospace">ni.com/patents</span>.</p>
+</body>
+
+</html>

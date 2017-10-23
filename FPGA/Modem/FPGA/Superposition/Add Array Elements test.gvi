@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="3.0.0.49153" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,7.5," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Add Array Elements test" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="36" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]37" Left="[float]198" RadixVisibility="[SMVisibility]Collapsed" Top="[float]47" Value="{DataItemBinding Id=31}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="37" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]36" Left="[float]198" Locked="[bool]True" Text="[string]Variable: number" Top="[float]24" />
+            <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="38" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]43" Left="[float]84" Top="[float]47" Value="{DataItemBinding Id=32}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <EnumSelectorInfo DisplayValue="[string]First Symbol" Id="39" Value="[ushort]0" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Random" Id="40" Value="[ushort]1" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Seeded" Id="41" Value="[ushort]2" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Set datablock given in number to 1" Id="42" Value="[ushort]3" ValueType="[Type]UInt16" />
+            </EnumSelector>
+            <Label Id="43" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]38" Left="[float]84" Locked="[bool]True" Text="[string]Data generator?" Top="[float]24" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="44" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]45" Left="[float]312" RadixVisibility="[SMVisibility]Collapsed" Top="[float]47" Value="{DataItemBinding Id=33}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="45" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]44" Left="[float]312" Locked="[bool]True" Text="[string]Variable: M" Top="[float]24" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="46" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]47" Left="[float]412" RadixVisibility="[SMVisibility]Collapsed" Top="[float]47" Value="{DataItemBinding Id=34}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="47" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]46" Left="[float]412" Locked="[bool]True" Text="[string]Variable: K" Top="[float]24" />
+            <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="48" IsReadOnly="[bool]False" Label="[UIModel]49" Left="[float]528" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]33" TrueContent="[string]On" Value="{DataItemBinding Id=35}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="49" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]48" Left="[float]528" Locked="[bool]True" Text="[string]Variable: random_g" Top="[float]10" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="520 270 40 15" DataItem="31" Id="15" Label="26">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="520 255 40 15" DataItem="32" Id="16" Label="27">
+                <Terminal DataType="@1223329466_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="520 240 40 15" DataItem="33" Id="17" Label="28">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="520 225 40 15" DataItem="34" Id="18" Label="29">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <MethodCall Bounds="585 195 170 270" Id="19" Target="GFDM\ RX\ signals\.gvi" Template="List">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="Variable: K" />
+                        <Parameter Id="L1" Desc="Variable: M" />
+                        <Parameter Id="L2" Desc="Data generator?" />
+                        <Parameter Id="L3" Desc="Variable: number" />
+                        <Parameter Id="L4" Desc="Variable: random_g" />
+                        <Parameter Id="R0" Desc="multiplexer config" />
+                        <Parameter Id="R1" Desc="shifted_samples" />
+                        <Parameter Id="R2" Desc="splitted samples" />
+                        <Parameter Id="R3" Desc="filtered samples" />
+                        <Parameter Id="R4" Desc="samples after superposition" />
+                        <Parameter Id="R5" Desc="reference" />
+                        <Parameter Id="R6" Desc="filter" />
+                        <Parameter Id="R7" Desc="M-1" />
+                        <Parameter Id="T0" Desc="N-1" />
+                        <Parameter Id="T1" Desc="K-1" />
+                        <Parameter Id="T2" Desc="Variable: filtered_samples" />
+                        <Parameter Id="T3" Desc="Variable: shifted_samples" />
+                        <Parameter Id="T4" Desc="Variable: splitted_samples" />
+                        <Parameter Id="T5" Desc="Variable: superposition_samples" />
+                        <Parameter Id="B0" Desc="Variable: x" />
+                        <Parameter Id="B1" Desc="TX signal" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 35" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 50" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="@1223329466_0" Direction="Input" Hotspot="0 65" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 80" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Boolean" Direction="Input" Hotspot="0 95" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt64[16]" Direction="Output" Hotspot="170 80" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt32[,]" Direction="Output" Hotspot="170 95" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt64[,]" Direction="Output" Hotspot="170 110" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt64[,]" Direction="Output" Hotspot="170 125" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt64[,]" Direction="Output" Hotspot="170 140" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="170 155" Id="R5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt64[]" Direction="Output" Hotspot="170 170" Id="R6" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Output" Hotspot="170 50" Id="R7" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Output" Hotspot="170 65" Id="T0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Output" Hotspot="170 35" Id="T1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="170 185" Id="T2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="170 200" Id="T3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="170 215" Id="T4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="170 230" Id="T5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="170 245" Id="B0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="UInt32[]" Direction="Output" Hotspot="170 260" Id="B1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="20" Joints="N(18:Value) N(19:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="21" Joints="N(17:Value) N(19:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="22" Joints="N(16:Value) N(19:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="23" Joints="N(15:Value) N(19:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="520 285 40 15" DataItem="35" Id="24" Label="30">
+                <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <Wire Id="25" Joints="N(24:Value) N(19:L4)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="15" Bounds="424 270 91 16" Id="26" Text="Variable: number" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="16" Bounds="429 255 86 16" Id="27" Text="Data generator?" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="17" Bounds="455 240 60 16" Id="28" Text="Variable: M" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="18" Bounds="459 225 56 16" Id="29" Text="Variable: K" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="24" Bounds="412 285 103 16" Id="30" Text="Variable: random_g" xmlns="http://www.ni.com/PlatformFramework" />
+            <ForLoop Bounds="918 153 420 365" DiagramId="51" Id="50">
+                <ForLoop.Iteration Bounds="5 335 15 15" Id="53" />
+                <SclRemoteCall Bounds="60 95 180 80" DomainName="NI.LabVIEW.FPGA" Id="54" Target=":Project:USRP:Add\ Array\ Elements\.gcdl" xmlns="http://www.ni.com/LabVIEW.FPGA">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="array input" />
+                            <Parameter Id="L3" Desc="valid in" />
+                            <Parameter Id="R0" Desc="sum" />
+                            <Parameter Id="R3" Desc="valid out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt64[16]" Direction="Input" Hotspot="0 25" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt64" Direction="Output" Hotspot="180 25" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="180 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </SclRemoteCall>
+                <ForLoop.Count Bounds="1 1 15 15" Docking="Left" Id="52" Terminals="50, 51" />
+            </ForLoop>
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem DataType="Double" Id="31" Name="Variable: number">
+            <p.DefaultValue>0x3FF0000000000000</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="@1223329466_0" Id="32" Name="Data generator?">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Double" Id="33" Name="Variable: M">
+            <p.DefaultValue>0x4008000000000000</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Double" Id="34" Name="Variable: K">
+            <p.DefaultValue>0x4010000000000000</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Boolean" Id="35" Name="Variable: random_g">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="1223329466_0">
+                <Enumeration Name="Enum">
+                    <Members>
+                        <EnumerationMember Value="0" Name="First Symbol" />
+                        <EnumerationMember Value="1" Name="Random" />
+                        <EnumerationMember Value="2" Name="Seeded" />
+                        <EnumerationMember Value="3" Name="Set datablock given in number to 1" />
+                    </Members>
+                    <DataType>
+                        <UInt16 />
+                    </DataType>
+                </Enumeration>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

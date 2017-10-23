@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 30" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]30" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]toggle_output" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="30" Id="9" ListViewHeight="75" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="22" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="39" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 50" Parameter="28" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="15 30" />
+            <ConnectorPaneTerminal Hotspot="25 30" />
+            <ConnectorPaneTerminal Hotspot="35 30" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="25" IsReadOnly="[bool]False" Name="[string]toggle" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TrueContent="[string]On" Value="{DataItemBinding Id=22}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="31" IsReadOnly="[bool]True" Name="[string]output" Shape="[LEDShape]Square" TrueContent="[string]On" Value="{DataItemBinding Id=28}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="42" IsReadOnly="[bool]False" Name="[string]reset" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TrueContent="[string]On" Value="{DataItemBinding Id=39}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <Select Bounds="630 325 40 40" Id="14" />
+            <FeedbackNode Bounds="585 270 30 20" EnableTerminalVisible="False" Id="15" />
+            <Literal Bounds="530 235 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="16" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>False</p.Data>
+                <BooleanBehavior />
+            </Literal>
+            <Wire Id="17" Joints="N(16:Out) h(44) B(1) h(73) v(75) N(34:t) B(1) N(15:Initializer)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="18" Joints="N(15:Output) h(-10) v(50) B(2) N(19:x) B(2) v(30) N(14:f)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Not Bounds="595 320 25 20" Id="19" />
+            <Wire Id="20" Joints="N(19:.not. x?) N(14:t)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="505 340 40 15" DataItem="22" Id="24" Label="26">
+                <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="24" Bounds="465 340 35 16" Id="26" Text="toggle" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="27" Joints="N(24:Value) N(14:s)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="790 325 40 15" DataItem="28" Id="30" Label="32">
+                <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="30" Bounds="835 325 36 16" Id="32" Text="output" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="33" Joints="N(34:s? t:f) h(5) B(1) N(30:Value) B(1) v(-50) N(15:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Select Bounds="725 310 40 40" Id="34" />
+            <Wire Id="38" Joints="N(14:s? t:f) N(34:f)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="505 370 40 15" DataItem="39" Id="41" Label="43">
+                <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="41" Bounds="474 370 26 16" Id="43" Text="reset" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="44" Joints="N(41:Value) h(170) v(-45) N(34:s)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="Boolean" Id="22" Name="toggle">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="Boolean" Id="28" Name="output">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="Boolean" Id="39" Name="reset">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="7C54353A325F93127883ECA9643C7AC4" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.50062" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.50062" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.50062" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.50062" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.50062" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.50062" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_LTE">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts the measured baseband input power into a logarithmic value and checks if this power level is within the desired range.&lt;/p&gt;&lt;p&gt;Otherwise, the configured RX gain value is increased or decreased by 0.5 dB.&lt;/p&gt;</p.UserDescription>
+    <Icon Id="90" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="91" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="267" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="268" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="269" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="270" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,2 L 4,2 C 2.895,2 2,2.895 2,4 L 2,12 L 38,12 L 38,4 C 38,2.895 37.105,2 36,2 Z M 16.93,10 L 12.735,10 L 12.735,4.184 L 14.235,4.184 L 14.235,8.875 L 16.93,8.875 L 16.93,10 Z M 22.383,5.309 L 20.567,5.309 L 20.567,10 L 19.067,10 L 19.067,5.309 L 17.25,5.309 L 17.25,4.184 L 22.383,4.184 L 22.383,5.309 Z M 27.492,5.309 L 24.777,5.309 L 24.777,6.313 L 27.297,6.313 L 27.297,7.438 L 24.777,7.438 L 24.777,8.876 L 27.492,8.876 L 27.492,10 L 23.285,10 L 23.285,4.184 L 27.492,4.184 L 27.492,5.309 Z" Fill="[SMSolidColorBrush]#ff6205c4" Height="[float]40" Id="271" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Id="272" Left="[float]5" Text="[string]CONTROL&#xA;POWER&#xA;GAIN" TextWrapping="[TextWrapping]Wrap" Top="[float]12">
+            <FontSetting FontSize="5" Id="273" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="195" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="17" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="20" />
+      <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 140" Parameter="229" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 155" Parameter="228" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 170" Parameter="251" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="26" />
+      <ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 80" Parameter="29" />
+      <ConnectorPaneTerminal Hotspot="40 25" ListViewHotspot="150 185" Parameter="260" />
+      <ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 95" Parameter="32" />
+      <ConnectorPaneTerminal Hotspot="15 40" ListViewHotspot="0 110" Parameter="167" />
+      <ConnectorPaneTerminal Hotspot="25 40" ListViewHotspot="0 125" Parameter="162" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="320 130 40 15" DataItem="20" Id="21" Label="44" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="1325 115 40 15" DataItem="29" Id="30" Label="47" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="1325 255 40 15" DataItem="32" Id="33" Label="48" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="1325 300 40 15" DataItem="26" Id="27" Label="46" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="320 305 40 15" DataItem="17" Id="18" Label="43" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Literal Bounds="410 280 40 15" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="61" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x4024000000000000</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <IsGreater Bounds="875 185 30 30" Id="64" />
+      <InRangeAndCoerce Bounds="875 235 30 40" Id="65" />
+      <LogarithmBase10 Bounds="395 305 30 30" Id="82" />
+      <Multiply Bounds="461 290 30 30" Id="83" Terminals="o=97, c0t0v=110, c1t0v=109" />
+      <Comment Bounds="410 185 98 28" Id="87" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>power in dBFS</p.Text>
+      </Comment>
+      <Wire Id="97" Joints="N(83:o) h(14) B(1) h(345) B(2) N(27:Value) B(2) v(-50) B(4) N(65:x) B(4) v(-65) N(64:x) B(1) v(50) N(254:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="100" Joints="N(18:Value) N(82:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="109" Joints="N(82:log(x\)) N(83:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="110" Joints="N(61:Out) h(6) v(10) N(83:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="149" Joints="N(164:Value) h(39) B(1) N(65:upper limit) B(1) v(-35) N(64:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="158" Joints="N(169:Value) N(65:lower limit)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="555 150 140 55" Id="160" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"Expected signal range\r\nin dBFS to cope with\r\nPAPR of signal"</p.Text>
+      </Comment>
+      <DataAccessor Bounds="750 235 40 15" DataItem="162" Id="164" Label="166" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="750 265 40 15" DataItem="167" Id="169" Label="171" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Literal Bounds="920 170 41 15" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="200" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x3FE0000000000000</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Literal Bounds="1170 180 48 15" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="201" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x4042C00000000000</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Literal Bounds="1170 210 40 15" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="202" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Select Bounds="1045 180 40 40" Id="203" />
+      <Add Bounds="995 212 30 30" Id="204" Terminals="o=216, c0t0v=210, c1t0v=212" />
+      <Subtract Bounds="995 155 30 30" Id="205" />
+      <Select Bounds="1118 180 40 40" Id="206" />
+      <InRangeAndCoerce Bounds="1227 180 30 40" Id="207" />
+      <Wire Id="208" Joints="N(65:In Range?) h(200) B(1) N(33:Value) B(1) v(-60) N(206:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="210" Joints="N(21:Value) h(20) B(1) h(600) B(2) h(125) v(50) N(206:t) B(2) v(25) B(6) N(205:x) B(6) v(57) N(204:c0t0v) B(1) v(255) h(180) v(-10) N(257:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="211" Joints="N(64:x &gt; y?) N(203:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="212" Joints="N(200:Out) h(5) B(1) N(205:y) B(1) v(57) N(204:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="213" Joints="N(201:Out) N(207:upper limit)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="214" Joints="N(202:Out) N(207:lower limit)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="215" Joints="N(203:s? t:f) h(5) v(15) N(206:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="216" Joints="N(204:o) h(10) v(-12) N(203:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="217" Joints="N(205:x-y) h(10) v(15) N(203:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="218" Joints="N(206:s? t:f) N(207:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Select Bounds="1275 100 40 40" Id="223" />
+      <DataAccessor Bounds="320 100 40 15" DataItem="228" Id="224" Label="226" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="320 115 40 15" DataItem="229" Id="225" Label="227" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="234" Joints="N(225:Value) N(223:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="235" Joints="N(224:Value) N(223:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="237" Joints="N(207:coerced(x\)) h(13) v(-50) N(223:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="238" Joints="N(223:s? t:f) N(30:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="320 365 40 15" DataItem="251" Id="249" Label="250" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Add Bounds="525 350 30 30" Id="254" Terminals="o=258, c0t0v=97, c1t0v=256" />
+      <Wire Id="256" Joints="N(249:Value) N(254:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Subtract Bounds="585 360 30 30" Id="257" />
+      <Wire Id="258" Joints="N(254:o) N(257:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="1325 370 40 15" DataItem="260" Id="262" Label="264" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="265" Joints="N(257:x-y) N(262:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <NodeLabel AttachedTo="21" Bounds="279 130 36 16" Id="44" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>gain in</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="30" Bounds="1370 115 45 16" Id="47" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>gain out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="33" Bounds="1370 255 49 16" Id="48" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>in range?</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="27" Bounds="1370 300 70 16" Id="46" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>power [dBFS]</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="18" Bounds="233 305 82 16" Id="43" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>BB input power</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="164" Bounds="556 235 189 16" Id="166" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>expected signal range upper bound</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="169" Bounds="558 265 187 16" Id="171" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>expected signal range lower bound</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="224" Bounds="194 100 121 16" Id="226" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>manual gain value [dB]</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="225" Bounds="228 115 87 16" Id="227" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>use manual gain</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="249" Bounds="165 365 150 16" Id="250" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>power calibration offset [dB]</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="262" Bounds="1370 370 116 16" Id="264" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>RF input power [dBm]</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="19" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]36" Left="[float]110" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]169" Value="{DataItemBinding Id=17}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="22" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]37" Left="[float]110" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]220" Value="{DataItemBinding Id=20}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="28" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]39" Left="[float]341" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]279" Value="{DataItemBinding Id=26}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="31" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]40" Left="[float]341" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]220" Value="{DataItemBinding Id=29}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="34" IsReadOnly="[bool]True" Label="[UIModel]41" Left="[float]341" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]427" TrueContent="[string]On" Value="{DataItemBinding Id=32}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="36" LabelOwner="[UIModel]19" Left="[float]110" Text="[string]BB input power" Top="[float]146" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="37" LabelOwner="[UIModel]22" Left="[float]110" Text="[string]gain in" Top="[float]197" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="39" LabelOwner="[UIModel]28" Left="[float]341" Text="[string]power [dBFS]" Top="[float]256" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="40" LabelOwner="[UIModel]31" Left="[float]341" Text="[string]gain out" Top="[float]197" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="41" LabelOwner="[UIModel]34" Left="[float]341" Text="[string]in range?" Top="[float]404" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="165" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]221" Left="[float]110" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]555" Value="{DataItemBinding Id=162}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="221" LabelOwner="[UIModel]165" Left="[float]110" Text="[string]expected signal range upper bound" Top="[float]532" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="170" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]222" Left="[float]341" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]555" Value="{DataItemBinding Id=167}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="222" LabelOwner="[UIModel]170" Left="[float]341" Text="[string]expected signal range lower bound" Top="[float]532" xmlns="http://www.ni.com/PanelCommon" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Disable" Height="[float]50" Id="232" IsReadOnly="[bool]False" Label="[UIModel]233" Left="[float]108" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]265" TrueContent="[string]enable" Value="{DataItemBinding Id=229}" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="233" LabelOwner="[UIModel]232" Left="[float]108" Text="[string]use manual gain" Top="[float]242" xmlns="http://www.ni.com/PanelCommon" />
+      <Slider BaseName="[string]Numeric" Height="[float]62" Id="230" InteractionMode="[NumericPointerInteractionModes]ArrowKeys, Drag, Snap, ScrollWheel, EditRange" Label="[UIModel]231" Left="[float]108" MajorRangeDivisionsMode="[RangeDivisionsMode]Auto" MajorTickVisibility="[SMVisibility]Visible" Maximum="[double]37.5" MechanicalAction="[MechanicalAction]SwitchWhenReleased" MinHeight="[float]60" MinWidth="[float]50" MinorTickVisibility="[SMVisibility]Visible" Orientation="[SMOrientation]Horizontal" RangeLabelsVisibility="[SMVisibility]Visible" ScaleVisibility="[SMVisibility]Visible" Top="[float]344" Value="{DataItemBinding Id=228}" Width="[float]180" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="231" LabelOwner="[UIModel]230" Left="[float]108" Text="[string]manual gain value [dB]" Top="[float]321" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="252" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]253" Left="[float]108" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]435" Value="{DataItemBinding Id=251}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="253" LabelOwner="[UIModel]252" Left="[float]108" Text="[string]power calibration offset [dB]" Top="[float]412" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="263" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]266" Left="[float]341" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" Top="[float]338" Value="{DataItemBinding Id=260}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="266" LabelOwner="[UIModel]263" Left="[float]341" Text="[string]RF input power [dBm]" Top="[float]315" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="2" DataType="Double" Id="17" Name="BB input power" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;BB input power measured on the FPGA&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="Double" Id="20" Name="gain in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Current gain, in dB, applied to the RX port.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="1" DataType="Double" Id="26" Name="power [dBFS]" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Logarithmic baseband input power value, in dBFS.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="2" DataType="Double" Id="29" Name="gain out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Calculated RX gain output, in dB.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="3" DataType="Boolean" Id="32" Name="in range?" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Indicates that the measured baseband input power is already within the desired range.&lt;/p&gt;&lt;p&gt;The calculated output should be equal to the &lt;lvParamRef&gt;gain in&lt;/lvParamRef&gt; value if manual gain is disabled.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="5" DataType="Double" Id="162" Name="expected signal range upper bound" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0xC02E000000000000</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Upper bound of the baseband input power control range.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="Double" Id="167" Name="expected signal range lower bound" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0xC031000000000000</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Lower bound of the baseband input power control range.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="4" DataType="Double" Id="228" Name="manual gain value [dB]" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Manual gain value, in dB, to be applied for the RX port.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Boolean" Id="229" Name="use manual gain" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;If enabled, the calculated gain is be provided as gain output and the &lt;lvParamRef&gt;manual gain value [dB]&lt;/lvParamRef&gt; value is used instead.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="6" DataType="Double" Id="251" Name="power calibration offset [dB]" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Frequency-dependent power offset that is applied to the calculation of the RF input power.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="Double" Id="260" Name="RF input power [dBm]" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Calculated RF input power at the RX antenna based on measured baseband power, the provided power calibration offset, and the current gain.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,1903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="4E9B7CEAA0B4171D8E6C579A5A7386E2" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Updater Host Test" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6.75" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="40" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+		<BlockDiagram Id="13">
+			<CaseStructure Bounds="210 270 550 190" Default="21" Id="20" Selected="22" UserSelectorBounds="231 0 88 17">
+				<CaseStructure.Case Bounds="5 5 540 180" Id="21" Pattern="False">
+					<Wire Id="28" Joints="N(24:21) h(21) B(1) N(1085:948) B(1) v(10) N(40:RIO address)" xmlns="http://www.ni.com/PlatformFramework" />
+					<FPGADownloadNode Bounds="420 60 40 40" Id="32" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="33" Joints="N(1088:948) N(32:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="34" Joints="N(1091:948) N(32:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<FPGARunNode Bounds="480 60 40 40" Id="35" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="36" Joints="N(32:reference out) N(35:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="37" Joints="N(32:error out) N(35:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="38" Joints="N(35:error out) N(26:21)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="39" Joints="N(35:reference out) N(25:21)" xmlns="http://www.ni.com/PlatformFramework" />
+					<FPGAOpenNode Bounds="50 70 40 40" Id="40" ProjectItem=":NullTarget:USRP\-Empty\-0002\.lvbitx" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FPGADownloadNode Bounds="115 70 40 40" Id="41" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="42" Joints="N(40:error out) N(41:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="43" Joints="N(40:reference out) N(41:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<FPGARunNode Bounds="175 70 40 40" Id="44" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="45" Joints="N(41:reference out) N(44:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="46" Joints="N(41:error out) N(44:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<FPGACloseNode Bounds="245 70 40 40" Id="47" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="48" Joints="N(44:reference out) N(47:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="49" Joints="N(44:error out) N(47:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="50" Joints="N(47:error out) N(1094:948)" xmlns="http://www.ni.com/PlatformFramework" />
+					<CaseStructure Bounds="300 30 110 115" Id="948" Selected="950" UserSelectorBounds="11 0 88 17">
+						<CaseStructure.Case Bounds="5 5 100 105" Id="949" Pattern="True">
+							<FPGAOpenNode Bounds="30 25 40 40" Id="1096" ProjectItem=":NullTarget:USRP\-Updater\ 3x\ memory\ Toplevel\-0003\.lvbitx" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<Literal Bounds="18 35 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="1097" Label="1099" xmlns="http://www.ni.com/MocCommon">
+								<p.Data>False</p.Data>
+								<BooleanBehavior />
+								<DockedConstantFacade UndockedSize="26 15" />
+							</Literal>
+							<Wire Facade="WireInvisibleFacade" Id="1098" Joints="N(1097:Out) N(1096:run?)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+							<NodeLabel AttachedTo="1097" Bounds="18 35 0 0" Id="1099" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>run?</p.Text>
+							</NodeLabel>
+							<Wire Id="1100" Joints="N(1085:949) N(1096:RIO address)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1101" Joints="N(1096:reference out) N(1091:949)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1102" Joints="N(1096:error out) N(1088:949)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1103" Joints="N(1094:949) h(21) v(-10) N(1096:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 100 105" Id="950" Pattern="False">
+							<FPGAOpenNode Bounds="50 25 40 40" Id="27" ProjectItem=":NullTarget:USRP\-Updater\ Toplevel\-0016\.lvbitx" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<Literal Bounds="38 35 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="29" Label="31" xmlns="http://www.ni.com/MocCommon">
+								<p.Data>False</p.Data>
+								<BooleanBehavior />
+								<DockedConstantFacade UndockedSize="26 15" />
+							</Literal>
+							<NodeLabel AttachedTo="29" Bounds="38 35 0 0" Id="31" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>run?</p.Text>
+							</NodeLabel>
+							<Wire Id="1084" Joints="N(1085:950) N(27:RIO address)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1087" Joints="N(27:error out) N(1088:950)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1090" Joints="N(27:reference out) N(1091:950)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1093" Joints="N(1094:950) h(41) v(-10) N(27:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Facade="WireInvisibleFacade" Id="30" Joints="N(29:Out) N(27:run?)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 95 13 10" Docking="Left" Id="951" Terminals="948=1104, 949, 950" />
+						<CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="1085" Terminals="948=28, 949=1100, 950=1084" />
+						<CaseStructure.Tunnel Bounds="101 60 13 10" Docking="Right" Id="1088" Terminals="948=33, 949=1102, 950=1087" />
+						<CaseStructure.Tunnel Bounds="101 30 13 10" Docking="Right" Id="1091" Terminals="948=34, 949=1101, 950=1090" />
+						<CaseStructure.Tunnel Bounds="-4 70 13 10" Docking="Left" Id="1094" Terminals="948=50, 949=1103, 950=1093" />
+					</CaseStructure>
+					<Wire Id="1104" Joints="N(1105:21) N(951:948)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 540 180" Id="22" Pattern="True">
+					<Wire Id="52" Joints="N(24:22) N(1175:1107)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="54" Joints="N(1178:1107) N(26:22)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="708" Joints="N(1181:1107) N(25:22)" xmlns="http://www.ni.com/PlatformFramework" />
+					<CaseStructure Bounds="25 25 230 130" Id="1107" Selected="1108" UserSelectorBounds="71 0 88 17">
+						<CaseStructure.Case Bounds="5 5 220 120" Id="1108" Pattern="True">
+							<FPGAOpenNode Bounds="85 30 40 40" Id="1184" ProjectItem=":USRP:Updater\ 3x\ memory\ Toplevel" TopVITarget=":USRP:Updater\ 3x\ memory\ Toplevel:Updater\ Toplevel\ \-\ 3\ memories\.gvi" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<Wire Id="1185" Joints="N(1175:1108) N(1184:RIO address)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1186" Joints="N(1184:reference out) N(1181:1108)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1187" Joints="N(1184:error out) N(1178:1108)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 220 120" Id="1109" Pattern="False">
+							<FPGAOpenNode Bounds="35 30 40 40" Id="51" ProjectItem=":USRP:Updater\ Toplevel" TopVITarget=":USRP:Updater\ Toplevel:Updater\ Toplevel\ \-\ single\ memory\.gvi" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<Wire Id="1174" Joints="N(1175:1109) N(51:RIO address)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1177" Joints="N(51:error out) N(1178:1109)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="1180" Joints="N(51:reference out) N(1181:1109)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 100 13 10" Docking="Left" Id="1110" Terminals="1107=1183, 1108, 1109" />
+						<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="1175" Terminals="1107=52, 1108=1185, 1109=1174" />
+						<CaseStructure.Tunnel Bounds="221 65 13 10" Docking="Right" Id="1178" Terminals="1107=54, 1108=1187, 1109=1177" />
+						<CaseStructure.Tunnel Bounds="221 35 13 10" Docking="Right" Id="1181" Terminals="1107=708, 1108=1186, 1109=1180" />
+					</CaseStructure>
+					<Wire Id="1183" Joints="N(1105:22) N(1110:1107)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 80 13 10" Docking="Left" Id="23" Terminals="20=56, 21, 22" />
+				<CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="24" Terminals="20=58, 21=28, 22=52" />
+				<CaseStructure.Tunnel Bounds="541 65 13 10" Docking="Right" Id="25" Terminals="20=1344, 21=39, 22=708" />
+				<CaseStructure.Tunnel Bounds="541 95 13 10" Docking="Right" Id="26" Terminals="20=1347, 21=38, 22=54" />
+				<CaseStructure.Tunnel Bounds="-4 130 13 10" Docking="Left" Id="1105" Terminals="20=1106, 21=1104, 22=1183" />
+			</CaseStructure>
+			<DataAccessor Bounds="155 350 40 15" DataItem="73" Id="55" Label="70" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="56" Joints="N(55:Value) N(23:20)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="155 335 40 15" DataItem="74" Id="57" Label="71" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="58" Joints="N(57:Value) N(24:20)" xmlns="http://www.ni.com/PlatformFramework" />
+			<NodeLabel AttachedTo="55" Bounds="91 350 59 14" Id="70" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Simulation</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="57" Bounds="82 335 68 14" Id="71" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>RIO address</p.Text>
+			</NodeLabel>
+			<WhileLoop Bounds="1850 225 1186 575" DiagramId="158" Id="157">
+				<LoopIteration Bounds="5 545 15 15" Id="159" />
+				<LoopCondition Bounds="1160 545 15 15" Id="160" />
+				<Wire Id="317" Joints="N(318:i0) N(400:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="320" Joints="N(321:i0) N(403:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<CaseStructure Bounds="188 20 952 435" Default="324" Id="323" Selected="325" UserSelectorBounds="432 0 88 17">
+					<CaseStructure.Case Bounds="5 5 942 425" Id="324" Pattern="False">
+						<HostFifoReadNode Bounds="142 70 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="501" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+						<Wire Id="506" Joints="N(501:reference out) h(751) v(10) N(450:324)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="508" Joints="N(403:324) h(5) v(-10) N(501:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="509" Joints="N(501:error out) h(751) v(10) N(457:324)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Literal Bounds="71.5 80 39.5 16" DataType="Int32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="511" Label="512" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>-1</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						</Literal>
+						<Wire Id="513" Joints="N(511:Out) h(5) v(10) N(501:timeout (ms\))" xmlns="http://www.ni.com/PlatformFramework" />
+						<NodeLabel AttachedTo="511" Bounds="71.5 80 0 0" Id="512" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>timeout (ms)</p.Text>
+						</NodeLabel>
+						<Wire Id="514" Joints="N(515:324) v(-346) N(501:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="580" Joints="N(586:324) h(123) B(1) N(496:324) B(1) v(-205) N(501:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="711" Joints="N(501:data) h(10) v(125) N(1247:1188)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Increment Bounds="197 320 30 30" Id="723" />
+						<Wire Id="726" Joints="N(725:324) h(5) v(-10) N(723:x)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="727" Joints="N(723:x+1) h(155) v(10) B(2) N(728:324) B(2) v(15) N(733:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="387 355 40 15" DataItem="731" Id="733" Label="735" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="UInt32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="733" Bounds="432 355 92 14" Id="735" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>number of reads</p.Text>
+						</NodeLabel>
+						<CaseStructure Bounds="467 145 250 120" Id="1188" Selected="1189" UserSelectorBounds="81 0 88 17">
+							<CaseStructure.Case Bounds="5 5 240 110" Id="1189" Pattern="True">
+								<BuildArray Bounds="155 25 40 40" Id="1252" Terminals="outArray=1278, c0t0v=1258, c1t0v=1259, c2t0v=1260, c3t0v=1261" VerticalChunkCount="4" />
+								<SplitNumber Bounds="15 45 30 30" Id="1253" />
+								<SplitNumber Bounds="75 25 30 30" Id="1254" />
+								<Wire Id="1255" Joints="N(1253:high(x\)) h(25) v(-10) N(1254:x)" xmlns="http://www.ni.com/PlatformFramework" />
+								<SplitNumber Bounds="75 65 30 30" Id="1256" />
+								<Wire Id="1257" Joints="N(1253:low(x\)) h(25) v(15) N(1256:x)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1258" Joints="N(1254:high(x\)) N(1252:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1259" Joints="N(1254:low(x\)) h(5) v(-5) N(1252:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1260" Joints="N(1256:high(x\)) h(15) v(-20) N(1252:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1261" Joints="N(1256:low(x\)) h(25) v(-25) N(1252:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1262" Joints="N(1247:1189) N(1253:x)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1278" Joints="N(1252:outArray) h(5) v(20) N(1276:1189)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Case Bounds="5 5 240 110" Id="1190" Pattern="False">
+								<SplitNumber Bounds="5 45 30 30" Id="709" />
+								<BuildArray Bounds="60 45 40 20" Id="712" Terminals="outArray=715, c0t0v=713, c1t0v=714" VerticalChunkCount="2" />
+								<Wire Id="1246" Joints="N(1247:1190) N(709:x)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="715" Joints="N(712:outArray) N(1276:1190)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="713" Joints="N(709:high(x\)) N(712:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="714" Joints="N(709:low(x\)) h(20) v(-5) N(712:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="1191" Terminals="1188=1251, 1189, 1190" />
+							<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="1247" Terminals="1188=711, 1189=1262, 1190=1246" />
+							<CaseStructure.Tunnel Bounds="241 50 13 10" Docking="Right" Id="1276" Terminals="1188=1275, 1189=1278, 1190=715" />
+						</CaseStructure>
+						<DataAccessor Bounds="402 185 40 15" DataItem="911" Id="1249" Label="1250" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="1249" Bounds="297 185 100 14" Id="1250" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>3 Memory version</p.Text>
+						</NodeLabel>
+						<Wire Id="1251" Joints="N(1249:Value) N(1191:1188)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="742 195 40 15" DataItem="542" Id="543" Label="563" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="UInt32[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="543" Bounds="787 195 34 14" Id="563" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Graph</p.Text>
+						</NodeLabel>
+						<Wire Id="1275" Joints="N(1276:1188) N(543:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+					</CaseStructure.Case>
+					<CaseStructure.Case Bounds="5 5 942 425" Id="325" Pattern="True">
+						<MethodCall Bounds="447 80 40 40" DomainName="NI.MocCommon" Id="15" Target="start\ configuration\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="FPGA.Interface" />
+									<Parameter Id="L3" Desc="Error_in" />
+									<Parameter Id="R3" Desc="Error_out" />
+									<Parameter Id="R0" Desc="FPGA reference_out" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<MethodCall Bounds="887 80 40 40" DomainName="NI.MocCommon" Id="16" Target="stop\ configuration\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L3" Desc="error in" />
+									<Parameter Id="L0" Desc="FPGA reference_in" />
+									<Parameter Id="R0" Desc="FPGA reference out" />
+									<Parameter Id="R3" Desc="error out" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<MethodCall Bounds="572 80 40 60" DomainName="NI.MocCommon" Id="17" Target="write_array\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L5" Desc="error in" />
+									<Parameter Id="L4" Desc="update id" />
+									<Parameter Id="L3" Desc="address offset" />
+									<Parameter Id="L2" Desc="switch bank after" />
+									<Parameter Id="L1" Desc="Array" />
+									<Parameter Id="L0" Desc="FPGA reference_in" />
+									<Parameter Id="R0" Desc="FPGA reference out" />
+									<Parameter Id="R5" Desc="error out" />
+									<Parameter Id="R1" Desc="address offset out" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="Error" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt8" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt16" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt16" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt64[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Error" Direction="Output" Hotspot="40 55" Id="R5" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<Wire Id="399" Joints="N(400:325) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="18" Joints="N(15:R0) N(17:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="42 145 40 15" DataItem="405" Id="411" Label="412" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="411" Bounds="87 145 72 14" Id="412" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Do a update!</p.Text>
+						</NodeLabel>
+						<Literal Bounds="12 145 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="413" Label="414" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>False</p.Data>
+							<BooleanBehavior />
+						</Literal>
+						<Wire Id="415" Joints="N(413:Out) N(411:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+						<NodeLabel AttachedTo="413" Bounds="12 145 0 0" Id="414" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Do a update!</p.Text>
+						</NodeLabel>
+						<Literal Bounds="560 120 12 10" DataType="UInt8" Facade="DockedConstantFacade" Id="421" Label="422" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>1</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+							<DockedConstantFacade UndockedSize="39.5 16" />
+						</Literal>
+						<Wire Facade="WireInvisibleFacade" Id="423" Joints="N(421:Out) N(17:L4)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+						<NodeLabel AttachedTo="421" Bounds="560 120 0 0" Id="422" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>update id</p.Text>
+						</NodeLabel>
+						<Wire Id="449" Joints="N(16:R0) N(450:325)" xmlns="http://www.ni.com/PlatformFramework" />
+						<MethodCall Bounds="127 180 40 40" DomainName="NI.MocCommon" Id="467" Target="create\ ramp\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="length" />
+									<Parameter Id="L1" Desc="offset" />
+									<Parameter Id="R0" Desc="data in" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="UInt16" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Int32" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt8[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<DataAccessor Bounds="72 180 40 15" DataItem="468" Id="471" Label="472" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="471" Bounds="32 180 35 14" Id="472" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>length</p.Text>
+						</NodeLabel>
+						<Wire Id="474" Joints="N(467:R0) h(18) v(-120) h(372) B(3) N(1316:921) B(3) v(30) N(17:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+						<PropertyNode Bounds="222 300 211 45" Id="492" InstanceDataType="@1b5fcce7b127484abf30c1b3ed462b55" Mode="InstanceProperties" Template="List">
+							<PropertyItemTerminal Action="Write" DataType="UInt16" Hotspot="0 25" Id="c0t0v" Path="length" Usage="Required" />
+						</PropertyNode>
+						<Wire Id="658" Joints="N(471:Value) h(5) B(1) N(467:L0) B(1) v(105) B(3) N(496:325) B(3) v(35) N(492:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="671" Joints="N(515:325) v(-116) N(492:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="686" Joints="N(16:R3) N(457:325)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="689" Joints="N(403:325) h(201) v(200) N(492:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="690" Joints="N(492:error out) h(7) v(-200) N(15:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="692" Joints="N(492:instance out) N(903:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="730" Joints="N(725:325) h(213) v(5) h(716) v(-5) N(728:325)" xmlns="http://www.ni.com/PlatformFramework" />
+						<MergeErrors Bounds="502 130 30 20" Id="738" Terminals="error out=740, c0t0v=741, c1t0v=739" />
+						<Wire Id="739" Joints="N(906:o0) h(9) v(-95) h(-168) v(-95) N(738:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="740" Joints="N(738:error out) N(17:L5)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="741" Joints="N(15:R3) h(5) v(20) N(738:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+						<WhileLoop Bounds="472 255 180 130" DiagramId="743" Id="742">
+							<LoopIteration Bounds="5 100 15 15" Id="744" />
+							<LoopCondition Bounds="150 100 15 15" Id="745" />
+							<HostFifoReadNode Bounds="35 40 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="691" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<Literal Bounds="23 50 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="694" Label="695" xmlns="http://www.ni.com/MocCommon">
+								<p.Data>0</p.Data>
+								<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+								<DockedConstantFacade UndockedSize="39.5 16" />
+							</Literal>
+							<HostFifoReadNode Bounds="100 40 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="697" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+							<NodeLabel AttachedTo="694" Bounds="23 50 0 0" Id="695" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>number of elements</p.Text>
+							</NodeLabel>
+							<Wire Id="902" Joints="N(903:i0) N(691:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="905" Joints="N(697:error out) N(906:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="701" Joints="N(691:reference out) N(697:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Facade="WireInvisibleFacade" Id="696" Joints="N(694:Out) N(691:number of elements)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="703" Joints="N(691:elements remaining) h(15) B(1) v(-10) N(697:number of elements) B(1) v(40) N(908:x)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="702" Joints="N(691:error out) N(697:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+							<IsEqualTo0 Bounds="95 90 30 30" Id="908" />
+							<Wire Id="910" Joints="N(908:x = 0?) N(745:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+							<LoopTunnel Bounds="-4 45 13 10" Docking="Left" Id="903" Terminals="o0=692, i0=902" />
+							<LoopTunnel Bounds="171 75 13 10" Docking="Right" Id="906" Terminals="o0=739, i0=905" />
+						</WhileLoop>
+						<Wire Id="920" Joints="N(941:921) h(11) v(-20) N(16:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+						<CaseStructure Bounds="637 15 230 155" Default="922" Id="921" Selected="923" UserSelectorBounds="71 0 88 17">
+							<CaseStructure.Case Bounds="5 5 220 145" Id="922" Pattern="False">
+								<Wire Id="943" Joints="N(926:922) N(938:922)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="944" Joints="N(929:922) N(941:922)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Case Bounds="5 5 220 145" Id="923" Pattern="True">
+								<MethodCall Bounds="65 60 40 60" DomainName="NI.MocCommon" Id="916" Target="write_array\.gvi" xmlns="http://www.ni.com/MocCommon">
+									<p.MethodDeclaration>
+										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+											<Parameter Id="L5" Desc="error in" />
+											<Parameter Id="L4" Desc="update id" />
+											<Parameter Id="L3" Desc="address offset" />
+											<Parameter Id="L2" Desc="switch bank after" />
+											<Parameter Id="L1" Desc="Array" />
+											<Parameter Id="L0" Desc="FPGA reference_in" />
+											<Parameter Id="R0" Desc="FPGA reference out" />
+											<Parameter Id="R5" Desc="error out" />
+											<Parameter Id="R1" Desc="address offset out" />
+										</MethodDeclaration>
+									</p.MethodDeclaration>
+									<Terminal DataType="Error" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt8" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt16" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt16" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt64[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="Error" Direction="Output" Hotspot="40 55" Id="R5" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+								</MethodCall>
+								<Literal Bounds="53 100 12 10" DataType="UInt8" Facade="DockedConstantFacade" Id="917" Label="919" xmlns="http://www.ni.com/MocCommon">
+									<p.Data>2</p.Data>
+									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+									<DockedConstantFacade UndockedSize="39.5 16" />
+								</Literal>
+								<Wire Facade="WireInvisibleFacade" Id="918" Joints="N(917:Out) N(916:L4)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+								<NodeLabel AttachedTo="917" Bounds="53 100 0 0" Id="919" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+									<p.Text>update id</p.Text>
+								</NodeLabel>
+								<Wire Id="927" Joints="N(926:923) N(916:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="930" Joints="N(929:923) N(916:L5)" xmlns="http://www.ni.com/PlatformFramework" />
+								<MethodCall Bounds="160 60 40 60" DomainName="NI.MocCommon" Id="931" Target="write_array\.gvi" xmlns="http://www.ni.com/MocCommon">
+									<p.MethodDeclaration>
+										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+											<Parameter Id="L5" Desc="error in" />
+											<Parameter Id="L4" Desc="update id" />
+											<Parameter Id="L3" Desc="address offset" />
+											<Parameter Id="L2" Desc="switch bank after" />
+											<Parameter Id="L1" Desc="Array" />
+											<Parameter Id="L0" Desc="FPGA reference_in" />
+											<Parameter Id="R0" Desc="FPGA reference out" />
+											<Parameter Id="R5" Desc="error out" />
+											<Parameter Id="R1" Desc="address offset out" />
+										</MethodDeclaration>
+									</p.MethodDeclaration>
+									<Terminal DataType="Error" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt8" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt16" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt16" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="UInt64[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="Error" Direction="Output" Hotspot="40 55" Id="R5" xmlns="http://www.ni.com/PlatformFramework" />
+									<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+								</MethodCall>
+								<Literal Bounds="148 100 12 10" DataType="UInt8" Facade="DockedConstantFacade" Id="932" Label="934" xmlns="http://www.ni.com/MocCommon">
+									<p.Data>3</p.Data>
+									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+									<DockedConstantFacade UndockedSize="39.5 16" />
+								</Literal>
+								<Wire Facade="WireInvisibleFacade" Id="933" Joints="N(932:Out) N(931:L4)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+								<NodeLabel AttachedTo="932" Bounds="148 100 0 0" Id="934" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+									<p.Text>update id</p.Text>
+								</NodeLabel>
+								<Wire Id="935" Joints="N(916:R0) N(931:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="936" Joints="N(916:R5) N(931:L5)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="937" Joints="N(931:R0) N(938:923)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="940" Joints="N(931:R5) N(941:923)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Increment Bounds="20 30 30 30" Id="1319" />
+								<Wire Id="1323" Joints="N(1316:923) N(1319:x)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Increment Bounds="115 30 30 30" Id="1324" />
+								<Wire Id="1327" Joints="N(1324:x+1) h(5) v(30) N(931:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="1328" Joints="N(1319:x+1) h(5) B(1) N(1324:x) B(1) v(30) N(916:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Selector Bounds="-4 10 13 10" Docking="Left" Id="924" Terminals="921=945, 922, 923" />
+							<CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="926" Terminals="921=925, 922=943, 923=927" />
+							<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="929" Terminals="921=928, 922=944, 923=930" />
+							<CaseStructure.Tunnel Bounds="221 65 13 10" Docking="Right" Id="938" Terminals="921=939, 922=943, 923=937" />
+							<CaseStructure.Tunnel Bounds="221 115 13 10" Docking="Right" Id="941" Terminals="921=920, 922=944, 923=940" />
+							<CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="1316" Terminals="921=474, 922, 923=1323" />
+						</CaseStructure>
+						<Wire Id="925" Joints="N(17:R0) N(926:921)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="928" Joints="N(17:R5) N(929:921)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="939" Joints="N(938:921) N(16:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="547 25 40 15" DataItem="911" Id="912" Label="915" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="912" Bounds="442 25 100 14" Id="915" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>3 Memory version</p.Text>
+						</NodeLabel>
+						<Wire Id="945" Joints="N(912:Value) N(924:921)" xmlns="http://www.ni.com/PlatformFramework" />
+					</CaseStructure.Case>
+					<CaseStructure.Selector Bounds="-4 155 13 10" Docking="Left" Id="326" Terminals="323=591, 324, 325" />
+					<CaseStructure.Tunnel Bounds="-4 85 13 10" Docking="Left" Id="400" Terminals="323=317, 324, 325=399" />
+					<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="403" Terminals="323=320, 324=508, 325=689" />
+					<CaseStructure.Tunnel Bounds="943 85 13 10" Docking="Right" Id="450" Terminals="323=451, 324=506, 325=449" />
+					<CaseStructure.Tunnel Bounds="943 115 13 10" Docking="Right" Id="457" Terminals="323=488, 324=509, 325=686" />
+					<CaseStructure.Tunnel Bounds="943 290 13 10" Docking="Right" Id="496" Terminals="323=495, 324=580, 325=658" />
+					<CaseStructure.Tunnel Bounds="12 426 10 13" Docking="Bottom" Id="515" Terminals="323=480, 324=514, 325=671" />
+					<CaseStructure.Tunnel Bounds="-4 290 13 10" Docking="Left" Id="586" Terminals="323=585, 324=580, 325" />
+					<CaseStructure.Tunnel Bounds="-4 345 13 10" Docking="Left" Id="725" Terminals="323=724, 324=726, 325=730" />
+					<CaseStructure.Tunnel Bounds="943 345 13 10" Docking="Right" Id="728" Terminals="323=729, 324=727, 325=730" />
+				</CaseStructure>
+				<DataAccessor Bounds="135 175 40 15" DataItem="405" Id="407" Label="409" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<NodeLabel AttachedTo="407" Bounds="58 175 72 14" Id="409" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>Do a update!</p.Text>
+				</NodeLabel>
+				<Wire Id="451" Joints="N(450:323) N(452:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<DataAccessor Bounds="1100 545 40 15" DataItem="461" Id="464" Label="465" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<Wire Id="466" Joints="N(464:Value) N(160:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="464" Bounds="1071 545 24 14" Id="465" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>stop</p.Text>
+				</NodeLabel>
+				<Wire Id="480" Joints="N(481:i0) h(201) N(515:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="488" Joints="N(457:323) N(455:i0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="495" Joints="N(496:323) N(582:158)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="585" Joints="N(584:i0) N(586:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="591" Joints="N(407:Value) N(326:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="724" Joints="N(721:i0) N(725:323)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="729" Joints="N(728:323) N(722:158)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopTunnel Bounds="-4 110 13 10" Docking="Left" Id="318" Terminals="o0=1332, i0=317" />
+				<LoopTunnel Bounds="-4 140 13 10" Docking="Left" Id="321" Terminals="o0=1333, i0=320" />
+				<LoopTunnel Bounds="1177 110 13 10" Docking="Right" Id="452" Terminals="o0=453, i0=451" />
+				<LoopTunnel Bounds="1177 140 13 10" Docking="Right" Id="455" Terminals="o0=454, i0=488" />
+				<LoopTunnel Bounds="-4 470 13 10" Docking="Left" Id="481" Terminals="o0=1344, i0=480" />
+				<RightShiftRegister Bounds="1177 315 13 10" Docking="Right" Id="582" Terminals="157, 158=495" />
+				<LeftShiftRegister Bounds="-4 315 13 10" Docking="Left" Id="584" RightRegister="582" Terminals="o0=589, i0=585" />
+				<LeftShiftRegister Bounds="-4 370 13 10" Docking="Left" Id="721" RightRegister="722" Terminals="o0=718, i0=724" />
+				<RightShiftRegister Bounds="1177 370 13 10" Docking="Right" Id="722" Terminals="157, 158=729" />
+			</WhileLoop>
+			<DataAccessor Bounds="1710 270 40 15" DataItem="405" Id="416" Label="417" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="416" Bounds="1755 270 72 14" Id="417" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Do a update!</p.Text>
+			</NodeLabel>
+			<Literal Bounds="1675 270 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="418" Label="419" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>True</p.Data>
+				<BooleanBehavior />
+			</Literal>
+			<NodeLabel AttachedTo="418" Bounds="1675 270 0 0" Id="419" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Do a update!</p.Text>
+			</NodeLabel>
+			<Wire Id="420" Joints="N(418:Out) N(416:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<GetExecutionModeNode Bounds="3050 335 40 40" Id="425" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<CaseStructure Bounds="3130 290 180 115" DataType="@fc2c687192604fd0a21b2079a2b98a85" Default="427" Id="426" Selected="428" UserSelectorBounds="5 0 170 17">
+				<CaseStructure.Case Bounds="5 5 170 105" Id="427" Pattern="&quot;hardware&quot;, Default">
+					<FPGACloseNode Bounds="40 40 40 40" Id="433" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="434" Joints="N(430:427) N(433:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="435" Joints="N(431:427) N(433:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="436" Joints="N(433:error out) N(432:427)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 170 105" Id="428" Pattern="&quot;simulation&quot;">
+					<FPGACloseNode Bounds="45 40 40 40" Id="437" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="438" Joints="N(430:428) N(437:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="439" Joints="N(431:428) N(437:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="33 50 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="440" Label="442" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>True</p.Data>
+						<BooleanBehavior />
+						<DockedConstantFacade UndockedSize="26 15" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="441" Joints="N(440:Out) N(437:abort?)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="440" Bounds="33 50 0 0" Id="442" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>abort?</p.Text>
+					</NodeLabel>
+					<Wire Id="443" Joints="N(437:error out) N(432:428)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 55 13 10" Docking="Left" Id="429" Terminals="426=444, 427, 428" />
+				<CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="430" Terminals="426=445, 427=434, 428=438" />
+				<CaseStructure.Tunnel Bounds="-4 75 13 10" Docking="Left" Id="431" Terminals="426=446, 427=435, 428=439" />
+				<CaseStructure.Tunnel Bounds="171 75 13 10" Docking="Right" Id="432" Terminals="426=448, 427=436, 428=443" />
+			</CaseStructure>
+			<Wire Id="444" Joints="N(425:execution mode) N(429:426)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="445" Joints="N(425:reference out) N(430:426)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="446" Joints="N(425:error out) N(431:426)" xmlns="http://www.ni.com/PlatformFramework" />
+			<MethodCall Bounds="3370 365 40 40" DomainName="NI.MocCommon" Id="447" Target="Display\ Error\.gvi" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L1" Desc="type of dialog" />
+						<Parameter Id="L0" Desc="error in" />
+						<Parameter Id="R0" Desc="error?" />
+						<Parameter Id="R1" Desc="code" />
+						<Parameter Id="R2" Desc="location" />
+						<Parameter Id="R3" Desc="description" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="@f6dfab9d095b400584aa3e3c2284683f" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Error" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="String" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="String" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<Wire Id="448" Joints="N(432:426) N(447:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="453" Joints="N(452:o0) N(425:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="454" Joints="N(455:o0) N(425:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="1780 540 39.5 16" DataType="UInt16" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="588" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<Wire Id="589" Joints="N(588:Out) N(584:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="1780 595 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="717" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<Wire Id="718" Joints="N(717:Out) N(721:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="155 400 40 15" DataItem="911" Id="946" Label="947" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="946" Bounds="50 400 100 14" Id="947" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>3 Memory version</p.Text>
+			</NodeLabel>
+			<Wire Id="1106" Joints="N(946:Value) N(1105:20)" xmlns="http://www.ni.com/PlatformFramework" />
+			<WhileLoop Bounds="1850 820 1130 205" DiagramId="1280" Id="1279">
+				<LoopIteration Bounds="5 175 15 15" Id="1281" />
+				<LoopCondition Bounds="1100 175 15 15" Id="1282" />
+				<PropertyNode Bounds="280 40 211 60" Id="475" InstanceDataType="@1b5fcce7b127484abf30c1b3ed462b55" Mode="InstanceProperties" Template="List">
+					<PropertyItemTerminal DataType="Int32" Hotspot="211 25" Id="c0t0v" Path="loop iteration" Usage="Optional" />
+					<PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 40" Id="c1t0v" Path="read enable" Usage="Required" />
+				</PropertyNode>
+				<DataAccessor Bounds="505 60 40 15" DataItem="568" Id="570" Label="572" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Int32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<Wire Id="573" Joints="N(475:c0t0v) N(570:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="570" Bounds="550 60 74 14" Id="572" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>loop iteration</p.Text>
+				</NodeLabel>
+				<Literal Bounds="268 75 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="683" Label="684" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="685" Joints="N(683:Out) N(475:c1t0v)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1304" Joints="N(1305:i0) N(475:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="683" Bounds="268 75 0 0" Id="684" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>read enable</p.Text>
+				</NodeLabel>
+				<DataAccessor Bounds="1040 160 40 15" DataItem="461" Id="1307" Label="1308" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<NodeLabel AttachedTo="1307" Bounds="1011 160 24 14" Id="1308" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>stop</p.Text>
+				</NodeLabel>
+				<Wire Id="1309" Joints="N(1307:Value) h(5) v(15) N(1282:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopTunnel Bounds="-4 45 13 10" Docking="Left" Id="1305" Terminals="o0=1344, i0=1304" />
+			</WhileLoop>
+			<DataAccessor Bounds="1540 575 40 15" DataItem="461" Id="1310" Label="1311" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="1310" Bounds="1585 575 24 14" Id="1311" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>stop</p.Text>
+			</NodeLabel>
+			<Literal Bounds="1500 575 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1312" Label="1313" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>False</p.Data>
+				<BooleanBehavior />
+			</Literal>
+			<NodeLabel AttachedTo="1312" Bounds="1500 575 0 0" Id="1313" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>stop</p.Text>
+			</NodeLabel>
+			<Wire Id="1314" Joints="N(1312:Out) N(1310:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1332" Joints="N(2050:1355) N(318:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1333" Joints="N(2053:1355) N(321:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1344" Joints="N(25:20) h(16) B(1) N(1481:1355) B(1) v(-95) h(225) N(1864:1355) B(1) v(360) B(6) N(481:o0) B(6) v(170) N(1305:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1347" Joints="N(26:20) N(1484:1355)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FlatSequence Bounds="800 260 860 170" Id="1355">
+				<FlatSequence.Frame Bounds="5 10 190 150" Id="1356">
+					<MethodCall Bounds="95 65 40 40" DomainName="NI.MocCommon" Id="1342" Target="wait\ for\ fpga\ start\.gvi" xmlns="http://www.ni.com/MocCommon">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="L0" Desc="FPGA interface_in" />
+								<Parameter Id="L3" Desc="Error_in" />
+								<Parameter Id="R0" Desc="FPGA.Interface_out" />
+								<Parameter Id="R3" Desc="Error_out" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+					</MethodCall>
+					<DynamicFpgaInterfaceCast Bounds="45 65 30 15" Id="1349" Label="1352" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<NodeLabel AttachedTo="1349" Bounds="45 65 0 0" Id="1352" IsReadOnly="True" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>Dynamic FPGA Interface Cast</p.Text>
+					</NodeLabel>
+					<Wire Id="1480" Joints="N(1481:1356) N(1349:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1483" Joints="N(1484:1356) N(1342:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1486" Joints="N(1342:R3) N(1491:1356)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1354" Joints="N(1349:reference out) N(1342:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Facade="WireInvisibleFacade" Id="1351" Joints="N(2069:Out) h(5) v(2) h(-21) N(1349:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<OpaqueRefnumLiteral Bounds="64 53 12 10" DataType="@4719273b9d794395b344e50a0c40da29" Facade="DockedConstantFacade" Id="2069" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+							<TypeDefinitionTarget TargetName="Updater\ FPGA\ reference\.gtype" />
+						</p.TypeDefinitionTargets>
+						<OpaqueRefnumLiteralBehavior />
+						<DockedConstantFacade UndockedSize="65 15" />
+					</OpaqueRefnumLiteral>
+				</FlatSequence.Frame>
+				<FlatSequence.Frame Bounds="200 10 360 150" Id="1489">
+					<HostFifoConfigureNode Bounds="40 65 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="518" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<HostFifoStartNode Bounds="170 65 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="519" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<HostFifoStopNode Bounds="105 65 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="520" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="521" Joints="N(518:reference out) N(520:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="522" Joints="N(518:error out) N(520:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="523" Joints="N(520:reference out) N(519:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="524" Joints="N(520:error out) N(519:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<HostFifoReadNode Bounds="240 65 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="525" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<HostFifoReadNode Bounds="310 65 40 40" FifoName="&quot;Resources.grsc\\upload&quot;" Id="526" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="527" Joints="N(525:reference out) N(526:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="528" Joints="N(525:error out) N(526:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="529" Joints="N(525:elements remaining) h(23) v(-10) N(526:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="530" Joints="N(519:reference out) N(525:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="531" Joints="N(519:error out) N(525:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="28 75 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="532" Label="536" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>1000000</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="58 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="533" Joints="N(532:Out) N(518:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="228 75 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="534" Label="537" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="535" Joints="N(534:Out) h(5) v(30) h(-22) v(-30) N(525:number of elements)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1863" Joints="N(1864:1489) v(66) N(518:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="532" Bounds="28 75 0 0" Id="536" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>depth</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="534" Bounds="228 75 0 0" Id="537" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>number of elements</p.Text>
+					</NodeLabel>
+					<Wire Id="2061" Joints="N(526:reference out) N(2060:1489)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2062" Joints="N(526:error out) N(2063:1489)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2065" Joints="N(1491:1489) N(518:error in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</FlatSequence.Frame>
+				<FlatSequence.Frame Bounds="565 10 290 150" Id="1494">
+					<MethodCall Bounds="95 65 40 40" DomainName="NI.MocCommon" Id="140" Target="setup\ configuration\ FIFOs\.gvi" xmlns="http://www.ni.com/MocCommon">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="L0" Desc="FPGA interface_in" />
+								<Parameter Id="L3" Desc="Error_in" />
+								<Parameter Id="R0" Desc="FPGA.Interface_out" />
+								<Parameter Id="R3" Desc="Error_out" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+					</MethodCall>
+					<DynamicFpgaInterfaceCast Bounds="20 65 30 15" Id="149" Label="152" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<MethodCall Bounds="165 65 40 40" DomainName="NI.MocCommon" Id="1329" Target="reset\.gvi" xmlns="http://www.ni.com/MocCommon">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="L0" Desc="FPGA interface_in" />
+								<Parameter Id="L3" Desc="Error_in" />
+								<Parameter Id="R0" Desc="FPGA.Interface_out" />
+								<Parameter Id="R3" Desc="Error_out" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@4719273b9d794395b344e50a0c40da29" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+					</MethodCall>
+					<Wire Id="1330" Joints="N(140:R0) N(1329:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1331" Joints="N(140:R3) N(1329:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1338" Joints="N(149:reference out) N(140:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="149" Bounds="20 65 0 0" Id="152" IsReadOnly="True" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>Dynamic FPGA Interface Cast</p.Text>
+					</NodeLabel>
+					<Wire Facade="WireInvisibleFacade" Id="151" Joints="N(2068:Out) v(7) N(149:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2049" Joints="N(1329:R0) N(2050:1494)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2052" Joints="N(1329:R3) N(2053:1494)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2059" Joints="N(2060:1494) N(149:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2064" Joints="N(2063:1494) N(140:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+					<OpaqueRefnumLiteral Bounds="40 53 12 10" DataType="@4719273b9d794395b344e50a0c40da29" Facade="DockedConstantFacade" Id="2068" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+							<TypeDefinitionTarget TargetName="Updater\ FPGA\ reference\.gtype" />
+						</p.TypeDefinitionTargets>
+						<OpaqueRefnumLiteralBehavior />
+						<DockedConstantFacade UndockedSize="65 15" />
+					</OpaqueRefnumLiteral>
+				</FlatSequence.Frame>
+				<FlatSequence.Tunnel Bounds="-4 75 13 10" Docking="Left" Id="1481" Terminals="1355=1344, 1356=1480" />
+				<FlatSequence.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="1484" Terminals="1355=1347, 1356=1483" />
+				<FlatSequence.Tunnel Bounds="191 105 13 10" Docking="VerticalSplitter" Id="1491" Terminals="1489=2065, 1356=1486" />
+				<FlatSequence.Tunnel Bounds="200 -4 10 18" Docking="Top" Id="1864" Terminals="1355=1344, 1489=1863" />
+				<FlatSequence.Tunnel Bounds="851 75 13 10" Docking="Right" Id="2050" Terminals="1355=1332, 1494=2049" />
+				<FlatSequence.Tunnel Bounds="851 105 13 10" Docking="Right" Id="2053" Terminals="1355=1333, 1494=2052" />
+				<FlatSequence.Tunnel Bounds="556 75 13 10" Docking="VerticalSplitter" Id="2060" Terminals="1494=2059, 1489=2061" />
+				<FlatSequence.Tunnel Bounds="556 105 13 10" Docking="VerticalSplitter" Id="2063" Terminals="1489=2062, 1494=2064" />
+			</FlatSequence>
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=542}" Height="[float]400" Id="544" Label="[UIModel]562" Left="[float]223" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]65" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="545" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]556" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 9, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="556" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="546" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]557" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 12, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+					<RangeLabeledDivisions Id="557" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
+				</Axis>
+				<Plot HorizontalScale="[UIModel]545" Id="547" Label="[string]data" VerticalScale="[UIModel]546" Visibility="[SMVisibility]Visible" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="548" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="549" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="550" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="551" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="552" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="553" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="554" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="555" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+				<Cursor CrosshairBrush="[SMSolidColorBrush]#ff000000" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="590" Label="[string]Cursor 1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetShape="[PointShape]Ellipse" Value="[string]System.Double, mscorlib]|[8]|[System.Double, mscorlib]|[9" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+				<Plot HorizontalScale="[UIModel]545" Id="716" Label="[string]addr" VerticalScale="[UIModel]546" Visibility="[SMVisibility]Visible" />
+				<Plot HorizontalScale="[UIModel]545" Id="1340" Label="[string]Plot 3" VerticalScale="[UIModel]546" Visibility="[SMVisibility]Visible" />
+				<Plot HorizontalScale="[UIModel]545" Id="1341" Label="[string]Plot 4" VerticalScale="[UIModel]546" Visibility="[SMVisibility]Visible" />
+			</Graph>
+			<PlotLegend Graph="[UIModel]544" Height="[float]54" Id="558" Left="[float]830" Top="[float]65" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]544" Height="[float]102" Id="559" Left="[float]228" MinHeight="[float]80" Top="[float]494" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]544" Height="[float]50" Id="560" Left="[float]830" MinHeight="[float]50" Top="[float]363" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]544" Height="[float]22" Id="561" Left="[float]228" Top="[float]472" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="562" LabelOwner="[UIModel]544" Left="[float]223" Text="[string]Graph" Top="[float]42" Width="[float]33" xmlns="http://www.ni.com/PanelCommon" />
+			<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="77" IsReadOnly="[bool]False" Label="[UIModel]78" Left="[float]82" Text="{DataItemBinding Id=74}" Top="[float]65" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="78" LabelOwner="[UIModel]77" Left="[float]82" Text="[string]RIO address" Top="[float]42" Width="[float]64" xmlns="http://www.ni.com/PanelCommon" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="75" IsReadOnly="[bool]False" Label="[UIModel]76" Left="[float]82" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]120" TrueContent="[string]On" Value="{DataItemBinding Id=73}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="76" LabelOwner="[UIModel]75" Left="[float]82" Text="[string]Simulation" Top="[float]97" Width="[float]57" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="469" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ushort]1" Label="[UIModel]564" Left="[float]92" MinHeight="[float]22" Minimum="[ushort]1" Top="[float]204" Value="{DataItemBinding Id=468}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="564" LabelOwner="[UIModel]469" Left="[float]92" Text="[string]length" Top="[float]181" Width="[float]34" xmlns="http://www.ni.com/PanelCommon" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="408" IsReadOnly="[bool]False" Label="[UIModel]565" Left="[float]82" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]261" TrueContent="[string]On" Value="{DataItemBinding Id=405}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="565" LabelOwner="[UIModel]408" Left="[float]82" Text="[string]Do a update!" Top="[float]238" Width="[float]69" xmlns="http://www.ni.com/PanelCommon" />
+			<Button BaseName="[string]Stop" ClickMode="[ClickMode]Press" Content="[string]Stop" Foreground="[SMColor]#ffff0000" Height="[float]30" Id="462" IncludeInCapture="[bool]False" IsMomentary="[bool]False" Label="[UIModel]566" Latch="[bool]True" Left="[float]82" MinHeight="[float]13" MinWidth="[float]13" Shape="[ButtonShape]Square" Top="[float]340" Value="{DataItemBinding Id=461}" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="566" LabelOwner="[UIModel]462" Left="[float]82" Text="[string]stop" Top="[float]317" Width="[float]24" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="571" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[int]1" Label="[UIModel]574" Left="[float]77" MinHeight="[float]22" Top="[float]396" Value="{DataItemBinding Id=568}" ValueFormatter="[string]LV:G13" ValueType="[Type]Int32" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="574" LabelOwner="[UIModel]571" Left="[float]77" Text="[string]loop iteration" Top="[float]373" Width="[float]72" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="734" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Label="[UIModel]736" Left="[float]77" MinHeight="[float]22" Top="[float]443" Value="{DataItemBinding Id=731}" ValueFormatter="[string]LV:G15" ValueType="[Type]UInt32" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="736" LabelOwner="[UIModel]734" Left="[float]77" Text="[string]number of reads" Top="[float]420" Width="[float]88" xmlns="http://www.ni.com/PanelCommon" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="913" Label="[UIModel]914" Left="[float]77" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]497" TrueContent="[string]On" Value="{DataItemBinding Id=911}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="914" LabelOwner="[UIModel]913" Left="[float]77" Text="[string]3 Memory version" Top="[float]474" Width="[float]96" xmlns="http://www.ni.com/PanelCommon" />
+		</CPFrontPanel>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="73" Name="Simulation" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>True</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="String" Id="74" Name="RIO address" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>RIO0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="405" Name="Do a update!" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="461" Name="stop" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt16" Id="468" Name="length" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>10</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32[,]" Id="542" Name="Graph" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0,0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Int32" Id="568" Name="loop iteration" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32" Id="731" Name="number of reads" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="911" Name="3 Memory version" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="start\ configuration\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]start configuration" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="stop\ configuration\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]stop configuration" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="write_array\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 60">
+							<IconPanel Height="[float]60" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]write_array" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]54" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="create\ ramp\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]create ramp" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="8.25" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="Display\ Error\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<Canvas Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+									<Path Data="[PathGeometry]M 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 " Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+									<Path Data="[PathGeometry]M 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 " Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+									<Path Data="[PathGeometry]M 4,2 L 36,2 C 37.104,2 38,2.896 38,4 L 38,36 C 38,37.105 37.104,38 36,38 L 4,38 C 2.896,38 2,37.105 2,36 L 2,4 C 2,2.896 2.896,2 4,2 " Fill="[SMSolidColorBrush]#ffebebeb" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+									<Path Data="[PathGeometry]M 4.001,2.001 C 2.897,2.001 2.001,2.966 2.001,4.155 L 2.001,16 L 16,16 L 16,2 L 4.001,2.001 Z M 4.239,11.354 L 4.024,9.42 L 7.893,9.42 L 4.239,11.354 Z M 3.452,5.968 L 5.1,4.036 L 8.897,7.903 L 3.452,5.968 Z M 12.954,14 L 10.233,14 L 10.233,12.222 L 12.954,12.222 L 12.954,14 Z M 12.692,11.11 L 10.495,11.11 L 10.186,3.97 L 13.002,3.97 L 12.692,11.11 Z" Fill="[SMSolidColorBrush]#ffa0a017" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+									<Path Data="[PathGeometry]M 18,18 L 4,18 L 4,17 L 17,17 L 17,10 L 18,10 L 18,18 Z M 33.971,10 L 19,10 L 19,18 L 19,19 L 18,19 L 4,19 L 4,26.971 C 4,28.092 4.908,29 6.029,29 L 28,29 L 28,33 L 31.971,29 L 33.971,29 C 35.091,29 36,28.092 36,26.971 L 36,12.029 C 36,10.908 35.091,10 33.971,10 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+								</Canvas>
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="wait\ for\ fpga\ start\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]wait for fpga start" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6.75" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="setup\ configuration\ FIFOs\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]setup configuration FIFOs" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="reset\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]reset" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="10.5" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+		</IconTable>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="4719273b9d794395b344e50a0c40da29">
+			<Typedef TypedefName="Updater FPGA reference.gtype" UnderlyingType="@50fdfdbc6a814dc9813f13fe79dfa8de" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="1b5fcce7b127484abf30c1b3ed462b55">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Composite Id="1" Name="configuration_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="2" Name="configuration_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="2" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="configuration_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="3" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt64" />
+											<Field FieldAccessPolicy="ReadWrite" Name="data valid" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="length" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="switch bank after" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="address" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="bank" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="address offset" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="update id" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="start update" DataType="Boolean" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="configuration_in">
+										<DataType>
+											<Composite RefId="3" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="4" Name="control signals_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="5" Name="control signals_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="5" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="control signals_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="6" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reset!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="reset done?" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="request for config!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="config done?" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="set active!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="active?" DataType="Boolean" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="control signals_in">
+										<DataType>
+											<Composite RefId="6" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="7" Name="control signals_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="8" Name="control signals_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="8" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="control signals_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite RefId="6" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="control signals_out">
+										<DataType>
+											<Composite RefId="6" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="9" Name="IFPGAReferenceDataType" ReferenceClass="" Interface="" GenericTypeDefinition="Void" BaseType="Void" />
+							<Composite Id="10" Name="initial reset done_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="11" Name="initial reset done_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="11" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="initial reset done_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="initial reset done_out" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="12" Name="length" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="13" Name="length" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="13" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="length">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt16 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="length" DataType="UInt16" />
+								</Members>
+							</Composite>
+							<Composite Id="14" Name="loop iteration" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="15" Name="loop iteration" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="15" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="loop iteration">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Int32 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="loop iteration" DataType="Int32" />
+								</Members>
+							</Composite>
+							<Composite Id="16" Name="read enable" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="17" Name="read enable" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="17" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="read enable">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="read enable" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="18" Name="ready for configuration_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="19" Name="ready for configuration_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="19" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="ready for configuration_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="ready for configuration_out" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="20" Name="Resources.grsc\upload" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="21" Name="Resources.grsc\upload" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="21" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="22" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="21" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="23" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="21" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="24" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="21" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="25" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="21" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="26" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="20" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="27" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="20" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="28" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="20" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="29" IsStatic="False" IsConstructor="False" Name="Resources.grsc\upload.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="20" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="30" Name="Resources.grsc\download" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="31" Name="Resources.grsc\download" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="31" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="32" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="31" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="33" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="31" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="34" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="31" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="35" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="31" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="36" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="30" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="37" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="30" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="38" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="30" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="39" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="30" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Interface" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="fc2c687192604fd0a21b2079a2b98a85">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="hardware" />
+					<EnumerationMember Value="1" Name="simulation" />
+				</Members>
+				<DataType>
+					<UInt32 />
+				</DataType>
+			</Enumeration>
+		</p.TypeReference>
+		<p.TypeReference TypeId="f6dfab9d095b400584aa3e3c2284683f">
+			<Typedef TypedefName="Error Dialog Type.gtype" UnderlyingType="@00b3695690b343949d81b02e4e4ab614" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="50fdfdbc6a814dc9813f13fe79dfa8de">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Composite Id="1" Name="configuration_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="2" Name="configuration_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="2" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="configuration_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="3" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt64" />
+											<Field FieldAccessPolicy="ReadWrite" Name="data valid" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="length" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="switch bank after" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="address" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="bank" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="address offset" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="update id" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="start update" DataType="Boolean" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="configuration_in">
+										<DataType>
+											<Composite RefId="3" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="4" Name="control signals_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="5" Name="control signals_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="5" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="control signals_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="6" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reset!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="reset done?" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="request for config!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="config done?" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="set active!" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="active?" DataType="Boolean" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="control signals_in">
+										<DataType>
+											<Composite RefId="6" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="7" Name="control signals_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="8" Name="control signals_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="8" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="control signals_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite RefId="6" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="control signals_out">
+										<DataType>
+											<Composite RefId="6" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="9" Name="IFPGAReferenceDataType" ReferenceClass="" Interface="" GenericTypeDefinition="Void" BaseType="Void" />
+							<Composite Id="10" Name="initial reset done_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="11" Name="initial reset done_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="11" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="initial reset done_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="initial reset done_out" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="12" Name="loop iteration" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="13" Name="loop iteration" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="13" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="loop iteration">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Int32 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="loop iteration" DataType="Int32" />
+								</Members>
+							</Composite>
+							<Composite Id="14" Name="ready for configuration_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="15" Name="ready for configuration_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="15" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="ready for configuration_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="ready for configuration_out" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="16" Name="Resources.grsc\download" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="17" Name="Resources.grsc\download" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="17" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="18" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="17" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="19" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="17" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="20" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="17" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="21" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="17" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="22" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="16" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="23" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="16" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="24" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="16" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="25" IsStatic="False" IsConstructor="False" Name="Resources.grsc\download.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="16" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Interface" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="925e7625a0874ce68843f019a6e36348">
+			<Generic />
+		</p.TypeReference>
+		<p.TypeReference TypeId="00b3695690b343949d81b02e4e4ab614">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="no dialog" />
+					<EnumerationMember Value="1" Name="OK message" />
+					<EnumerationMember Value="2" Name="continue or stop message" />
+					<EnumerationMember Value="3" Name="OK message + warnings" />
+					<EnumerationMember Value="4" Name="continue/stop + warnings" />
+				</Members>
+				<DataType>
+					<UInt16 />
+				</DataType>
+			</Enumeration>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
