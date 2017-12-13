@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="3D9FA6ACCAB3DABCC47AA33E8244DD1E" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="5F09FD87F9413603A41E7F19D7FA8088" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="4.5.2.50317" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
-		<ApplicationVersionInfo Build="4.5.2.50317" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Generates start triggers for Rx and Tx. Start triggers are generated based on which trigger type is selected, whether the stream is enabled, whether triggers are enabled, and whether the triggers are to be synchronized across multiple devices.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Input Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;enable stream&lt;/b&gt; controls the output of a &amp;#39;start trigger&amp;#39;.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;software trigger&lt;/b&gt; is a start trigger asserted by software.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;enable trigger&lt;/b&gt; controls the output of a &amp;#39;start trigger&amp;#39;.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;enable trigger sync&lt;/b&gt; to synchronize a &amp;#39;start trigger&amp;#39; between multiple devices. The master device sends the &amp;#39;start trigger&amp;#39; to all the slave devices. If enabled, the slave devices ignore the &amp;#39;trigger select&amp;#39; because the &amp;#39;start trigger&amp;#39; from the master device is used instead.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;trigger select&lt;/b&gt; picks which source to use as the &amp;#39;start trigger&amp;#39;.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Output Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;rx.start trigger&lt;/b&gt; is the signal to use at the &amp;#39;start trigger&amp;#39; for the Rx data path.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;tx.start trigger&lt;/b&gt; is the signal to use at the &amp;#39;start trigger&amp;#39; for the Tx data path.&lt;/p&gt;"</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework"></p.UserDescription>
 		<Icon Id="209" ListViewIconCrop="0 0 60 60" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]60" Id="210" Left="[float]0" Top="[float]0" Width="[float]60">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="211" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
@@ -85,17 +85,17 @@
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<DataAccessor Bounds="30 355 40 15" DataItem="62" Id="63" Label="190" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@a4feb86d46fe4473ba72fbcb9d3bb976" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@8def395a45874d81aca70e2a4a8d6d4b" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<IONameConstant Bounds="110 110 152.583328 27" DataType="@eed23e7c582b4d99b757a7d38ece3e18" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="191" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+			<IONameConstant Bounds="110 110 152.583328 27" DataType="@8b27da16ddf54888a3735f1f09f80c9b" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="191" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>Reference Clock</p.Data>
 				<IONameConstantBehavior />
 			</IONameConstant>
-			<IONameConstant Bounds="110 85 152.583328 27" DataType="@eed23e7c582b4d99b757a7d38ece3e18" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="192" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+			<IONameConstant Bounds="110 85 152.583328 27" DataType="@8b27da16ddf54888a3735f1f09f80c9b" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="192" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>PPS Trig In</p.Data>
 				<IONameConstantBehavior />
 			</IONameConstant>
-			<IONameConstant Bounds="110 60 152.583328 27" DataType="@e32474d9373f412db51f9102d0513842" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="193" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+			<IONameConstant Bounds="110 60 152.583328 27" DataType="@e0e0a14b8ec44ef8b719ea364273593f" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="193" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>PPS Trig Out</p.Data>
 				<IONameConstantBehavior />
 			</IONameConstant>
@@ -154,8 +154,8 @@
 						<Parameter Id="R1" Desc="event.occurred" />
 					</MethodDeclaration>
 				</p.MethodDeclaration>
-				<Terminal DataType="@ca817d5f78be43b2888e43248f91dac0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-				<Terminal DataType="@3eec8d52129a424ea687ffe6288ddd3f" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@1a6dd823a2914db2b63e5986891e0c47" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@937f94bd02d34d9c83810237c7e09e0a" Direction="Input" Hotspot="0 15" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt64" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
@@ -168,8 +168,8 @@
 						<Parameter Id="R1" Desc="event.occurred" />
 					</MethodDeclaration>
 				</p.MethodDeclaration>
-				<Terminal DataType="@ca817d5f78be43b2888e43248f91dac0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-				<Terminal DataType="@3eec8d52129a424ea687ffe6288ddd3f" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@1a6dd823a2914db2b63e5986891e0c47" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@937f94bd02d34d9c83810237c7e09e0a" Direction="Input" Hotspot="0 15" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt64" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
@@ -186,20 +186,20 @@
 						<Parameter Id="R1" Desc="time.previous cptr" />
 					</MethodDeclaration>
 				</p.MethodDeclaration>
-				<Terminal DataType="@ca817d5f78be43b2888e43248f91dac0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-				<Terminal DataType="@eed23e7c582b4d99b757a7d38ece3e18" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
-				<Terminal DataType="@eed23e7c582b4d99b757a7d38ece3e18" Direction="Input" Hotspot="25 0" Id="T1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@1a6dd823a2914db2b63e5986891e0c47" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@8b27da16ddf54888a3735f1f09f80c9b" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@8b27da16ddf54888a3735f1f09f80c9b" Direction="Input" Hotspot="25 0" Id="T1" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="@91471a3301524200874831f325461050" Direction="Input" Hotspot="35 0" Id="T2" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt64" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt64" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<PropertyNode Bounds="90 355 174 65" HasErrorTerminals="False" Id="203" InstanceDataType="@a4feb86d46fe4473ba72fbcb9d3bb976" Mode="InstanceProperties" Template="List">
-				<PropertyItemTerminal DataType="@ca817d5f78be43b2888e43248f91dac0" Hotspot="174 15" Id="c0t0v" Path="time.resources" Usage="Optional" />
-				<PropertyItemTerminal DataType="@3eec8d52129a424ea687ffe6288ddd3f" Hotspot="174 30" Id="c1t0v" Path="future event.resources" Usage="Optional" />
-				<PropertyItemTerminal DataType="@3eec8d52129a424ea687ffe6288ddd3f" Hotspot="174 45" Id="c2t0v" Path="future event.resources_2" Usage="Optional" />
+			<PropertyNode Bounds="90 355 174 65" HasErrorTerminals="False" Id="203" InstanceDataType="@8def395a45874d81aca70e2a4a8d6d4b" Mode="InstanceProperties" Template="List">
+				<PropertyItemTerminal DataType="@1a6dd823a2914db2b63e5986891e0c47" Hotspot="174 15" Id="c0t0v" Path="time.resources" Usage="Optional" />
+				<PropertyItemTerminal DataType="@937f94bd02d34d9c83810237c7e09e0a" Hotspot="174 30" Id="c1t0v" Path="future event.resources" Usage="Optional" />
+				<PropertyItemTerminal DataType="@937f94bd02d34d9c83810237c7e09e0a" Hotspot="174 45" Id="c2t0v" Path="future event.resources_2" Usage="Optional" />
 			</PropertyNode>
 			<IoRead Bounds="300 195 40 40" Id="204" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-			<IONameConstant Bounds="80 195 179.653336 27" DataType="@ad14a93e441e4a15ada7fd6bbd032a94" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="205" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+			<IONameConstant Bounds="80 195 179.653336 27" DataType="@56d97d8afb144a158e8c7d94e0ab11dc" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="205" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>AUX I/O 0</p.Data>
 				<IONameConstantBehavior />
 			</IONameConstant>
@@ -273,7 +273,7 @@
 				<p.Text>time.resources</p.Text>
 			</NodeLabel>
 		</BlockDiagram>
-		<CPFrontPanel Height="[float]2351" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+		<CPFrontPanel Height="[float]1996" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
 			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="16" IsReadOnly="[bool]False" Label="[UIModel]140" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]23" TrueContent="[string]On" Value="{DataItemBinding Id=14}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="19" IsReadOnly="[bool]False" Label="[UIModel]141" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]109" TrueContent="[string]On" Value="{DataItemBinding Id=17}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="22" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]142" Left="[float]295" Top="[float]195" Value="{DataItemBinding Id=20}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
@@ -300,69 +300,67 @@
 				<EnumSelectorInfo DisplayValue="[string]Future Time Event" Value="[ushort]5" ValueType="[Type]UInt16" />
 			</EnumSelector>
 			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="61" IsReadOnly="[bool]False" Label="[UIModel]151" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]741" TrueContent="[string]On" Value="{DataItemBinding Id=59}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-			<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@a4feb86d46fe4473ba72fbcb9d3bb976" Height="[float]1525" Id="64" Label="[UIModel]152" Left="[float]287" Top="[float]826" Value="{DataItemBinding Id=62}" Width="[float]196" xmlns="http://www.ni.com/PanelCommon">
-				<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@ca817d5f78be43b2888e43248f91dac0" Height="[float]652" Id="334" Label="[UIModel]355" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=time.resources}" Width="[float]173" p5:ControlDefinitionChecksum="ZGspdle+8YM2octaCWaM0g==" xmlns:p5="http://www.ni.com/PanelCommon">
+			<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@8def395a45874d81aca70e2a4a8d6d4b" Height="[float]1170" Id="64" Label="[UIModel]152" Left="[float]287" Top="[float]826" Value="{DataItemBinding Id=62}" Width="[float]191" xmlns="http://www.ni.com/PanelCommon">
+				<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@1a6dd823a2914db2b63e5986891e0c47" Height="[float]463" Id="388" Label="[UIModel]407" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=time.resources}" Width="[float]168" p5:ControlDefinitionChecksum="FwaHeJPTVwCDqHTV4sclqA==" xmlns:p5="http://www.ni.com/PanelCommon">
 					<p5:p.TypeDefinitionTargets>
 						<p5:TypeDefinitionTarget TargetName="niUsrpRio\ Time\ v1\ FPGA\.lvlib__Time\ Resources\.gtype:ControlDefinition" />
 					</p5:p.TypeDefinitionTargets>
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="335" Label="[UIModel]344" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]25" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="336" Label="[UIModel]345" Left="[float]5" SelectedResource="{ClusterBinding FieldName=time}" Top="[float]89" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="337" Label="[UIModel]346" Left="[float]5" SelectedResource="{ClusterBinding FieldName=time.previous\ cptr}" Top="[float]153" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="338" Label="[UIModel]347" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time}" Top="[float]217" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@8f1afd859d774ae0977325cfcf7663d3" Height="[float]41" Id="339" Label="[UIModel]348" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time.when}" Top="[float]281" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="340" Label="[UIModel]349" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time.set}" Top="[float]345" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="341" Label="[UIModel]350" Left="[float]5" SelectedResource="{ClusterBinding FieldName=which\ edge\ of\ ref}" Top="[float]409" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@8f1afd859d774ae0977325cfcf7663d3" Height="[float]41" Id="342" Label="[UIModel]351" Left="[float]5" SelectedResource="{ClusterBinding FieldName=pps\ source}" Top="[float]473" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@bc7fc7d0ee444ab89e9170246239fa72" Height="[float]41" Id="343" Label="[UIModel]352" Left="[float]5" SelectedResource="{ClusterBinding FieldName=internal\ pps\ period}" Top="[float]537" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<p5:Label Height="[float]16" Id="344" LabelOwner="[UIModel]335" Left="[float]5" Text="[string]reset" Top="[float]2" Width="[float]26" />
-					<p5:Label Height="[float]16" Id="345" LabelOwner="[UIModel]336" Left="[float]5" Text="[string]time" Top="[float]66" Width="[float]24" />
-					<p5:Label Height="[float]16" Id="346" LabelOwner="[UIModel]337" Left="[float]5" Text="[string]time.previous cptr" Top="[float]130" Width="[float]96" />
-					<p5:Label Height="[float]16" Id="347" LabelOwner="[UIModel]338" Left="[float]5" Text="[string]new time" Top="[float]194" Width="[float]49" />
-					<p5:Label Height="[float]16" Id="348" LabelOwner="[UIModel]339" Left="[float]5" Text="[string]new time.when" Top="[float]258" Width="[float]80" />
-					<p5:Label Height="[float]16" Id="349" LabelOwner="[UIModel]340" Left="[float]5" Text="[string]new time.set" Top="[float]322" Width="[float]67" />
-					<p5:Label Height="[float]16" Id="350" LabelOwner="[UIModel]341" Left="[float]5" Text="[string]which edge of ref" Top="[float]386" Width="[float]93" />
-					<p5:Label Height="[float]16" Id="351" LabelOwner="[UIModel]342" Left="[float]5" Text="[string]pps source" Top="[float]450" Width="[float]58" />
-					<p5:Label Height="[float]16" Id="352" LabelOwner="[UIModel]343" Left="[float]5" Text="[string]internal pps period" Top="[float]514" Width="[float]101" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="353" Label="[UIModel]354" Left="[float]5" SelectedResource="{ClusterBinding FieldName=time\ 2}" Top="[float]601" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<p5:Label Height="[float]16" Id="354" LabelOwner="[UIModel]353" Left="[float]5" Text="[string]time 2" Top="[float]578" Width="[float]34" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="389" Label="[UIModel]398" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]23" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]27" Id="390" Label="[UIModel]399" Left="[float]5" SelectedResource="{ClusterBinding FieldName=time}" Top="[float]73" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]27" Id="391" Label="[UIModel]400" Left="[float]5" SelectedResource="{ClusterBinding FieldName=time.previous\ cptr}" Top="[float]123" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]27" Id="392" Label="[UIModel]401" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time}" Top="[float]173" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@89574e1940be45f087f992832fdb0cee" Height="[float]27" Id="393" Label="[UIModel]402" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time.when}" Top="[float]223" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="394" Label="[UIModel]403" Left="[float]5" SelectedResource="{ClusterBinding FieldName=new\ time.set}" Top="[float]273" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="395" Label="[UIModel]404" Left="[float]5" SelectedResource="{ClusterBinding FieldName=which\ edge\ of\ ref}" Top="[float]323" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@89574e1940be45f087f992832fdb0cee" Height="[float]27" Id="396" Label="[UIModel]405" Left="[float]5" SelectedResource="{ClusterBinding FieldName=pps\ source}" Top="[float]373" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@51dca75ef1df4e6c8e2d321d9238b51c" Height="[float]27" Id="397" Label="[UIModel]406" Left="[float]5" SelectedResource="{ClusterBinding FieldName=internal\ pps\ period}" Top="[float]423" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<p5:Label Height="[float]16" Id="398" LabelOwner="[UIModel]389" Left="[float]5" Text="[string]reset" Top="[float]0" Width="[float]26" />
+					<p5:Label Height="[float]16" Id="399" LabelOwner="[UIModel]390" Left="[float]5" Text="[string]time" Top="[float]50" Width="[float]24" />
+					<p5:Label Height="[float]16" Id="400" LabelOwner="[UIModel]391" Left="[float]5" Text="[string]time.previous cptr" Top="[float]100" Width="[float]96" />
+					<p5:Label Height="[float]16" Id="401" LabelOwner="[UIModel]392" Left="[float]5" Text="[string]new time" Top="[float]150" Width="[float]49" />
+					<p5:Label Height="[float]16" Id="402" LabelOwner="[UIModel]393" Left="[float]5" Text="[string]new time.when" Top="[float]200" Width="[float]80" />
+					<p5:Label Height="[float]16" Id="403" LabelOwner="[UIModel]394" Left="[float]5" Text="[string]new time.set" Top="[float]250" Width="[float]67" />
+					<p5:Label Height="[float]16" Id="404" LabelOwner="[UIModel]395" Left="[float]5" Text="[string]which edge of ref" Top="[float]300" Width="[float]93" />
+					<p5:Label Height="[float]16" Id="405" LabelOwner="[UIModel]396" Left="[float]5" Text="[string]pps source" Top="[float]350" Width="[float]58" />
+					<p5:Label Height="[float]16" Id="406" LabelOwner="[UIModel]397" Left="[float]5" Text="[string]internal pps period" Top="[float]400" Width="[float]101" />
 				</Cluster>
-				<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@3eec8d52129a424ea687ffe6288ddd3f" Height="[float]396" Id="302" Label="[UIModel]315" Left="[float]5" Top="[float]700" Value="{ClusterBinding FieldName=future\ event.resources}" Width="[float]173" p5:ControlDefinitionChecksum="cRcVZPIKzYSuxOJbllNvcA==" xmlns:p5="http://www.ni.com/PanelCommon">
+				<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@937f94bd02d34d9c83810237c7e09e0a" Height="[float]313" Id="356" Label="[UIModel]369" Left="[float]5" Top="[float]511" Value="{ClusterBinding FieldName=future\ event.resources}" Width="[float]168" p5:ControlDefinitionChecksum="+MVAW3S4qIzCMvobwVXsPg==" xmlns:p5="http://www.ni.com/PanelCommon">
 					<p5:p.TypeDefinitionTargets>
 						<p5:TypeDefinitionTarget TargetName="niUsrpRio\ Time\ v1\ FPGA\.lvlib__Future\ Event\ Resources\.gtype:ControlDefinition" />
 					</p5:p.TypeDefinitionTargets>
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="303" Label="[UIModel]309" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]25" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="304" Label="[UIModel]310" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.time}" Top="[float]89" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="305" Label="[UIModel]311" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.ready}" Top="[float]153" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="306" Label="[UIModel]312" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set}" Top="[float]217" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="307" Label="[UIModel]313" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.clear}" Top="[float]281" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="308" Label="[UIModel]314" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set\ in\ past}" Top="[float]345" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<p5:Label Height="[float]16" Id="309" LabelOwner="[UIModel]303" Left="[float]5" Text="[string]reset" Top="[float]2" Width="[float]26" />
-					<p5:Label Height="[float]16" Id="310" LabelOwner="[UIModel]304" Left="[float]5" Text="[string]future event.time" Top="[float]66" Width="[float]91" />
-					<p5:Label Height="[float]16" Id="311" LabelOwner="[UIModel]305" Left="[float]5" Text="[string]future event.ready" Top="[float]130" Width="[float]97" />
-					<p5:Label Height="[float]16" Id="312" LabelOwner="[UIModel]306" Left="[float]5" Text="[string]future event.set" Top="[float]194" Width="[float]83" />
-					<p5:Label Height="[float]16" Id="313" LabelOwner="[UIModel]307" Left="[float]5" Text="[string]future event.clear" Top="[float]258" Width="[float]92" />
-					<p5:Label Height="[float]16" Id="314" LabelOwner="[UIModel]308" Left="[float]5" Text="[string]future event.set in past" Top="[float]322" Width="[float]121" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="357" Label="[UIModel]363" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]23" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]27" Id="358" Label="[UIModel]364" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.time}" Top="[float]73" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="359" Label="[UIModel]365" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.ready}" Top="[float]123" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="360" Label="[UIModel]366" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set}" Top="[float]173" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="361" Label="[UIModel]367" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.clear}" Top="[float]223" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="362" Label="[UIModel]368" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set\ in\ past}" Top="[float]273" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<p5:Label Height="[float]16" Id="363" LabelOwner="[UIModel]357" Left="[float]5" Text="[string]reset" Top="[float]0" Width="[float]26" />
+					<p5:Label Height="[float]16" Id="364" LabelOwner="[UIModel]358" Left="[float]5" Text="[string]future event.time" Top="[float]50" Width="[float]91" />
+					<p5:Label Height="[float]16" Id="365" LabelOwner="[UIModel]359" Left="[float]5" Text="[string]future event.ready" Top="[float]100" Width="[float]97" />
+					<p5:Label Height="[float]16" Id="366" LabelOwner="[UIModel]360" Left="[float]5" Text="[string]future event.set" Top="[float]150" Width="[float]83" />
+					<p5:Label Height="[float]16" Id="367" LabelOwner="[UIModel]361" Left="[float]5" Text="[string]future event.clear" Top="[float]200" Width="[float]92" />
+					<p5:Label Height="[float]16" Id="368" LabelOwner="[UIModel]362" Left="[float]5" Text="[string]future event.set in past" Top="[float]250" Width="[float]121" />
 				</Cluster>
-				<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@3eec8d52129a424ea687ffe6288ddd3f" Height="[float]396" Id="318" Label="[UIModel]331" Left="[float]5" Top="[float]1119" Value="{ClusterBinding FieldName=future\ event.resources_2}" Width="[float]173" p5:ControlDefinitionChecksum="cRcVZPIKzYSuxOJbllNvcA==" xmlns:p5="http://www.ni.com/PanelCommon">
+				<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@937f94bd02d34d9c83810237c7e09e0a" Height="[float]313" Id="372" Label="[UIModel]385" Left="[float]5" Top="[float]847" Value="{ClusterBinding FieldName=future\ event.resources_2}" Width="[float]168" p5:ControlDefinitionChecksum="+MVAW3S4qIzCMvobwVXsPg==" xmlns:p5="http://www.ni.com/PanelCommon">
 					<p5:p.TypeDefinitionTargets>
 						<p5:TypeDefinitionTarget TargetName="niUsrpRio\ Time\ v1\ FPGA\.lvlib__Future\ Event\ Resources\.gtype:ControlDefinition" />
 					</p5:p.TypeDefinitionTargets>
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="319" Label="[UIModel]325" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]25" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]41" Id="320" Label="[UIModel]326" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.time}" Top="[float]89" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="321" Label="[UIModel]327" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.ready}" Top="[float]153" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="322" Label="[UIModel]328" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set}" Top="[float]217" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="323" Label="[UIModel]329" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.clear}" Top="[float]281" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@1e8392ea97d641bf853cbf4bc82b08b8" Height="[float]41" Id="324" Label="[UIModel]330" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set\ in\ past}" Top="[float]345" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-					<p5:Label Height="[float]16" Id="325" LabelOwner="[UIModel]319" Left="[float]5" Text="[string]reset" Top="[float]2" Width="[float]26" />
-					<p5:Label Height="[float]16" Id="326" LabelOwner="[UIModel]320" Left="[float]5" Text="[string]future event.time" Top="[float]66" Width="[float]91" />
-					<p5:Label Height="[float]16" Id="327" LabelOwner="[UIModel]321" Left="[float]5" Text="[string]future event.ready" Top="[float]130" Width="[float]97" />
-					<p5:Label Height="[float]16" Id="328" LabelOwner="[UIModel]322" Left="[float]5" Text="[string]future event.set" Top="[float]194" Width="[float]83" />
-					<p5:Label Height="[float]16" Id="329" LabelOwner="[UIModel]323" Left="[float]5" Text="[string]future event.clear" Top="[float]258" Width="[float]92" />
-					<p5:Label Height="[float]16" Id="330" LabelOwner="[UIModel]324" Left="[float]5" Text="[string]future event.set in past" Top="[float]322" Width="[float]121" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="373" Label="[UIModel]379" Left="[float]5" SelectedResource="{ClusterBinding FieldName=reset}" Top="[float]23" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@e118ed2132df428c800375c573183c3d" Height="[float]27" Id="374" Label="[UIModel]380" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.time}" Top="[float]73" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="375" Label="[UIModel]381" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.ready}" Top="[float]123" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="376" Label="[UIModel]382" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set}" Top="[float]173" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="377" Label="[UIModel]383" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.clear}" Top="[float]223" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<FpgaNameControl BaseName="[string]Register" DataType="[Type]@fe727365e16a43739fc579617e572605" Height="[float]27" Id="378" Label="[UIModel]384" Left="[float]5" SelectedResource="{ClusterBinding FieldName=future\ event.set\ in\ past}" Top="[float]273" UdrClass="[string]Register" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<p5:Label Height="[float]16" Id="379" LabelOwner="[UIModel]373" Left="[float]5" Text="[string]reset" Top="[float]0" Width="[float]26" />
+					<p5:Label Height="[float]16" Id="380" LabelOwner="[UIModel]374" Left="[float]5" Text="[string]future event.time" Top="[float]50" Width="[float]91" />
+					<p5:Label Height="[float]16" Id="381" LabelOwner="[UIModel]375" Left="[float]5" Text="[string]future event.ready" Top="[float]100" Width="[float]97" />
+					<p5:Label Height="[float]16" Id="382" LabelOwner="[UIModel]376" Left="[float]5" Text="[string]future event.set" Top="[float]150" Width="[float]83" />
+					<p5:Label Height="[float]16" Id="383" LabelOwner="[UIModel]377" Left="[float]5" Text="[string]future event.clear" Top="[float]200" Width="[float]92" />
+					<p5:Label Height="[float]16" Id="384" LabelOwner="[UIModel]378" Left="[float]5" Text="[string]future event.set in past" Top="[float]250" Width="[float]121" />
 				</Cluster>
-				<Label Height="[float]16" Id="355" LabelOwner="[UIModel]334" Left="[float]5" Text="[string]time.resources" Top="[float]2" Width="[float]77" />
-				<Label Height="[float]16" Id="315" LabelOwner="[UIModel]302" Left="[float]5" Text="[string]future event.resources" Top="[float]677" Width="[float]118" />
-				<Label Height="[float]16" Id="331" LabelOwner="[UIModel]318" Left="[float]5" Text="[string]future event.resources_2" Top="[float]1096" Width="[float]118" />
+				<Label Height="[float]16" Id="407" LabelOwner="[UIModel]388" Left="[float]5" Text="[string]time.resources" Top="[float]2" Width="[float]77" />
+				<Label Height="[float]16" Id="369" LabelOwner="[UIModel]356" Left="[float]5" Text="[string]future event.resources" Top="[float]677" Width="[float]118" />
+				<Label Height="[float]16" Id="385" LabelOwner="[UIModel]372" Left="[float]5" Text="[string]future event.resources_2" Top="[float]1013" Width="[float]129" />
 			</Cluster>
 			<Label Height="[float]16" Id="140" LabelOwner="[UIModel]16" Left="[float]335" Text="[string]rx 1.stream enabled" Top="[float]0" Width="[float]104" xmlns="http://www.ni.com/PanelCommon" />
 			<Label Height="[float]16" Id="141" LabelOwner="[UIModel]19" Left="[float]335" Text="[string]rx.software trigger" Top="[float]86" Width="[float]97" xmlns="http://www.ni.com/PanelCommon" />
@@ -414,7 +412,7 @@
 		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="10" DataType="Boolean" Id="59" Name="tx.software trigger" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>False</p.DefaultValue>
 		</DataItem>
-		<DataItem CallDirection="Input" CallIndex="11" DataType="@a4feb86d46fe4473ba72fbcb9d3bb976" Id="62" Name="time.resources" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Input" CallIndex="11" DataType="@8def395a45874d81aca70e2a4a8d6d4b" Id="62" Name="time.resources" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
 				<Cluster>
 					<Field1>
@@ -428,7 +426,6 @@
 							<Field7>""</Field7>
 							<Field8>""</Field8>
 							<Field9>""</Field9>
-							<Field10>""</Field10>
 						</Cluster>
 					</Field1>
 					<Field2>
@@ -482,7 +479,7 @@
 			<p.IconModel Target="niUsrpRio\ Time\ v1\ FPGA\.lvlib__Future\ Event\.gcdl">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
-						<Icon ListViewIconCrop="0 0 50 50">
+						<Icon ListViewIconCrop="0 0 40 40">
 							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
 								<Canvas Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
 									<Path Data="[PathGeometry]M 49,46 C 49,47.65 47.65,49 46,49 L 4,49 C 2.35,49 1,47.65 1,46 L 1,4 C 1,2.35 2.35,1 4,1 L 46,1 C 47.65,1 49,2.35 49,4 L 49,46 Z" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
@@ -499,7 +496,7 @@
 			<p.IconModel Target="niUsrpRio\ Time\ v1\ FPGA\.lvlib__Timekeeper\.gcdl">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
-						<Icon ListViewIconCrop="0 0 50 50">
+						<Icon ListViewIconCrop="0 0 40 40">
 							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
 								<Canvas Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
 									<Path Data="[PathGeometry]M 49,46 C 49,47.65 47.65,49 46,49 L 4,49 C 2.35,49 1,47.65 1,46 L 1,4 C 1,2.35 2.35,1 4,1 L 46,1 C 47.65,1 49,2.35 49,4 L 49,46 Z" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
@@ -531,28 +528,28 @@
 				</DataType>
 			</Enumeration>
 		</p.TypeReference>
-		<p.TypeReference TypeId="a4feb86d46fe4473ba72fbcb9d3bb976">
+		<p.TypeReference TypeId="8def395a45874d81aca70e2a4a8d6d4b">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="time.resources">
 						<DataType>
-							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Time Resources.gtype" UnderlyingType="@a46cf89fd51148daab26c2b6e287210b" />
+							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Time Resources.gtype" UnderlyingType="@863ea3b37130471ab6d896d6f4e3d3e1" />
 						</DataType>
 					</Field>
 					<Field FieldAccessPolicy="ReadWrite" Name="future event.resources">
 						<DataType>
-							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@013c96e081684018c22bc1d5f028304d" />
+							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@ea5cc68336194220b59b77f3b85723a3" />
 						</DataType>
 					</Field>
 					<Field FieldAccessPolicy="ReadWrite" Name="future event.resources_2">
 						<DataType>
-							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@013c96e081684018c22bc1d5f028304d" />
+							<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@ea5cc68336194220b59b77f3b85723a3" />
 						</DataType>
 					</Field>
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="eed23e7c582b4d99b757a7d38ece3e18">
+		<p.TypeReference TypeId="8b27da16ddf54888a3735f1f09f80c9b">
 			<Attributed>
 				<AttributedType>
 					<Generic>
@@ -568,7 +565,7 @@
 															<Composite RefId="2" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -584,7 +581,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -636,7 +633,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="e32474d9373f412db51f9102d0513842">
+		<p.TypeReference TypeId="e0e0a14b8ec44ef8b719ea364273593f">
 			<Attributed>
 				<AttributedType>
 					<Generic>
@@ -652,7 +649,7 @@
 															<Composite RefId="2" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -668,7 +665,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -721,7 +718,7 @@
 															<Composite RefId="6" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -737,7 +734,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -789,11 +786,11 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="ca817d5f78be43b2888e43248f91dac0">
-			<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Time Resources.gtype" UnderlyingType="@a46cf89fd51148daab26c2b6e287210b" />
+		<p.TypeReference TypeId="1a6dd823a2914db2b63e5986891e0c47">
+			<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Time Resources.gtype" UnderlyingType="@863ea3b37130471ab6d896d6f4e3d3e1" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="3eec8d52129a424ea687ffe6288ddd3f">
-			<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@013c96e081684018c22bc1d5f028304d" />
+		<p.TypeReference TypeId="937f94bd02d34d9c83810237c7e09e0a">
+			<Typedef TypedefName="niUsrpRio Time v1 FPGA.lvlib__Future Event Resources.gtype" UnderlyingType="@ea5cc68336194220b59b77f3b85723a3" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="91471a3301524200874831f325461050">
 			<Attributed>
@@ -811,7 +808,7 @@
 															<Composite RefId="2" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -827,7 +824,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -879,7 +876,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="ad14a93e441e4a15ada7fd6bbd032a94">
+		<p.TypeReference TypeId="56d97d8afb144a158e8c7d94e0ab11dc">
 			<Attributed>
 				<AttributedType>
 					<Generic>
@@ -895,7 +892,7 @@
 															<Composite RefId="2" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -911,7 +908,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -964,7 +961,7 @@
 															<Composite RefId="6" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -980,7 +977,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -1033,7 +1030,7 @@
 															<Composite RefId="10" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -1097,7 +1094,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="1e8392ea97d641bf853cbf4bc82b08b8">
+		<p.TypeReference TypeId="fe727365e16a43739fc579617e572605">
 			<Attributed>
 				<AttributedType>
 					<Composite Id="1" Name="RegisterDataType" ReferenceClass="">
@@ -1109,7 +1106,7 @@
 											<Composite RefId="2" />
 										</GenericTypeDefinition>
 										<GenericParameters>
-											<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+											<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 										</GenericParameters>
 										<BaseType>
 											<Void />
@@ -1125,7 +1122,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1140,7 +1137,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1206,7 +1203,7 @@
 											<Composite RefId="2" />
 										</GenericTypeDefinition>
 										<GenericParameters>
-											<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+											<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 										</GenericParameters>
 										<BaseType>
 											<Void />
@@ -1222,7 +1219,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1237,7 +1234,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1291,7 +1288,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="8f1afd859d774ae0977325cfcf7663d3">
+		<p.TypeReference TypeId="89574e1940be45f087f992832fdb0cee">
 			<Attributed>
 				<AttributedType>
 					<Composite Id="1" Name="RegisterDataType" ReferenceClass="">
@@ -1303,7 +1300,7 @@
 											<Composite RefId="2" />
 										</GenericTypeDefinition>
 										<GenericParameters>
-											<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+											<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 										</GenericParameters>
 										<BaseType>
 											<Void />
@@ -1319,7 +1316,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1334,7 +1331,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1388,7 +1385,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="bc7fc7d0ee444ab89e9170246239fa72">
+		<p.TypeReference TypeId="51dca75ef1df4e6c8e2d321d9238b51c">
 			<Attributed>
 				<AttributedType>
 					<Composite Id="1" Name="RegisterDataType" ReferenceClass="">
@@ -1400,7 +1397,7 @@
 											<Composite RefId="2" />
 										</GenericTypeDefinition>
 										<GenericParameters>
-											<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+											<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 										</GenericParameters>
 										<BaseType>
 											<Void />
@@ -1416,7 +1413,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1431,7 +1428,7 @@
 												<Parameters>
 													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</DataType>
 													</Parameter>
 												</Parameters>
@@ -1485,7 +1482,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="a46cf89fd51148daab26c2b6e287210b">
+		<p.TypeReference TypeId="863ea3b37130471ab6d896d6f4e3d3e1">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="reset">
@@ -1501,7 +1498,7 @@
 															<Composite RefId="3" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -1517,7 +1514,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -1532,7 +1529,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -1828,24 +1825,10 @@
 							</Attributed>
 						</DataType>
 					</Field>
-					<Field FieldAccessPolicy="ReadWrite" Name="time 2">
-						<DataType>
-							<Attributed>
-								<AttributedType>
-									<Composite RefId="8" />
-								</AttributedType>
-								<AttributeValues>
-									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
-									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-								</AttributeValues>
-							</Attributed>
-						</DataType>
-					</Field>
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="013c96e081684018c22bc1d5f028304d">
+		<p.TypeReference TypeId="ea5cc68336194220b59b77f3b85723a3">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="reset">
@@ -1861,7 +1844,7 @@
 															<Composite RefId="3" />
 														</GenericTypeDefinition>
 														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 														</GenericParameters>
 														<BaseType>
 															<Void />
@@ -1877,7 +1860,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -1892,7 +1875,7 @@
 																<Parameters>
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
 																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
 																		</DataType>
 																	</Parameter>
 																</Parameters>
@@ -2063,7 +2046,7 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="afa95de9248f4d0a921501886d19191e">
+		<p.TypeReference TypeId="925e7625a0874ce68843f019a6e36348">
 			<Generic />
 		</p.TypeReference>
 	</DataTypeReferenceTable>
