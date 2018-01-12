@@ -8,5 +8,5 @@ Notes:
 - Currently the USRP-RIOs with the 40 MHz frontends are fully supported. The 120 MHz frontends are known to work, however the gain setting cannot be changed.
 
 Known Bugs:
-- The path to the preamble file has to be fixed in
+- The path to the preamble file has to be fixed in ImportTxtFileToComplex_Preamble.gvi to Host\preamble.txt
 - Tha AGC is prone to oscillate. The workaround is to fix the reciever gain to a fixed value.
