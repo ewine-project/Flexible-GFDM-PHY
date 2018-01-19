@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="18F79838C7017BD0060A6171C6490B24" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="3A6E8A5891B9988FE9DC41EC789A86DD" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
@@ -182,7 +182,7 @@
 				<CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="103" Terminals="99=55, 100=108, 101" />
 				<CaseStructure.Tunnel Bounds="-4 95 13 10" Docking="Left" Id="152" Terminals="99=92, 100=210, 101" />
 			</CaseStructure>
-			<Literal Bounds="-228.140015 210 368.14 15.37" DataType="Path" Facade="NationalInstruments.MocCommon.SourceModel.IPathBehavior" Id="214" Label="215" xmlns="http://www.ni.com/MocCommon">
+			<Literal Bounds="-343.14 105 368.14 15.37" DataType="Path" Facade="NationalInstruments.MocCommon.SourceModel.IPathBehavior" Id="214" Label="215" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>
 					<Path a="1">
 						<pE>C</pE>
@@ -196,7 +196,6 @@
 				</p.Data>
 				<PathBehavior />
 			</Literal>
-			<Wire Id="217" Joints="N(214:Out) h(76) v(-75) B(2) N(19:file (use dialog\)) B(2) v(-55) N(40:Path)" xmlns="http://www.ni.com/PlatformFramework" />
 			<NodeLabel AttachedTo="19" Bounds="225 116 109 14" Id="63" IsReadOnly="True" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Read from Text File</p.Text>
 			</NodeLabel>
@@ -242,9 +241,21 @@
 			<NodeLabel AttachedTo="53" Bounds="416.5 370 0 0" Id="78" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>row index</p.Text>
 			</NodeLabel>
-			<NodeLabel AttachedTo="214" Bounds="-228.140015 210 0 0" Id="215" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="214" Bounds="-343.14 105 0 0" Id="215" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Path Constant</p.Text>
 			</NodeLabel>
+			<GetComponentDirectory Bounds="-185 175 30 30" Id="226" />
+			<BuildPath Bounds="-70 175 30 30" Id="234" />
+			<Wire Id="235" Joints="N(226:Path) h(5) v(-10) N(234:base path)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="-264.5 240 124 15" DataType="String" Facade="NationalInstruments.MocCommon.SourceModel.IStringBehavior" Id="236" Label="237" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>"Host\\Preamble.txt"</p.Data>
+				<StringBehavior TextDisplayMode="Default" />
+			</Literal>
+			<NodeLabel AttachedTo="236" Bounds="-264.5 240 0 0" Id="237" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>name or relative path</p.Text>
+			</NodeLabel>
+			<Wire Id="238" Joints="N(236:Out) h(5) v(-50) N(234:name or relative path)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="240" Joints="N(234:appended path) h(140) v(-70) h(116) B(3) v(-25) N(40:Path) B(3) v(30) N(19:file (use dialog\))" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
 			<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]660" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="81" IncludeInCapture="[bool]True" IsReadOnly="[bool]True" Label="[UIModel]82" Left="[float]1005" Text="{DataItemBinding Id=79}" Top="[float]63" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]206" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
