@@ -19,6 +19,22 @@ def parseArgs():
     args = parser.parse_args()
     return args.rio, args.payload_size, args.num_bytes
 
+def oneTransmission(packetLen, txFifo, rxFifo):
+    txData = (256*np.random.rand(packetLen)).astype(np.uint8)
+
+    try:
+        start = time.time()
+        txFifo.write(txData)
+        rxData = np.array(rxFifo.read(packetLen, timeout_ms=2000)[0])
+        end = time.time()
+        dur = (end-start + 1e-9)
+        rate = 8*packetLen/dur * 1e-6
+        errors = np.count_nonzero(txData != rxData)
+        print ("Transmit %d bytes in %f seconds: %s errors (%.1f MBit/s)" % (packetLen, dur, errors, rate))
+    except nifpga.FifoTimeoutError:
+        print ("Timeout!")
+    
+
 def main(RIO, basePacketLength, numBytes):
     bitfilename = os.path.abspath(os.path.join(os.path.dirname(__file__), '../Builds/GFDM FPGA Toplevel for 40MHz USRP.lvbitx'))
     assert os.path.exists(bitfilename), "Bitfile not found as usual position!"
@@ -26,36 +42,20 @@ def main(RIO, basePacketLength, numBytes):
     rxFifoName = 'Needed Resources.grsc\\RX.Data out.T2H'
     txFifoName = 'Needed Resources.grsc\\TX.data in.H2T'
 
-#    basePacketLength = 60
     packetLen = int((numBytes//basePacketLength)*basePacketLength)
-    #packetLen = 60*100
 
     with Session(bitfilename, RIO) as session:
-        print (session.fifos.keys())
 
-        txFifo = session.fifos[txFifoName]
-        txFifo.configure(10000000)
-        txFifo.start()
-        rxFifo = session.fifos[rxFifoName]
-        rxFifo.configure(10000000)
-        rxFifo.start()
+            txFifo = session.fifos[txFifoName]
+            txFifo.configure(10000000)
+            txFifo.start()
+            rxFifo = session.fifos[rxFifoName]
+            rxFifo.configure(10000000)
+            rxFifo.start()
 
-        while True:
-            txData = (256*np.random.rand(packetLen)).astype(np.uint8)
-
-            try:
-                start = time.time()
-                txFifo.write(txData)
-                rxData = np.array(rxFifo.read(packetLen, timeout_ms=1000)[0])
-                end = time.time()
-                dur = (end-start + 1e-9)
-                rate = 8*packetLen/dur * 1e-6
-                errors = np.count_nonzero(txData != rxData)
-                print ("Transmit %d bytes in %f seconds: %s errors (%.1f MBit/s)" % (packetLen, dur, errors, rate))
-            except nifpga.FifoTimeoutError:
-                print ("Timeout!")
-
-            time.sleep(0.1)
+            while True:
+                oneTransmission(packetLen, txFifo, rxFifo)
+                time.sleep(0.1)
 
 if __name__ == '__main__':
     main(*parseArgs())
