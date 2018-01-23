@@ -1,7 +1,7 @@
 # Flexible-GFDM-PHY
 This repository includes the FPGA implementation of a GFDM based transceiver running on National Instruments USRP.
 
-A more detailed description is available in the documentation folder and on the website.
+A more detailed description is available in the documentation folder and on the website http://owl.ifn.et.tu-dresden.de.
 
 Notes:
 - The USRP1700 driver should be installed.
