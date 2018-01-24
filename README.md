@@ -7,7 +7,7 @@ Notes:
 - The latest USRP1700 driver must be installed! However, now all projects created and saved by this computer require the latest USRP driver!
 - Currently the USRP-RIOs with the 40 MHz frontends are fully supported. The 120 and 160 MHz frontends are known to work, however the gain setting cannot be changed.
 
-Idally the transceiver is tried out using a cable between the most left TX and the most right RX port with a 30dB-attenuator and with a fixed 37 dB receiver gain setting. The transceiver only creates packets if data is created at the host side. After the transceiver runs over the cable, antennas can be used.
+Ideally the transceiver is tried out using a cable between the most left TX and the most right RX port with a 30dB-attenuator and with a fixed 37 dB receiver gain setting. The transceiver only creates packets if data is created at the host side. After the transceiver runs over the cable, antennas can be used.
 
 Known Bugs:
 - The path to the preamble file has to be fixed in ImportTxtFileToComplex_Preamble.gvi to Host\preamble.txt
