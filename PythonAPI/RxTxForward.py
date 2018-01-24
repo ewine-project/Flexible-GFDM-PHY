@@ -11,6 +11,8 @@ import nifpga
 
 import argparse
 
+from GFDMPhy import GFDMPhy
+
 def parseArgs():
     parser = argparse.ArgumentParser(description="Forward the RX data to the TX data")
     parser.add_argument('-s', '--packet-size', type=int, required=True, help='Size of PHY packet in bytes')
@@ -20,11 +22,11 @@ def parseArgs():
     args = parser.parse_args()
     return args.rio, args.packet_size
 
-def forwardFunc(stopEvent, txFifo, rxFifo, packetSize, printIt):
+def forwardFunc(stopEvent, phy, packetSize, printIt):
     while not stopEvent.isSet():
         try:
-            data, remaining = rxFifo.read(packetSize, timeout_ms=200)
-            txFifo.write(data)
+            data = phy.read(packetSize)
+            phy.write(data)
             if printIt:
                 for d in data:
                     try:
@@ -36,39 +38,27 @@ def forwardFunc(stopEvent, txFifo, rxFifo, packetSize, printIt):
             pass
     print ("Finishing thread")
 
-def writeStringToFifo(line, fifo):
+def writeStringToPhy(line, phy):
     line = "\n"*2+line+"\n"
     line = line * 3
     data = [ord(c) for c in line]
-    fifo.write(data, timeout_ms=200)
+    phy.write(data)
     pass
 
 
 def main(RIO, packetSize):
-    bitfilename = os.path.abspath(os.path.join(os.path.dirname(__file__), '../Builds/GFDM FPGA Toplevel for 40MHz USRP.lvbitx'))
-    assert os.path.exists(bitfilename), "Bitfile not found as usual position!"
-
-    rxFifoName = 'Needed Resources.grsc\\RX.Data out.T2H'
-    txFifoName = 'Needed Resources.grsc\\TX.data in.H2T'
-
-    with Session(bitfilename, RIO) as session:
-        txFifo = session.fifos[txFifoName]
-        txFifo.configure(10000000)
-        txFifo.start()
-        rxFifo = session.fifos[rxFifoName]
-        rxFifo.configure(10000000)
-        rxFifo.start()
-            
+    with GFDMPhy(RIO) as phy:
         stopEvent = threading.Event()
         try:
-            T = threading.Thread(target=forwardFunc, args=(stopEvent, txFifo, rxFifo, packetSize, False))
+            T = threading.Thread(target=forwardFunc, args=(stopEvent, phy, packetSize, False))
             T.start()
+
             print ("Forwarding started. Type to send extra commands.\nType X to exit.")
-            for l in sys.stdin:
-                l = l.strip()
-                if l == 'X':
+            for line in sys.stdin:
+                line = line.strip()
+                if line == 'X':
                     break
-                writeStringToFifo(l, txFifo)
+                writeStringToPhy(line, phy)
             pass
         finally:
             stopEvent.set()
