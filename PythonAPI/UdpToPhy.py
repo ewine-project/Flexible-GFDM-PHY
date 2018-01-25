@@ -1,6 +1,5 @@
 import sys
 import os
-sys.path.append(r"C:\Users\admin\Documents\Python\nifpga-python")
 
 import numpy as np
 import threading

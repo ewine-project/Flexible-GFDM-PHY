@@ -1,5 +1,4 @@
 import sys
-sys.path.append(r"C:\Users\admin\Documents\Python\nifpga-python")
 
 import time
 import numpy as np
