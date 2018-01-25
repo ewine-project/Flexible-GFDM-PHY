@@ -7,7 +7,7 @@ from UdpEncoderDecoder import UdpEncoder, UdpDecoder
 
 def _getPacketsAndDecoder():
     enc = UdpEncoder(udpsize=1316, physize=61)
-    data = np.arange(1316, dtype=np.uint8) % 256
+    data = np.arange(1316, dtype=np.uint8) % 251
     phy_packets = enc.encode(data)
 
     dec = UdpDecoder(udpsize=1316, physize=61)
@@ -40,7 +40,7 @@ def test_putsZerosInMissedPackets():
 
 def test_startsNewPacketOnNewFrameCounter():
     enc = UdpEncoder(udpsize=1316, physize=61)
-    data = np.arange(1316, dtype=np.uint8) % 256
+    data = np.arange(1316, dtype=np.uint8) % 251
     phy_packets1 = enc.encode(data)
     phy_packets2 = enc.encode(data)
 
@@ -52,6 +52,26 @@ def test_startsNewPacketOnNewFrameCounter():
     for p in phy_packets1_h:
         assert dec.decode(p) is None
     assert len(dec.decode(phy_packets2_h[0])) == 1316
+
+def test_packetEncodeDecode():
+    enc = UdpEncoder(udpsize=1316, physize=61)
+    dec = UdpDecoder(udpsize=1316, physize=61)
+    txdata = []
+    packets = []
+    for i in range(32):
+        d = np.random.randint(256, size=1316).astype(np.uint8)
+        packets.extend(enc.encode(d))
+        txdata.append(d)
+
+    rxdata = []
+    for p in packets:
+        rx = dec.decode(p)
+        if rx is not None:
+            rxdata.append(rx)
+
+    for t, r in zip(txdata, rxdata):
+        nt.assert_array_equal(t, r)
+    
 
     
     

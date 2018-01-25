@@ -38,28 +38,18 @@ def forwardFunc(stopEvent, phy, packetSize, printIt):
             pass
     print ("Finishing thread")
 
-def writeStringToPhy(line, phy):
-    line = "\n"*2+line+"\n"
-    line = line * 3
-    data = [ord(c) for c in line]
-    phy.write(data)
-    pass
-
-
 def main(RIO, packetSize):
     with GFDMPhy(RIO) as phy:
         stopEvent = threading.Event()
         try:
-            T = threading.Thread(target=forwardFunc, args=(stopEvent, phy, packetSize, False))
+            T = threading.Thread(target=forwardFunc, args=(stopEvent,phy,packetSize,True))
             T.start()
 
-            print ("Forwarding started. Type to send extra commands.\nType X to exit.")
+            print ("Forwarding started.\nType X to exit.")
             for line in sys.stdin:
                 line = line.strip()
                 if line == 'X':
                     break
-                writeStringToPhy(line, phy)
-            pass
         finally:
             stopEvent.set()
             T.join()

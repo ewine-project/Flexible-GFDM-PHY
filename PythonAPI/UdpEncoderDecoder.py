@@ -83,10 +83,13 @@ class UdpDecoder(object):
             pass
 
         needsReset = False
+#        print ("Current block", currBlock, currFrame)
         if currBlock + 1 == self._numPhyPackets:
+            print ("Correct reset!")
             needsReset = True
         elif (self._lastFrameNumber != currFrame and
               self._lastBlockNumber > currBlock):
+            print ("Erroneous reset", self._lastFrameNumber, currFrame, self._lastBlockNumber, currBlock)
             needsReset = True
 
         self._lastFrameNumber = currFrame
@@ -105,15 +108,16 @@ class UdpDecoder(object):
         return np.hstack([part1, part2])            
 
     def _decodeCounter(self, phypacket):
-        counter1 = phypacket[:2]
-        counter2 = phypacket[self._splitAt+np.arange(2)]
+#        counter1 = phypacket[:2]
+#        counter2 = phypacket[self._splitAt+np.arange(2)]
         counter3 = phypacket[-3:-1]
 
-        dec1 = self._decodeSingleCounter(counter1)
-        dec2 = self._decodeSingleCounter(counter2)
+#        dec1 = self._decodeSingleCounter(counter1)
+#        dec2 = self._decodeSingleCounter(counter2)
         dec3 = self._decodeSingleCounter(counter3)
 
-        dec = ((dec1 + dec2 + dec3) / 6) > 0.5
+#        dec = ((dec1 + dec2 + dec3) / 6) > 0.5
+        dec = (dec3 / 2) > 0.5
         decFrame = dec[:3]
         decBlock = dec[3:]
 
