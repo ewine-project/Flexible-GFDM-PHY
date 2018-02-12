@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.2" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.13501" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.0" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.14849" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 60 20" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]20" Id="3" Left="[float]0" Top="[float]0" Width="[float]60">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="120" TemplateName="Green">
+                    <Rectangle Fill="[SMSolidColorBrush]#ffa9af91" Id="121" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffeef8cd" Id="122" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="123" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]gen_qam_map" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="10" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="20" Id="11" ListViewHeight="60" ListViewWidth="170" Width="60" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="60 5" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="15 20" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="25 20" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="35 20" />
+            <ConnectorPaneTerminal Hotspot="45 0" />
+            <ConnectorPaneTerminal Hotspot="45 20" />
+            <ConnectorPaneTerminal Hotspot="60 15" ListViewHotspot="170 50" Parameter="38" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 35" Parameter="37" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="12" />
+        <FrontPanelUnplacedItems Id="13">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="39" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]40" Left="[float]189" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]321" Value="{DataItemBinding Id=37}" ValueFormatter="[string]" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="40" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]39" Left="[float]189" Locked="[bool]True" Text="[string]order of modulation mu" Top="[float]301" />
+            <ArrayViewer ArrayElement="[UIModel]42" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="41" Name="[string]symbol map" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=38}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="42" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Bounds="0 0 555 645" Id="14">
+            <Wire Id="16" Joints="N(33:Value) N(21:18)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="17" Joints="N(22:18) N(34:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <CaseStructure Bounds="-1041 475 552 347" DataType="Int32" Default="19" Id="18" Selected="125" UserSelectorBounds="222 0 109 17">
+                <CaseStructure.Case Bounds="5 5 542 337" Id="19" Pattern="1, Default">
+                    <Comment Bounds="46 40 47 28" Id="23" xmlns="http://www.ni.com/MocCommon">
+                        <p.Text>BPSK</p.Text>
+                    </Comment>
+                    <ArrayLiteral Bounds="106 40 126 42" DataType="ComplexDouble[]" Facade="NationalInstruments.MocCommon.Modeling.IArrayBehavior" Id="24" Label="25" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>
+                            <Array Lengths="2">
+                                <Elements>0x3FF0000000000000;0x0,0xBFF0000000000000;0x0</Elements>
+                            </Array>
+                        </p.Data>
+                        <ArrayBehavior ElementType="ComplexDouble" VisibleRows="2">
+                            <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                        </ArrayBehavior>
+                        <Literal Bounds="47 22 65 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="31">
+                            <p.Data>0xBFF0000000000000;0x0</p.Data>
+                            <NumericBehavior Interpretation="Exact" />
+                        </Literal>
+                    </ArrayLiteral>
+                    <TextNode AttachedTo="24" Bounds="106 40 0 0" Id="25" Text="Symbol Map" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="26" Joints="N(24:Out) N(22:19)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 542 337" Id="20" Pattern="2">
+                    <ArrayLiteral Bounds="96 30 130 76" DataType="ComplexDouble[]" Facade="NationalInstruments.MocCommon.Modeling.IArrayBehavior" Id="27" Label="28" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>
+                            <Array Lengths="4">
+                                <Elements>0xBFF0000000000000;0xBFF0000000000000,0x3FF0000000000000;0xBFF0000000000000,0xBFF0000000000000;0x3FF0000000000000,0x3FF0000000000000;0x3FF0000000000000</Elements>
+                            </Array>
+                        </p.Data>
+                        <ArrayBehavior ElementType="ComplexDouble" IndexEditorWidth="46" VisibleRows="4">
+                            <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                        </ArrayBehavior>
+                        <Literal Bounds="51 5 65 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="32">
+                            <p.Data>0xBFF0000000000000;0xBFF0000000000000</p.Data>
+                            <NumericBehavior Interpretation="Exact" />
+                        </Literal>
+                    </ArrayLiteral>
+                    <TextNode AttachedTo="27" Bounds="96 30 0 0" Id="28" Text="Symbol Map" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Comment Bounds="40 30 48 28" Id="30" xmlns="http://www.ni.com/MocCommon">
+                        <p.Text>QPSK</p.Text>
+                    </Comment>
+                    <Multiply Bounds="446 30 30 30" Id="64" Terminals="o=69, c0t0v=68, c1t0v=67" />
+                    <Wire Id="67" Joints="N(70:Out) h(5) v(-25) N(64:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="68" Joints="N(27:Out) N(64:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="69" Joints="N(64:o) N(22:20)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Literal Bounds="254 70 180 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="70" Label="72" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>0x3FE6A0902DE00D1B;0x0</p.Data>
+                        <NumericBehavior Interpretation="Exact" />
+                    </Literal>
+                    <TextNode AttachedTo="70" Bounds="254 51.04 70.37666 15.96" Id="72" Text="scaling factor" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 542 337" Id="125" Pattern="4">
+                    <ArrayLiteral Bounds="96 30 130 280" DataType="ComplexDouble[]" Facade="NationalInstruments.MocCommon.Modeling.IArrayBehavior" Id="126" Label="128" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>
+                            <Array Lengths="16">
+                                <Elements>0xC008000000000000;0x4008000000000000,0x4008000000000000;0x4008000000000000,0xBFF0000000000000;0x4008000000000000,0x3FF0000000000000;0x4008000000000000,0xC008000000000000;0xC008000000000000,0x4008000000000000;0xC008000000000000,0xBFF0000000000000;0xC008000000000000,0x3FF0000000000000;0xC008000000000000,0xC008000000000000;0x3FF0000000000000,0x4008000000000000;0x3FF0000000000000,0xBFF0000000000000;0x3FF0000000000000,0x3FF0000000000000;0x3FF0000000000000,0xC008000000000000;0xBFF0000000000000,0x4008000000000000;0xBFF0000000000000,0xBFF0000000000000;0xBFF0000000000000,0x3FF0000000000000;0xBFF0000000000000</Elements>
+                            </Array>
+                        </p.Data>
+                        <ArrayBehavior ElementType="ComplexDouble" IndexEditorWidth="46" VisibleRows="16">
+                            <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                        </ArrayBehavior>
+                        <Literal Bounds="51 277 65 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="127">
+                            <p.Data>0x0;0x0</p.Data>
+                            <NumericBehavior Interpretation="Exact" />
+                        </Literal>
+                    </ArrayLiteral>
+                    <TextNode AttachedTo="126" Bounds="96 30 0 0" Id="128" Text="Symbol Map" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Comment Bounds="31 30 57 28" Id="129" xmlns="http://www.ni.com/MocCommon">
+                        <p.Text>16QAM</p.Text>
+                    </Comment>
+                    <Multiply Bounds="446 30 30 30" Id="130" Terminals="o=133, c0t0v=132, c1t0v=142" />
+                    <Wire Id="132" Joints="N(126:Out) N(130:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="133" Joints="N(130:o) N(22:125)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Literal Bounds="254 70 180 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="134" Label="135" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>0x3FD43C9EECBFB15B;0x0</p.Data>
+                        <NumericBehavior Interpretation="Exact" />
+                    </Literal>
+                    <TextNode AttachedTo="134" Bounds="254 51.04 70.37666 15.96" Id="135" Text="scaling factor" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="142" Joints="N(134:Out) h(7) v(-25) N(130:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Comment Bounds="261 130 256 42" Id="144" xmlns="http://www.ni.com/MocCommon">
+                        <p.Text>"map is applied to the symbols \r\n0...15 with the LSB being on the __LEFT__"</p.Text>
+                    </Comment>
+                </CaseStructure.Case>
+                <CaseStructure.Selector Bounds="-4 35 13 15" Docking="Left" Id="21" Terminals="18=16, 19, 20, 125" />
+                <CaseStructure.Tunnel Bounds="543 45 13 10" DefaultIfUnwired="True" Docking="Right" Id="22" Terminals="18=17, 19=26, 20=69, 125=133" />
+            </CaseStructure>
+            <DataAccessor Bounds="-1095 510 40 15" DataItem="37" Id="33" Label="35">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="-460 520 40 15" DataItem="38" Id="34" Label="36">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="33" Bounds="-1227.52332 510 127.523331 15.96" Id="35" Text="order of modulation mu" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="34" Bounds="-415 520 65.01 15.96" Id="36" Text="symbol map" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="-965 425 294 28" Id="45" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>return symbol map for different QAM modulations</p.Text>
+            </Comment>
+            <Comment Bounds="-1220 340 152 55" Id="124" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"TODO:\r\n+ mu&gt;2\r\n+ LUT or read from file?"</p.Text>
+            </Comment>
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="15" Width="[float]2000" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="Int32" Id="37" Name="order of modulation mu">
+            <p.DefaultValue>1</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="38" Name="symbol map" />
+    </VirtualInstrument>
+</SourceFile>

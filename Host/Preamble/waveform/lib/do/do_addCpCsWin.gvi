@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Green">
+                    <Rectangle Fill="[SMSolidColorBrush]#ffa9af91" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffeef8cd" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]do_addCpCsWin" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="75" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="384" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="300" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 65" Parameter="280" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <ArrayViewer ArrayElement="[UIModel]283" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="286" Name="[string]transmit_samples" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=280}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="283" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+            <ArrayViewer ArrayElement="[UIModel]303" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="306" Name="[string]data_samples" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=300}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="303" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+            </ArrayViewer>
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@1078531682_0" Height="[float]1986" Id="385" Name="[string]params" Value="{DataItemBinding Id=384}" Width="[float]147">
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="386" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]429" Left="[float]5" Top="[float]22" Value="{ClusterBinding FieldName=Ncp}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="387" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]430" Left="[float]5" Top="[float]64" Value="{ClusterBinding FieldName=Nrise}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="388" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]431" Left="[float]5" Top="[float]106" Value="{ClusterBinding FieldName=Ncs}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="389" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]432" Left="[float]5" Top="[float]148" Value="{ClusterBinding FieldName=Nfall}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="390" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]433" Left="[float]5" Top="[float]190" Value="{ClusterBinding FieldName=Ncp+Nrise}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="391" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]434" Left="[float]5" Top="[float]232" Value="{ClusterBinding FieldName=Ncs+Nfall}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="392" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]435" Left="[float]5" Top="[float]274" Value="{ClusterBinding FieldName=N+Ncp+Nrise+Ncs+Nfall}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="393" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]436" Left="[float]5" Top="[float]316" Value="{ClusterBinding FieldName=N+Ncp+Nrise+Ncs}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="394" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]437" Left="[float]5" Top="[float]358" Value="{ClusterBinding FieldName=N-(Ncp+Nrise)}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="395" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]438" Left="[float]5" Top="[float]400" Value="{ClusterBinding FieldName=N+Ncp+Nrise}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="396" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]439" Left="[float]5" Top="[float]442" Value="{ClusterBinding FieldName=K}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="397" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]440" Left="[float]5" Top="[float]484" Value="{ClusterBinding FieldName=M}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="398" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]441" Left="[float]5" Top="[float]526" Value="{ClusterBinding FieldName=mu}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ArrayViewer ArrayElement="[UIModel]472" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="399" Label="[UIModel]442" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]568" Value="{ClusterBinding FieldName=qam_map}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="472" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="400" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]443" Left="[float]5" Top="[float]624" Value="{ClusterBinding FieldName=N}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="401" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]444" Left="[float]5" Top="[float]666" Value="{ClusterBinding FieldName=Nov}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="402" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]445" Left="[float]5" Top="[float]708" Value="{ClusterBinding FieldName=N+Ncp+Nrise+Ncs+Nfall-Nov}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="403" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]446" Left="[float]5" Top="[float]750" Value="{ClusterBinding FieldName=Nb}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="404" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]447" Left="[float]5" Top="[float]792" Value="{ClusterBinding FieldName=Non}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="405" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]448" Left="[float]5" Top="[float]834" Value="{ClusterBinding FieldName=Mon}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="406" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]449" Left="[float]5" Top="[float]876" Value="{ClusterBinding FieldName=Kon}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ArrayViewer ArrayElement="[UIModel]473" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="407" Label="[UIModel]450" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]918" Value="{ClusterBinding FieldName=Nset}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="473" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" ValueType="[Type]Int32" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]474" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="408" Label="[UIModel]451" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]974" Value="{ClusterBinding FieldName=Mset}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="474" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" ValueType="[Type]Int32" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]475" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="409" Label="[UIModel]452" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1030" Value="{ClusterBinding FieldName=Kset}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="475" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" ValueType="[Type]Int32" Width="[float]69" />
+                </ArrayViewer>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="410" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]453" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]1086" Value="{ClusterBinding FieldName=alpha}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="411" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]454" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]1128" Value="{ClusterBinding FieldName=beta}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ArrayViewer ArrayElement="[UIModel]476" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="412" Label="[UIModel]455" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1170" Value="{ClusterBinding FieldName=window_rise}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="476" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]477" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="413" Label="[UIModel]456" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1226" Value="{ClusterBinding FieldName=window_fall}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="477" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]478" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="414" Label="[UIModel]457" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1282" Value="{ClusterBinding FieldName=filter_coeff_tx}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="478" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]479" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="415" Label="[UIModel]458" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1338" Value="{ClusterBinding FieldName=filter_coeff_rx}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="479" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="416" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]459" Left="[float]5" Top="[float]1394" Value="{ClusterBinding FieldName=Np}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <ArrayViewer ArrayElement="[UIModel]480" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="417" Label="[UIModel]460" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1436" Value="{ClusterBinding FieldName=filter_coeff_tx_2}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="480" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <ArrayViewer ArrayElement="[UIModel]481" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="418" Label="[UIModel]461" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1492" Value="{ClusterBinding FieldName=filter_coeff_rx_2}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="481" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]69" />
+                </ArrayViewer>
+                <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="419" IsReadOnly="[bool]False" Label="[UIModel]462" Left="[float]5" Text="{ClusterBinding FieldName=rx_type}" Top="[float]1548" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="420" IsReadOnly="[bool]False" Label="[UIModel]463" Left="[float]5" Text="{ClusterBinding FieldName=filter_type}" Top="[float]1590" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="421" IsReadOnly="[bool]False" Label="[UIModel]464" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]1632" TrueContent="[string]On" Value="{ClusterBinding FieldName=OQAM}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="422" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]465" Left="[float]5" Top="[float]1702" Value="{ClusterBinding FieldName=R}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="423" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]466" Left="[float]5" Top="[float]1744" Value="{ClusterBinding FieldName=T}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="424" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]467" Left="[float]5" Top="[float]1786" Value="{ClusterBinding FieldName=S}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="425" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]468" Left="[float]5" Top="[float]1828" Value="{ClusterBinding FieldName=P}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="426" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]469" Left="[float]5" Top="[float]1870" Value="{ClusterBinding FieldName=Q}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="427" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]470" Left="[float]5" Top="[float]1912" Value="{ClusterBinding FieldName=P/R}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="428" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]471" Left="[float]5" Top="[float]1954" Value="{ClusterBinding FieldName=Q/T}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="429" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]386" Left="[float]5" Locked="[bool]True" Text="[string]Ncp" />
+                <Label Id="430" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]387" Left="[float]5" Locked="[bool]True" Text="[string]Nrise" Top="[float]42" />
+                <Label Id="431" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]388" Left="[float]5" Locked="[bool]True" Text="[string]Ncs" Top="[float]84" />
+                <Label Id="432" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]389" Left="[float]5" Locked="[bool]True" Text="[string]Nfall" Top="[float]126" />
+                <Label Id="433" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]390" Left="[float]5" Locked="[bool]True" Text="[string]Ncp+Nrise" Top="[float]168" />
+                <Label Id="434" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]391" Left="[float]5" Locked="[bool]True" Text="[string]Ncs+Nfall" Top="[float]210" />
+                <Label Id="435" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]392" Left="[float]5" Locked="[bool]True" Text="[string]N+Ncp+Nrise+Ncs+Nfall" Top="[float]252" />
+                <Label Id="436" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]393" Left="[float]5" Locked="[bool]True" Text="[string]N+Ncp+Nrise+Ncs" Top="[float]294" />
+                <Label Id="437" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]394" Left="[float]5" Locked="[bool]True" Text="[string]N-(Ncp+Nrise)" Top="[float]336" />
+                <Label Id="438" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]395" Left="[float]5" Locked="[bool]True" Text="[string]N+Ncp+Nrise" Top="[float]378" />
+                <Label Id="439" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]396" Left="[float]5" Locked="[bool]True" Text="[string]K" Top="[float]420" />
+                <Label Id="440" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]397" Left="[float]5" Locked="[bool]True" Text="[string]M" Top="[float]462" />
+                <Label Id="441" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]398" Left="[float]5" Locked="[bool]True" Text="[string]mu" Top="[float]504" />
+                <Label Id="442" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]399" Left="[float]5" Locked="[bool]True" Text="[string]qam_map" Top="[float]546" />
+                <Label Id="443" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]400" Left="[float]5" Locked="[bool]True" Text="[string]N" Top="[float]602" />
+                <Label Id="444" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]401" Left="[float]5" Locked="[bool]True" Text="[string]Nov" Top="[float]644" />
+                <Label Id="445" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]402" Left="[float]5" Locked="[bool]True" Text="[string]N+Ncp+Nrise+Ncs+Nfall-Nov" Top="[float]686" />
+                <Label Id="446" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]403" Left="[float]5" Locked="[bool]True" Text="[string]Nb" Top="[float]728" />
+                <Label Id="447" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]404" Left="[float]5" Locked="[bool]True" Text="[string]Non" Top="[float]770" />
+                <Label Id="448" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]405" Left="[float]5" Locked="[bool]True" Text="[string]Mon" Top="[float]812" />
+                <Label Id="449" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]406" Left="[float]5" Locked="[bool]True" Text="[string]Kon" Top="[float]854" />
+                <Label Id="450" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]407" Left="[float]5" Locked="[bool]True" Text="[string]Nset" Top="[float]896" />
+                <Label Id="451" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]408" Left="[float]5" Locked="[bool]True" Text="[string]Mset" Top="[float]952" />
+                <Label Id="452" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]409" Left="[float]5" Locked="[bool]True" Text="[string]Kset" Top="[float]1008" />
+                <Label Id="453" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]410" Left="[float]5" Locked="[bool]True" Text="[string]alpha" Top="[float]1064" />
+                <Label Id="454" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]411" Left="[float]5" Locked="[bool]True" Text="[string]beta" Top="[float]1106" />
+                <Label Id="455" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]412" Left="[float]5" Locked="[bool]True" Text="[string]window_rise" Top="[float]1148" />
+                <Label Id="456" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]413" Left="[float]5" Locked="[bool]True" Text="[string]window_fall" Top="[float]1204" />
+                <Label Id="457" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]414" Left="[float]5" Locked="[bool]True" Text="[string]filter_coeff_tx" Top="[float]1260" />
+                <Label Id="458" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]415" Left="[float]5" Locked="[bool]True" Text="[string]filter_coeff_rx" Top="[float]1316" />
+                <Label Id="459" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]416" Left="[float]5" Locked="[bool]True" Text="[string]Np" Top="[float]1372" />
+                <Label Id="460" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]417" Left="[float]5" Locked="[bool]True" Text="[string]filter_coeff_tx_2" Top="[float]1414" />
+                <Label Id="461" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]418" Left="[float]5" Locked="[bool]True" Text="[string]filter_coeff_rx_2" Top="[float]1470" />
+                <Label Id="462" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]419" Left="[float]5" Locked="[bool]True" Text="[string]rx_type" Top="[float]1526" />
+                <Label Id="463" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]420" Left="[float]5" Locked="[bool]True" Text="[string]filter_type" Top="[float]1568" />
+                <Label Id="464" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]421" Left="[float]5" Locked="[bool]True" Text="[string]OQAM" Top="[float]1610" />
+                <Label Id="465" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]422" Left="[float]5" Locked="[bool]True" Text="[string]R" Top="[float]1680" />
+                <Label Id="466" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]423" Left="[float]5" Locked="[bool]True" Text="[string]T" Top="[float]1722" />
+                <Label Id="467" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]424" Left="[float]5" Locked="[bool]True" Text="[string]S" Top="[float]1764" />
+                <Label Id="468" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]425" Left="[float]5" Locked="[bool]True" Text="[string]P" Top="[float]1806" />
+                <Label Id="469" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]426" Left="[float]5" Locked="[bool]True" Text="[string]Q" Top="[float]1848" />
+                <Label Id="470" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]427" Left="[float]5" Locked="[bool]True" Text="[string]P/R" Top="[float]1890" />
+                <Label Id="471" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]428" Left="[float]5" Locked="[bool]True" Text="[string]Q/T" Top="[float]1932" />
+            </Cluster>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <InitializeArray Bounds="1340 230 40 30" Id="15" Terminals="element=18, outArray=37, c0t0v=248" />
+            <Literal Bounds="1328 230 12 10" DataType="ComplexDouble" Facade="DockedConstantFacade" Id="16" Label="17" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0;0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="893 155 57 15" />
+            </Literal>
+            <TextNode AttachedTo="16" Bounds="1328 230 0 0" Id="17" Text="element" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Facade="WireInvisibleFacade" Id="18" Joints="N(16:Out) h(5) v(-10) h(-10) v(10) N(15:element)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="37" Joints="N(15:outArray) h(10) v(15) N(84:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReplaceArraySubset Bounds="1400 245 40 40" Id="84" Terminals="inArray=37, outArray=113, c0t0v=250, c0t1v=292" />
+            <ReplaceArraySubset Bounds="1630 299 40 40" Id="94" Terminals="inArray=113, outArray=129, c0t0v=97, c0t1v=108" />
+            <Literal Bounds="1618 319 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="95" Label="96" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="940 350 40 15" />
+            </Literal>
+            <TextNode AttachedTo="95" Bounds="1618 319 0 0" Id="96" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Facade="WireInvisibleFacade" Id="97" Joints="N(95:Out) N(94:c0t0v)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArraySubset Bounds="1565 329 40 40" Id="98" Terminals="array=292, subarray=108, index0=257, length0=258" />
+            <Comment Bounds="1325 160 283 42" Id="105" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"init new array of size N+Ncp+Nrise+Ncs+Nfall\r\nand insert transmit samples at index Ncp+Nrise"</p.Text>
+            </Comment>
+            <Comment Bounds="1565 245 153 42" Id="106" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"select samples and copy\r\nto the beginning"</p.Text>
+            </Comment>
+            <Wire Id="108" Joints="N(98:subarray) N(94:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="113" Joints="N(84:outArray) h(60) v(54) N(94:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReplaceArraySubset Bounds="1865 440 40 40" Id="122" Terminals="inArray=129, outArray=167, c0t0v=264, c0t1v=124" />
+            <ArraySubset Bounds="1780 470 40 40" Id="123" Terminals="array=292, subarray=124, index0=135, length0=262" />
+            <Wire Id="124" Joints="N(123:subarray) N(122:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="129" Joints="N(94:outArray) h(60) v(141) N(122:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="1768 490 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="133" Label="134" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="950 505 40 15" />
+            </Literal>
+            <TextNode AttachedTo="133" Bounds="1768 490 0 0" Id="134" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Facade="WireInvisibleFacade" Id="135" Joints="N(133:Out) N(123:index0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="1780 390 153 42" Id="142" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"select samples and copy\r\nto the end"</p.Text>
+            </Comment>
+            <ArraySubset Bounds="1965 580 40 40" Id="152" Terminals="array=167, subarray=159, index0=156, length0=269" />
+            <Literal Bounds="1953 600 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="154" Label="155" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="1695 620 40 15" />
+            </Literal>
+            <TextNode AttachedTo="154" Bounds="1953 600 0 0" Id="155" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Facade="WireInvisibleFacade" Id="156" Joints="N(154:Out) N(152:index0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Multiply Bounds="2030 610 30 30" Id="158" Terminals="o=166, c0t0v=159, c1t0v=272" />
+            <Wire Id="159" Joints="N(152:subarray) h(15) v(30) N(158:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReplaceArraySubset Bounds="2085 590 40 40" Id="161" Terminals="inArray=167, outArray=181, c0t0v=163, c0t1v=166" />
+            <Literal Bounds="2073 610 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="162" Label="164" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="940 350 40 15" />
+            </Literal>
+            <Wire Facade="WireInvisibleFacade" Id="163" Joints="N(162:Out) N(161:c0t0v)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="162" Bounds="2073 610 0 0" Id="164" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="166" Joints="N(158:o) N(161:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="167" Joints="N(122:outArray) h(15) v(125) B(2) h(155) v(25) N(161:inArray) B(2) v(15) N(152:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArraySubset Bounds="2190 705 40 40" Id="171" Terminals="array=181, subarray=184, index0=276, length0=279" />
+            <Multiply Bounds="2260 740 30 30" Id="172" Terminals="o=174, c0t0v=184, c1t0v=291" />
+            <ReplaceArraySubset Bounds="2310 720 40 40" Id="173" Terminals="inArray=181, outArray=183, c0t0v=276, c0t1v=174" />
+            <Wire Id="174" Joints="N(172:o) N(173:c0t1v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="181" Joints="N(161:outArray) h(5) v(95) B(2) h(160) v(35) N(173:inArray) B(2) v(20) N(171:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="183" Joints="N(173:outArray) N(285:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="184" Joints="N(171:subarray) h(15) v(35) N(172:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="1970 530 158 28" Id="192" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>apply rising window flank</p.Text>
+            </Comment>
+            <Comment Bounds="2190 650 161 28" Id="193" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>apply falling window flank</p.Text>
+            </Comment>
+            <PropertyNode Bounds="1010 220 175 60" HasErrorTerminals="False" Id="244" InstanceDataType="@1078531682_0" Template="List" Terminals="instance in=245~0:5, instance out~175:5, c0t0v=248~175:35, c1t0v=250~175:50" VerticalChunkCount="2">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>N+Ncp+Nrise+Ncs+Nfall</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Ncp+Nrise</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="245" Joints="N(382:Value) h(145) B(1) N(244:instance in) B(1) v(99) B(3) N(255:instance in) B(3) v(111) B(5) N(261:instance in) B(5) v(150) B(7) N(266:instance in) B(7) v(115) N(274:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="248" Joints="N(244:c0t0v) N(15:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="250" Joints="N(244:c1t0v) N(84:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <PropertyNode Bounds="1010 319 175 60" HasErrorTerminals="False" Id="255" InstanceDataType="@1078531682_0" Template="List" Terminals="instance in=245~0:5, instance out~175:5, c0t0v=257~175:35, c1t0v=258~175:50" VerticalChunkCount="2">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>N-(Ncp+Nrise)</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Ncp+Nrise</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="257" Joints="N(255:c0t0v) N(98:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="258" Joints="N(255:c1t0v) h(370) v(-5) N(98:length0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <PropertyNode Bounds="1010 430 175 60" HasErrorTerminals="False" Id="261" InstanceDataType="@1078531682_0" Template="List" Terminals="instance in=245~0:5, instance out~175:5, c0t0v=262~175:50, c1t0v=264~175:35" VerticalChunkCount="2">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Ncs+Nfall</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>N+Ncp+Nrise</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="262" Joints="N(261:c0t0v) h(85) v(25) N(123:length0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="264" Joints="N(261:c1t0v) N(122:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <PropertyNode Bounds="1010 580 175 60" HasErrorTerminals="False" Id="266" InstanceDataType="@1078531682_0" Template="List" Terminals="instance in=245~0:5, instance out~175:5, c0t0v=272~175:50, c1t0v=269~175:35" VerticalChunkCount="2">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>window_rise</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Nrise</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="269" Joints="N(266:c1t0v) N(152:length0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="272" Joints="N(266:c0t0v) N(158:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <PropertyNode Bounds="1010 695 175 75" HasErrorTerminals="False" Id="274" InstanceDataType="@1078531682_0" Template="List" Terminals="instance in=245~0:5, instance out~175:5, c0t0v=279~175:50, c1t0v=276~175:35, c2t0v=291~175:65" VerticalChunkCount="3">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Nfall</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>N+Ncp+Nrise+Ncs</PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>window_fall</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="276" Joints="N(274:c1t0v) h(985) B(1) N(171:index0) B(1) v(50) h(130) v(-35) N(173:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="279" Joints="N(274:c0t0v) h(995) v(-5) N(171:length0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="2490 720 40 15" DataItem="280" Id="285" Label="287">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="285" Bounds="2535 720 92 16" Id="287" Text="transmit_samples" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="291" Joints="N(274:c2t0v) N(172:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="292" Joints="N(305:Value) h(470) v(85) B(2) N(84:c0t1v) B(2) v(54) B(4) N(98:array) B(4) v(141) N(123:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="790 190 40 15" DataItem="300" Id="305" Label="307">
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="305" Bounds="713 190 72 16" Id="307" Text="data_samples" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="790 220 40 15" DataItem="384" Id="382" Label="383">
+                <Terminal DataType="@1078531682_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="382" Bounds="746 220 39 16" Id="383" Text="params" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="280" Name="transmit_samples" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="ComplexDouble[]" Id="300" Name="data_samples" />
+        <DataItem CallDirection="Input" CallIndex="1" DataType="@1078531682_0" Id="384" Name="params">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>0</Field1>
+                    <Field2>0</Field2>
+                    <Field3>0</Field3>
+                    <Field4>0</Field4>
+                    <Field5>0</Field5>
+                    <Field6>0</Field6>
+                    <Field7>0</Field7>
+                    <Field8>0</Field8>
+                    <Field9>0</Field9>
+                    <Field10>0</Field10>
+                    <Field11>0</Field11>
+                    <Field12>0</Field12>
+                    <Field13>0</Field13>
+                    <Field14>null</Field14>
+                    <Field15>0</Field15>
+                    <Field16>0</Field16>
+                    <Field17>0</Field17>
+                    <Field18>0</Field18>
+                    <Field19>0</Field19>
+                    <Field20>0</Field20>
+                    <Field21>0</Field21>
+                    <Field22>null</Field22>
+                    <Field23>null</Field23>
+                    <Field24>null</Field24>
+                    <Field25>0x0</Field25>
+                    <Field26>0x0</Field26>
+                    <Field27>null</Field27>
+                    <Field28>null</Field28>
+                    <Field29>null</Field29>
+                    <Field30>null</Field30>
+                    <Field31>0</Field31>
+                    <Field32>null</Field32>
+                    <Field33>null</Field33>
+                    <Field34>""</Field34>
+                    <Field35>""</Field35>
+                    <Field36>False</Field36>
+                    <Field37>0</Field37>
+                    <Field38>0</Field38>
+                    <Field39>0</Field39>
+                    <Field40>0</Field40>
+                    <Field41>0</Field41>
+                    <Field42>0</Field42>
+                    <Field43>0</Field43>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="1078531682_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Ncp">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Nrise">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Ncs">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Nfall">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Ncp+Nrise">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Ncs+Nfall">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N+Ncp+Nrise+Ncs+Nfall">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N+Ncp+Nrise+Ncs">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N-(Ncp+Nrise)">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N+Ncp+Nrise">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="K">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="M">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="mu">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="qam_map">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Nov">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="N+Ncp+Nrise+Ncs+Nfall-Nov">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Nb">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Non">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Mon">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Kon">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Nset">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Int32 />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Mset">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Int32 />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Kset">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Int32 />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="alpha">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="beta">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="window_rise">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="window_fall">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="filter_coeff_tx">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="filter_coeff_rx">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Np">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="filter_coeff_tx_2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="filter_coeff_rx_2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="rx_type">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="filter_type">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="OQAM">
+                            <DataType>
+                                <Boolean />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="R">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="T">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="S">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="P">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Q">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="P/R">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Q/T">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.2" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.13501" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.0" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.14849" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Green">
+                    <Rectangle Fill="[SMSolidColorBrush]#ffa9af91" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffeef8cd" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]get_gaborDual" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="90" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="230" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="217" />
+            <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 65" Parameter="222" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 80" Parameter="168" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="220" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]samples_per_period" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Value="{DataItemBinding Id=217}" ValueFormatter="[string]LV:" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="225" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]periods" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Value="{DataItemBinding Id=222}" ValueFormatter="[string]LV:" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <ArrayViewer ArrayElement="[UIModel]233" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="236" IsFixedSize="[bool]False" Name="[string]filter_coeff" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=230}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="233" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]69" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Bounds="0 0 1350 685" Id="12">
+            <Comment Bounds="60 445 240 95" Id="14" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"gm = reshape(filter_coeff_tx, K, M);\r\nGm = fft(gm, [], 2);\r\niGm = 1./conj(Gm);\r\ngmd = ifft(iGm, [], 2);\r\nfilter_coeff_rx = reshape(gmd, K*M, 1);\r\nfilter_coeff_rx = filter_coeff_rx(:);"</p.Text>
+            </Comment>
+            <Wire Id="29" Joints="N(219:Value) h(65) B(1) h(320) v(-5) N(32:c1t0v) B(1) v(65) N(136:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReshapeArray Bounds="490 625 40 40" Id="32" Terminals="inArray=238, outArray=107, c0t0v=256, c1t0v=29" VerticalChunkCount="2" />
+            <ForLoop Bounds="603 608 105 80" DiagramId="79" Id="78">
+                <ForLoop.Iteration Bounds="0 50 15 15" Id="81" />
+                <MethodCall Bounds="25 15 50 50" Id="77" Target="DFT\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="x[n]" />
+                            <Parameter Id="L1" Desc="nfft" />
+                            <Parameter Id="R0" Desc="X[f]" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Int32" Direction="Input" Hotspot="0 15" Id="L1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <Wire Id="82" Joints="N(83:79) N(77:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="86" Joints="N(77:R0) N(87:79)" xmlns="http://www.ni.com/PlatformFramework" />
+                <ForLoop.Count Bounds="1 1 15 15" Docking="Left" Id="80" Terminals="78, 79" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="-5 17 13 10" Docking="Left" Id="83" Terminals="78=108, 79=82" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="95 17 13 10" Docking="Right" Id="87" Terminals="78=118, 79=86" />
+            </ForLoop>
+            <Transpose2DArray Bounds="545 625 40 20" Id="104" />
+            <Wire Id="107" Joints="N(32:outArray) N(104:2D array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="108" Joints="N(104:transposed array) N(83:78)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Transpose2DArray Bounds="1160 635 40 20" Id="109" />
+            <ComplexConjugate Bounds="730 615 30 30" Id="114" />
+            <Reciprocal Bounds="990 625 30 30" Id="116" />
+            <Wire Id="118" Joints="N(87:78) N(114:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ForLoop Bounds="1033 618 110 80" DiagramId="120" Id="119">
+                <ForLoop.Iteration Bounds="0 50 15 15" Id="124" />
+                <Wire Id="126" Joints="N(122:120) N(128:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <MethodCall Bounds="30 15 50 50" Id="128" Target="IDFT\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="X[f]" />
+                            <Parameter Id="R0" Desc="x[n]" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <Wire Id="131" Joints="N(128:R0) N(132:120)" xmlns="http://www.ni.com/PlatformFramework" />
+                <ForLoop.Count Bounds="1 1 15 15" Docking="Left" Id="121" Terminals="119, 120" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="-5 17 13 10" Docking="Left" Id="122" Terminals="119=130, 120=126" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="100 17 13 10" Docking="Right" Id="132" Terminals="119=133, 120=131" />
+            </ForLoop>
+            <Wire Id="130" Joints="N(116:1/x) N(122:119)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="133" Joints="N(132:119) N(109:2D array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ReshapeArray Bounds="1230 635 40 30" Id="134" Terminals="inArray=135, outArray=216, c0t0v=140" />
+            <Wire Id="135" Joints="N(109:transposed array) N(134:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Multiply Bounds="195 710 30 30" Id="136" Terminals="o=140, c0t0v=256, c1t0v=29" />
+            <Wire Id="140" Joints="N(136:o) h(990) v(-65) N(134:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1440 635 40 15" DataItem="168" Id="169" Label="170">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="169" Bounds="1485 635 84 16" Id="170" Text="dual_filter_coeff" xmlns="http://www.ni.com/PlatformFramework" />
+            <Multiply Bounds="940 625 30 30" Id="187" Terminals="o=192, c0t0v=241, c1t0v=247" />
+            <Wire Id="192" Joints="N(187:o) N(116:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Comment Bounds="440 535 138 28" Id="210" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>reshape KMx1 to KxM</p.Text>
+            </Comment>
+            <Comment Bounds="610 535 84 28" Id="211" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>M point DFT</p.Text>
+            </Comment>
+            <Comment Bounds="800 535 135 28" Id="212" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>transform+normalize</p.Text>
+            </Comment>
+            <Comment Bounds="1040 535 89 28" Id="213" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>M point IDFT</p.Text>
+            </Comment>
+            <Comment Bounds="1180 535 138 28" Id="214" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>reshape KxM to KMx1</p.Text>
+            </Comment>
+            <Wire Id="216" Joints="N(134:outArray) N(169:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="55 660 40 15" DataItem="217" Id="219" Label="221">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="219" Bounds="-55 660 105 16" Id="221" Text="samples_per_period" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="55 640 40 15" DataItem="222" Id="224" Label="226">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="224" Bounds="10 640 40 16" Id="226" Text="periods" xmlns="http://www.ni.com/PlatformFramework" />
+            <WireComment AttachedTo="140" Bounds="703 716.5 34 17" Id="227" xmlns="http://www.ni.com/PlatformFramework">
+                <p.ExpandedWidth>34</p.ExpandedWidth>
+                <p.Point>720 725</p.Point>
+                <p.Text>"N "</p.Text>
+            </WireComment>
+            <WireComment AttachedTo="29" Bounds="112.5 656.5 30 17" Id="229" xmlns="http://www.ni.com/PlatformFramework">
+                <p.ExpandedWidth>30</p.ExpandedWidth>
+                <p.Point>127.5 665</p.Point>
+                <p.Text>K</p.Text>
+            </WireComment>
+            <DataAccessor Bounds="55 615 40 15" DataItem="230" Id="235" Label="237">
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="235" Bounds="-6 615 56 16" Id="237" Text="filter_coeff" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="238" Joints="N(235:Value) h(385) v(10) N(32:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="241" Joints="N(114:x - iy) N(187:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="247" Joints="N(248:x + iy) h(5) v(-10) N(187:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <RealAndImaginaryToComplex Bounds="900 640 30 30" Id="248" />
+            <ToDoublePrecisionFloat Bounds="860 640 30 10" Id="250" />
+            <Wire Id="255" Joints="N(250:double precision float) N(248:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="256" Joints="N(224:Value) h(80) B(1) h(305) v(5) N(32:c0t0v) B(1) v(55) B(5) h(650) v(-55) N(250:number) B(5) v(15) N(136:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="888 655 12 10" DataType="Double" Facade="DockedConstantFacade" Id="257" Label="258" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                <DockedConstantFacade UndockedBounds="835 685 40 15" />
+            </Literal>
+            <TextNode AttachedTo="257" Bounds="888 655 0 0" Id="258" Text="y" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Facade="WireInvisibleFacade" Id="259" Joints="N(257:Out) N(248:y)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <WireComment AttachedTo="256" Bounds="119.5 636.5 31 17" Id="260" xmlns="http://www.ni.com/PlatformFramework">
+                <p.ExpandedWidth>31</p.ExpandedWidth>
+                <p.Point>135 645</p.Point>
+                <p.Text>M</p.Text>
+            </WireComment>
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=168}" Height="[float]532" Id="141" Label="[UIModel]167" Left="[float]340" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" ThemeColorPaletteName="[string]Flat Blue" Top="[float]113" Width="[float]825" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitExactly" Id="142" Label="[string]sample index" MajorDivisions="[UIModel]156" MajorGridLines="[UIModel]157" Orientation="[SMOrientation]Horizontal" Range="[IRange]-0.51348288183939106, 1.0239551187143878, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="156" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                    <GridLines Id="157" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]None" Id="143" Label="[string]amplitude" MajorDivisions="[UIModel]158" MajorGridLines="[UIModel]159" Orientation="[SMOrientation]Vertical" Range="[IRange]-1, 2, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="158" />
+                    <GridLines Id="159" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]142" Id="144" Label="[string]RX data real" VerticalScale="[UIModel]143">
+                    <PlotRenderer BarBaseline="[FillBaseline]Zero" Id="160" LineStroke="[SMSolidColorBrush]#ffee1c25" LineThickness="[double]1" PointFill="[SMSolidColorBrush]#ffee1c25" PointShape="[PointShape]Diamond" />
+                </Plot>
+                <PlotRenderer Id="145" LineStroke="[SMSolidColorBrush]#ff962428" />
+                <PlotRenderer Id="146" LineStroke="[SMSolidColorBrush]#ff008ee4" />
+                <PlotRenderer Id="147" LineStroke="[SMSolidColorBrush]#ffe2b683" />
+                <PlotRenderer Id="148" LineStroke="[SMSolidColorBrush]#ffb7ac1f" />
+                <PlotRenderer Id="149" LineStroke="[SMSolidColorBrush]#ffaedcef" />
+                <PlotRenderer Id="150" LineStroke="[SMSolidColorBrush]#ffa08bb0" />
+                <PlotRenderer Id="151" LineStroke="[SMSolidColorBrush]#ff7f7f7f" />
+                <PlotRenderer Id="152" LineStroke="[SMSolidColorBrush]#ff91685c" />
+                <Plot HorizontalScale="[UIModel]142" Id="153" Label="[string]RX data imag" VerticalScale="[UIModel]143">
+                    <PlotRenderer AreaBaseline="[FillBaseline]NegativeInfinity" BarBaseline="[FillBaseline]Zero" BarWidth="[double]0.75" Id="161" LineStyle="[LineStyle]Solid" LineThickness="[double]1" PointFill="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                </Plot>
+                <Plot HorizontalScale="[UIModel]142" Id="154" Label="[string]TX data real" VerticalScale="[UIModel]143">
+                    <PlotRenderer AreaBaseline="[FillBaseline]NegativeInfinity" BarBaseline="[FillBaseline]Zero" BarWidth="[double]0.75" Id="162" LineStroke="[SMSolidColorBrush]#ffee1c25" LineStyle="[LineStyle]Solid" LineThickness="[double]1" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                </Plot>
+                <Plot HorizontalScale="[UIModel]142" Id="155" Label="[string]TX data imag" VerticalScale="[UIModel]143">
+                    <PlotRenderer AreaBaseline="[FillBaseline]NegativeInfinity" BarBaseline="[FillBaseline]Zero" BarWidth="[double]0.75" Id="163" LineStroke="[SMSolidColorBrush]#ff0070bc" LineStyle="[LineStyle]Solid" LineThickness="[double]1" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                </Plot>
+            </Graph>
+            <PlotLegend Graph="[UIModel]141" Height="[float]104" Id="164" Left="[float]1172" ThemeColorPaletteName="[string]Flat Blue" Top="[float]113" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]141" Height="[float]102" Id="165" Left="[float]345" ThemeColorPaletteName="[string]Flat Blue" Top="[float]674" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]141" Id="166" Left="[float]345" ThemeColorPaletteName="[string]Flat Blue" Top="[float]652" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="167" LabelAlignment="[PartAlignment]LeftTop" LabelOwner="[UIModel]141" Left="[float]250" Locked="[bool]True" Text="[string]dual_filter_coeff" ThemeColorPaletteName="[string]Flat Blue" Top="[float]113" Visible="[bool]False" />
+        </CPFrontPanel>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="168" Name="dual_filter_coeff">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="2" DataType="Int32" Id="217" Name="samples_per_period">
+            <p.DefaultValue>32</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="Int32" Id="222" Name="periods">
+            <p.DefaultValue>21</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="0" DataType="ComplexDouble[]" Id="230" Name="filter_coeff" />
+    </VirtualInstrument>
+</SourceFile>

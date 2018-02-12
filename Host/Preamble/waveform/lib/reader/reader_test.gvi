@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6.75," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]reader_test" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12">
+            <MethodCall Bounds="705 245 70 20" Id="14" Target="read_file_to_array\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="filename" />
+                        <Parameter Id="L1" Desc="error in" />
+                        <Parameter Id="R0" Desc="array" />
+                        <Parameter Id="R1" Desc="error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="Path" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="70 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="70 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="17" Joints="N(20:Path) N(14:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="639 245 40 15" DataItem="18" Id="20" Label="22">
+                <Terminal DataType="Path" Direction="Output" Hotspot="40 5" Id="Path" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="20" Bounds="588 245 46 16" Id="22" Text="filename" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="815 245 50 30" Id="23" Target="get_value_as_string\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="string" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="24" Joints="N(14:R0) N(23:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="905 245 70 30" Id="25" Target="get_value_as_double\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="number" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Output" Hotspot="70 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="70 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="70 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="26" Joints="N(23:R0) N(25:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="1010 245 50 30" Id="27" Target="get_value_as_complex_double\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="number" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="28" Joints="N(25:R0) N(27:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="31" Joints="N(62:Value) h(5) v(-35) N(23:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="34" Joints="N(67:Value) h(35) v(-60) N(25:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="880 185 40 15" DataItem="35" Id="37" Label="39">
+                <Terminal DataType="String" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="37" Bounds="925 185 31 16" Id="39" Text="string" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="40" Joints="N(23:R1) h(10) v(-70) N(37:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="990 180 40 15" DataItem="41" Id="43" Label="45">
+                <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="43" Bounds="1035 180 42 16" Id="45" Text="number" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="46" Joints="N(25:R1) h(10) v(-75) N(43:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1110 180 40 15" DataItem="47" Id="49" Label="51">
+                <Terminal DataType="ComplexDouble" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="49" Bounds="1155 180 45 16" Id="51" Text="complex" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="52" Joints="N(27:R1) h(45) v(-75) N(49:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="55" Joints="N(72:Value) h(5) v(-70) N(27:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="760 290 40 15" DataItem="60" Id="62" Label="64">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="62" Bounds="687 290 68 16" Id="64" Text="search string" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="820 315 40 15" DataItem="65" Id="67" Label="69">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="67" Bounds="702 315 113 16" Id="69" Text="search number string" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="955 325 40 15" DataItem="70" Id="72" Label="74">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="72" Bounds="789 325 161 16" Id="74" Text="search complex number string" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="1180 245 50 30" Id="79" Target="get_value_as_string_array\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="T0" Desc="delimiter" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="array" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="Error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="80" Joints="N(27:R0) N(79:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="960 385 40 15" DataItem="81" Id="83" Label="85">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="83" Bounds="857 385 98 16" Id="85" Text="search array string" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="86" Joints="N(83:Value) h(170) v(-130) N(79:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1255 180 40 15" DataItem="87" Id="92" Label="94">
+                <Terminal DataType="String[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="92" Bounds="1300 180 62 16" Id="94" Text="String array" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="95" Joints="N(79:R1) h(20) v(-75) N(92:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="98" Joints="N(23:R2) N(25:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="99" Joints="N(25:R2) N(27:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="100" Joints="N(14:R1) h(5) v(10) N(23:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="101" Joints="N(27:R2) N(79:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="1320 245 50 30" Id="102" Target="get_value_as_double_array\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="T0" Desc="delimiter" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="Array" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="Error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double[]" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="103" Joints="N(79:R0) N(102:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="104" Joints="N(79:R2) N(102:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1270 405 40 15" DataItem="105" Id="107" Label="109">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="107" Bounds="1127 405 138 16" Id="109" Text="search double array string" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="110" Joints="N(107:Value) h(5) v(-150) N(102:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1400 185 40 15" DataItem="111" Id="116" Label="118">
+                <Terminal DataType="Double[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="116" Bounds="1445 185 67 16" Id="118" Text="double array" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="119" Joints="N(102:R1) h(25) v(-70) N(116:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="1510 245 50 30" Id="120" Target="get_value_as_complex_double_array\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="array in" />
+                        <Parameter Id="L1" Desc="search string" />
+                        <Parameter Id="T0" Desc="delimiter" />
+                        <Parameter Id="L2" Desc="error in" />
+                        <Parameter Id="R1" Desc="Array" />
+                        <Parameter Id="R0" Desc="array out" />
+                        <Parameter Id="R2" Desc="Error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="String[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="String[]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="121" Joints="N(102:R0) N(120:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="122" Joints="N(102:R2) N(120:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1455 350 40 15" DataItem="123" Id="125" Label="127">
+                <Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="125" Bounds="1264 350 186 16" Id="127" Text="search complex double array string" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="128" Joints="N(125:Value) h(5) v(-95) N(120:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1580 185 40 15" DataItem="129" Id="134" Label="136">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="134" Bounds="1625 185 115 16" Id="136" Text="complex double array" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="137" Joints="N(120:R1) h(15) v(-70) N(134:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="38" IsReadOnly="[bool]True" Label="[UIModel]56" Left="[float]775" Text="{DataItemBinding Id=35}" Top="[float]101" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="56" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]38" Left="[float]775" Locked="[bool]True" Text="[string]string" Top="[float]78" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="44" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]57" Left="[float]775" RadixVisibility="[SMVisibility]Collapsed" Top="[float]157" Value="{DataItemBinding Id=41}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="57" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]44" Left="[float]775" Locked="[bool]True" Text="[string]number" Top="[float]134" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="50" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]58" Left="[float]775" RadixVisibility="[SMVisibility]Collapsed" Top="[float]213" Value="{DataItemBinding Id=47}" ValueType="[Type]ComplexDouble" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="58" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]50" Left="[float]775" Locked="[bool]True" Text="[string]complex" Top="[float]190" />
+            <PathSelector BaseName="[string]Path" BrowseDialogTitle="[string]Open File" Filter="[string]txt;*.csv" Height="[float]28" Id="21" InteractionMode="[PathSelectorInteractionModes]BrowseDialog, TextInput, AllowNullPathSelection" Label="[UIModel]59" Left="[float]554" Path="{DataItemBinding Id=18}" Top="[float]33" Width="[float]366" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="59" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]21" Left="[float]554" Locked="[bool]True" Text="[string]filename" Top="[float]10" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="63" IsReadOnly="[bool]False" Label="[UIModel]75" Left="[float]554" Text="{DataItemBinding Id=60}" Top="[float]101" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="75" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]63" Left="[float]554" Locked="[bool]True" Text="[string]search string" Top="[float]78" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="68" IsReadOnly="[bool]False" Label="[UIModel]76" Left="[float]554" Text="{DataItemBinding Id=65}" Top="[float]157" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="76" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]68" Left="[float]554" Locked="[bool]True" Text="[string]search number string" Top="[float]134" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="73" IsReadOnly="[bool]False" Label="[UIModel]77" Left="[float]554" Text="{DataItemBinding Id=70}" Top="[float]213" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="77" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]73" Left="[float]554" Locked="[bool]True" Text="[string]search complex number string" Top="[float]190" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="84" IsReadOnly="[bool]False" Label="[UIModel]96" Left="[float]554" Text="{DataItemBinding Id=81}" Top="[float]269" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="96" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]84" Left="[float]554" Locked="[bool]True" Text="[string]search array string" Top="[float]246" />
+            <ArrayViewer ArrayElement="[UIModel]90" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="93" Label="[UIModel]97" Left="[float]775" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]262" Value="{DataItemBinding Id=87}" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>""</p.DefaultElementValue>
+                <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="90" IsReadOnly="[bool]True" Name="[string]Child" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" />
+            </ArrayViewer>
+            <Label Id="97" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]93" Left="[float]775" Locked="[bool]True" Text="[string]String array" Top="[float]239" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="108" IsReadOnly="[bool]False" Label="[UIModel]138" Left="[float]554" Text="{DataItemBinding Id=105}" Top="[float]337" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="138" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]108" Left="[float]554" Locked="[bool]True" Text="[string]search double array string" Top="[float]314" />
+            <ArrayViewer ArrayElement="[UIModel]114" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="117" Label="[UIModel]139" Left="[float]775" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]337" Value="{DataItemBinding Id=111}" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="114" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[double]0" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]90" />
+            </ArrayViewer>
+            <Label Id="139" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]117" Left="[float]775" Locked="[bool]True" Text="[string]double array" Top="[float]314" />
+            <StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]22" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="126" IsReadOnly="[bool]False" Label="[UIModel]140" Left="[float]554" Text="{DataItemBinding Id=123}" Top="[float]411" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="140" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]126" Left="[float]554" Locked="[bool]True" Text="[string]search complex double array string" Top="[float]388" />
+            <ArrayViewer ArrayElement="[UIModel]132" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="135" Label="[UIModel]141" Left="[float]775" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]404" Value="{DataItemBinding Id=129}" Width="[float]150" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="132" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]90" />
+            </ArrayViewer>
+            <Label Id="141" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]135" Left="[float]775" Locked="[bool]True" Text="[string]complex double array" Top="[float]381" />
+        </CPFrontPanel>
+        <DataItem DataType="Path" Id="18" Name="filename">
+            <p.DefaultValue>
+                <Path a="1">
+                    <pE>U</pE>
+                    <pE>NI</pE>
+                    <pE>CSDS Projects</pE>
+                    <pE>gfdm_transceiver_desktop</pE>
+                    <pE>reader</pE>
+                    <pE>test.ini</pE>
+                </Path>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="String" Id="35" Name="string">
+            <p.DefaultValue>""</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="Double" Id="41" Name="number">
+            <p.DefaultValue>0x0</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="ComplexDouble" Id="47" Name="complex">
+            <p.DefaultValue>0x0;0x0</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="60" Name="search string">
+            <p.DefaultValue>wert</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="65" Name="search number string">
+            <p.DefaultValue>value</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="70" Name="search complex number string">
+            <p.DefaultValue>complex</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="String" Id="81" Name="search array string">
+            <p.DefaultValue>string_array</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="String[]" Id="87" Name="String array" />
+        <DataItem DataType="String" Id="105" Name="search double array string">
+            <p.DefaultValue>array</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="Double[]" Id="111" Name="double array" />
+        <DataItem DataType="String" Id="123" Name="search complex double array string">
+            <p.DefaultValue>complex_array</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="ComplexDouble[]" Id="129" Name="complex double array" />
+    </VirtualInstrument>
+</SourceFile>
