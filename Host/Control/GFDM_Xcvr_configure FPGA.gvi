@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="86561EF42FACBAC107E45243F6933E70" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="F3BC1896329802D75DFCC30F70A838AE" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -395,7 +395,7 @@
 				<PropertyItemTerminal DataType="UInt16" Hotspot="98 60" Id="c2t0v" Path="Ncs" Usage="Optional" />
 				<PropertyItemTerminal DataType="UInt16" Hotspot="98 45" Id="c3t0v" Path="Ncp" Usage="Optional" />
 			</PropertyNode>
-			<Wire Id="58" Joints="N(57:c0t0v) N(56:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="58" Joints="N(57:c0t0v) h(17) B(1) N(56:c7t0v) B(1) v(320) N(3133:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="59" Joints="N(57:c1t0v) N(56:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="63" Joints="N(2713:Value) h(144.5) v(-15) N(56:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Literal Bounds="1180 685 39.5 16" DataType="UInt16" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="64" Label="197" xmlns="http://www.ni.com/MocCommon">
@@ -1595,7 +1595,6 @@
 				<Terminal DataType="Double" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<Wire Id="3134" Joints="N(64:Out) h(5) B(1) h(21.5) v(-15) N(56:c2t0v) B(1) v(230) N(3133:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3135" Joints="N(3085:Value) N(3133:L1)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3136" Joints="N(3093:Path) h(65) v(-5) N(3133:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3137" Joints="N(3100:Value) h(85) v(-10) N(3133:L3)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1607,6 +1606,7 @@
 				<p.Text>preamble scale</p.Text>
 			</NodeLabel>
 			<Wire Id="3147" Joints="N(3145:Value) h(310) v(-15) N(3133:L4)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="3148" Joints="N(64:Out) h(26.5) v(-15) N(56:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
 		<DataItem CallDirection="Output" CallIndex="1" DataType="Error" Id="207" Name="Error out" xmlns="http://www.ni.com/MocCommon">
@@ -1842,8 +1842,8 @@
 			<p.IconModel Target="Create\ preamble\.gvi">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
-						<Icon ListViewIconCrop="0 0 40 40">
-							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+						<Icon ListViewIconCrop="0 0 40 50">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]40">
 								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
 									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
 									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
@@ -1851,7 +1851,7 @@
 										<FontSetting FontFamily="Verdana" FontSize="6" />
 									</FileNameText>
 								</IconTemplate>
-								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]44" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
 							</IconPanel>
 						</Icon>
 					</MergeItem>
