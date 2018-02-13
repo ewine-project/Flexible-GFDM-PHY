@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="56B028A7D39B48BC910AA101A049728E" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="952697AEC5AFE136AC08DDE649B53AB8" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -1412,45 +1412,69 @@
 									<CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="16378" Terminals="16322=15267, 16323, 16324=16377" />
 								</CaseStructure>
 								<Wire Id="16381" Joints="N(16318:x = y?) h(5) v(-10) N(16325:16322)" xmlns="http://www.ni.com/PlatformFramework" />
-								<DataAccessor Bounds="225 145 40 15" DataItem="20859" Id="20864" Label="20865" xmlns="http://www.ni.com/MocCommon">
-									<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-								</DataAccessor>
-								<NodeLabel AttachedTo="20864" Bounds="84 145 136 14" Id="20865" xmlns="http://www.ni.com/PlatformFramework">
-									<p.Text>QAM symbols per Frame</p.Text>
-								</NodeLabel>
 								<Wire Id="20934" Joints="N(5577:R0) N(20938:number)" xmlns="http://www.ni.com/PlatformFramework" />
 								<ToDoublePrecisionComplex Bounds="200 200 30 10" Id="20938" />
-								<MethodCall Bounds="285 190 40 40" DomainName="NI.MocCommon" Id="20967" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
-									<p.MethodDeclaration>
-										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-											<Parameter Id="L0" Desc="QAM symbols per Frame" />
-											<Parameter Id="L1" Desc="ConstelationIn" />
-											<Parameter Id="R0" Desc="ConstellationOut" />
-										</MethodDeclaration>
-									</p.MethodDeclaration>
-									<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-									<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-									<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
-								</MethodCall>
-								<Wire Id="20968" Joints="N(20864:Value) h(5) v(45) B(2) N(20967:L0) B(2) v(55) N(20977:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="20969" Joints="N(20938:double precision complex) N(20967:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="20971" Joints="N(20967:R0) h(415) B(1) v(-30) N(11804:11769) B(1) v(70) N(11847:11806)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20969" Joints="N(20938:double precision complex) N(21124:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20971" Joints="N(21127:20984) h(246) B(1) v(-30) N(11804:11769) B(1) v(70) N(11847:11806)" xmlns="http://www.ni.com/PlatformFramework" />
 								<ToDoublePrecisionComplex Bounds="220 255 30 10" Id="20975" />
-								<MethodCall Bounds="280 245 40 40" DomainName="NI.MocCommon" Id="20977" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
-									<p.MethodDeclaration>
-										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-											<Parameter Id="L0" Desc="QAM symbols per Frame" />
-											<Parameter Id="L1" Desc="ConstelationIn" />
-											<Parameter Id="R0" Desc="ConstellationOut" />
-										</MethodDeclaration>
-									</p.MethodDeclaration>
-									<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-									<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-									<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
-								</MethodCall>
-								<Wire Id="20978" Joints="N(20975:double precision complex) N(20977:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="20982" Joints="N(20977:R0) h(40) v(45) N(14408:11806)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20978" Joints="N(20975:double precision complex) N(21130:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20982" Joints="N(21133:20984) N(14408:11806)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="20983" Joints="N(14393:R0) N(20975:number)" xmlns="http://www.ni.com/PlatformFramework" />
+								<CaseStructure Bounds="285 115 210 190" Default="20985" Id="20984" Selected="20986" UserSelectorBounds="61 0 88 17">
+									<CaseStructure.Case Bounds="5 5 200 180" Id="20985" Pattern="False">
+										<Wire Id="21172" Joints="N(21124:20985) h(5) v(-10) N(21127:20985)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21173" Joints="N(21130:20985) h(187) v(35) N(21133:20985)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 200 180" Id="20986" Pattern="True">
+										<DataAccessor Bounds="145 15 40 15" DataItem="20859" Id="20864" Label="20865" xmlns="http://www.ni.com/MocCommon">
+											<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+										</DataAccessor>
+										<MethodCall Bounds="141 70 40 40" DomainName="NI.MocCommon" Id="20967" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
+											<p.MethodDeclaration>
+												<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+													<Parameter Id="L0" Desc="QAM symbols per Frame" />
+													<Parameter Id="L1" Desc="ConstelationIn" />
+													<Parameter Id="R0" Desc="ConstellationOut" />
+												</MethodDeclaration>
+											</p.MethodDeclaration>
+											<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+										</MethodCall>
+										<MethodCall Bounds="136 125 40 40" DomainName="NI.MocCommon" Id="20977" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
+											<p.MethodDeclaration>
+												<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+													<Parameter Id="L0" Desc="QAM symbols per Frame" />
+													<Parameter Id="L1" Desc="ConstelationIn" />
+													<Parameter Id="R0" Desc="ConstellationOut" />
+												</MethodDeclaration>
+											</p.MethodDeclaration>
+											<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+										</MethodCall>
+										<NodeLabel AttachedTo="20864" Bounds="4 15 136 14" Id="20865" xmlns="http://www.ni.com/PlatformFramework">
+											<p.Text>QAM symbols per Frame</p.Text>
+										</NodeLabel>
+										<Wire Id="21123" Joints="N(21124:20986) N(20967:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21126" Joints="N(20967:R0) N(21127:20986)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21129" Joints="N(21130:20986) N(20977:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21132" Joints="N(20977:R0) h(15) v(45) N(21133:20986)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="20968" Joints="N(20864:Value) h(5) v(25) h(-59) v(30) B(4) N(20967:L0) B(4) v(55) N(20977:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="20987" Terminals="20984=21171, 20985, 20986" />
+									<CaseStructure.Tunnel Bounds="-4 85 13 10" Docking="Left" Id="21124" Terminals="20984=20969, 20985=21172, 20986=21123" />
+									<CaseStructure.Tunnel Bounds="201 75 13 10" Docking="Right" Id="21127" Terminals="20984=20971, 20985=21172, 20986=21126" />
+									<CaseStructure.Tunnel Bounds="-4 140 13 10" Docking="Left" Id="21130" Terminals="20984=20978, 20985=21173, 20986=21129" />
+									<CaseStructure.Tunnel Bounds="201 175 13 10" Docking="Right" Id="21133" Terminals="20984=20982, 20985=21173, 20986=21132" />
+								</CaseStructure>
+								<DataAccessor Bounds="185 115 40 15" DataItem="21166" Id="21168" Label="21170" xmlns="http://www.ni.com/MocCommon">
+									<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+								</DataAccessor>
+								<Wire Id="21171" Joints="N(21168:Value) h(5) v(40) N(20987:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<NodeLabel AttachedTo="21168" Bounds="47 115 133 14" Id="21170" xmlns="http://www.ni.com/PlatformFramework">
+									<p.Text>NormalizeConstellation?</p.Text>
+								</NodeLabel>
 							</CaseStructure.Case>
 							<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="14582" Terminals="14579=15239, 14580, 14581" />
 							<CaseStructure.Tunnel Bounds="-4 250 13 10" Docking="Left" Id="15214" Terminals="14579=14559, 14580, 14581=15213" />
@@ -4449,7 +4473,7 @@
 						<Label Height="[float]16" Id="13690" LabelOwner="[UIModel]13685" Left="[float]16" Text="[string]Data panel" Top="[float]9" Width="[float]58" xmlns="http://www.ni.com/PanelCommon" />
 						<ArrayViewer ArrayElement="[UIModel]10137" BaseName="[string]Array" Columns="[int]15" Dimensions="[int]1" Height="[float]55" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" Id="10140" IndexVisibility="[Visibility]Visible" Label="[UIModel]10142" Left="[float]16" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]412" Value="{DataItemBinding Id=10134}" Width="[float]1138" xmlns="http://www.ni.com/PanelCommon">
 							<p.DefaultElementValue>0</p.DefaultElementValue>
-							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="10137" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[byte]1" Left="[float]846" MinHeight="[float]22" Name="[string]Child" Top="[float]8" Value="[byte]0" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt8" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="10137" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[byte]1" Left="[float]702" MinHeight="[float]22" Name="[string]Child" Top="[float]8" Value="[byte]10" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt8" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						</ArrayViewer>
 						<Label Height="[float]16" Id="10142" LabelOwner="[UIModel]10140" Left="[float]16" Text="[string]Received Bytes" Top="[float]389" Width="[float]79" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=14507}" Height="[float]140" Id="14509" Label="[UIModel]14527" Left="[float]16" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]485" Width="[float]891" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
@@ -4498,6 +4522,8 @@
 						<Label Height="[float]16" Id="14547" LabelOwner="[UIModel]14529" Left="[float]10" Text="[string]Pilot-Phase" Top="[float]619" Width="[float]60" xmlns="http://www.ni.com/PanelCommon" />
 						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="16309" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Label="[UIModel]16311" Left="[float]1186" MinHeight="[float]22" Top="[float]428" Value="{DataItemBinding Id=16306}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="16311" LabelOwner="[UIModel]16309" Left="[float]1186" Text="[string]received packets" Top="[float]405" Width="[float]88" xmlns="http://www.ni.com/PanelCommon" />
+						<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="21169" IsReadOnly="[bool]False" Label="[UIModel]21174" Left="[float]1110" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]510" TrueContent="[string]On" Value="{DataItemBinding Id=21166}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="21174" LabelOwner="[UIModel]21169" Left="[float]1110" Text="[string]NormalizeConstellation?" Top="[float]487" Width="[float]129" xmlns="http://www.ni.com/PanelCommon" />
 					</Canvas>
 				</TabItem>
 				<TabItem Header="[string]TX" Id="9088" Left="[float]0" TabIndex="[int]6" Top="[float]0">
@@ -5972,25 +5998,10 @@
 		<DataItem AdaptToDiagramType="True" DataType="UInt32" Id="20859" Name="QAM symbols per Frame" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0</p.DefaultValue>
 		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="21166" Name="NormalizeConstellation?" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
 		<IconTable xmlns="http://www.ni.com/PlatformFramework">
-			<p.IconModel Target="NormConstellation\.gvi">
-				<MergeScript>
-					<MergeItem Path="." IsPrimary="True">
-						<Icon ListViewIconCrop="0 0 40 40">
-							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
-								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
-									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
-									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
-									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]NormConstellation" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
-										<FontSetting FontFamily="Verdana" FontSize="6" />
-									</FileNameText>
-								</IconTemplate>
-								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
-							</IconPanel>
-						</Icon>
-					</MergeItem>
-				</MergeScript>
-			</p.IconModel>
 			<p.IconModel Target="Configure\ FIFOs\.gvi">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
@@ -6228,6 +6239,24 @@
 									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
 									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
 									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Calculate Pilot Results" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="NormConstellation\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]NormConstellation" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
 										<FontSetting FontFamily="Verdana" FontSize="6" />
 									</FileNameText>
 								</IconTemplate>
