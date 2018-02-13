@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="8F96F39A2E9BA53BA19F2218B535AB26" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="5C1BF1C96DFDE288484CD93E27E24A14" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -64,6 +64,7 @@
 			<NumericText BaseName="[string]Numeric" BottomGuideline="[string]" Height="[float]22" Id="19199" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]19200" Left="[float]421" LeftGuideline="[string]" LeftPositionMode="[GuidelineItemPositionMode]PositionNormal" Margin="[SMThickness]0,0,0,0" MinHeight="[float]22" RadixVisibility="[SMVisibility]Collapsed" RightGuideline="[string]" SizeHeightMode="[GuidelineItemSizeMode]SizedFixed" SizeWidthMode="[GuidelineItemSizeMode]SizedFixed" Top="[float]231" TopGuideline="[string]" TopPositionMode="[GuidelineItemPositionMode]PositionNormal" Value="{DataItemBinding Id=19198}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Label Id="19200" LabelOwner="[UIModel]19199" Left="[float]421" Text="[string]rms value" Top="[float]208" xmlns="http://www.ni.com/PanelCommon" />
 			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="19334" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]0" MinHeight="[float]22" Name="[string]Preamble Power_Host" Top="[float]0" Value="{DataItemBinding Id=19331}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="20862" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Left="[float]0" MinHeight="[float]22" Name="[string]QAM symbols per Frame" Top="[float]0" Value="{DataItemBinding Id=20859}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 		</FrontPanelUnplacedItems>
 		<BlockDiagram Id="13">
 			<MethodCall Bounds="205 1095 40 40" DomainName="NI.MocCommon" Id="174" Target="Configure\ FIFOs\.gvi" xmlns="http://www.ni.com/MocCommon">
@@ -100,8 +101,8 @@
 			<NodeLabel AttachedTo="183" Bounds="-9 920 0 0" Id="186" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>stop</p.Text>
 			</NodeLabel>
-			<CaseStructure Bounds="280 -320 2555 3600" DataType="Error" Default="134" Id="133" Selected="134" UserSelectorBounds="1224 0 106 17">
-				<CaseStructure.Case Bounds="5 5 2545 3590" Id="134" Pattern="No Error">
+			<CaseStructure Bounds="280 -320 2570 3600" DataType="Error" Default="134" Id="133" Selected="134" UserSelectorBounds="1232 0 106 17">
+				<CaseStructure.Case Bounds="5 5 2560 3590" Id="134" Pattern="No Error">
 					<MethodCall Bounds="310 1410 40 90" DomainName="NI.MocCommon" Id="733" Target="GFDM_Xcvr_configure\ FPGA\.gvi" xmlns="http://www.ni.com/MocCommon">
 						<p.MethodDeclaration>
 							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -1215,9 +1216,9 @@
 						<LoopTunnel Bounds="-4 105 13 10" Docking="Left" Id="8068" Terminals="o0=20094, i0=9308" />
 						<LoopTunnel Bounds="-4 135 13 10" Docking="Left" Id="8071" Terminals="o0=18375, i0=9307" />
 					</WhileLoop>
-					<Wire Id="8914" Joints="N(8913:o0) h(101) v(-75) N(692:134)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="8914" Joints="N(8913:o0) h(116) v(-75) N(692:134)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="8916" Joints="N(8915:o0) N(694:134)" xmlns="http://www.ni.com/PlatformFramework" />
-					<WhileLoop Bounds="890 3120 1380 395" DiagramId="9303" Id="9302">
+					<WhileLoop Bounds="890 3120 1395 395" DiagramId="9303" Id="9302">
 						<LoopIteration Bounds="5 365 15 15" Id="9304" />
 						<LoopCondition Bounds="115 25 15 15" Id="9305" />
 						<DataAccessor Bounds="50 25 40 15" DataItem="187" Id="9309" Label="9310" xmlns="http://www.ni.com/MocCommon">
@@ -1247,7 +1248,6 @@
 						<NodeLabel AttachedTo="14563" Bounds="115 280 0 0" Id="14564" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>number of elements</p.Text>
 						</NodeLabel>
-						<Wire Id="14566" Joints="N(14555:elements remaining) h(30) B(1) N(15220:14579) B(1) v(-215) N(15233:x)" xmlns="http://www.ni.com/PlatformFramework" />
 						<HostFifoReadNode Bounds="165 210 40 40" FifoName="&quot;Needed Resources.grsc\\RX.Debug.Modem_64 bit samples out&quot;" Id="14567" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 						<Wire Id="14570" Joints="N(9316:i0) h(5) B(1) N(14567:error in) B(1) v(60) N(14555:error in)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="14571" Joints="N(9313:i0) h(41) B(1) N(14567:reference in) B(1) v(60) N(14555:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1261,12 +1261,11 @@
 						<NodeLabel AttachedTo="14574" Bounds="115 220 0 0" Id="14575" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>number of elements</p.Text>
 						</NodeLabel>
-						<Wire Id="14577" Joints="N(14567:elements remaining) h(15) B(1) N(15229:14579) B(1) v(-185) N(15232:x)" xmlns="http://www.ni.com/PlatformFramework" />
-						<CaseStructure Bounds="330 20 1025 330" Default="14580" Id="14579" Selected="14581" UserSelectorBounds="468 0 88 17">
-							<CaseStructure.Case Bounds="5 5 1015 320" Id="14580" Pattern="False" />
-							<CaseStructure.Case Bounds="5 5 1015 320" Id="14581" Pattern="True">
-								<HostFifoReadNode Bounds="25 185 40 40" FifoName="&quot;Needed Resources.grsc\\RX.Debug.Modem_64 bit samples out&quot;" Id="4779" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-								<MethodCall Bounds="210 200 40 40" DomainName="NI.MocCommon" Id="5577" Target="u32\ array\ to\ 2\.14\ CFX\.gvi" xmlns="http://www.ni.com/MocCommon">
+						<CaseStructure Bounds="375 20 990 330" Default="14580" Id="14579" Selected="14581" UserSelectorBounds="451 0 88 17">
+							<CaseStructure.Case Bounds="5 5 980 320" Id="14580" Pattern="False" />
+							<CaseStructure.Case Bounds="5 5 980 320" Id="14581" Pattern="True">
+								<HostFifoReadNode Bounds="60 185 40 40" FifoName="&quot;Needed Resources.grsc\\RX.Debug.Modem_64 bit samples out&quot;" Id="4779" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+								<MethodCall Bounds="150 200 40 40" DomainName="NI.MocCommon" Id="5577" Target="u32\ array\ to\ 2\.14\ CFX\.gvi" xmlns="http://www.ni.com/MocCommon">
 									<p.MethodDeclaration>
 										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 											<Parameter Id="L0" Desc="data" />
@@ -1276,15 +1275,15 @@
 									<Terminal DataType="UInt32[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 									<Terminal DataType="CFXP(2.14)[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 								</MethodCall>
-								<CaseStructure Bounds="785 125 210 100" Default="11770" Id="11769" Selected="11771" UserSelectorBounds="61 0 88 17">
+								<CaseStructure Bounds="750 125 210 100" Default="11770" Id="11769" Selected="11771" UserSelectorBounds="61 0 88 17">
 									<CaseStructure.Case Bounds="5 5 200 90" Id="11770" Pattern="False" />
 									<CaseStructure.Case Bounds="5 5 200 90" Id="11771" Pattern="True">
 										<ComplexToRealImaginary Bounds="55 20 30 30" Id="4461" />
 										<DataAccessor Bounds="95 20 40 15" DataItem="4497" Id="4493" Label="4495" xmlns="http://www.ni.com/MocCommon">
-											<Terminal DataType="FXP(2.14)[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="Double[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 										</DataAccessor>
 										<DataAccessor Bounds="95 35 40 15" DataItem="4498" Id="4494" Label="4496" xmlns="http://www.ni.com/MocCommon">
-											<Terminal DataType="FXP(2.14)[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="Double[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 										</DataAccessor>
 										<NodeLabel AttachedTo="4493" Bounds="140 20 46 14" Id="4495" xmlns="http://www.ni.com/PlatformFramework">
 											<p.Text>RE_data</p.Text>
@@ -1297,13 +1296,13 @@
 										<Wire Id="4542" Joints="N(4461:y) N(4494:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 									</CaseStructure.Case>
 									<CaseStructure.Selector Bounds="-4 50 13 10" Docking="Left" Id="11772" Terminals="11769=11853, 11770, 11771" />
-									<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="11804" Terminals="11769=12757, 11770, 11771=11803" />
+									<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="11804" Terminals="11769=20971, 11770, 11771=11803" />
 								</CaseStructure>
-								<CaseStructure Bounds="785 230 205 80" Default="11807" Id="11806" Selected="11808" UserSelectorBounds="58 0 88 17">
+								<CaseStructure Bounds="750 230 205 80" Default="11807" Id="11806" Selected="11808" UserSelectorBounds="58 0 88 17">
 									<CaseStructure.Case Bounds="5 5 195 70" Id="11807" Pattern="False" />
 									<CaseStructure.Case Bounds="5 5 195 70" Id="11808" Pattern="True">
 										<DataAccessor Bounds="125 25 40 15" DataItem="4467" Id="4465" Label="4466" xmlns="http://www.ni.com/MocCommon">
-											<Terminal DataType="CFXP(2.14)[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 										</DataAccessor>
 										<NodeLabel AttachedTo="4465" Bounds="170 25 14 14" Id="4466" xmlns="http://www.ni.com/PlatformFramework">
 											<p.Text>IQ</p.Text>
@@ -1314,27 +1313,27 @@
 										<Wire Id="14407" Joints="N(14408:11808) h(36) v(-20) N(14402:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 									</CaseStructure.Case>
 									<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="11809" Terminals="11806=11856, 11807, 11808" />
-									<CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="11847" Terminals="11806=12757, 11807, 11808=14405" />
-									<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="14408" Terminals="11806=14409, 11807, 11808=14407" />
+									<CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="11847" Terminals="11806=20971, 11807, 11808=14405" />
+									<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="14408" Terminals="11806=20982, 11807, 11808=14407" />
 								</CaseStructure>
-								<DataAccessor Bounds="635 215 40 15" DataItem="1230" Id="11849" Label="11850" xmlns="http://www.ni.com/MocCommon">
+								<DataAccessor Bounds="600 215 40 15" DataItem="1230" Id="11849" Label="11850" xmlns="http://www.ni.com/MocCommon">
 									<Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 								</DataAccessor>
-								<IsEqual Bounds="725 165 30 30" Id="11851" />
-								<IsEqual Bounds="725 260 30 30" Id="11854" />
-								<Literal Bounds="713 180 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="11857" Label="11858" xmlns="http://www.ni.com/MocCommon">
+								<IsEqual Bounds="690 165 30 30" Id="11851" />
+								<IsEqual Bounds="690 260 30 30" Id="11854" />
+								<Literal Bounds="678 180 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="11857" Label="11858" xmlns="http://www.ni.com/MocCommon">
 									<p.Data>4</p.Data>
 									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 									<DockedConstantFacade UndockedSize="39.5 16" />
 								</Literal>
-								<Literal Bounds="713 275 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="11860" Label="11861" xmlns="http://www.ni.com/MocCommon">
+								<Literal Bounds="678 275 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="11860" Label="11861" xmlns="http://www.ni.com/MocCommon">
 									<p.Data>0</p.Data>
 									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 									<DockedConstantFacade UndockedSize="39.5 16" />
 								</Literal>
-								<SplitNumber Bounds="90 185 30 30" Id="12620" />
-								<HostFifoReadNode Bounds="25 245 40 40" FifoName="&quot;Needed Resources.grsc\\RX.Debug.Modem_32 bit samples out&quot;" Id="14390" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-								<MethodCall Bounds="210 255 40 40" DomainName="NI.MocCommon" Id="14393" Target="u32\ array\ to\ 2\.14\ CFX\.gvi" xmlns="http://www.ni.com/MocCommon">
+								<SplitNumber Bounds="110 185 30 30" Id="12620" />
+								<HostFifoReadNode Bounds="60 245 40 40" FifoName="&quot;Needed Resources.grsc\\RX.Debug.Modem_32 bit samples out&quot;" Id="14390" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+								<MethodCall Bounds="150 255 40 40" DomainName="NI.MocCommon" Id="14393" Target="u32\ array\ to\ 2\.14\ CFX\.gvi" xmlns="http://www.ni.com/MocCommon">
 									<p.MethodDeclaration>
 										<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 											<Parameter Id="L0" Desc="data" />
@@ -1344,43 +1343,41 @@
 									<Terminal DataType="UInt32[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 									<Terminal DataType="CFXP(2.14)[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 								</MethodCall>
-								<NodeLabel AttachedTo="11849" Bounds="575 215 55 14" Id="11850" xmlns="http://www.ni.com/PlatformFramework">
+								<NodeLabel AttachedTo="11849" Bounds="540 215 55 14" Id="11850" xmlns="http://www.ni.com/PlatformFramework">
 									<p.Text>Operation</p.Text>
 								</NodeLabel>
-								<NodeLabel AttachedTo="11857" Bounds="713 180 0 0" Id="11858" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<NodeLabel AttachedTo="11857" Bounds="678 180 0 0" Id="11858" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 									<p.Text>y</p.Text>
 								</NodeLabel>
-								<NodeLabel AttachedTo="11860" Bounds="713 275 0 0" Id="11861" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<NodeLabel AttachedTo="11860" Bounds="678 275 0 0" Id="11861" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 									<p.Text>y</p.Text>
 								</NodeLabel>
 								<Wire Id="15213" Joints="N(15214:14581) N(14390:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="15216" Joints="N(15217:14581) N(14390:error in)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="15219" Joints="N(15220:14581) h(11) v(-10) N(14390:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="15219" Joints="N(15220:14581) h(40) v(-10) N(14390:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="15222" Joints="N(15223:14581) N(4779:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="15225" Joints="N(15226:14581) N(4779:error in)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="15228" Joints="N(15229:14581) h(11) v(-10) N(4779:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="15228" Joints="N(15229:14581) h(40) v(-10) N(4779:number of elements)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="12621" Joints="N(4779:data) N(12620:x)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="12622" Joints="N(12620:low(x\)) N(5577:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="11853" Joints="N(11851:x = y?) N(11772:11769)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="12757" Joints="N(5577:R0) h(10) v(-40) h(510) B(3) N(11804:11769) B(3) v(100) N(11847:11806)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="11856" Joints="N(11854:x = y?) N(11809:11806)" xmlns="http://www.ni.com/PlatformFramework" />
-								<Wire Id="14409" Joints="N(14393:R0) h(5) v(35) N(14408:11806)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="11852" Joints="N(11849:Value) h(25) B(1) v(-50) B(2) N(11851:x) B(2) v(-110) N(16318:x) B(1) v(45) N(11854:x)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Facade="WireInvisibleFacade" Id="11859" Joints="N(11857:Out) N(11851:y)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Facade="WireInvisibleFacade" Id="11862" Joints="N(11860:Out) N(11854:y)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="14395" Joints="N(14390:data) N(14393:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="15267" Joints="N(12620:high(x\)) h(5) v(-140) N(16378:16322)" xmlns="http://www.ni.com/PlatformFramework" />
-								<IsEqual Bounds="725 55 30 30" Id="16318" />
-								<Literal Bounds="713 70 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="16319" Label="16321" xmlns="http://www.ni.com/MocCommon">
+								<IsEqual Bounds="690 55 30 30" Id="16318" />
+								<Literal Bounds="678 70 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="16319" Label="16321" xmlns="http://www.ni.com/MocCommon">
 									<p.Data>0</p.Data>
 									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 									<DockedConstantFacade UndockedSize="39.5 16" />
 								</Literal>
 								<Wire Facade="WireInvisibleFacade" Id="16320" Joints="N(16319:Out) N(16318:y)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-								<NodeLabel AttachedTo="16319" Bounds="713 70 0 0" Id="16321" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<NodeLabel AttachedTo="16319" Bounds="678 70 0 0" Id="16321" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 									<p.Text>y</p.Text>
 								</NodeLabel>
-								<CaseStructure Bounds="775 15 215 100" Default="16323" Id="16322" Selected="16324" UserSelectorBounds="64 0 88 17">
+								<CaseStructure Bounds="740 15 215 100" Default="16323" Id="16322" Selected="16324" UserSelectorBounds="64 0 88 17">
 									<CaseStructure.Case Bounds="5 5 205 90" Id="16323" Pattern="False" />
 									<CaseStructure.Case Bounds="5 5 205 90" Id="16324" Pattern="True">
 										<DataAccessor Bounds="80 25 40 15" DataItem="14507" Id="14508" Label="14528" xmlns="http://www.ni.com/MocCommon">
@@ -1415,23 +1412,126 @@
 									<CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="16378" Terminals="16322=15267, 16323, 16324=16377" />
 								</CaseStructure>
 								<Wire Id="16381" Joints="N(16318:x = y?) h(5) v(-10) N(16325:16322)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20934" Joints="N(5577:R0) N(20938:number)" xmlns="http://www.ni.com/PlatformFramework" />
+								<ToDoublePrecisionComplex Bounds="200 200 30 10" Id="20938" />
+								<Wire Id="20969" Joints="N(20938:double precision complex) N(21124:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20971" Joints="N(21127:20984) h(246) B(1) v(-30) N(11804:11769) B(1) v(70) N(11847:11806)" xmlns="http://www.ni.com/PlatformFramework" />
+								<ToDoublePrecisionComplex Bounds="220 255 30 10" Id="20975" />
+								<Wire Id="20978" Joints="N(20975:double precision complex) N(21130:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20982" Joints="N(21133:20984) N(14408:11806)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="20983" Joints="N(14393:R0) N(20975:number)" xmlns="http://www.ni.com/PlatformFramework" />
+								<CaseStructure Bounds="285 115 210 190" Default="20985" Id="20984" Selected="20986" UserSelectorBounds="61 0 88 17">
+									<CaseStructure.Case Bounds="5 5 200 180" Id="20985" Pattern="False">
+										<Wire Id="21172" Joints="N(21124:20985) h(5) v(-10) N(21127:20985)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21173" Joints="N(21130:20985) h(187) v(35) N(21133:20985)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 200 180" Id="20986" Pattern="True">
+										<DataAccessor Bounds="145 15 40 15" DataItem="20859" Id="20864" Label="20865" xmlns="http://www.ni.com/MocCommon">
+											<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+										</DataAccessor>
+										<MethodCall Bounds="141 70 40 40" DomainName="NI.MocCommon" Id="20967" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
+											<p.MethodDeclaration>
+												<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+													<Parameter Id="L0" Desc="QAM symbols per Frame" />
+													<Parameter Id="L1" Desc="ConstelationIn" />
+													<Parameter Id="R0" Desc="ConstellationOut" />
+												</MethodDeclaration>
+											</p.MethodDeclaration>
+											<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+										</MethodCall>
+										<MethodCall Bounds="136 125 40 40" DomainName="NI.MocCommon" Id="20977" Target="NormConstellation\.gvi" xmlns="http://www.ni.com/MocCommon">
+											<p.MethodDeclaration>
+												<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+													<Parameter Id="L0" Desc="QAM symbols per Frame" />
+													<Parameter Id="L1" Desc="ConstelationIn" />
+													<Parameter Id="R0" Desc="ConstellationOut" />
+												</MethodDeclaration>
+											</p.MethodDeclaration>
+											<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+											<Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+										</MethodCall>
+										<NodeLabel AttachedTo="20864" Bounds="4 15 136 14" Id="20865" xmlns="http://www.ni.com/PlatformFramework">
+											<p.Text>QAM symbols per Frame</p.Text>
+										</NodeLabel>
+										<Wire Id="21123" Joints="N(21124:20986) N(20967:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21126" Joints="N(20967:R0) N(21127:20986)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21129" Joints="N(21130:20986) N(20977:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="21132" Joints="N(20977:R0) h(15) v(45) N(21133:20986)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="20968" Joints="N(20864:Value) h(5) v(25) h(-59) v(30) B(4) N(20967:L0) B(4) v(55) N(20977:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="20987" Terminals="20984=21171, 20985, 20986" />
+									<CaseStructure.Tunnel Bounds="-4 85 13 10" Docking="Left" Id="21124" Terminals="20984=20969, 20985=21172, 20986=21123" />
+									<CaseStructure.Tunnel Bounds="201 75 13 10" Docking="Right" Id="21127" Terminals="20984=20971, 20985=21172, 20986=21126" />
+									<CaseStructure.Tunnel Bounds="-4 140 13 10" Docking="Left" Id="21130" Terminals="20984=20978, 20985=21173, 20986=21129" />
+									<CaseStructure.Tunnel Bounds="201 175 13 10" Docking="Right" Id="21133" Terminals="20984=20982, 20985=21173, 20986=21132" />
+								</CaseStructure>
+								<DataAccessor Bounds="185 115 40 15" DataItem="21166" Id="21168" Label="21170" xmlns="http://www.ni.com/MocCommon">
+									<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+								</DataAccessor>
+								<Wire Id="21171" Joints="N(21168:Value) h(5) v(40) N(20987:20984)" xmlns="http://www.ni.com/PlatformFramework" />
+								<NodeLabel AttachedTo="21168" Bounds="47 115 133 14" Id="21170" xmlns="http://www.ni.com/PlatformFramework">
+									<p.Text>NormalizeConstellation?</p.Text>
+								</NodeLabel>
 							</CaseStructure.Case>
 							<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="14582" Terminals="14579=15239, 14580, 14581" />
 							<CaseStructure.Tunnel Bounds="-4 250 13 10" Docking="Left" Id="15214" Terminals="14579=14559, 14580, 14581=15213" />
 							<CaseStructure.Tunnel Bounds="-4 280 13 10" Docking="Left" Id="15217" Terminals="14579=14562, 14580, 14581=15216" />
-							<CaseStructure.Tunnel Bounds="-4 270 13 10" Docking="Left" Id="15220" Terminals="14579=14566, 14580, 14581=15219" />
+							<CaseStructure.Tunnel Bounds="-4 270 13 10" Docking="Left" Id="15220" Terminals="14579=20852, 14580, 14581=15219" />
 							<CaseStructure.Tunnel Bounds="-4 190 13 10" Docking="Left" Id="15223" Terminals="14579=14572, 14580, 14581=15222" />
 							<CaseStructure.Tunnel Bounds="-4 220 13 10" Docking="Left" Id="15226" Terminals="14579=14573, 14580, 14581=15225" />
-							<CaseStructure.Tunnel Bounds="-4 210 13 10" Docking="Left" Id="15229" Terminals="14579=14577, 14580, 14581=15228" />
+							<CaseStructure.Tunnel Bounds="-4 210 13 10" Docking="Left" Id="15229" Terminals="14579=20845, 14580, 14581=15228" />
 						</CaseStructure>
-						<IsNotEqualTo0 Bounds="250 35 30 30" Id="15232" />
-						<IsNotEqualTo0 Bounds="250 65 30 30" Id="15233" />
-						<LogicalAnd Bounds="290 55 25 20" Id="15236" Terminals="o=15239, c0t0v=15237, c1t0v=15238" />
+						<IsNotEqualTo0 Bounds="305 35 30 30" Id="15232" />
+						<IsNotEqualTo0 Bounds="305 65 30 30" Id="15233" />
+						<LogicalAnd Bounds="345 55 25 20" Id="15236" Terminals="o=15239, c0t0v=15237, c1t0v=15238" />
 						<Wire Id="15237" Joints="N(15232:x != 0?) h(5) v(10) N(15236:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="15238" Joints="N(15233:x != 0?) h(10) N(15236:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="15239" Joints="N(15236:o) N(14582:14579)" xmlns="http://www.ni.com/PlatformFramework" />
+						<MethodCall Bounds="225 230 40 40" DomainName="NI.MocCommon" Id="20842" Target="IntegerMultipleOf\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="availableSize" />
+									<Parameter Id="L1" Desc="blockSize" />
+									<Parameter Id="R0" Desc="multipleOfBlockSize" />
+									<Parameter Id="R3" Desc="numBlocks" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<Wire Id="20843" Joints="N(14567:elements remaining) N(20842:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="20844" Joints="N(20816:i0) h(36) B(1) h(180) v(-20) B(3) N(20847:L1) B(3) v(-60) N(20842:L1) B(1) v(25) N(20861:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="20845" Joints="N(20842:R0) h(10) B(1) N(15229:14579) B(1) v(-185) N(15232:x)" xmlns="http://www.ni.com/PlatformFramework" />
+						<MethodCall Bounds="225 290 40 40" DomainName="NI.MocCommon" Id="20847" Target="IntegerMultipleOf\.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="availableSize" />
+									<Parameter Id="L1" Desc="blockSize" />
+									<Parameter Id="R0" Desc="multipleOfBlockSize" />
+									<Parameter Id="R3" Desc="numBlocks" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="UInt32" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<Wire Id="20851" Joints="N(14555:elements remaining) N(20847:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="20852" Joints="N(20847:R0) h(25) B(1) N(15220:14579) B(1) v(-215) N(15233:x)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="45 345 40 15" DataItem="20859" Id="20861" Label="20863" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="UInt32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="20861" Bounds="90 345 136 14" Id="20863" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>QAM symbols per Frame</p.Text>
+						</NodeLabel>
 						<LoopTunnel Bounds="-4 215 13 10" Docking="Left" Id="9313" Terminals="o0=20094, i0=14571" />
 						<LoopTunnel Bounds="-4 245 13 10" Docking="Left" Id="9316" Terminals="o0=18375, i0=14570" />
+						<LoopTunnel Bounds="-4 325 13 10" Docking="Left" Id="20816" Terminals="o0=20815, i0=20844" />
 					</WhileLoop>
 					<Wire Id="12533" Joints="N(1852:134) N(1912:134)" xmlns="http://www.ni.com/PlatformFramework" />
 					<MethodCall Bounds="425 1465 40 40" DomainName="NI.MocCommon" Id="12539" Target="RM\ config\.gvi" xmlns="http://www.ni.com/MocCommon">
@@ -1643,7 +1743,7 @@
 								<Wire Id="20776" Joints="N(20773:size(s\)) N(20775:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Wire Id="20777" Joints="N(20731:R0) h(235) v(15) N(20760:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 								<Literal Bounds="165 55 39.5 16" DataType="Double" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="20779" Label="20780" xmlns="http://www.ni.com/MocCommon">
-									<p.Data>0x3FE0000000000000</p.Data>
+									<p.Data>0x3FB999999999999A</p.Data>
 									<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 								</Literal>
 								<Wire Id="20781" Joints="N(20779:Out) N(20775:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -2933,8 +3033,30 @@
 						<p.Text>Fully allocated?</p.Text>
 					</NodeLabel>
 					<Wire Id="20807" Joints="N(20799:x = y?) N(20805:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+					<DataAccessor Bounds="590 3410 40 15" DataItem="12577" Id="20808" Label="20809" xmlns="http://www.ni.com/MocCommon">
+						<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+					</DataAccessor>
+					<NodeLabel AttachedTo="20808" Bounds="480 3410 105 14" Id="20809" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>PayloadSize [Byte]</p.Text>
+					</NodeLabel>
+					<Multiply Bounds="665 3435 30 30" Id="20810" Terminals="o=20815, c0t0v=20811, c1t0v=20814" />
+					<Wire Id="20811" Joints="N(20808:Value) h(28) v(25) N(20810:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="600 3460 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="20812" Label="20813" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>8</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					</Literal>
+					<Wire Id="20814" Joints="N(20812:Out) h(5) v(-10) N(20810:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="20812" Bounds="600 3460 0 0" Id="20813" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>input 1</p.Text>
+					</NodeLabel>
+					<Wire Id="20815" Joints="N(20810:o) N(20816:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+					<WireComment AttachedTo="20815" Bounds="723 3442 158 16" Id="20817" xmlns="http://www.ni.com/PlatformFramework">
+						<p.ExpandedWidth>158</p.ExpandedWidth>
+						<p.Point>802 3450</p.Point>
+						<p.Text>QAM symbols per Frame</p.Text>
+					</WireComment>
 				</CaseStructure.Case>
-				<CaseStructure.Case Bounds="5 5 2545 3590" Id="135" Pattern="Error">
+				<CaseStructure.Case Bounds="5 5 2560 3590" Id="135" Pattern="Error">
 					<Wire Id="744" Joints="N(139:135) N(692:135)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="745" Joints="N(136:135) h(245) B(1) v(-35) N(5517:L0) B(1) v(10) h(2042) v(-30) N(694:135)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="1925" Joints="N(1852:135) N(1912:135)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -2978,11 +3100,11 @@
 				</CaseStructure.Case>
 				<CaseStructure.Selector Bounds="-4 1445 13 10" Docking="Left" Id="136" Terminals="133=316, 134=735, 135=745" />
 				<CaseStructure.Tunnel Bounds="-4 1415 13 10" Docking="Left" Id="139" Terminals="133=313, 134=5537, 135=744" />
-				<CaseStructure.Tunnel Bounds="2546 1415 13 10" Docking="Right" Id="692" Terminals="133=4608, 134=8914, 135=744" />
-				<CaseStructure.Tunnel Bounds="2546 1425 13 10" Docking="Right" Id="694" Terminals="133=822, 134=8916, 135=745" />
+				<CaseStructure.Tunnel Bounds="2561 1415 13 10" Docking="Right" Id="692" Terminals="133=4608, 134=8914, 135=744" />
+				<CaseStructure.Tunnel Bounds="2561 1425 13 10" Docking="Right" Id="694" Terminals="133=822, 134=8916, 135=745" />
 				<CaseStructure.Tunnel Bounds="-4 3530 13 10" Docking="Left" Id="1852" Terminals="133=1914, 134=12533, 135=1925" />
 				<CaseStructure.Tunnel Bounds="-4 3515 13 10" Docking="Left" Id="1855" Terminals="133=1856, 134, 135" />
-				<CaseStructure.Tunnel Bounds="2546 3530 13 10" Docking="Right" Id="1912" Terminals="133=6178, 134=12533, 135=1925" />
+				<CaseStructure.Tunnel Bounds="2561 3530 13 10" Docking="Right" Id="1912" Terminals="133=6178, 134=12533, 135=1925" />
 				<CaseStructure.Tunnel Bounds="-4 495 13 10" Docking="Left" Id="6383" Terminals="133=20096, 134=13326, 135" />
 				<CaseStructure.Tunnel Bounds="-4 1500 13 10" Docking="Left" Id="7623" Terminals="133=7622, 134=736, 135" />
 				<CaseStructure.Tunnel Bounds="-4 1560 13 10" Docking="Left" Id="12611" Terminals="133=12610, 134=12612, 135" />
@@ -2994,7 +3116,7 @@
 			</CaseStructure>
 			<Wire Id="313" Joints="N(174:R0) N(139:133)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="316" Joints="N(174:R3) N(136:133)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="3215 1105 40 40" DomainName="NI.MocCommon" Id="773" Target="Display\ Error\.gvi" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="3230 1105 40 40" DomainName="NI.MocCommon" Id="773" Target="Display\ Error\.gvi" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L1" Desc="type of dialog" />
@@ -3012,7 +3134,7 @@
 				<Terminal DataType="String" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="String" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<Literal Bounds="3203 1115 12 10" DataType="@f6dfab9d095b400584aa3e3c2284683f" Facade="DockedConstantFacade" Id="774" Label="777" xmlns="http://www.ni.com/MocCommon">
+			<Literal Bounds="3218 1115 12 10" DataType="@f6dfab9d095b400584aa3e3c2284683f" Facade="DockedConstantFacade" Id="774" Label="777" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>0</p.Data>
 				<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 					<TypeDefinitionTarget TargetName="Error\ Dialog\ Type\.gtype" />
@@ -3021,18 +3143,18 @@
 				<DockedConstantFacade UndockedSize="107.01 15" />
 			</Literal>
 			<Wire Facade="WireInvisibleFacade" Id="776" Joints="N(774:Out) N(773:L1)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-			<NodeLabel AttachedTo="774" Bounds="3203 1115 0 0" Id="777" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="774" Bounds="3218 1115 0 0" Id="777" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>type of dialog</p.Text>
 			</NodeLabel>
 			<Wire Id="778" Joints="N(1626:R4) N(773:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="3280 1135 40 15" DataItem="779" Id="783" Label="784" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="3295 1135 40 15" DataItem="779" Id="783" Label="784" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="String" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="783" Bounds="3325 1135 137 14" Id="784" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="783" Bounds="3340 1135 137 14" Id="784" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>general error description</p.Text>
 			</NodeLabel>
 			<Wire Id="785" Joints="N(773:R3) N(783:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="3070 1095 40 40" DomainName="NI.MocCommon" Id="820" Target="stop\ FIFOs\.gvi" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="3085 1095 40 40" DomainName="NI.MocCommon" Id="820" Target="stop\ FIFOs\.gvi" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L0" Desc="FPGA interface in" />
@@ -3111,7 +3233,7 @@
 			</PropertyNode>
 			<DynamicFpgaInterfaceCast Bounds="-155 1095 30 15" Id="1620" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 			<Wire Id="1621" Joints="N(1618:c0t0v) N(1620:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="3125 1065 50 50" DomainName="NI.MocCommon" Id="1626" Target="Close\ Device\.gvi" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="3140 1065 50 50" DomainName="NI.MocCommon" Id="1626" Target="Close\ Device\.gvi" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L0" Desc="niusrprio session" />
@@ -3180,7 +3302,7 @@
 				<ArrayBehavior ElementType="UInt32">
 					<p.DefaultElementValue>0</p.DefaultElementValue>
 				</ArrayBehavior>
-				<Literal Bounds="47.25 4.75 40 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="6866">
+				<Literal Bounds="46 4 40 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="6866">
 					<p.Data>0</p.Data>
 					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 				</Literal>
@@ -3202,7 +3324,7 @@
 			<NodeLabel AttachedTo="1495" Bounds="-1224 1145 94 14" Id="1503" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>USRP RIO device</p.Text>
 			</NodeLabel>
-			<CaseStructure Bounds="2965 1135 195 165" DataType="Error" Default="12195" Id="12194" Selected="12196" UserSelectorBounds="44 0 106 17">
+			<CaseStructure Bounds="2980 1135 195 165" DataType="Error" Default="12195" Id="12194" Selected="12196" UserSelectorBounds="44 0 106 17">
 				<CaseStructure.Case Bounds="5 5 185 155" Id="12195" Pattern="No Error" />
 				<CaseStructure.Case Bounds="5 5 185 155" Id="12196" Pattern="Error">
 					<DataAccessor Bounds="65 100 40 15" DataItem="187" Id="12199" Label="12200" xmlns="http://www.ni.com/MocCommon">
@@ -3289,10 +3411,10 @@
 			<DataAccessor Bounds="-75 1210 40 15" DataItem="12574" Id="12554" Label="12567" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Int16[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<DataAccessor Bounds="-275 1280 40 15" DataItem="12577" Id="12558" Label="12570" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="-275 1270 40 15" DataItem="12577" Id="12558" Label="12570" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<Wire Id="12559" Joints="N(12558:Value) N(12551:L4)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="12559" Joints="N(12558:Value) h(5) v(5) h(90) v(5) N(12551:L4)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="-275 1300 40 15" DataItem="12579" Id="12562" Label="12572" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
@@ -3305,7 +3427,7 @@
 			<NodeLabel AttachedTo="12554" Bounds="-30 1210 33 14" Id="12567" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>M_set</p.Text>
 			</NodeLabel>
-			<NodeLabel AttachedTo="12558" Bounds="-385 1280 105 14" Id="12570" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="12558" Bounds="-385 1270 105 14" Id="12570" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>PayloadSize [Byte]</p.Text>
 			</NodeLabel>
 			<NodeLabel AttachedTo="12562" Bounds="-388 1300 108 14" Id="12572" xmlns="http://www.ni.com/PlatformFramework">
@@ -4285,7 +4407,7 @@
 							<TabItem Header="[string]UDP" Id="13686" Left="[float]0" TabIndex="[int]0" Top="[float]0">
 								<Canvas Height="[float]314" Id="13688" Left="[float]5" Top="[float]24" Width="[float]1241" xmlns="http://www.ni.com/PlatformFramework">
 									<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=13022}" Height="[float]194" Id="13034" Label="[UIModel]13053" Left="[float]0" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]23" Width="[float]1209" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-										<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="13035" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]13047" Orientation="[SMOrientation]Horizontal" Range="[IRange]655800, 656400, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+										<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="13035" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]13047" Orientation="[SMOrientation]Horizontal" Range="[IRange]521200, 521800, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 											<RangeLabeledDivisions Id="13047" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 										</Axis>
 										<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="13036" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]13048" Orientation="[SMOrientation]Vertical" Range="[IRange]-1, 6, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4351,11 +4473,11 @@
 						<Label Height="[float]16" Id="13690" LabelOwner="[UIModel]13685" Left="[float]16" Text="[string]Data panel" Top="[float]9" Width="[float]58" xmlns="http://www.ni.com/PanelCommon" />
 						<ArrayViewer ArrayElement="[UIModel]10137" BaseName="[string]Array" Columns="[int]15" Dimensions="[int]1" Height="[float]55" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" Id="10140" IndexVisibility="[Visibility]Visible" Label="[UIModel]10142" Left="[float]16" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]412" Value="{DataItemBinding Id=10134}" Width="[float]1138" xmlns="http://www.ni.com/PanelCommon">
 							<p.DefaultElementValue>0</p.DefaultElementValue>
-							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="10137" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[byte]1" Left="[float]846" MinHeight="[float]22" Name="[string]Child" Top="[float]8" Value="[byte]0" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt8" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="10137" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[byte]1" Left="[float]702" MinHeight="[float]22" Name="[string]Child" Top="[float]8" Value="[byte]10" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt8" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						</ArrayViewer>
 						<Label Height="[float]16" Id="10142" LabelOwner="[UIModel]10140" Left="[float]16" Text="[string]Received Bytes" Top="[float]389" Width="[float]79" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=14507}" Height="[float]140" Id="14509" Label="[UIModel]14527" Left="[float]16" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]485" Width="[float]891" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14510" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14521" Orientation="[SMOrientation]Horizontal" Range="[IRange]225034, 236034, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14510" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14521" Orientation="[SMOrientation]Horizontal" Range="[IRange]258571, 269571, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="14521" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]None" Id="14511" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14522" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4377,10 +4499,10 @@
 						<GraphTools Graph="[UIModel]14509" Height="[float]22" Id="14526" Left="[float]920" Top="[float]499" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="14527" LabelOwner="[UIModel]14509" Left="[float]16" Text="[string]Pilot-Betrag" Top="[float]462" Width="[float]64" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=14548}" Height="[float]149" Id="14529" Label="[UIModel]14547" Left="[float]10" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]642" Width="[float]897" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14530" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14541" Orientation="[SMOrientation]Horizontal" Range="[IRange]225034, 236034, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14530" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14541" Orientation="[SMOrientation]Horizontal" Range="[IRange]258571, 269571, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="14541" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
-							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="14531" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14542" Orientation="[SMOrientation]Vertical" Range="[IRange]-8, 6, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="14531" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14542" Orientation="[SMOrientation]Vertical" Range="[IRange]-20, 70, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="14542" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Plot HorizontalScale="[UIModel]14530" Id="14532" Label="[string]Plot" VerticalScale="[UIModel]14531" Visibility="[SMVisibility]Visible" />
@@ -4400,6 +4522,8 @@
 						<Label Height="[float]16" Id="14547" LabelOwner="[UIModel]14529" Left="[float]10" Text="[string]Pilot-Phase" Top="[float]619" Width="[float]60" xmlns="http://www.ni.com/PanelCommon" />
 						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="16309" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Label="[UIModel]16311" Left="[float]1186" MinHeight="[float]22" Top="[float]428" Value="{DataItemBinding Id=16306}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="16311" LabelOwner="[UIModel]16309" Left="[float]1186" Text="[string]received packets" Top="[float]405" Width="[float]88" xmlns="http://www.ni.com/PanelCommon" />
+						<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="21169" IsReadOnly="[bool]False" Label="[UIModel]21174" Left="[float]1110" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]510" TrueContent="[string]On" Value="{DataItemBinding Id=21166}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="21174" LabelOwner="[UIModel]21169" Left="[float]1110" Text="[string]NormalizeConstellation?" Top="[float]487" Width="[float]129" xmlns="http://www.ni.com/PanelCommon" />
 					</Canvas>
 				</TabItem>
 				<TabItem Header="[string]TX" Id="9088" Left="[float]0" TabIndex="[int]6" Top="[float]0">
@@ -4582,7 +4706,7 @@
 						<Label Height="[float]16" Id="1330" LabelOwner="[UIModel]919" Left="[float]1097" Text="[string]rx.samples to acquire" Top="[float]568" Width="[float]112" xmlns="http://www.ni.com/PanelCommon" />
 						<Label Height="[float]16" Id="1331" LabelOwner="[UIModel]925" Left="[float]1097" Text="[string]rx.state" Top="[float]624" Width="[float]38" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=14422}" Height="[float]173" Id="14424" Label="[UIModel]14442" Left="[float]10" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]26" Width="[float]893" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14425" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14436" Orientation="[SMOrientation]Horizontal" Range="[IRange]175006, 175106, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14425" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14436" Orientation="[SMOrientation]Horizontal" Range="[IRange]130477, 130577, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="14436" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="14426" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14437" Orientation="[SMOrientation]Vertical" Range="[IRange]-28.8, -25.700000000000003, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4604,7 +4728,7 @@
 						<GraphTools Graph="[UIModel]14424" Height="[float]22" Id="14441" Left="[float]15" Top="[float]206" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="14442" LabelOwner="[UIModel]14424" Left="[float]10" Text="[string]RF Power" Top="[float]3" Width="[float]50" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=14463}" Height="[float]145" Id="14444" Label="[UIModel]14462" Left="[float]10" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]199" Width="[float]893" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14445" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14456" Orientation="[SMOrientation]Horizontal" Range="[IRange]109455, 109555, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="14445" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14456" Orientation="[SMOrientation]Horizontal" Range="[IRange]102302, 102402, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="14456" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="14446" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]14457" Orientation="[SMOrientation]Vertical" Range="[IRange]-15.9, -15.73, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4626,7 +4750,7 @@
 						<GraphTools Graph="[UIModel]14444" Height="[float]22" Id="14461" Left="[float]15" Top="[float]351" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="14462" LabelOwner="[UIModel]14444" Left="[float]10" Text="[string]Preamble Power" Top="[float]176" Width="[float]87" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=16634}" Height="[float]127" Id="16636" Label="[UIModel]16654" Left="[float]21" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]347" Width="[float]871" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16637" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16648" Orientation="[SMOrientation]Horizontal" Range="[IRange]27058, 27158, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16637" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16648" Orientation="[SMOrientation]Horizontal" Range="[IRange]20776, 20876, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="16648" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="16638" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16649" Orientation="[SMOrientation]Vertical" Range="[IRange]30, 50, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4648,7 +4772,7 @@
 						<GraphTools Graph="[UIModel]16636" Height="[float]22" Id="16653" Left="[float]26" Top="[float]481" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="16654" LabelOwner="[UIModel]16636" Left="[float]21" Text="[string]Overall AGC setting" Top="[float]324" Width="[float]104" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=16675}" Height="[float]125" Id="16656" Label="[UIModel]16674" Left="[float]21" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]487" Width="[float]871" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16657" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16668" Orientation="[SMOrientation]Horizontal" Range="[IRange]27058, 27158, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16657" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16668" Orientation="[SMOrientation]Horizontal" Range="[IRange]20776, 20876, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="16668" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="16658" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16669" Orientation="[SMOrientation]Vertical" Range="[IRange]30, 32, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4670,7 +4794,7 @@
 						<GraphTools Graph="[UIModel]16656" Height="[float]22" Id="16673" Left="[float]26" Top="[float]619" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="16674" LabelOwner="[UIModel]16656" Left="[float]21" Text="[string]RF RX power setting" Top="[float]464" Width="[float]107" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=16697}" Height="[float]125" Id="16678" Label="[UIModel]16696" Left="[float]28" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]625" Width="[float]857" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16679" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16690" Orientation="[SMOrientation]Horizontal" Range="[IRange]27058, 27158, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="16679" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16690" Orientation="[SMOrientation]Horizontal" Range="[IRange]20776, 20876, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="16690" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="16680" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]16691" Orientation="[SMOrientation]Vertical" Range="[IRange]-1, 11, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4714,7 +4838,7 @@
 						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="18287" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[double]1" Label="[UIModel]19148" Left="[float]914" MinHeight="[float]22" Top="[float]92" Value="{DataItemBinding Id=18284}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="19148" LabelOwner="[UIModel]18287" Left="[float]914" Text="[string]rssi.log power" Top="[float]69" Width="[float]74" xmlns="http://www.ni.com/PanelCommon" />
 						<Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=19353}" Height="[float]139" Id="19354" Label="[UIModel]19372" Left="[float]15" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]763" Width="[float]870" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="19355" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]19366" Orientation="[SMOrientation]Horizontal" Range="[IRange]618748, 619848, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="19355" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]19366" Orientation="[SMOrientation]Horizontal" Range="[IRange]519755, 520855, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="19366" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="19356" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]19367" Orientation="[SMOrientation]Vertical" Range="[IRange]-7.579, -7.5600000000000005, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4750,7 +4874,7 @@
 						<Label Height="[float]16" Id="1909" LabelOwner="[UIModel]1897" Left="[float]9" Text="[string]RX.sync.symbolStart" Top="[float]103" Width="[float]106" xmlns="http://www.ni.com/PanelCommon" />
 						<Label Height="[float]16" Id="1910" LabelOwner="[UIModel]1903" Left="[float]9" Text="[string]RX.sync.sync found_out" Top="[float]206" Width="[float]124" xmlns="http://www.ni.com/PanelCommon" />
 						<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=1960}" Height="[float]219" Id="1962" Label="[UIModel]1980" Left="[float]308" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]32" Width="[float]964" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="1963" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]1974" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 21000, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="1963" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]1974" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 20000, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="1974" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]None" Id="1964" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]1975" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4765,7 +4889,7 @@
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="1971" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="1972" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="1973" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
-							<Cursor CrosshairBrush="[SMSolidColorBrush]#ff000000" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="3218" Label="[string]Cursor 1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetShape="[PointShape]Ellipse" Value="[string]System.Double, mscorlib]|[99]|[System.Double, mscorlib]|[0" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+							<Cursor CrosshairBrush="[SMSolidColorBrush]#ff000000" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="3218" Label="[string]Cursor 1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetShape="[PointShape]Ellipse" Value="[string]System.Double, mscorlib]|[701]|[System.Double, mscorlib]|[0" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
 							<Plot HorizontalScale="[UIModel]1963" Id="9449" Label="[string]RX Energy2" VerticalScale="[UIModel]1964" Visibility="[SMVisibility]Visible" />
 							<Plot HorizontalScale="[UIModel]1963" Id="9450" Label="[string]Threshold" VerticalScale="[UIModel]1964" Visibility="[SMVisibility]Visible" />
 							<Plot HorizontalScale="[UIModel]1963" Id="9521" Label="[string]cfo pi out" VerticalScale="[UIModel]1964" Visibility="[SMVisibility]Visible">
@@ -4844,10 +4968,10 @@
 						</Cluster>
 						<Label Height="[float]16" Id="2824" LabelOwner="[UIModel]2781" Left="[float]179" Text="[string]RX.sync.GFDM configuration cluster" Top="[float]9" Width="[float]189" xmlns="http://www.ni.com/PanelCommon" />
 						<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=4308}" Height="[float]243" Id="4309" Label="[UIModel]4330" Left="[float]18" MetadataAlwaysOverridesPlotNames="[bool]True" PlotAreaMargin="[SMThickness]NaN,NaN,NaN,NaN" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]595" Width="[float]597" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4310" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4322" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4310" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4322" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 600, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4322" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
-							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="4311" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4323" Orientation="[SMOrientation]Vertical" Range="[IRange]-4, 4, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="4311" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4323" Orientation="[SMOrientation]Vertical" Range="[IRange]-10000000000000, 140000000000000, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4323" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="4313" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
@@ -4864,10 +4988,10 @@
 							<Plot HorizontalScale="[UIModel]4310" Id="4379" Label="[string]phase" VerticalScale="[UIModel]4311" Visibility="[SMVisibility]Visible" />
 						</Graph>
 						<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=4347}" Height="[float]243" Id="4348" Label="[UIModel]4367" Left="[float]668" MetadataAlwaysOverridesPlotNames="[bool]True" PlotAreaMargin="[SMThickness]NaN,NaN,NaN,NaN" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]595" Width="[float]617" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4349" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4360" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4349" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4360" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 600, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4360" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
-							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="4350" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4361" Orientation="[SMOrientation]Vertical" Range="[IRange]-3, 4, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="4350" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4361" Orientation="[SMOrientation]Vertical" Range="[IRange]-1000000000000, 9000000000000, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4361" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="4351" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
@@ -4904,7 +5028,7 @@
 				<TabItem Header="[string]Demodulator" Id="9090" Left="[float]0" TabIndex="[int]5" Top="[float]0">
 					<Canvas Height="[float]902" Id="9091" Left="[float]5" MinHeight="[float]0" MinWidth="[float]0" Top="[float]24" Width="[float]1302" xmlns="http://www.ni.com/PlatformFramework">
 						<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=4497}" Height="[float]201" Id="4499" Label="[UIModel]4519" Left="[float]638" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]38" Width="[float]630" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4500" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4512" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 80, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4500" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4512" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 500, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4512" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]None" Id="4501" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4513" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.3, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -4922,7 +5046,7 @@
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="4509" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
 							<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="4510" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
 							<Plot HorizontalScale="[UIModel]4500" Id="4511" Label="[string]Host" VerticalScale="[UIModel]4501" Visibility="[SMVisibility]Visible" />
-							<Cursor CrosshairBrush="[SMSolidColorBrush]#ff000000" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="4543" Label="[string]Cursor 1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetShape="[PointShape]Ellipse" Value="[string]System.Double, mscorlib]|[77]|[System.Double, mscorlib]|[0.08319091796875" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+							<Cursor CrosshairBrush="[SMSolidColorBrush]#ff000000" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="4543" Label="[string]Cursor 1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetShape="[PointShape]Ellipse" Value="[string]System.Double, mscorlib]|[471]|[System.Double, mscorlib]|[-190185546875" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
 							<Plot HorizontalScale="[UIModel]4500" Id="5527" Label="[string]Plot 3" VerticalScale="[UIModel]4501" Visibility="[SMVisibility]Visible" />
 						</Graph>
 						<PlotLegend Graph="[UIModel]4499" Height="[float]26" Id="4515" Left="[float]580" Top="[float]137" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
@@ -4931,7 +5055,7 @@
 						<GraphTools Graph="[UIModel]4499" Height="[float]22" Id="4518" Left="[float]692" Top="[float]224" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="4519" LabelOwner="[UIModel]4499" Left="[float]638" Text="[string]RE_data" Top="[float]15" Width="[float]42" xmlns="http://www.ni.com/PanelCommon" />
 						<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=4498}" Height="[float]201" Id="4520" Label="[UIModel]4540" Left="[float]3" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]38" Width="[float]641" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4521" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4533" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 80, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+							<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="4521" Label="[string]Time" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4533" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 500, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
 								<RangeLabeledDivisions Id="4533" LabelPresenter="[string]LVRelativeSeconds:0.######&gt;&gt;0.000E+0" />
 							</Axis>
 							<Axis Adjuster="[RangeAdjuster]None" Id="4522" Label="[string]Amplitude" LabelVisibility="[SMVisibility]Visible" MajorDivisions="[UIModel]4534" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.5, 1.4000000000000001, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
@@ -5075,7 +5199,7 @@
 				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="2685" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]2752" Left="[float]5" MinHeight="[float]22" Top="[float]295" Value="{ClusterBinding FieldName=Nw}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				<ArrayViewer ArrayElement="[UIModel]2688" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]16" Height="[float]36" Id="2691" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]True" Label="[UIModel]2753" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]340" Value="{ClusterBinding FieldName=Modulator\ MUX\ config}" Width="[float]130">
 					<p.DefaultElementValue>0</p.DefaultElementValue>
-					<NumericText BaseName="[string]Numeric" Height="[float]22" Id="2688" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ulong]1" Left="[float]53" MinHeight="[float]22" Name="[string]Child" Top="[float]8" Value="[ulong]609767373817249791" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt64" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<NumericText BaseName="[string]Numeric" Height="[float]22" Id="2688" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ulong]1" Left="[float]54" MinHeight="[float]22" Name="[string]Child" Top="[float]7" Value="[ulong]153122387330596863" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt64" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				</ArrayViewer>
 				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="2694" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]2754" Left="[float]5" MinHeight="[float]22" Top="[float]399" Value="{ClusterBinding FieldName=K}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="2697" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[byte]1" Label="[UIModel]2755" Left="[float]5" MinHeight="[float]22" Top="[float]444" Value="{ClusterBinding FieldName=fft_size_log2(K)}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt8" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
@@ -5272,7 +5396,7 @@
 						<Label Height="[float]16" Id="12855" LabelOwner="[UIModel]12854" Left="[float]134" Text="[string]Data Routing" Top="[float]9" Width="[float]70" xmlns="http://www.ni.com/PanelCommon" />
 						<ArrayViewer ArrayElement="[UIModel]12581" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]348" Id="12580" IndexVisibility="[Visibility]Visible" Label="[UIModel]12582" Left="[float]16" Orientation="[SMOrientation]Vertical" Rows="[int]14" Top="[float]80" Value="{DataItemBinding Id=12573}" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Width="[float]149" xmlns="http://www.ni.com/PanelCommon">
 							<p.DefaultElementValue>0</p.DefaultElementValue>
-							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="12581" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[short]1" Left="[float]54" MinHeight="[float]22" Name="[string]Child" Top="[float]32" Value="[short]2" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="12581" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[short]1" Left="[float]54" MinHeight="[float]22" Name="[string]Child" Top="[float]56" Value="[short]3" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						</ArrayViewer>
 						<Label Height="[float]16" Id="12582" LabelOwner="[UIModel]12580" Left="[float]16" Text="[string]K_set" Top="[float]57" Width="[float]28" xmlns="http://www.ni.com/PanelCommon" />
 						<ArrayViewer ArrayElement="[UIModel]12584" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]348" Id="12583" IndexVisibility="[Visibility]Visible" Label="[UIModel]12585" Left="[float]179" Orientation="[SMOrientation]Vertical" Rows="[int]14" Top="[float]79" Value="{DataItemBinding Id=12574}" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Width="[float]149" xmlns="http://www.ni.com/PanelCommon">
@@ -5585,25 +5709,25 @@
 				</Array>
 			</p.DefaultValue>
 		</DataItem>
-		<DataItem AdaptToDiagramType="True" DataType="CFXP(2.14)[,]" Id="4467" Name="IQ" xmlns="http://www.ni.com/MocCommon">
+		<DataItem AdaptToDiagramType="True" DataType="ComplexDouble[,]" Id="4467" Name="IQ" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
-				<Array Lengths="2,576">
-					<Elements>0xFFFFFFFFFFFFF8A3;0xFFFFFFFFFFFFF924,0x6AF;0xFFFFFFFFFFFFF852,0xFFFFFFFFFFFFF8D6;0xFFFFFFFFFFFFF9C2,0xFFFFFFFFFFFFF8FA;0xFFFFFFFFFFFFF935,0x737;0x65E,0xFFFFFFFFFFFFF949;0x740,0xFFFFFFFFFFFFF899;0xFFFFFFFFFFFFF8F6,0x746;0x69C,0x787;0x6F0,0xFFFFFFFFFFFFF7E2;0xFFFFFFFFFFFFF9EB,0x695;0xFFFFFFFFFFFFF89C,0xFFFFFFFFFFFFF906;0xFFFFFFFFFFFFF997,0xFFFFFFFFFFFFF859;0xFFFFFFFFFFFFF963,0x750;0x698,0xFFFFFFFFFFFFF91E;0x75E,0xFFFFFFFFFFFFF84D;0xFFFFFFFFFFFFF9FF,0xFFFFFFFFFFFFF8BE;0xFFFFFFFFFFFFF978,0xFFFFFFFFFFFFF990;0x76B,0xFFFFFFFFFFFFF942;0x701,0x6BB;0x6DC,0xFFFFFFFFFFFFF918;0xFFFFFFFFFFFFF930,0xFFFFFFFFFFFFF92B;0x74B,0x680;0xFFFFFFFFFFFFF8A1,0xFFFFFFFFFFFFF7B3;0xFFFFFFFFFFFFF912,0x713;0x619,0x6B4;0x675,0xFFFFFFFFFFFFF8F3;0xFFFFFFFFFFFFF93B,0x669;0xFFFFFFFFFFFFF87B,0xFFFFFFFFFFFFF772;0xFFFFFFFFFFFFF8EA,0xFFFFFFFFFFFFF6E7;0xFFFFFFFFFFFFF8C5,0x8B3;0x7AE,0xFFFFFFFFFFFFF9B2;0x779,0x6E2;0x6E8,0x64B;0xFFFFFFFFFFFFF8FB,0x779;0x6B7,0xFFFFFFFFFFFFF96E;0x888,0xFFFFFFFFFFFFF84D;0xFFFFFFFFFFFFF8D1,0x69D;0xFFFFFFFFFFFFF92F,0xFFFFFFFFFFFFF90D;0xFFFFFFFFFFFFF97D,0xFFFFFFFFFFFFF965;0x723,0xFFFFFFFFFFFFF8A6;0xFFFFFFFFFFFFF9DE,0xFFFFFFFFFFFFF8C2;0xFFFFFFFFFFFFF9B2,0xFFFFFFFFFFFFF992;0x741,0xFFFFFFFFFFFFF8F0;0x76D,0x6D9;0x6EB,0xFFFFFFFFFFFFF911;0xFFFFFFFFFFFFF962,0xFFFFFFFFFFFFF991;0x7C6,0x672;0xFFFFFFFFFFFFF8AD,0x784;0x665,0xFFFFFFFFFFFFF8E6;0x7B4,0x652;0xFFFFFFFFFFFFF887,0x6AB;0xFFFFFFFFFFFFF8C7,0x796;0x6BB,0x651;0xFFFFFFFFFFFFF8A3,0x685;0xFFFFFFFFFFFFF8C4,0x6D6;0xFFFFFFFFFFFFF997,0xFFFFFFFFFFFFF88A;0xFFFFFFFFFFFFF896,0x756;0x706,0x731;0x67D,0xFFFFFFFFFFFFF907;0xFFFFFFFFFFFFF98A,0x6C9;0xFFFFFFFFFFFFF8CA,0xFFFFFFFFFFFFF89F;0xFFFFFFFFFFFFF895,0xFFFFFFFFFFFFF8F1;0xFFFFFFFFFFFFF891,0x769;0x6D0,0x6A3;0xFFFFFFFFFFFFF91F,0xFFFFFFFFFFFFF96C;0x6F8,0xFFFFFFFFFFFFF8DB;0xFFFFFFFFFFFFF943,0x6F2;0x6F0,0x6C2;0xFFFFFFFFFFFFF8E7,0x6CD;0xFFFFFFFFFFFFF979,0x6E4;0x705,0x77A;0x64F,0xFFFFFFFFFFFFF91F;0x728,0x6BA;0x6D9,0x6B9;0xFFFFFFFFFFFFF98E,0x68E;0x74E,0xFFFFFFFFFFFFF99D;0x709,0xFFFFFFFFFFFFF845;0xFFFFFFFFFFFFF92D,0x6A2;0xFFFFFFFFFFFFF8B1,0xFFFFFFFFFFFFF883;0xFFFFFFFFFFFFF992,0x6E1;0xFFFFFFFFFFFFF958,0x6EB;0xFFFFFFFFFFFFF9C0,0xFFFFFFFFFFFFF941;0x696,0xFFFFFFFFFFFFF92A;0xFFFFFFFFFFFFF9C3,0xFFFFFFFFFFFFF8A9;0x83E,0x940;0xFFFFFFFFFFFFF5D7,0xFFFFFFFFFFFFF8BB;0x932,0xFFFFFFFFFFFFF8E7;0xFFFFFFFFFFFFF91C,0xFFFFFFFFFFFFF992;0x6E5,0xFFFFFFFFFFFFF940;0xFFFFFFFFFFFFF974,0xFFFFFFFFFFFFF8B6;0xFFFFFFFFFFFFF90C,0xFFFFFFFFFFFFF957;0x74B,0xFFFFFFFFFFFFF8CB;0x71E,0x7CB;0x735,0xFFFFFFFFFFFFF8A9;0xFFFFFFFFFFFFF95E,0xFFFFFFFFFFFFF90E;0x6F0,0xFFFFFFFFFFFFF99E;0x6DE,0xFFFFFFFFFFFFF907;0x6E3,0x6C6;0x734,0x6D9;0xFFFFFFFFFFFFF8C4,0xFFFFFFFFFFFFF90D;0x728,0xFFFFFFFFFFFFF93B;0x6E9,0x751;0x64F,0xFFFFFFFFFFFFF914;0x733,0x6EB;0xFFFFFFFFFFFFF912,0x6FF;0x6F4,0xFFFFFFFFFFFFF93B;0x6CD,0x687;0xFFFFFFFFFFFFF890,0x6E6;0xFFFFFFFFFFFFF8B5,0x7AD;0x6EB,0x6B3;0xFFFFFFFFFFFFF8B7,0x7B2;0xFFFFFFFFFFFFF916,0xFFFFFFFFFFFFF8EB;0x792,0x6CA;0xFFFFFFFFFFFFF862,0x69D;0xFFFFFFFFFFFFF8C7,0xFFFFFFFFFFFFF987;0x727,0x6D9;0xFFFFFFFFFFFFF8F5,0xFFFFFFFFFFFFF8EE;0x72A,0xFFFFFFFFFFFFF8DC;0x716,0x68F;0xFFFFFFFFFFFFF8E3,0x6D6;0xFFFFFFFFFFFFF8E1,0xFFFFFFFFFFFFF8DF;0xFFFFFFFFFFFFF9C1,0x709;0x62D,0x760;0x682,0xFFFFFFFFFFFFF906;0xFFFFFFFFFFFFF960,0x6A5;0xFFFFFFFFFFFFF909,0xFFFFFFFFFFFFF891;0xFFFFFFFFFFFFF933,0xFFFFFFFFFFFFF8BD;0xFFFFFFFFFFFFF93F,0xFFFFFFFFFFFFF874;0xFFFFFFFFFFFFF956,0xFFFFFFFFFFFFF8BB;0xFFFFFFFFFFFFF9B9,0x6AB;0x6A9,0xFFFFFFFFFFFFF901;0xFFFFFFFFFFFFF8F5,0xFFFFFFFFFFFFF88D;0xFFFFFFFFFFFFF9BF,0xFFFFFFFFFFFFF8C6;0xFFFFFFFFFFFFF9B6,0x762;0x659,0xFFFFFFFFFFFFF850;0xFFFFFFFFFFFFF964,0x704;0x659,0x675;0xFFFFFFFFFFFFF93A,0xFFFFFFFFFFFFF999;0x6CD,0xFFFFFFFFFFFFF89D;0xFFFFFFFFFFFFF8B3,0x8C0;0x687,0x7B8;0xFFFFFFFFFFFFF51C,0x758;0xFFFFFFFFFFFFF716,0x7A5;0x74C,0xFFFFFFFFFFFFF8F4;0xFFFFFFFFFFFFF9D9,0x725;0x5EA,0x672;0xFFFFFFFFFFFFF89F,0x7B9;0x717,0x754;0x70B,0xFFFFFFFFFFFFF8E0;0xFFFFFFFFFFFFF917,0xFFFFFFFFFFFFF991;0x783,0x78E;0x680,0x6F7;0x627,0xFFFFFFFFFFFFF970;0x739,0x760;0x73A,0x741;0xFFFFFFFFFFFFF8F5,0x770;0x6B8,0xFFFFFFFFFFFFF99B;0x747,0xFFFFFFFFFFFFF8EA;0xFFFFFFFFFFFFF9AD,0x641;0xFFFFFFFFFFFFF869,0x6F1;0x6AB,0xFFFFFFFFFFFFF927;0xFFFFFFFFFFFFF96C,0xFFFFFFFFFFFFF8ED;0xFFFFFFFFFFFFF910,0xFFFFFFFFFFFFF97C;0x746,0x781;0x6D5,0x74A;0x68D,0x6B5;0x6D0,0x6F9;0xFFFFFFFFFFFFF883,0xFFFFFFFFFFFFF877;0xFFFFFFFFFFFFF95E,0x64C;0xFFFFFFFFFFFFF8A1,0x67D;0xFFFFFFFFFFFFF8ED,0xFFFFFFFFFFFFF949;0x722,0xFFFFFFFFFFFFF8EF;0xFFFFFFFFFFFFF8D6,0xFFFFFFFFFFFFF8B9;0x795,0x69E;0xFFFFFFFFFFFFF85F,0xFFFFFFFFFFFFF9CA;0x6E9,0x714;0x6C7,0x6F1;0x63D,0xFFFFFFFFFFFFF981;0x6E6,0x6AA;0xFFFFFFFFFFFFF8A7,0xFFFFFFFFFFFFF91B;0xFFFFFFFFFFFFF908,0x746;0x6D4,0xFFFFFFFFFFFFF9D6;0x73A,0xFFFFFFFFFFFFF9C0;0x799,0xFFFFFFFFFFFFF92E;0xFFFFFFFFFFFFF935,0xFFFFFFFFFFFFF909;0x692,0xFFFFFFFFFFFFF8D9;0xFFFFFFFFFFFFF98A,0xFFFFFFFFFFFFF8AE;0xFFFFFFFFFFFFF977,0xFFFFFFFFFFFFF9CC;0x72B,0xFFFFFFFFFFFFF95A;0x78E,0x73B;0x6B7,0xFFFFFFFFFFFFF8F7;0xFFFFFFFFFFFFF96F,0x61B;0xFFFFFFFFFFFFF9B4,0x6A8;0x6B5,0x74B;0x6DA,0x89A;0x6F0,0xFFFFFFFFFFFFF77D;0xB0A,0x837;0x7F0,0xFFFFFFFFFFFFF8B9;0xFFFFFFFFFFFFF854,0xFFFFFFFFFFFFF8EB;0xFFFFFFFFFFFFF99A,0xFFFFFFFFFFFFF9EC;0x6BF,0xFFFFFFFFFFFFF99F;0x76F,0xFFFFFFFFFFFFF8DA;0x753,0x767;0x73F,0x69E;0xFFFFFFFFFFFFF8F4,0xFFFFFFFFFFFFF9B5;0x76D,0xFFFFFFFFFFFFF9BA;0x767,0x6D3;0x6B2,0x6ED;0xFFFFFFFFFFFFF8FB,0xFFFFFFFFFFFFF89F;0xFFFFFFFFFFFFF92F,0x6A9;0xFFFFFFFFFFFFF901,0xFFFFFFFFFFFFF8BC;0xFFFFFFFFFFFFF930,0x6A6;0xFFFFFFFFFFFFF8B9,0x79B;0x648,0x652;0xFFFFFFFFFFFFF8E6,0x701;0x673,0xFFFFFFFFFFFFF902;0x6E2,0x672;0xFFFFFFFFFFFFF8FE,0x791;0x659,0xFFFFFFFFFFFFF93F;0x7BC,0x6C2;0xFFFFFFFFFFFFF8C8,0x688;0xFFFFFFFFFFFFF9AD,0x793;0x703,0x699;0xFFFFFFFFFFFFF884,0xFFFFFFFFFFFFF9A0;0x75A,0x703;0x679,0xFFFFFFFFFFFFF8E5;0xFFFFFFFFFFFFF939,0x742;0xFFFFFFFFFFFFF919,0x6BC;0xFFFFFFFFFFFFF869,0xFFFFFFFFFFFFF861;0xFFFFFFFFFFFFF94E,0xFFFFFFFFFFFFF886;0xFFFFFFFFFFFFF931,0x64F;0xFFFFFFFFFFFFF879,0x6AC;0xFFFFFFFFFFFFF905,0xFFFFFFFFFFFFF972;0x773,0x6EE;0xFFFFFFFFFFFFF928,0x6B6;0xFFFFFFFFFFFFF872,0xFFFFFFFFFFFFF9AD;0x7B8,0x69D;0xFFFFFFFFFFFFF8E2,0xFFFFFFFFFFFFF98B;0x773,0xFFFFFFFFFFFFF98C;0x774,0xFFFFFFFFFFFFF907;0x6F3,0xFFFFFFFFFFFFF981;0xFFFFFFFFFFFFF902,0xFFFFFFFFFFFFF935;0x6F1,0xFFFFFFFFFFFFF938;0x747,0xFFFFFFFFFFFFF9BF;0x761,0xFFFFFFFFFFFFF8C6;0xFFFFFFFFFFFFF95D,0x69F;0xFFFFFFFFFFFFF90C,0xFFFFFFFFFFFFF9A2;0x6A4,0x6E1;0xFFFFFFFFFFFFF972,0x6DA;0xFFFFFFFFFFFFF944,0xFFFFFFFFFFFFF704;0xFFFFFFFFFFFFF947,0xAD2;0x800,0x8E1;0x7A7,0xFFFFFFFFFFFFF89D;0xFFFFFFFFFFFFF958,0x68E;0xFFFFFFFFFFFFF905,0xFFFFFFFFFFFFF8F6;0xFFFFFFFFFFFFF9C8,0x787;0x663,0x6FE;0xFFFFFFFFFFFFF872,0x707;0xFFFFFFFFFFFFF8C1,0x71A;0x709,0x6DC;0x6EE,0x683;0xFFFFFFFFFFFFF91F,0xFFFFFFFFFFFFF959;0x734,0xFFFFFFFFFFFFF886;0xFFFFFFFFFFFFF997,0xFFFFFFFFFFFFF8AC;0xFFFFFFFFFFFFF94E,0xFFFFFFFFFFFFF925;0xFFFFFFFFFFFFF905,0xFFFFFFFFFFFFF85D;0xFFFFFFFFFFFFF938,0x7BC;0x681,0xFFFFFFFFFFFFF8AB;0xFFFFFFFFFFFFF961,0xFFFFFFFFFFFFF87A;0xFFFFFFFFFFFFF966,0xFFFFFFFFFFFFF923;0xFFFFFFFFFFFFF943,0x74B;0x6B8,0x767;0x70B,0xFFFFFFFFFFFFF97E;0x7C0,0x7BC;0x64E,0xFFFFFFFFFFFFF8BF;0xFFFFFFFFFFFFF94A,0xFFFFFFFFFFFFF95A;0xFFFFFFFFFFFFF95C,0x703;0xFFFFFFFFFFFFF884,0x79B;0x682,0x75F;0x641,0xFFFFFFFFFFFFF8D5;0xFFFFFFFFFFFFF9A3,0x74D;0x69E,0x69A;0xFFFFFFFFFFFFF8D7,0xFFFFFFFFFFFFF935;0x722,0xFFFFFFFFFFFFF8E4;0xFFFFFFFFFFFFF93D,0x781;0x6B9,0x6A5;0xFFFFFFFFFFFFF87D,0x5E1;0xFFFFFFFFFFFFF8DB,0xFFFFFFFFFFFFF919;0xFFFFFFFFFFFFF95A,0x6C7;0xFFFFFFFFFFFFF903,0xFFFFFFFFFFFFF9A2;0x748,0x610;0xFFFFFFFFFFFFF8CA,0xFFFFFFFFFFFFF839;0xFFFFFFFFFFFFF9D5,0xFFFFFFFFFFFFF9F7;0x7BA,0xFFFFFFFFFFFFF921;0x716,0x69F;0xFFFFFFFFFFFFF8B3,0x727;0x683,0xFFFFFFFFFFFFF890;0xFFFFFFFFFFFFF92E,0x758;0x650,0x652;0xFFFFFFFFFFFFF7F0,0x782;0x632,0x6A4;0x672,0xFFFFFFFFFFFFF94C;0xFFFFFFFFFFFFF94F,0xFFFFFFFFFFFFF952;0x6B5,0xFFFFFFFFFFFFF876;0xFFFFFFFFFFFFF946,0xFFFFFFFFFFFFF967;0x875,0xFFFFFFFFFFFFF557;0xFFFFFFFFFFFFF7E0,0xFFFFFFFFFFFFF7ED;0x92C,0x78F;0x6F4,0xFFFFFFFFFFFFF96E;0x6F8,0x71B;0x688,0xFFFFFFFFFFFFF984;0x713,0x7D3;0x6E7,0x7F1;0x6BF,0xFFFFFFFFFFFFF932;0x756,0x7AB;0x6C8,0x61C;0xFFFFFFFFFFFFF864,0x792;0x640,0xFFFFFFFFFFFFF950;0x744,0xFFFFFFFFFFFFF877;0xFFFFFFFFFFFFF94C,0xFFFFFFFFFFFFF94A;0x786,0xFFFFFFFFFFFFF9B8;0x767,0x637;0xFFFFFFFFFFFFF87C,0xFFFFFFFFFFFFF8C2;0xFFFFFFFFFFFFF980,0x697;0xFFFFFFFFFFFFF8E3,0xFFFFFFFFFFFFF999;0x71D,0x6F3;0xFFFFFFFFFFFFF8A4,0xFFFFFFFFFFFFF8AC;0xFFFFFFFFFFFFF917,0x689;0xFFFFFFFFFFFFF8BD,0x75A;0x67A,0xFFFFFFFFFFFFF8BD;0xFFFFFFFFFFFFF995,0xFFFFFFFFFFFFF92D;0xFFFFFFFFFFFFF915,0xFFFFFFFFFFFFF917;0x771,0x7F3;0x674,0x797;0x637,0x731;0x65C,0xFFFFFFFFFFFFF9B5;0x71B,0x6AD;0xFFFFFFFFFFFFF8ED,0x784;0x66C,0x770;0x646,0xFFFFFFFFFFFFF96A;0x788,0xFFFFFFFFFFFFF961;0x762,0xFFFFFFFFFFFFF8AD;0xFFFFFFFFFFFFFA09,0x763;0x6EE,0x63D;0xFFFFFFFFFFFFF8AC,0xFFFFFFFFFFFFF8AB;0xFFFFFFFFFFFFF9D2,0x61E;0xFFFFFFFFFFFFF862,0x5E5;0xFFFFFFFFFFFFF898,0xFFFFFFFFFFFFF9AC;0x7C2,0xFFFFFFFFFFFFF938;0xFFFFFFFFFFFFF9BF,0xFFFFFFFFFFFFF98F;0x719,0x6F3;0xFFFFFFFFFFFFF8DB,0x666;0xFFFFFFFFFFFFF923,0xFFFFFFFFFFFFFA1B;0x7DC,0xFFFFFFFFFFFFF9F3;0x7E7,0xFFFFFFFFFFFFF973;0x7B7,0xFFFFFFFFFFFFF990;0x6EF,0x669;0xFFFFFFFFFFFFF98F,0x69D;0xFFFFFFFFFFFFF947,0x610;0xFFFFFFFFFFFFF849,0xFFFFFFFFFFFFF905;0x905,0xAB0;0x859,0x8ED;0x7AD,0xFFFFFFFFFFFFF9AC;0x766,0x692;0xFFFFFFFFFFFFF93F,0xFFFFFFFFFFFFF936;0xFFFFFFFFFFFFF9C9,0x703;0x64E,0xFFFFFFFFFFFFF8BD;0x787,0x6AC;0xFFFFFFFFFFFFF85D,0x66F;0xFFFFFFFFFFFFF86D,0xFFFFFFFFFFFFF8B8;0xFFFFFFFFFFFFF97E,0x68D;0xFFFFFFFFFFFFF8A3,0x5D8;0xFFFFFFFFFFFFF8A6,0x665;0xFFFFFFFFFFFFF8F9,0xFFFFFFFFFFFFF851;0xFFFFFFFFFFFFF97D,0xFFFFFFFFFFFFF9AD;0x75E,0xFFFFFFFFFFFFF9BF;0x76D,0xFFFFFFFFFFFFF86C;0xFFFFFFFFFFFFF9FE,0xFFFFFFFFFFFFF9F7;0x7AF,0xFFFFFFFFFFFFF85A;0xFFFFFFFFFFFFF956,0xFFFFFFFFFFFFF8C4;0xFFFFFFFFFFFFF9DE,0xFFFFFFFFFFFFF917;0x74F,0xFFFFFFFFFFFFF937;0x780,0x79F;0x621,0x7A7;0x624,0xFFFFFFFFFFFFF89A;0xFFFFFFFFFFFFF99C,0xFFFFFFFFFFFFF970;0x6F7,0x7B1;0x73D,0xFFFFFFFFFFFFF854;0xFFFFFFFFFFFFF946,0x730;0x65B,0x66F;0xFFFFFFFFFFFFF8B1,0x710;0x676,0xFFFFFFFFFFFFF8C8;0xFFFFFFFFFFFFF8F2,0x72D;0xFFFFFFFFFFFFF8A4,0x765;0x70B,0x734;0x6CC,0x74E;0x6BC,0xFFFFFFFFFFFFF944;0x761,0x75D;0x62E,0xFFFFFFFFFFFFF8D1;0xFFFFFFFFFFFFF8F7,0x725;0x6D9,0x795;0x6D1,0xFFFFFFFFFFFFF8A4;0xFFFFFFFFFFFFF940,0xFFFFFFFFFFFFF909;0xFFFFFFFFFFFFF9B8,0x71A;0x6BC,0x773;0x6B3,0xFFFFFFFFFFFFF903;0xFFFFFFFFFFFFF9BA,0xFFFFFFFFFFFFF935;0xFFFFFFFFFFFFF971,0xFFFFFFFFFFFFF84D;0xFFFFFFFFFFFFF94C,0xFFFFFFFFFFFFF97A;0x7CF,0xFFFFFFFFFFFFF9CC;0x79C,0xFFFFFFFFFFFFF978;0x727,0x67F;0x658,0x6CF;0xFFFFFFFFFFFFF966,0xFFFFFFFFFFFFFA1D;0x7B6,0xFFFFFFFFFFFFF92F;0x8A1,0xFFFFFFFFFFFFF59B;0xFFFFFFFFFFFFF6FA,0xFFFFFFFFFFFFF701;0xFFFFFFFFFFFFF7B3,0x6FC;0xFFFFFFFFFFFFF8B7,0x672;0xFFFFFFFFFFFFF8D2,0x6FB;0x605,0xFFFFFFFFFFFFF85E;0xFFFFFFFFFFFFF9B3,0x691;0xFFFFFFFFFFFFF85E,0xFFFFFFFFFFFFF8A9;0x781,0x744;0x722,0x69B;0xFFFFFFFFFFFFF911,0xFFFFFFFFFFFFF8A4;0xFFFFFFFFFFFFF9FB,0x67E;0xFFFFFFFFFFFFF894,0xFFFFFFFFFFFFF8D4;0xFFFFFFFFFFFFF93C,0x6D8;0xFFFFFFFFFFFFF8F7,0x71B;0x73C,0x6B2;0xFFFFFFFFFFFFF868,0xFFFFFFFFFFFFF894;0xFFFFFFFFFFFFF928,0x774;0x69F,0x79F;0x642,0xFFFFFFFFFFFFF909;0x744,0xFFFFFFFFFFFFF8EE;0xFFFFFFFFFFFFF918,0xFFFFFFFFFFFFF8BF;0xFFFFFFFFFFFFF905,0xFFFFFFFFFFFFF8A5;0xFFFFFFFFFFFFF929,0x6BF;0xFFFFFFFFFFFFF847,0x77B;0x6D2,0xFFFFFFFFFFFFF8C2;0x658,0x703;0xFFFFFFFFFFFFF871,0x79D;0x69E,0xFFFFFFFFFFFFF9AA;0x751,0x65C;0xFFFFFFFFFFFFF8D8,0x682;0xFFFFFFFFFFFFF8C9,0x79C;0x687,0xFFFFFFFFFFFFF951;0x723,0x782;0x666,0xFFFFFFFFFFFFF9B3;0x717,0xFFFFFFFFFFFFF88D;0xFFFFFFFFFFFFF9EB,0xFFFFFFFFFFFFF9DE;0x73D,0xFFFFFFFFFFFFF8FA;0xFFFFFFFFFFFFF9B8,0xFFFFFFFFFFFFF91D;0x70F,0x6F3;0x6A9,0x67A;0xFFFFFFFFFFFFF88A,0xFFFFFFFFFFFFF9C3;0x71A,0x78F;0x67A,0xFFFFFFFFFFFFF86A;0xFFFFFFFFFFFFF96A,0x6DA;0xFFFFFFFFFFFFF951,0x6D0;0xFFFFFFFFFFFFF87C,0xFFFFFFFFFFFFF8E8;0xFFFFFFFFFFFFF9AD,0xFFFFFFFFFFFFF860;0xFFFFFFFFFFFFF998,0xFFFFFFFFFFFFF9C5;0x7C1,0xFFFFFFFFFFFFF822;0xFFFFFFFFFFFFF97B,0xFFFFFFFFFFFFF94C;0xFFFFFFFFFFFFF9A9,0x6D1;0x6A0,0x638;0xFFFFFFFFFFFFF96B,0xFFFFFFFFFFFFF85F;0xFFFFFFFFFFFFF95A,0x8A5;0x74C,0xFFFFFFFFFFFFF4FD;0xFFFFFFFFFFFFF870,0x7B7;0xFFFFFFFFFFFFF7C4,0x64E;0xFFFFFFFFFFFFF8B0,0xFFFFFFFFFFFFF9F8;0x720,0x62F;0xFFFFFFFFFFFFF8DD,0x690;0xFFFFFFFFFFFFF894,0xFFFFFFFFFFFFF914;0x800,0x6AB;0xFFFFFFFFFFFFF857,0xFFFFFFFFFFFFF91B;0x7B7,0x663;0xFFFFFFFFFFFFF8F9,0x7AE;0x655,0x683;0xFFFFFFFFFFFFF8E8,0xFFFFFFFFFFFFF937;0x754,0x6D9;0xFFFFFFFFFFFFF8A1,0x700;0x6C6,0xFFFFFFFFFFFFF9C8;0x756,0xFFFFFFFFFFFFF997;0x739,0xFFFFFFFFFFFFF96A;0x778,0x644;0xFFFFFFFFFFFFF8BC,0x674;0xFFFFFFFFFFFFF89A,0xFFFFFFFFFFFFF8C9;0xFFFFFFFFFFFFF995,0x706;0x68F,0x775;0x626,0x75D;0x668,0x782;0x5FD,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x0;0x0</Elements>
-					<Elements>0xFFFFFFFFFFFFFF1C;0xFFFFFFFFFFFFFFA6,0x1714;0xFFFFFFFFFFFFF6FC,0xFFFFFFFFFFFFE7D6;0xFFFFFFFFFFFFF66C,0x8DC;0xFFFFFFFFFFFFE73D,0xFFFFFFFFFFFFE8E6;0xFFFFFFFFFFFFF7B6,0xFFFFFFFFFFFFE8B8;0xFFFFFFFFFFFFF641,0x1758;0x889,0xFFFFFFFFFFFFF6AA;0x17C2,0xFFFFFFFFFFFFE793;0xFFFFFFFFFFFFF605,0x17B6;0x911,0x18A2;0x99E,0xFFFFFFFFFFFFE6C0;0xFFFFFFFFFFFFF8FF,0x8E4;0xFFFFFFFFFFFFE809,0xFFFFFFFFFFFFE92F;0xFFFFFFFFFFFFF722,0xFFFFFFFFFFFFE760;0xFFFFFFFFFFFFF747,0x17CB;0x8FE,0xFFFFFFFFFFFFF65C;0x1832,0xFFFFFFFFFFFFE7D6;0xFFFFFFFFFFFFF8CA,0xFFFFFFFFFFFFE867;0xFFFFFFFFFFFFF71B,0xFFFFFFFFFFFFF77C;0x17E5,0xFFFFFFFFFFFFF65D;0x172F,0x16A4;0xA2E,0xFFFFFFFFFFFFE8FB;0xFFFFFFFFFFFFF61A,0xFFFFFFFFFFFFF66B;0x17F9,0x8B5;0xFFFFFFFFFFFFE827,0xFFFFFFFFFFFFE585;0xFFFFFFFFFFFFF721,0x16C0;0x805,0x1631;0x93C,0xFFFFFFFFFFFFE8AC;0xFFFFFFFFFFFFF657,0x85B;0xFFFFFFFFFFFFE7E2,0xFFFFFFFFFFFFE4C3;0xFFFFFFFFFFFFF6FE,0xFFFFFFFFFFFFFCB5;0xFFFFFFFFFFFFFEBC,0xFFFFFFFFFFFFEB26;0xFFFFFFFFFFFFF8EA,0xFFFFFFFFFFFFE352;0xFFFFFFFFFFFFF728,0x1C25;0xA4D,0xFFFFFFFFFFFFF7DA;0x17E9,0x170D;0xA26,0x88B;0xFFFFFFFFFFFFE931,0x184B;0x922,0xFFFFFFFFFFFFF837;0x1AB4,0xFFFFFFFFFFFFE6BA;0xFFFFFFFFFFFFF5F3,0x981;0xFFFFFFFFFFFFE963,0xFFFFFFFFFFFFE92A;0xFFFFFFFFFFFFF6DE,0xFFFFFFFFFFFFF6D2;0x1761,0xFFFFFFFFFFFFE88C;0xFFFFFFFFFFFFF827,0xFFFFFFFFFFFFE8A6;0xFFFFFFFFFFFFF7A4,0xFFFFFFFFFFFFF75A;0x177F,0xFFFFFFFFFFFFF5FE;0x1881,0x16FA;0xA36,0xFFFFFFFFFFFFE919;0xFFFFFFFFFFFFF699,0xFFFFFFFFFFFFF7D3;0x18C1,0x8A0;0xFFFFFFFFFFFFE853,0x1818;0x852,0xFFFFFFFFFFFFF629;0x1936,0x82F;0xFFFFFFFFFFFFE815,0x941;0xFFFFFFFFFFFFE85B,0x1894;0x910,0x847;0xFFFFFFFFFFFFE858,0x8E2;0xFFFFFFFFFFFFE877,0x134;0xFFFFFFFFFFFFFFC6,0x12;0x28,0x99;0xFFFFFFFFFFFFFF81,0xFFFFFFFFFFFFFFD3;0x8,0xFFFFFFFFFFFFFF9F;0xFFFFFFFFFFFFFFAC,0xFFFFFFFFFFFFFF6C;0xFFFFFFFFFFFFFF64,0xA6C;0xFFFFFFFFFFFFEA27,0xFFFFFFFFFFFFE714;0xFFFFFFFFFFFFF52D,0x1840;0xA02,0x1767;0x8D9,0xFFFFFFFFFFFFE927;0xFFFFFFFFFFFFF703,0x98B;0xFFFFFFFFFFFFE845,0xFFFFFFFFFFFFE746;0xFFFFFFFFFFFFF516,0xFFFFFFFFFFFFE808;0xFFFFFFFFFFFFF4C0,0x183C;0x96C,0x980;0xFFFFFFFFFFFFE936,0xFFFFFFFFFFFFF6B8;0x16F3,0xFFFFFFFFFFFFE87A;0xFFFFFFFFFFFFF682,0x173A;0xA29,0x997;0xFFFFFFFFFFFFE893,0xA39;0xFFFFFFFFFFFFE9E7,0x172C;0xA69,0x17EC;0x826,0xFFFFFFFFFFFFF62D;0x17AF,0x169F;0xA26,0xA1D;0xFFFFFFFFFFFFEA2D,0x16A2;0xB6A,0xFFFFFFFFFFFFF73F;0x16ED,0xFFFFFFFFFFFFE6FC;0xFFFFFFFFFFFFF6D8,0x917;0xFFFFFFFFFFFFE82D,0xFFFFFFFFFFFFE7F0;0xFFFFFFFFFFFFF791,0xA4B;0xFFFFFFFFFFFFE984,0xAC5;0xFFFFFFFFFFFFEA76,0xFFFFFFFFFFFFF5F5;0x162F,0xFFFFFFFFFFFFE9B2;0xFFFFFFFFFFFFF76B,0xFFFFFFFFFFFFF617;0x1ABA,0xDD;0xFFFFFFFFFFFFFE93,0xFFFFFFFFFFFFE4F4;0x585,0xCB4;0xFFFFFFFFFFFFDEDD,0xFFFFFFFFFFFFF726;0x1CF4,0xFFFFFFFFFFFFE871;0xFFFFFFFFFFFFF617,0xFFFFFFFFFFFFF703;0x16A1,0xFFFFFFFFFFFFE99B;0xFFFFFFFFFFFFF698,0xFFFFFFFFFFFFE7ED;0xFFFFFFFFFFFFF620,0xFFFFFFFFFFFFF6D4;0x17CF,0xFFFFFFFFFFFFF55A;0x17E7,0x1987;0xA04,0xFFFFFFFFFFFFE81B;0xFFFFFFFFFFFFF6F1,0xFFFFFFFFFFFFF5D0;0x1739,0xFFFFFFFFFFFFF71A;0x1686,0xFFFFFFFFFFFFF5B3;0x171F,0x1712;0xAF7,0x9AC;0xFFFFFFFFFFFFE829,0xFFFFFFFFFFFFF601;0x17C1,0xFFFFFFFFFFFFF635;0x16FD,0x1787;0x84D,0xFFFFFFFFFFFFF61D;0x17D5,0xA22;0xFFFFFFFFFFFFE8D3,0x175F;0xA28,0xFFFFFFFFFFFFF61A;0x16B9,0x8B6;0xFFFFFFFFFFFFE7F8,0x9BD;0xFFFFFFFFFFFFE7F8,0x18F8;0x96E,0x945;0xFFFFFFFFFFFFE82D,0x5A;0xA,0xFFFFFFFFFFFFFF60;0xFFFFFFFFFFFFFFEB,0xFFFFFFFFFFFFFECB;0xFFFFFFFFFFFFFFDC,0x107;0x46,0xFFFFFFFFFFFFFF88;0xFFFFFFFFFFFFFF59,0xFFFFFFFFFFFFFF12;0xFFFFFFFFFFFFFF48,0xC03;0xFFFFFFFFFFFFE822,0xFFFFFFFFFFFFF613;0x18E0,0x92D;0xFFFFFFFFFFFFE74A,0x920;0xFFFFFFFFFFFFE869,0xFFFFFFFFFFFFF725;0x174B,0x9DB;0xFFFFFFFFFFFFE89E,0xFFFFFFFFFFFFF5B9;0x17E2,0xFFFFFFFFFFFFF57A;0x17C2,0x917;0xFFFFFFFFFFFFE8B9,0x9C1;0xFFFFFFFFFFFFE871,0xFFFFFFFFFFFFE8FB;0xFFFFFFFFFFFFF7AC,0x16BB;0x83E,0x17DC;0x8B9,0xFFFFFFFFFFFFE8FE;0xFFFFFFFFFFFFF69F,0x970;0xFFFFFFFFFFFFE8FF,0xFFFFFFFFFFFFE7B9;0xFFFFFFFFFFFFF6A1,0xFFFFFFFFFFFFE82E;0xFFFFFFFFFFFFF693,0xFFFFFFFFFFFFE795;0xFFFFFFFFFFFFF70F,0xFFFFFFFFFFFFE89D;0xFFFFFFFFFFFFF7BA,0x164E;0x9C3,0xFFFFFFFFFFFFE88D;0xFFFFFFFFFFFFF5A2,0xFFFFFFFFFFFFE833;0xFFFFFFFFFFFFF7F4,0xFFFFFFFFFFFFE8B3;0xFFFFFFFFFFFFF7AA,0x17BC;0x856,0xFFFFFFFFFFFFE74C;0xFFFFFFFFFFFFF753,0x16D7;0x8AD,0x92A;0xFFFFFFFFFFFFE9A2,0xFFFFFFFFFFFFF6FD;0x1662,0xFFFFFFFFFFFFE75E;0xFFFFFFFFFFFFF561,0x1B31;0x77A,0xFFFFFFFFFFFFFFDA;0xFFFFFFFFFFFFFF54,0xFFFFFFFFFFFFE569;0xFFFFFFFFFFFFFDCC,0x856;0xFFFFFFFFFFFFDE8C,0x94B;0xFFFFFFFFFFFFE3A6,0x1941;0xA5E,0xFFFFFFFFFFFFE943;0xFFFFFFFFFFFFF7D1,0x16BF;0x783,0x893;0xFFFFFFFFFFFFE830,0x193E;0x9CE,0x1841;0xA0F,0xFFFFFFFFFFFFE85E;0xFFFFFFFFFFFFF613,0xFFFFFFFFFFFFF795;0x181F,0x184A;0x889,0x168B;0x842,0xFFFFFFFFFFFFF700;0x178B,0x1888;0xA74,0xAD5;0xFFFFFFFFFFFFE83E,0x1835;0x92E,0xFFFFFFFFFFFFF775;0x1785,0xFFFFFFFFFFFFE902;0xFFFFFFFFFFFFF771,0x7EA;0xFFFFFFFFFFFFE7DB,0x16F8;0x985,0xFFFFFFFFFFFFE958;0xFFFFFFFFFFFFF69B,0xFFFFFFFFFFFFE876;0xFFFFFFFFFFFFF5F6,0xFFFFFFFFFFFFF729;0x179F,0x187A;0x963,0x17B2;0x8E8,0x27;0xFFFFFFFFFFFFFF3B,0xFFFFFFFFFFFFFFF1;0xBC,0xFFFFFFFFFFFFFFFD;0xFFFFFFFFFFFFFF58,0x48;0xFFFFFFFFFFFFFF57,0xFFFFFFFFFFFFFFAC;0x58,0x23;0xFFFFFFFFFFFFFF59,0xFFFFFFFFFFFFFF5C;0xFFFFFFFFFFFFFF77,0x168A;0xA15,0x9BD;0xFFFFFFFFFFFFE76F,0xFFFFFFFFFFFFE7A3;0xFFFFFFFFFFFFF71F,0x839;0xFFFFFFFFFFFFE859,0x8F6;0xFFFFFFFFFFFFE8E2,0xFFFFFFFFFFFFF68D;0x1779,0xFFFFFFFFFFFFE845;0xFFFFFFFFFFFFF568,0xFFFFFFFFFFFFF59D;0x1915,0x8BF;0xFFFFFFFFFFFFE76D,0xFFFFFFFFFFFFF78D;0x1676,0x1767;0x9A7,0x1691;0x87C,0xFFFFFFFFFFFFF6DA;0x16B5,0x921;0xFFFFFFFFFFFFE810,0xFFFFFFFFFFFFE8DC;0xFFFFFFFFFFFFF5B6,0x17EA;0x997,0xFFFFFFFFFFFFF7F7;0x172F,0xFFFFFFFFFFFFF81A;0x1828,0xFFFFFFFFFFFFE935;0xFFFFFFFFFFFFF610,0xFFFFFFFFFFFFF56A;0x165A,0xFFFFFFFFFFFFE8B9;0xFFFFFFFFFFFFF72E,0xFFFFFFFFFFFFE83F;0xFFFFFFFFFFFFF728,0xFFFFFFFFFFFFF7D1;0x1714,0xFFFFFFFFFFFFF71B;0x186D,0x17B6;0x95D,0xFFFFFFFFFFFFE8E8;0xFFFFFFFFFFFFF6D0,0x8C5;0xFFFFFFFFFFFFEB1C,0x1651;0x9E1,0x17FC;0x9A2,0x1B38;0x89B,0x12;0xB9,0xFFFFFFFFFFFFE4AA;0xFFFFFFFFFFFFFC99,0xFFFFFFFFFFFFF5E5;0x2291,0x1B39;0xB61,0xFFFFFFFFFFFFE749;0xFFFFFFFFFFFFF462,0xFFFFFFFFFFFFE8F2;0xFFFFFFFFFFFFF743,0xFFFFFFFFFFFFF7B8;0x15F2,0xFFFFFFFFFFFFF7A3;0x17E3,0xFFFFFFFFFFFFF5AE;0x1857,0x189F;0xA7A,0x94D;0xFFFFFFFFFFFFE8D3,0xFFFFFFFFFFFFF7D7;0x17C8,0xFFFFFFFFFFFFF7DE;0x17B4,0x16B6;0x9B2,0xA11;0xFFFFFFFFFFFFE89A,0xFFFFFFFFFFFFE7D7;0xFFFFFFFFFFFFF68A,0x972;0xFFFFFFFFFFFFE8E8,0xFFFFFFFFFFFFE81E;0xFFFFFFFFFFFFF671,0x928;0xFFFFFFFFFFFFE83D,0x1835;0x7F7,0x889;0xFFFFFFFFFFFFE8FA,0x16EB;0x8EF,0xFFFFFFFFFFFFF5A5;0x1723,0x8EC;0xFFFFFFFFFFFFE915,0x182C;0x828,0xFFFFFFFFFFFFF706;0x18F4,0x979;0xFFFFFFFFFFFFE847,0xFFFFFFFFFFFFFFA9;0xDC,0x47;0xFFFFFFFFFFFFFF47,0x59;0xFFFFFFFFFFFFFF4D,0x7F;0x4F,0x66;0xFFFFFFFFFFFFFF94,0xFFFFFFFFFFFFFF7C;0xFFFFFFFFFFFFFFCE,0xFFFFFFFFFFFFFF67;0xFFFFFFFFFFFFFF54,0x9C5;0xFFFFFFFFFFFFEAA6,0x18D2;0x9C1,0x8D6;0xFFFFFFFFFFFFE7CA,0xFFFFFFFFFFFFF792;0x17AE,0x16F4;0x8FD,0xFFFFFFFFFFFFE888;0xFFFFFFFFFFFFF660,0xAFA;0xFFFFFFFFFFFFE891,0x911;0xFFFFFFFFFFFFE769,0xFFFFFFFFFFFFE760;0xFFFFFFFFFFFFF70E,0xFFFFFFFFFFFFE79C;0xFFFFFFFFFFFFF6A6,0x81B;0xFFFFFFFFFFFFE7F6,0x97F;0xFFFFFFFFFFFFE8F0,0xFFFFFFFFFFFFF73C;0x1816,0xA3D;0xFFFFFFFFFFFFE905,0x90C;0xFFFFFFFFFFFFE783,0xFFFFFFFFFFFFF809;0x1883,0x939;0xFFFFFFFFFFFFE8A9,0xFFFFFFFFFFFFF778;0x17FE,0xFFFFFFFFFFFFF77A;0x17FF,0xFFFFFFFFFFFFF5C2;0x1745,0xFFFFFFFFFFFFE9CD;0xFFFFFFFFFFFFF547,0xFFFFFFFFFFFFF62F;0x1717,0xFFFFFFFFFFFFF686;0x17E3,0xFFFFFFFFFFFFF7E3;0x17A1,0xFFFFFFFFFFFFE861;0xFFFFFFFFFFFFF6D4,0x966;0xFFFFFFFFFFFFE90B,0xFFFFFFFFFFFFF6ED;0x15F7,0xA64;0xFFFFFFFFFFFFE9C4,0xA27;0xFFFFFFFFFFFFE95B,0xFFFFFFFFFFFFE411;0xFFFFFFFFFFFFF846,0xFFFFFFFFFFFFFF11;0xFFFFFFFFFFFFFF77,0xFFFFFFFFFFFFE6A0;0xFFFFFFFFFFFFF6F4,0x218D;0x915,0x1C8F;0xA10,0xFFFFFFFFFFFFE7F8;0xFFFFFFFFFFFFF6EF,0x936;0xFFFFFFFFFFFFE90A,0xFFFFFFFFFFFFE938;0xFFFFFFFFFFFFF7A8,0x181D;0x84A,0x9B9;0xFFFFFFFFFFFFE741,0xA19;0xFFFFFFFFFFFFE7F7,0x17B4;0xA40,0x1705;0xA39,0x934;0xFFFFFFFFFFFFE955,0xFFFFFFFFFFFFF6C4;0x1795,0xFFFFFFFFFFFFE7FC;0xFFFFFFFFFFFFF79C,0xFFFFFFFFFFFFE813;0xFFFFFFFFFFFFF6C7,0xFFFFFFFFFFFFE8F1;0xFFFFFFFFFFFFF5A5,0xFFFFFFFFFFFFE741;0xFFFFFFFFFFFFF6DC,0x18B8;0x860,0xFFFFFFFFFFFFE822;0xFFFFFFFFFFFFF6F6,0xFFFFFFFFFFFFE7B2;0xFFFFFFFFFFFFF730,0xFFFFFFFFFFFFE928;0xFFFFFFFFFFFFF63C,0x17DC;0x950,0x186D;0x9FD,0xFFFFFFFFFFFFF7A1;0x18C4,0x1888;0x7E6,0xFFFFFFFFFFFFE83D;0xFFFFFFFFFFFFF6AC,0xB2;0x56,0xFFFFFFFFFFFFFF8B;0xFFFFFFFFFFFFFF9A,0xFFFFFFFFFFFFFF8B;0x7B,0x59;0xFFFFFFFFFFFFFF86,0xFFFFFFFFFFFFFF63;0xFFFFFFFFFFFFFF56,0x39;0xFFFFFFFFFFFFFF76,0xFFFFFFFFFFFFFF5B;0xFFFFFFFFFFFFFF98,0xFFFFFFFFFFFFE9C4;0xFFFFFFFFFFFFF646,0x9D5;0xFFFFFFFFFFFFE766,0x186A;0x882,0x179E;0x81E,0xFFFFFFFFFFFFE8C7;0xFFFFFFFFFFFFF76E,0x17C9;0x90F,0x926;0xFFFFFFFFFFFFE891,0xFFFFFFFFFFFFF65C;0x178D,0xFFFFFFFFFFFFE889;0xFFFFFFFFFFFFF66A,0x185F;0x91E,0x8EC;0xFFFFFFFFFFFFE7AE,0x76E;0xFFFFFFFFFFFFE949,0xFFFFFFFFFFFFE926;0xFFFFFFFFFFFFF67E,0x9BC;0xFFFFFFFFFFFFE8D2,0xFFFFFFFFFFFFF786;0x1780,0x7CF;0xFFFFFFFFFFFFE8F5,0xFFFFFFFFFFFFE77E;0xFFFFFFFFFFFFF878,0xFFFFFFFFFFFFF8BE;0x1843,0xFFFFFFFFFFFFF622;0x1782,0x911;0xFFFFFFFFFFFFE837,0x1755;0x8F2,0xFFFFFFFFFFFFE7B3;0xFFFFFFFFFFFFF695,0x179B;0x84A,0x7A2;0xFFFFFFFFFFFFE6AA,0x17E3;0x7DA,0x1609;0x943,0xFFFFFFFFFFFFE996;0xFFFFFFFFFFFFF633,0xFFFFFFFFFFFFF63C;0x166B,0xFFFFFFFFFFFFE789;0xFFFFFFFFFFFFF6E6,0xFFFFFFFFFFFFF813;0x1A8C,0xC3;0x8B,0xFFFFFFFFFFFFE72F;0xFFFFFFFFFFFFF721,0xFFFFFFFFFFFFDEB7;0xFFFFFFFFFFFFF678,0xFFFFFFFFFFFFF532;0x1DA7,0x18B9;0x9A0,0xFFFFFFFFFFFFF6BF;0x16F2,0x173C;0x908,0xFFFFFFFFFFFFF70C;0x171F,0x1950;0x941,0x1973;0x8C4,0xFFFFFFFFFFFFF685;0x180C,0x18D2;0x91D,0x78D;0xFFFFFFFFFFFFE7F3,0x1816;0x7EB,0xFFFFFFFFFFFFF6BE;0x17C3,0xFFFFFFFFFFFFE792;0xFFFFFFFFFFFFF6F5,0xFFFFFFFFFFFFF6EC;0x1868,0xFFFFFFFFFFFFF7D8;0x17B7,0x7E3;0xFFFFFFFFFFFFE815,0xFFFFFFFFFFFFE878;0xFFFFFFFFFFFFF72A,0x92B;0xFFFFFFFFFFFFE8B2,0xFFFFFFFFFFFFF748;0x1721,0x9CE;0xFFFFFFFFFFFFE7C2,0xFFFFFFFFFFFFE7DF;0xFFFFFFFFFFFFF642,0x8E7;0xFFFFFFFFFFFFE863,0x17C7;0x8AD,0xFFFFFFFFFFFFE87E;0xFFFFFFFFFFFFF762,0xFFFFFFFFFFFFFF7A;0xFFFFFFFFFFFFFFA5,0x6C;0x88,0xFFFFFFFFFFFFFFB2;0xFFFFFFFFFFFFFF67,0xFFFFFFFFFFFFFF74;0xFFFFFFFFFFFFFF4B,0xB8;0xFFFFFFFFFFFFFF86,0x79;0x57,0xFFFFFFFFFFFFFF18;0xFFFFFFFFFFFFFF8D,0xFFFFFFFFFFFFE914;0xFFFFFFFFFFFFF5C5,0xFFFFFFFFFFFFF65E;0x1865,0x1931;0x80F,0x181A;0x7D2,0x1747;0x88A,0xFFFFFFFFFFFFF789;0x1703,0x96A;0xFFFFFFFFFFFFE8B4,0x181E;0x864,0x17CA;0x81B,0xFFFFFFFFFFFFF73C;0x184F,0xFFFFFFFFFFFFF702;0x17FC,0xFFFFFFFFFFFFE8C7;0xFFFFFFFFFFFFF889,0x1849;0x9BC,0x81E;0xFFFFFFFFFFFFE882,0xFFFFFFFFFFFFE88C;0xFFFFFFFFFFFFF806,0x78F;0xFFFFFFFFFFFFE7EB,0x738;0xFFFFFFFFFFFFE8A3,0xFFFFFFFFFFFFF811;0x189C,0xFFFFFFFFFFFFE9CF;0xFFFFFFFFFFFFF754,0xFFFFFFFFFFFFF72C;0x1723,0xA01;0xFFFFFFFFFFFFE846,0x8F2;0xFFFFFFFFFFFFE979,0xFFFFFFFFFFFFF935;0x1873,0xFFFFFFFFFFFFF8DF;0x18B3,0xFFFFFFFFFFFFF77E;0x18B8,0xFFFFFFFFFFFFF707;0x16BD,0x95F;0xFFFFFFFFFFFFEA79,0x997;0xFFFFFFFFFFFFE99D,0x757;0xFFFFFFFFFFFFE7BD,0xFFFFFFFFFFFFF7B0;0x1C43,0xFFFFFFFFFFFFFF82;0xFFFFFFFFFFFFFF91,0xFFFFFFFFFFFFE956;0xFFFFFFFFFFFFF14A,0x218F;0xA09,0x1CB1;0xA13,0xFFFFFFFFFFFFF7BA;0x17C0,0x976;0xFFFFFFFFFFFFE994,0xFFFFFFFFFFFFE9D2;0xFFFFFFFFFFFFF76E,0x16CC;0x895,0xFFFFFFFFFFFFF59A;0x18EF,0x8DF;0xFFFFFFFFFFFFE75C,0x85C;0xFFFFFFFFFFFFE7BA,0xFFFFFFFFFFFFE85D;0xFFFFFFFFFFFFF731,0x8D7;0xFFFFFFFFFFFFE821,0x726;0xFFFFFFFFFFFFE8D1,0x8C8;0xFFFFFFFFFFFFE914,0xFFFFFFFFFFFFE764;0xFFFFFFFFFFFFF78E,0xFFFFFFFFFFFFF7B4;0x17AB,0xFFFFFFFFFFFFF7EE;0x17BF,0xFFFFFFFFFFFFE820;0xFFFFFFFFFFFFF8AB,0xFFFFFFFFFFFFF8B3;0x182A,0xFFFFFFFFFFFFE756;0xFFFFFFFFFFFFF728,0xFFFFFFFFFFFFE8D6;0xFFFFFFFFFFFFF80C,0xFFFFFFFFFFFFF640;0x1815,0xFFFFFFFFFFFFF6B9;0x186C,0x181A;0x796,0x182F;0x795,0xFFFFFFFFFFFFE831;0xFFFFFFFFFFFFF794,0xFFFFFFFFFFFFFF76;0x4A,0xFFFFFFFFFFFFFFC2;0xFFFFFFFFFFFFFF63,0xFFFFFFFFFFFFFF8F;0xFFFFFFFFFFFFFF56,0xFFFFFFFFFFFFFFB8;0xFFFFFFFFFFFFFF7C,0xFFFFFFFFFFFFFF6E;0x45,0x5B;0x97,0xFFFFFFFFFFFFFFBA;0xFFFFFFFFFFFFFF78,0xFFFFFFFFFFFFF6C2;0x16EE,0x1950;0xA2F,0xFFFFFFFFFFFFE737;0xFFFFFFFFFFFFF707,0x1745;0x889,0x89B;0xFFFFFFFFFFFFE85E,0x1712;0x8E9,0xFFFFFFFFFFFFE801;0xFFFFFFFFFFFFF5CF,0xA58;0xFFFFFFFFFFFFE78C,0x1869;0xA00,0x17B8;0x996,0x17E7;0x956,0xFFFFFFFFFFFFF6BB;0x1816,0x1786;0x7F2,0xFFFFFFFFFFFFE81C;0xFFFFFFFFFFFFF5D4,0x17A1;0x9C2,0x18A7;0x945,0xFFFFFFFFFFFFE7F3;0xFFFFFFFFFFFFF6AE,0xFFFFFFFFFFFFE958;0xFFFFFFFFFFFFF76F,0x176A;0x987,0x1838;0x91D,0xFFFFFFFFFFFFE949;0xFFFFFFFFFFFFF77A,0xFFFFFFFFFFFFE97E;0xFFFFFFFFFFFFF69A,0xFFFFFFFFFFFFE72C;0xFFFFFFFFFFFFF71C,0xFFFFFFFFFFFFF7A5;0x18EA,0xFFFFFFFFFFFFF83B;0x1822,0xFFFFFFFFFFFFF702;0x1758,0x1599;0x929,0xA2C;0xFFFFFFFFFFFFE9B7,0xFFFFFFFFFFFFF916;0x1817,0xFFFFFFFFFFFFF7B5;0x1B2B,0xA7;0x5E,0xFFFFFFFFFFFFEA60;0xFFFFFFFFFFFFF239,0xFFFFFFFFFFFFDE82;0xFFFFFFFFFFFFF410,0xFFFFFFFFFFFFE28D;0xFFFFFFFFFFFFF47C,0x9F5;0xFFFFFFFFFFFFE7E7,0x8C3;0xFFFFFFFFFFFFE8AA,0x1674;0x7ED,0xFFFFFFFFFFFFE7B8;0xFFFFFFFFFFFFF804,0x89F;0xFFFFFFFFFFFFE777,0xFFFFFFFFFFFFF565;0x18F4,0x182F;0xA55,0x961;0xFFFFFFFFFFFFE91D,0xFFFFFFFFFFFFE8A2;0xFFFFFFFFFFFFF870,0x8A6;0xFFFFFFFFFFFFE80A,0xFFFFFFFFFFFFE862;0xFFFFFFFFFFFFF676,0x9DA;0xFFFFFFFFFFFFE8A5,0x17E6;0xABA,0x8F8;0xFFFFFFFFFFFFE76F,0xFFFFFFFFFFFFE7B6;0xFFFFFFFFFFFFF683,0x1828;0x8ED,0x1837;0x7E5,0xFFFFFFFFFFFFF613;0x1806,0xFFFFFFFFFFFFE87E;0xFFFFFFFFFFFFF607,0xFFFFFFFFFFFFE7FD;0xFFFFFFFFFFFFF606,0xFFFFFFFFFFFFE7E0;0xFFFFFFFFFFFFF674,0x8FA;0xFFFFFFFFFFFFE714,0x1868;0x960,0xFFFFFFFFFFFFFFAC;0xFFFFFFFFFFFFFF78,0xA7;0xFFFFFFFFFFFFFFCE,0xFFFFFFFFFFFFFFEE;0xFFFFFFFFFFFFFF3B,0x1F;0x73,0xFFFFFFFFFFFFFFCE;0xFFFFFFFFFFFFFF5F,0xFFFFFFFFFFFFFF38;0x3B,0xFFFFFFFFFFFFFF8B;0xFFFFFFFFFFFFFFBB,0xFFFFFFFFFFFFF48A;0x1613,0x9C3;0xFFFFFFFFFFFFE739,0x188A;0x8C5,0xFFFFFFFFFFFFF7A2;0x178F,0x894;0xFFFFFFFFFFFFE8CD,0x8E0;0xFFFFFFFFFFFFE887,0x1872;0x88C,0xFFFFFFFFFFFFF6A1;0x1775,0x1813;0x857,0xFFFFFFFFFFFFF781;0x16FA,0xFFFFFFFFFFFFE85C;0xFFFFFFFFFFFFF85E,0xFFFFFFFFFFFFF80D;0x172F,0xFFFFFFFFFFFFE932;0xFFFFFFFFFFFFF77C,0xFFFFFFFFFFFFF60F;0x1774,0x16FB;0x97F,0x892;0xFFFFFFFFFFFFE7F7,0xFFFFFFFFFFFFF7AA;0x16F4,0x1847;0x87B,0xFFFFFFFFFFFFE78E;0xFFFFFFFFFFFFF748,0xA35;0xFFFFFFFFFFFFE97B,0x954;0xFFFFFFFFFFFFE783,0xFFFFFFFFFFFFE8FD;0xFFFFFFFFFFFFF773,0xFFFFFFFFFFFFE7A3;0xFFFFFFFFFFFFF7C1,0xFFFFFFFFFFFFF84D;0x1883,0xFFFFFFFFFFFFE6F3;0xFFFFFFFFFFFFF7B6,0xFFFFFFFFFFFFE9EA;0xFFFFFFFFFFFFF70D,0x16A1;0x988,0x8C6;0xFFFFFFFFFFFFEA52,0xFFFFFFFFFFFFE765;0xFFFFFFFFFFFFF72E,0x1BA7;0x96E,0xFFFFFFFFFFFFFFD4;0x211,0xFFFFFFFFFFFFEE2F;0xFFFFFFFFFFFFEB37,0xFFFFFFFFFFFFDE65;0xFFFFFFFFFFFFF829,0xAD2;0xFFFFFFFFFFFFE4EF,0x84B;0xFFFFFFFFFFFFE87A,0xFFFFFFFFFFFFF82F;0x16D1,0x82C;0xFFFFFFFFFFFFE903,0x8CF;0xFFFFFFFFFFFFE7F9,0xFFFFFFFFFFFFF6DD;0x19C2,0x8D8;0xFFFFFFFFFFFFE74C,0xFFFFFFFFFFFFF6A9;0x190C,0x8C3;0xFFFFFFFFFFFFE918,0x186E;0x805,0x901;0xFFFFFFFFFFFFE8D0,0xFFFFFFFFFFFFF690;0x1801,0x98D;0xFFFFFFFFFFFFE7D4,0x1736;0x9B7,0xFFFFFFFFFFFFF7F0;0x177F,0xFFFFFFFFFFFFF75D;0x1767,0xFFFFFFFFFFFFF72D;0x182A,0x83F;0xFFFFFFFFFFFFE8A2,0x893;0xFFFFFFFFFFFFE822,0xFFFFFFFFFFFFE89C;0xFFFFFFFFFFFFF756,0x170F;0x92D,0x17B9;0x7C9,0x17BD;0x87E,0x17B1;0x75B,0xE2;0xFFFFFFFFFFFFFF5A,0xA0;0x33,0xFFFFFFFFFFFFFF30;0x4,0x17;0xFFFFFFFFFFFFFF44,0xE3;0xFFFFFFFFFFFFFFF0,0xFFFFFFFFFFFFFF94;0x1B</Elements>
+				<Array Lengths="2,576" IsBinary="True" Compression="GZip">
+					<BinaryElements>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</BinaryElements>
+					<BinaryElements>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</BinaryElements>
 				</Array>
 			</p.DefaultValue>
 		</DataItem>
-		<DataItem AdaptToDiagramType="True" DataType="FXP(2.14)[]" Id="4497" Name="RE_data" xmlns="http://www.ni.com/MocCommon">
+		<DataItem AdaptToDiagramType="True" DataType="Double[]" Id="4497" Name="RE_data" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
-				<Array Lengths="496">
-					<Elements>0xFFFFFFFFFFFFF7A8,0x7DB,0xFFFFFFFFFFFFF785,0xFFFFFFFFFFFFF79E,0x7DA,0xFFFFFFFFFFFFF7E3,0xFFFFFFFFFFFFF7C7,0x7E0,0x80E,0xFFFFFFFFFFFFF806,0x735,0xFFFFFFFFFFFFF82B,0xFFFFFFFFFFFFF871,0x7C4,0xFFFFFFFFFFFFF82A,0xFFFFFFFFFFFFF7DE,0xFFFFFFFFFFFFF7BE,0xFFFFFFFFFFFFF854,0xFFFFFFFFFFFFF824,0x7BC,0xFFFFFFFFFFFFF7C2,0xFFFFFFFFFFFFF81C,0x787,0xFFFFFFFFFFFFF730,0x74D,0x6F1,0xFFFFFFFFFFFFF85C,0x7D0,0xFFFFFFFFFFFFF5AB,0xFFFFFFFFFFFFF621,0xA47,0xFFFFFFFFFFFFF856,0x872,0x74E,0x83D,0xFFFFFFFFFFFFF8BF,0xFFFFFFFFFFFFF767,0x85B,0xFFFFFFFFFFFFF81C,0xFFFFFFFFFFFFF894,0xFFFFFFFFFFFFF831,0xFFFFFFFFFFFFF81C,0xFFFFFFFFFFFFF80A,0xFFFFFFFFFFFFF845,0x86D,0xFFFFFFFFFFFFF782,0xFFFFFFFFFFFFF8A5,0x7CE,0x7B6,0xFFFFFFFFFFFFF877,0x77E,0x797,0x876,0x76E,0x7BA,0x782,0xFFFFFFFFFFFFF803,0x83A,0x835,0xFFFFFFFFFFFFF7DD,0x6E8,0xFFFFFFFFFFFFF7ED,0xFFFFFFFFFFFFF7A5,0x7C5,0x7E3,0xFFFFFFFFFFFFF8A3,0xFFFFFFFFFFFFF788,0x881,0x7AD,0x7FA,0x894,0x80F,0xFFFFFFFFFFFFF86B,0x891,0x848,0x84E,0xFFFFFFFFFFFFF867,0xFFFFFFFFFFFFF777,0x7A1,0xFFFFFFFFFFFFF7DE,0x7C0,0x7A5,0xFFFFFFFFFFFFF8B3,0xFFFFFFFFFFFFF777,0xFFFFFFFFFFFFF839,0x965,0xFFFFFFFFFFFFF824,0xFFFFFFFFFFFFF799,0xFFFFFFFFFFFFF8C5,0xFFFFFFFFFFFFF81D,0xFFFFFFFFFFFFF789,0xFFFFFFFFFFFFF830,0xFFFFFFFFFFFFF7F1,0x85D,0xFFFFFFFFFFFFF809,0xFFFFFFFFFFFFF885,0xFFFFFFFFFFFFF817,0xFFFFFFFFFFFFF83C,0x89A,0x7D7,0xFFFFFFFFFFFFF876,0xFFFFFFFFFFFFF849,0x7C8,0xFFFFFFFFFFFFF863,0x7D5,0x86F,0xFFFFFFFFFFFFF803,0x794,0x73F,0x83F,0x736,0x7E8,0xFFFFFFFFFFFFF7C4,0x817,0x7B2,0xFFFFFFFFFFFFF8A2,0x777,0xFFFFFFFFFFFFF826,0xFFFFFFFFFFFFF7ED,0x83D,0x7A3,0xFFFFFFFFFFFFF7DB,0x80E,0x7D0,0xFFFFFFFFFFFFF80B,0x812,0xFFFFFFFFFFFFF7BF,0xFFFFFFFFFFFFF742,0xFFFFFFFFFFFFF77A,0xFFFFFFFFFFFFF80D,0x7B6,0xFFFFFFFFFFFFF80E,0xFFFFFFFFFFFFF847,0xFFFFFFFFFFFFF7B6,0x8B3,0xFFFFFFFFFFFFF774,0x756,0x79D,0xFFFFFFFFFFFFF860,0xFFFFFFFFFFFFF790,0x98F,0x85C,0x8D0,0x85E,0xFFFFFFFFFFFFF8B4,0x754,0x796,0x88A,0x87A,0xFFFFFFFFFFFFF7D4,0xFFFFFFFFFFFFF868,0x823,0x817,0xFFFFFFFFFFFFF82D,0x877,0x7FC,0x842,0xFFFFFFFFFFFFF84A,0xFFFFFFFFFFFFF7DD,0x7AF,0x7F4,0xFFFFFFFFFFFFF810,0xFFFFFFFFFFFFF784,0xFFFFFFFFFFFFF826,0x8A3,0x88E,0x7BC,0x822,0xFFFFFFFFFFFFF7C8,0x78C,0x767,0xFFFFFFFFFFFFF877,0xFFFFFFFFFFFFF7AD,0xFFFFFFFFFFFFF853,0x7C6,0xFFFFFFFFFFFFF805,0x88D,0x810,0xFFFFFFFFFFFFF7CC,0x7BE,0xFFFFFFFFFFFFF7D8,0x831,0xFFFFFFFFFFFFF803,0xFFFFFFFFFFFFF865,0xFFFFFFFFFFFFF792,0xFFFFFFFFFFFFF7BC,0xFFFFFFFFFFFFF8A9,0xFFFFFFFFFFFFF85A,0xFFFFFFFFFFFFF832,0xFFFFFFFFFFFFF844,0x8AD,0xFFFFFFFFFFFFF8B0,0x807,0x76F,0x848,0x9BA,0xFFFFFFFFFFFFF6D2,0x97A,0xFFFFFFFFFFFFF7C9,0xFFFFFFFFFFFFF827,0xFFFFFFFFFFFFF84D,0xFFFFFFFFFFFFF89C,0xFFFFFFFFFFFFF7DB,0x8B7,0x81E,0xFFFFFFFFFFFFF857,0xFFFFFFFFFFFFF894,0x85C,0x82A,0xFFFFFFFFFFFFF801,0x865,0xFFFFFFFFFFFFF7E6,0x7A3,0x7C1,0x7F2,0x7E0,0xFFFFFFFFFFFFF7E4,0x810,0x7E0,0xFFFFFFFFFFFFF8BA,0x7BB,0x7AB,0x81A,0x7EE,0xFFFFFFFFFFFFF85E,0x825,0xFFFFFFFFFFFFF802,0x845,0x7B7,0xFFFFFFFFFFFFF849,0xFFFFFFFFFFFFF7A6,0x743,0x7C0,0xFFFFFFFFFFFFF8B0,0x805,0x7AD,0xFFFFFFFFFFFFF871,0x7D7,0xFFFFFFFFFFFFF86F,0xFFFFFFFFFFFFF86A,0xFFFFFFFFFFFFF84D,0xFFFFFFFFFFFFF809,0xFFFFFFFFFFFFF7FF,0xFFFFFFFFFFFFF825,0xFFFFFFFFFFFFF83A,0xFFFFFFFFFFFFF765,0x78E,0xFFFFFFFFFFFFF853,0x7C8,0x81F,0xFFFFFFFFFFFFF5CD,0xC4A,0xA32,0xFFFFFFFFFFFFF700,0x76A,0xFFFFFFFFFFFFF881,0x794,0x804,0x85C,0x879,0x85C,0x7B7,0xFFFFFFFFFFFFF86F,0xFFFFFFFFFFFFF831,0xFFFFFFFFFFFFF82D,0xFFFFFFFFFFFFF78D,0xFFFFFFFFFFFFF815,0x7F4,0xFFFFFFFFFFFFF77F,0xFFFFFFFFFFFFF837,0xFFFFFFFFFFFFF7BD,0x7C5,0x85E,0xFFFFFFFFFFFFF89B,0x7FF,0xFFFFFFFFFFFFF797,0xFFFFFFFFFFFFF84B,0x816,0x810,0x838,0xFFFFFFFFFFFFF7E4,0x80F,0x818,0xFFFFFFFFFFFFF7B9,0xFFFFFFFFFFFFF7B0,0x862,0x764,0x7C2,0xFFFFFFFFFFFFF7D3,0x828,0xFFFFFFFFFFFFF808,0x7E0,0xFFFFFFFFFFFFF7EA,0xFFFFFFFFFFFFF88B,0xFFFFFFFFFFFFF84A,0x7B9,0x786,0xFFFFFFFFFFFFF7AE,0x883,0x72D,0x813,0x7E5,0xFFFFFFFFFFFFF886,0xFFFFFFFFFFFFF869,0xFFFFFFFFFFFFF77D,0xFFFFFFFFFFFFF84A,0xFFFFFFFFFFFFF3E5,0xFFFFFFFFFFFFF72B,0x89B,0xFFFFFFFFFFFFF864,0x7FE,0xFFFFFFFFFFFFF83B,0x802,0x827,0xFFFFFFFFFFFFF7E7,0x84C,0x77A,0x7EF,0xFFFFFFFFFFFFF847,0xFFFFFFFFFFFFF7DA,0xFFFFFFFFFFFFF836,0xFFFFFFFFFFFFF7FF,0x7D1,0xFFFFFFFFFFFFF7C3,0x7E1,0xFFFFFFFFFFFFF7EF,0x7B5,0xFFFFFFFFFFFFF7AA,0x7C3,0x85E,0xFFFFFFFFFFFFF7AC,0xFFFFFFFFFFFFF84C,0xFFFFFFFFFFFFF7F2,0x85A,0x83B,0x812,0xFFFFFFFFFFFFF855,0x825,0x785,0x79E,0xFFFFFFFFFFFFF867,0xFFFFFFFFFFFFF88D,0xFFFFFFFFFFFFF815,0x85F,0x7E6,0xFFFFFFFFFFFFF88A,0x802,0x7CF,0xFFFFFFFFFFFFF884,0xFFFFFFFFFFFFF7CB,0xFFFFFFFFFFFFF7C7,0x7EB,0x838,0xFFFFFFFFFFFFF853,0xFFFFFFFFFFFFF858,0xFFFFFFFFFFFFF86D,0xFFFFFFFFFFFFF7DE,0x800,0x7A4,0x828,0xFFFFFFFFFFFFF740,0xC1A,0xAA5,0xFFFFFFFFFFFFF7A5,0x7C3,0xFFFFFFFFFFFFF833,0x7DC,0xFFFFFFFFFFFFF82E,0x839,0x801,0xFFFFFFFFFFFFF7E9,0x77F,0x7EB,0x857,0xFFFFFFFFFFFFF825,0xFFFFFFFFFFFFF7C2,0xFFFFFFFFFFFFF7FB,0xFFFFFFFFFFFFF840,0xFFFFFFFFFFFFF842,0xFFFFFFFFFFFFF7C6,0xFFFFFFFFFFFFF844,0xFFFFFFFFFFFFF840,0xFFFFFFFFFFFFF84B,0x7E9,0x7E3,0xFFFFFFFFFFFFF7D0,0xFFFFFFFFFFFFF856,0x7D3,0xFFFFFFFFFFFFF7CE,0x830,0x76A,0x819,0xFFFFFFFFFFFFF797,0x819,0x858,0x875,0x8A2,0xFFFFFFFFFFFFF884,0x767,0xFFFFFFFFFFFFF7E5,0x832,0x7E8,0xFFFFFFFFFFFFF786,0xFFFFFFFFFFFFF7B0,0x87E,0x7E3,0xFFFFFFFFFFFFF8AB,0xFFFFFFFFFFFFF811,0xFFFFFFFFFFFFF73F,0xFFFFFFFFFFFFF89C,0xFFFFFFFFFFFFF870,0xFFFFFFFFFFFFF8AC,0x703,0x7C5,0xFFFFFFFFFFFFF85D,0xFFFFFFFFFFFFF828,0xFFFFFFFFFFFFF3FE,0xFFFFFFFFFFFFF62B,0x8C6,0x775,0x749,0xFFFFFFFFFFFFF81D,0x7F7,0xFFFFFFFFFFFFF7FC,0x8A6,0x7EC,0xFFFFFFFFFFFFF87D,0x781,0xFFFFFFFFFFFFF79E,0x85E,0x881,0x78B,0xFFFFFFFFFFFFF784,0x877,0x7BA,0xFFFFFFFFFFFFF82A,0xFFFFFFFFFFFFF78C,0xFFFFFFFFFFFFF78E,0xFFFFFFFFFFFFF76D,0x777,0x886,0xFFFFFFFFFFFFF80C,0x849,0x822,0xFFFFFFFFFFFFF870,0x75C,0x786,0x7CF,0xFFFFFFFFFFFFF79A,0x7A2,0xFFFFFFFFFFFFF813,0xFFFFFFFFFFFFF809,0xFFFFFFFFFFFFF880,0xFFFFFFFFFFFFF81A,0xFFFFFFFFFFFFF7F1,0x7F2,0x7C4,0xFFFFFFFFFFFFF7CB,0x842,0xFFFFFFFFFFFFF7DE,0x7FE,0x79D,0xFFFFFFFFFFFFF826,0xFFFFFFFFFFFFF7C4,0xFFFFFFFFFFFFF89A,0xFFFFFFFFFFFFF7A5,0xFFFFFFFFFFFFF84D,0x75D,0x7B7,0xFFFFFFFFFFFFF725,0x97A,0xFFFFFFFFFFFFF3D4,0x89C,0x80F,0xFFFFFFFFFFFFF846,0x720,0x801,0xFFFFFFFFFFFFF892,0x81C,0xFFFFFFFFFFFFF87B,0x834,0x7D9,0x7D0,0xFFFFFFFFFFFFF853,0x7DF,0x82B,0xFFFFFFFFFFFFF7F4,0xFFFFFFFFFFFFF80F,0xFFFFFFFFFFFFF867,0x813,0x801,0xFFFFFFFFFFFFF839,0x7F6,0x7DC,0x830,0x7BC</Elements>
+				<Array Lengths="496" IsBinary="True" Compression="GZip">
+					<BinaryElements>H4sIAAAAAAAEAG2Yb0TccRzHb0nSzmR6cOYkyelBJjk5c9Y9SCaZe3Dm5B5kkiTJnEkySSaTZHpwD3rQg0xy5h4k2a7fXX/GmUymB5lMDzJnzpzJ9ODYavq+3l/u14P69Pn/+Xw/n8/38/157ng8nr/XPzd/b34ab4Dy9a/6uv//Z/K5W2g813ML/QF3CDQK9RG4F0CzUP15AxVzhnqSNbgYuLBjoEZk41B70TwPlEFiEr6yY2Rn4FuG6oe6tmdwwV2DO/xooGU0R/Bl89DgnAMDLR0a6gYSF8QbQvM0uNpdw9eFB9tQ5WkGvnCuOo5ToBJ2v6GlohNES4g4TslBG7JXeJqAWkLfDtQi1HqgS3xJIjEG1Icva2Q3kFfkBmrCv0WgJN6X4avZM9QtPCgi0Q61GQ9iRNkKdRnqKtAwfPc5mXlsqP48WFuBGtytlvWTl8/7hk91+gV9pWyOyA30C2oEXDO4D/h8pjrAg3VwjUBBIk8oV8R7BtSi3IOLgfuOXZ15lBxU6OlX8J2CW0PLFHE8hK+AliniOKPqRrGmylFHLSLbD1UzR/17gpY2qHNIzHBuXqAj9Rs2CuAuyNAKWkbIsw8tceJIomUW2XNkmw/oN/xbQ18WXCcZiqI5juYmJC6RiGNjCLt9UHUKA1b9GVyZ/M3rVC0tBsriwTESefRdWbcGsnjqBypb/UbPINsJdZXINcPewbcFzocvJew+wFoLNkaRvcJGFNxzl7ofV/fAtwCU4IxS8IWsO8pAg/gSQeIe1rJEqXmVpEoS+0bikvkygQfDWDvC2jI21CkTeBDGxjoSuoVUkzHdM5pw4IJoVl/WcgoFIO0HISR0HqL68KCEvrTmru4oJBYcRWlwV3j6RrPTEUTl4IuX3Gve64wa0KJbSPuLZmwvuDiQzkPTu8bauVS7BupmloQc2SVrWHuMVyPsKisFgxtmV/FQORtEWdFU0R2v7AL9dsEpk4pXW4umyg+iTIPTtKghyjaor132A03CFXyuQP2KxAm+dCDRYk2V6vrTztAJtKT9xdqB6UvyV48Hg/BF4TsnIlV2hzwlDk3WC3LqA1pHok5bEDdsQHnBRhHNCUey1da6CwbahNqNjUntiWhuIqJa7D4F6sLTlLZ/cpVFi+7QASTaXbqiF4lpvQPAtVpnzoxQJ7tUzgbUYzzw6/6A7yWQdoa0y3xp0v4CpH3yiFNQ3TvIprSZw6echqGWoY65vLfS8E1as4naVZ6BrI1W9Wzdfgaa1UuJWdL/yUDbLnkOEuUkuCc5+UzHWzsInUyVKKL38Gk66nXXYG3m1ClRJqHq1hWfZsS6y/tjCFm97gagDmurUl3hfRc4TSThMkA/gXq1BXHS2nO6dbNrO8SXS5cpVclXRxRDc5YczHG+2g8ixBsF52XSWG81+IY0DzRLeCcvEtuJNrdd+Wf4ztBcTxwDyGagerFbS8Xqy4T6XK/FDvi0i2rL1btWXxyK8F0ABciVXidebBwj+1anqpeIvlYgq9muPj/SPqnb3soQVYy+lMsbUZuWvqZobsxb/tEz1tvPQNrW9WpLURHqfe00SWLTVrBN1rSpxqmSkMubvYi+WapO02JHXzWsCWxwo3rRa3MD0kycAfcMCZ/ueCLXHA+4TC698k81ga0JQk87PXf/AYhXL5N7EwAA</BinaryElements>
 				</Array>
 			</p.DefaultValue>
 		</DataItem>
-		<DataItem AdaptToDiagramType="True" DataType="FXP(2.14)[]" Id="4498" Name="IM_data" xmlns="http://www.ni.com/MocCommon">
+		<DataItem AdaptToDiagramType="True" DataType="Double[]" Id="4498" Name="IM_data" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
-				<Array Lengths="496">
-					<Elements>0xFFFFFFFFFFFFF7D0,0xFFFFFFFFFFFFF7CA,0xFFFFFFFFFFFFF86F,0xFFFFFFFFFFFFF8B0,0x764,0x817,0xFFFFFFFFFFFFF81C,0x7DB,0x78E,0xFFFFFFFFFFFFF913,0xFFFFFFFFFFFFF7E2,0xFFFFFFFFFFFFF837,0xFFFFFFFFFFFFF89F,0x7CF,0x82E,0xFFFFFFFFFFFFF888,0xFFFFFFFFFFFFF850,0x7FA,0x7EC,0x7B3,0xFFFFFFFFFFFFF807,0x865,0xFFFFFFFFFFFFF755,0xFFFFFFFFFFFFF926,0x77D,0x79B,0xFFFFFFFFFFFFF87F,0xFFFFFFFFFFFFF789,0xFFFFFFFFFFFFF79F,0xFFFFFFFFFFFFF730,0x84D,0x881,0x7B8,0xFFFFFFFFFFFFF8DF,0x804,0x823,0xFFFFFFFFFFFFF841,0xFFFFFFFFFFFFF80F,0xFFFFFFFFFFFFF84E,0x87D,0xFFFFFFFFFFFFF887,0xFFFFFFFFFFFFF825,0x7C6,0x849,0x849,0xFFFFFFFFFFFFF856,0x7DB,0xFFFFFFFFFFFFF7EB,0x7C9,0x82C,0xFFFFFFFFFFFFF866,0xFFFFFFFFFFFFF7D3,0x771,0xFFFFFFFFFFFFF7FC,0xFFFFFFFFFFFFF829,0xFFFFFFFFFFFFF81B,0xFFFFFFFFFFFFF80A,0x7E7,0x76F,0xFFFFFFFFFFFFF8AE,0xFFFFFFFFFFFFF7B9,0xFFFFFFFFFFFFF8B8,0xFFFFFFFFFFFFF829,0x7C6,0xFFFFFFFFFFFFF7C5,0x88F,0xFFFFFFFFFFFFF8AB,0x7BA,0xFFFFFFFFFFFFF851,0xFFFFFFFFFFFFF7E7,0x7E3,0x773,0x8D1,0x7C6,0xFFFFFFFFFFFFF7F9,0x7F2,0x79B,0xFFFFFFFFFFFFF921,0xFFFFFFFFFFFFF72E,0xFFFFFFFFFFFFF871,0xFFFFFFFFFFFFF7B2,0xFFFFFFFFFFFFF821,0x7B6,0xFFFFFFFFFFFFF807,0x9C6,0xFFFFFFFFFFFFF3E0,0xA13,0xFFFFFFFFFFFFF7DD,0x7B3,0xFFFFFFFFFFFFF894,0xFFFFFFFFFFFFF886,0x7F8,0x8A2,0x738,0xFFFFFFFFFFFFF866,0x873,0x822,0x8A9,0x7F4,0xFFFFFFFFFFFFF814,0x84E,0x87B,0x76D,0x855,0xFFFFFFFFFFFFF787,0x7C4,0x836,0xFFFFFFFFFFFFF80D,0xFFFFFFFFFFFFF75F,0x70E,0xFFFFFFFFFFFFF7F5,0xFFFFFFFFFFFFF823,0x809,0xFFFFFFFFFFFFF7B3,0xFFFFFFFFFFFFF7C8,0x836,0xFFFFFFFFFFFFF818,0x85B,0x85A,0xFFFFFFFFFFFFF81F,0xFFFFFFFFFFFFF756,0xFFFFFFFFFFFFF864,0x7DA,0x754,0xFFFFFFFFFFFFF800,0xFFFFFFFFFFFFF81E,0xFFFFFFFFFFFFF8A2,0xFFFFFFFFFFFFF868,0xFFFFFFFFFFFFF8B5,0xFFFFFFFFFFFFF83E,0x851,0xFFFFFFFFFFFFF86A,0xFFFFFFFFFFFFF899,0xFFFFFFFFFFFFF812,0x7C8,0xFFFFFFFFFFFFF908,0x785,0xFFFFFFFFFFFFF905,0x72C,0xFFFFFFFFFFFFF83D,0x7CA,0xFFFFFFFFFFFFF37B,0xFFFFFFFFFFFFF67E,0x7C8,0xFFFFFFFFFFFFF883,0x74A,0xFFFFFFFFFFFFF836,0x780,0x815,0xFFFFFFFFFFFFF7EF,0x7D8,0x72F,0x80A,0x7D1,0x79A,0xFFFFFFFFFFFFF768,0x787,0x806,0xFFFFFFFFFFFFF82C,0xFFFFFFFFFFFFF844,0x81C,0xFFFFFFFFFFFFF7D9,0xFFFFFFFFFFFFF84D,0x833,0x772,0x799,0x7DE,0xFFFFFFFFFFFFF7F7,0xFFFFFFFFFFFFF7EE,0xFFFFFFFFFFFFF7B5,0xFFFFFFFFFFFFF7FB,0x80C,0xFFFFFFFFFFFFF7EE,0x826,0xFFFFFFFFFFFFF82F,0x7EB,0x796,0x7D7,0x7EB,0xFFFFFFFFFFFFF876,0xFFFFFFFFFFFFF804,0x760,0x804,0x821,0xFFFFFFFFFFFFF7F8,0x807,0xFFFFFFFFFFFFF830,0xFFFFFFFFFFFFF82A,0x820,0x8D1,0x7BD,0xFFFFFFFFFFFFF84E,0xFFFFFFFFFFFFF8AD,0x787,0x777,0x92B,0xC94,0x997,0xFFFFFFFFFFFFF788,0xFFFFFFFFFFFFF893,0x795,0x7A0,0x888,0x825,0xFFFFFFFFFFFFF7F3,0x7C7,0x7B1,0x7F6,0xFFFFFFFFFFFFF774,0xFFFFFFFFFFFFF823,0xFFFFFFFFFFFFF7F0,0xFFFFFFFFFFFFF85B,0xFFFFFFFFFFFFF7BD,0x76E,0xFFFFFFFFFFFFF81B,0x83B,0x842,0xFFFFFFFFFFFFF806,0x784,0x852,0xFFFFFFFFFFFFF77D,0xFFFFFFFFFFFFF856,0x838,0xFFFFFFFFFFFFF7CE,0x836,0x772,0xFFFFFFFFFFFFF859,0xFFFFFFFFFFFFF7C6,0xFFFFFFFFFFFFF842,0xFFFFFFFFFFFFF875,0xFFFFFFFFFFFFF89D,0xFFFFFFFFFFFFF841,0xFFFFFFFFFFFFF7A0,0x79C,0xFFFFFFFFFFFFF7F2,0xFFFFFFFFFFFFF852,0x7D3,0xFFFFFFFFFFFFF799,0x80D,0x803,0x80F,0xFFFFFFFFFFFFF7D2,0x858,0x885,0x83F,0xFFFFFFFFFFFFF830,0xFFFFFFFFFFFFF8B8,0x727,0xFFFFFFFFFFFFF850,0xFFFFFFFFFFFFF7D0,0xFFFFFFFFFFFFF87F,0x8C3,0x823,0xFFFFFFFFFFFFF7FD,0xFFFFFFFFFFFFF837,0xFFFFFFFFFFFFF894,0x77B,0xFFFFFFFFFFFFF740,0xFFFFFFFFFFFFF7C5,0x840,0x7FB,0xFFFFFFFFFFFFF7AB,0x849,0xFFFFFFFFFFFFF853,0xFFFFFFFFFFFFF809,0xFFFFFFFFFFFFF7BA,0xFFFFFFFFFFFFF88D,0x73A,0xFFFFFFFFFFFFF84A,0xFFFFFFFFFFFFF85D,0xFFFFFFFFFFFFF807,0x7C7,0x787,0x7EA,0x73A,0xFFFFFFFFFFFFF859,0xFFFFFFFFFFFFF83D,0xFFFFFFFFFFFFF7FA,0x7D9,0x7CB,0xFFFFFFFFFFFFF883,0x7A1,0xFFFFFFFFFFFFF7D6,0x823,0xFFFFFFFFFFFFF7B5,0x761,0xFFFFFFFFFFFFF771,0xFFFFFFFFFFFFF80D,0xFFFFFFFFFFFFF821,0xFFFFFFFFFFFFF7E1,0x78F,0xFFFFFFFFFFFFF84F,0xFFFFFFFFFFFFF86D,0x839,0x856,0xFFFFFFFFFFFFF83E,0x7B6,0xFFFFFFFFFFFFF881,0x7E4,0xFFFFFFFFFFFFF7A6,0x7F9,0x7CB,0xFFFFFFFFFFFFF87B,0x7B7,0xFFFFFFFFFFFFF823,0x9CA,0xFFFFFFFFFFFFF6EF,0xA73,0x7D4,0x7E8,0x773,0x845,0x826,0x7C9,0x85C,0x76E,0xFFFFFFFFFFFFF845,0x782,0x860,0xFFFFFFFFFFFFF82A,0x7F7,0x7BE,0xFFFFFFFFFFFFF833,0xFFFFFFFFFFFFF828,0xFFFFFFFFFFFFF7B1,0x7DD,0xFFFFFFFFFFFFF79E,0xFFFFFFFFFFFFF867,0xFFFFFFFFFFFFF7AC,0x7C5,0xFFFFFFFFFFFFF821,0xFFFFFFFFFFFFF803,0x80C,0x820,0x7A7,0x778,0x80C,0xFFFFFFFFFFFFF7F1,0x819,0x812,0x87B,0x890,0xFFFFFFFFFFFFF853,0x79C,0xFFFFFFFFFFFFF88E,0xFFFFFFFFFFFFF806,0xFFFFFFFFFFFFF83F,0xFFFFFFFFFFFFF824,0x80E,0xFFFFFFFFFFFFF7BB,0x784,0xFFFFFFFFFFFFF815,0xFFFFFFFFFFFFF7FB,0x7F6,0x83C,0x884,0x80D,0xFFFFFFFFFFFFF8A3,0xFFFFFFFFFFFFF845,0xFFFFFFFFFFFFF7CE,0xA8F,0x986,0x961,0x80F,0xFFFFFFFFFFFFF83E,0xFFFFFFFFFFFFF812,0x7E9,0x8A3,0xFFFFFFFFFFFFF7E2,0xFFFFFFFFFFFFF844,0xFFFFFFFFFFFFF807,0xFFFFFFFFFFFFF7B9,0xFFFFFFFFFFFFF867,0xFFFFFFFFFFFFF7C4,0xFFFFFFFFFFFFF827,0x7D3,0x7F4,0xFFFFFFFFFFFFF81C,0x7C3,0xFFFFFFFFFFFFF87A,0xFFFFFFFFFFFFF7DD,0x865,0x84F,0x7C1,0x7B4,0xFFFFFFFFFFFFF83B,0x7E3,0x80D,0xFFFFFFFFFFFFF7EB,0x7A7,0xFFFFFFFFFFFFF7D7,0x78C,0xFFFFFFFFFFFFF840,0xFFFFFFFFFFFFF7DA,0x7E9,0x79F,0x76F,0x88F,0x7C5,0xFFFFFFFFFFFFF83D,0x7CB,0x764,0xFFFFFFFFFFFFF851,0xFFFFFFFFFFFFF7F0,0x7D4,0x795,0xFFFFFFFFFFFFF7EC,0xFFFFFFFFFFFFF7FA,0xFFFFFFFFFFFFF893,0x8EB,0x80E,0x7A8,0x7D3,0xFFFFFFFFFFFFF839,0x847,0x92B,0xFFFFFFFFFFFFF5DE,0xFFFFFFFFFFFFF6D5,0xFFFFFFFFFFFFF83E,0xFFFFFFFFFFFFF79E,0x78D,0xFFFFFFFFFFFFF8F9,0xFFFFFFFFFFFFF80B,0x8DB,0x7B5,0xFFFFFFFFFFFFF7D3,0xFFFFFFFFFFFFF84F,0xFFFFFFFFFFFFF7FD,0xFFFFFFFFFFFFF825,0xFFFFFFFFFFFFF7A9,0x807,0xFFFFFFFFFFFFF7F1,0xFFFFFFFFFFFFF88E,0x78C,0x7AD,0x867,0xFFFFFFFFFFFFF811,0xFFFFFFFFFFFFF85C,0xFFFFFFFFFFFFF874,0xFFFFFFFFFFFFF787,0x775,0x7A1,0xFFFFFFFFFFFFF80C,0x82F,0x828,0xFFFFFFFFFFFFF7DF,0xFFFFFFFFFFFFF7ED,0x7DC,0x7D9,0x7E8,0x841,0xFFFFFFFFFFFFF872,0x7C2,0xFFFFFFFFFFFFF7D7,0x838,0x84D,0xFFFFFFFFFFFFF839,0x85A,0x766,0xFFFFFFFFFFFFF871,0xFFFFFFFFFFFFF7C7,0xFFFFFFFFFFFFF851,0xFFFFFFFFFFFFF7DD,0xFFFFFFFFFFFFF888,0x849,0xFFFFFFFFFFFFF884,0xFFFFFFFFFFFFF824,0x76B,0xFFFFFFFFFFFFF8EC,0xFFFFFFFFFFFFF784,0x84D,0xFFFFFFFFFFFFF781,0xFFFFFFFFFFFFF71E,0xFFFFFFFFFFFFF73C,0x7AC,0xFFFFFFFFFFFFF835,0xFFFFFFFFFFFFF7D0,0x871,0xFFFFFFFFFFFFF7D8,0x849,0xFFFFFFFFFFFFF801,0x74E,0xFFFFFFFFFFFFF7A5,0x83D,0xFFFFFFFFFFFFF7D6,0x858,0x7B2,0x7FC,0x882,0xFFFFFFFFFFFFF7FB,0xFFFFFFFFFFFFF837,0xFFFFFFFFFFFFF826,0x811,0x7A5,0x7EF,0x797</Elements>
+				<Array Lengths="496" IsBinary="True" Compression="GZip">
+					<BinaryElements>H4sIAAAAAAAEAG2Yb2TcdxzHb3PqZKdOnYmKiJg6FVXVB/fgrFERMzVRUTExeRBzD/IgJiomJiqqKiomZupUVB5ExdyDU2GXu+v1xnWq+iAmD/IgpioPYs7ExMS2Zvp9vX7cLw/adz7f7+fzfX8/38+/XxIfJBKJf9/9nP5/+pM5BZ13/6TO/P/7VKP+Hs2ARmoBDW8HtLJ97T261AhopY5uPcjytYAqP4fVApY/QWMJywV0J7G8z2oDLgfsK4NectobLP+KlVvPgqwIlyPuMYNukjP+gGkTtIaVh1j+8BlMsbJUDftS7BsFnXBGC6ZtZH+z7w03n2FfL/f9vtGNNmpqBNnFiMeDbAKNIhpfsq+FX1LIJmGwCtoFlbBcRfcz2D/AysB2tz1vdJt9/fh0HI0DvFuF8xU0lo0DGDzGimecRaONzNdfIDbWeekCp5XQXdAHMVG3/DzIhttBdqFlHASZEVv2lqB9+I0YYdXud3vLW46AbqLxOpIp3iPI/gJV8NoTZH/CNKOvWH2Jvev4Kg+/j9GdY985dB+yOhupOWF1DY2n8gMtsTrOubN4owjTMW6U4Ix76M7j5yl0h5Cl2PeYcyeMA/ZtsW+Ac/eJoSzve4isjIfS6ObQ7XkRZMnn3ZaPODfH3XJYSXDaRTgPcvMpMxQGWSOH1SJWLuPdPmRpNMY4t4Nf8qx+EYnxgL5mtQ37aSzPw+Cc9Qr0A6gH1Is9992I3CjINq16nDaJzNUcTDvoLkYqYUDXQRnOPYtsGN0J0DCrVqQjuFj5b/C+enwPBreaMH0R0CUqTQcuFayMY2URlIHB57A6j24f3mihsYusl4gwpwfQXeUed5Ftwd6ucdtMBh2wmuHcdVbPcK79bZbV6ZgKYoSV0Jhj37EZD1rGa3bnhlUKVn3ezXfDQ69YPS97UD9okn1lZD28zHcx0WTnLJG/zkNObs4vd7E3GuFCbmHZ3nOI1xbxuD15ESuH3PcJq84gFRjs2RGtB3Y67rHrK4DspsakWbGBTCu+tJU1zbnTaAzF1NMlLI+jodesPkt4qB8P2QedCj5Fo4DllvEC+oYzNkGpmNnixNkb9pWGvuq+W9ZXwIpZu0rdGGwG2VsmlDGsrMVMVfdharV1stxCZu4fwiUFl4Z9FVZ7WDlm31VWp0CPIrMF3vWlOW0DWZZ9vtGRE6j5BirBYJ979EYyOeheiXShgJyqBshBs8Ja0jYX4JIEzZoB2LvvRIaVTfbZG63Z88YVXKxNc+Y+/Kyn/b+EfWnipdnUB90R6zy0DoNRzvXbrxOT5w9iXnA+kr9kD5adbf36TNutsOLE7ffgI1BSe/g0a+Wqd3vNLyqj5Cayy8gScm50+2XB75lIVZEBvseK2e0XuN9CdmLz1wkgx6o10UnhN8411tbQ1eN9kdcKMueSkVYdGRmPhhl61W7Kd/KOMz9cdtgX+TblvvYyv45/ipnIzFXzzTeqgF6hUcXeSk2NgPwq2uEV7B+v0f3KWTkyO4bVC84WeHc6pu7eQTdvFWXVqHMe8i8TvpZfTz/CuRDpQgFVY3LGv7/Y4zvbsg9oE8tjvOoxVmT1j29JD70HKuPJISs/Gr9HfNrN6gSNPFyesu9b9tnjnb7anNvBu0ki0crq3FQEDWJl1Zz2L1m1ax/9B0qvIvp7EwAA</BinaryElements>
 				</Array>
 			</p.DefaultValue>
 		</DataItem>
@@ -5871,6 +5995,12 @@
 		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="20792" Name="Fully allocated?" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>False</p.DefaultValue>
 		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32" Id="20859" Name="QAM symbols per Frame" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="21166" Name="NormalizeConstellation?" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
 		<IconTable xmlns="http://www.ni.com/PlatformFramework">
 			<p.IconModel Target="Configure\ FIFOs\.gvi">
 				<MergeScript>
@@ -6109,6 +6239,42 @@
 									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
 									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
 									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Calculate Pilot Results" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="NormConstellation\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]NormConstellation" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="IntegerMultipleOf\.gvi">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]IntegerMultipleOf" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
 										<FontSetting FontFamily="Verdana" FontSize="6" />
 									</FileNameText>
 								</IconTemplate>
