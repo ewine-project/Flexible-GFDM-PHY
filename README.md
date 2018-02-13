@@ -1,5 +1,5 @@
 # Flexible-GFDM-PHY
-This repository includes the FPGA implementation of a GFDM based transceiver running on National Instruments USRP.
+This repository includes the FPGA implementation of a GFDM based transceiver running on National Instruments USRP using LabVIEW Communications System Design Suite 2.0
 
 A more detailed description is available in the documentation folder and on the website http://owl.ifn.et.tu-dresden.de.
 
