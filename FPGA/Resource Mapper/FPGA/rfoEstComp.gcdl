@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="1D47DB27D9ECEFBB4B4A0F7E8062A68F" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="5FCA3C5A21F87AC351271B85A1A44CC9" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -77,23 +77,23 @@
 			<ComplexConjugate Bounds="395 140 30 30" Id="260">
 				<ConfigurableDataTypeTerminal DataType="CFXP(2.14)" DesiredType="FXP(2.14)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="x - iy" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
 			</ComplexConjugate>
-			<DataAccessor Bounds="920 100 40 15" DataItem="290" Id="292" Label="294" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1220 100 40 15" DataItem="290" Id="292" Label="294" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="292" Bounds="965 100 83 14" Id="294" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="292" Bounds="1265 100 83 14" Id="294" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>qam_out_valid</p.Text>
 			</NodeLabel>
-			<FeedbackNode ArrowDirection="Right" Bounds="475 145 30 30" Id="448" />
-			<DataAccessor Bounds="920 150 40 15" DataItem="453" Id="454" Label="456" xmlns="http://www.ni.com/MocCommon">
+			<FeedbackNode ArrowDirection="Right" Bounds="465 145 30 30" Id="448" />
+			<DataAccessor Bounds="1220 150 40 15" DataItem="453" Id="454" Label="456" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="CFXP(2.14)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="454" Bounds="965 150 68 14" Id="456" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="454" Bounds="1265 150 68 14" Id="456" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>rx_pilot_out</p.Text>
 			</NodeLabel>
-			<DataAccessor Bounds="920 80 40 15" DataItem="558" Id="560" Label="562" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1220 80 40 15" DataItem="558" Id="560" Label="562" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="UInt32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="560" Bounds="965 80 50 14" Id="562" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="560" Bounds="1265 80 50 14" Id="562" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>data_out</p.Text>
 			</NodeLabel>
 			<DataAccessor Bounds="270 70 40 15" DataItem="570" Id="572" Label="574" xmlns="http://www.ni.com/MocCommon">
@@ -102,43 +102,39 @@
 			<NodeLabel AttachedTo="572" Bounds="223 70 42 14" Id="574" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>data_in</p.Text>
 			</NodeLabel>
-			<Wire Id="652" Joints="N(725:output valid) N(292:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="681" Joints="N(260:x - iy) N(448:input)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="682" Joints="N(35:Value) h(155) v(-20) N(448:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="697" Joints="N(448:output) h(65) B(1) N(454:Value) B(1) v(-65) N(725:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="682" Joints="N(35:Value) h(150) v(-20) N(448:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="697" Joints="N(448:output) h(5) B(1) h(70) B(2) N(454:Value) B(2) v(-65) N(725:y) B(1) v(50) N(822:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="703" Joints="N(133:Value) N(774:input)" xmlns="http://www.ni.com/PlatformFramework" />
 			<HighThroughputMultiply Bounds="585 65 36 55" Id="725" PipeliningStages="5" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
 				<ConfigurableDataTypeTerminal DataType="CFXP(5.28)" DesiredType="FXP(1.15)" Direction="Output" Hotspot="36 20" Id="x*y" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
 			</HighThroughputMultiply>
 			<Wire Id="728" Joints="N(773:output) N(725:x)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="732" Joints="N(774:output) h(50) B(1) N(725:input valid) B(1) v(185) N(778:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<ToComplexFixedPoint Bounds="670 80 50 10" Id="733" />
-			<Wire Id="736" Joints="N(725:x*y) N(733:number)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Literal Bounds="590 15 55 16" DataType="CFXP(2.14)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="738" Label="739" xmlns="http://www.ni.com/MocCommon">
+			<Wire Id="732" Joints="N(774:output) h(50) B(1) N(725:input valid) B(1) v(105) B(3) N(817:input valid) B(3) v(75) B(5) N(830:input valid) B(5) v(110) N(778:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<ToComplexFixedPoint Bounds="970 80 50 10" Id="733" />
+			<Literal Bounds="950 25 55 16" DataType="CFXP(2.14)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="738" Label="739" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>0x0;0x0</p.Data>
 				<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:CFXP_2_14:G6" />
 			</Literal>
-			<NodeLabel AttachedTo="738" Bounds="590 15 0 0" Id="739" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="738" Bounds="950 25 0 0" Id="739" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>complex fixed-point type</p.Text>
 			</NodeLabel>
-			<Wire Id="740" Joints="N(738:Out) h(40) N(733:complex fixed-point type)" xmlns="http://www.ni.com/PlatformFramework" />
-			<FeedbackNode ArrowDirection="Right" Bounds="755 185 30 20" EnableTerminalVisible="False" Id="748" />
+			<Wire Id="740" Joints="N(738:Out) h(5) v(16) h(-25) N(733:complex fixed-point type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FeedbackNode ArrowDirection="Right" Bounds="1055 185 30 20" EnableTerminalVisible="False" Id="748" />
 			<Wire Id="751" Joints="N(733:overflow) v(105) N(748:input)" xmlns="http://www.ni.com/PlatformFramework" />
-			<FeedbackNode ArrowDirection="Right" Bounds="855 185 30 20" EnableTerminalVisible="False" Id="753" />
-			<DataAccessor Bounds="920 190 40 15" DataItem="755" Id="757" Label="759" xmlns="http://www.ni.com/MocCommon">
+			<FeedbackNode ArrowDirection="Right" Bounds="1155 185 30 20" EnableTerminalVisible="False" Id="753" />
+			<DataAccessor Bounds="1220 190 40 15" DataItem="755" Id="757" Label="759" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="757" Bounds="965 190 118 14" Id="759" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="757" Bounds="1265 190 118 14" Id="759" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>overflow counter_out</p.Text>
 			</NodeLabel>
 			<Wire Id="760" Joints="N(753:output) N(757:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="920 115 40 15" DataItem="761" Id="763" Label="765" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1220 115 40 15" DataItem="761" Id="763" Label="765" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="763" Bounds="965 115 83 14" Id="765" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="763" Bounds="1265 115 83 14" Id="765" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>ready for input</p.Text>
 			</NodeLabel>
-			<Wire Id="766" Joints="N(725:ready for input) h(24) B(1) h(270) v(5) N(763:Value) B(1) v(165) N(778:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="270 130 40 15" DataItem="767" Id="769" Label="771" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
@@ -147,14 +143,14 @@
 			</NodeLabel>
 			<FeedbackNode ArrowDirection="Right" Bounds="475 65 30 30" Id="773" />
 			<FeedbackNode ArrowDirection="Right" Bounds="475 95 30 30" Id="774" />
-			<LogicalAnd Bounds="685 275 25 20" Id="778" InvertedTerminals="010" Terminals="o=784, c0t0v=766, c1t0v=732" />
-			<Wire Id="781" Joints="N(769:Value) h(150) B(1) h(120) v(-20) N(725:ready for output) B(1) v(-15) B(5) N(774:enable?) B(5) v(-30) N(773:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
-			<FeedbackNode ArrowDirection="Right" Bounds="750 275 30 20" EnableTerminalVisible="False" Id="783" />
+			<LogicalAnd Bounds="985 380 25 20" Id="778" InvertedTerminals="010" Terminals="o=784, c0t0v=875, c1t0v=732" />
+			<Wire Id="781" Joints="N(769:Value) h(150) B(1) h(80) B(2) h(40) v(-20) N(725:ready for output) B(2) v(85) B(6) N(817:ready for output) B(6) v(75) N(830:ready for output) B(1) v(-15) B(10) N(774:enable?) B(10) v(-30) N(773:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FeedbackNode ArrowDirection="Right" Bounds="1050 380 30 20" EnableTerminalVisible="False" Id="783" />
 			<Wire Id="784" Joints="N(778:o) N(783:input)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="785" Joints="N(783:output) N(790:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<FeedbackNode ArrowDirection="Right" Bounds="855 275 30 20" EnableTerminalVisible="False" Id="786" />
+			<FeedbackNode ArrowDirection="Right" Bounds="1155 380 30 20" EnableTerminalVisible="False" Id="786" />
 			<Wire Id="787" Joints="N(790:R0) N(786:input)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="795 190 50 50" DomainName="NI.LabVIEW.ExtShared" Id="788" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="1095 295 50 50" DomainName="NI.LabVIEW.ExtShared" Id="788" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L0" Desc="increment" />
@@ -166,8 +162,8 @@
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt16" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<Wire Id="789" Joints="N(788:R0) N(753:input)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="795 280 50 50" DomainName="NI.LabVIEW.ExtShared" Id="790" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
+			<Wire Id="789" Joints="N(788:R0) h(5) v(-105) N(753:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<MethodCall Bounds="1095 385 50 50" DomainName="NI.LabVIEW.ExtShared" Id="790" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L0" Desc="increment" />
@@ -179,21 +175,21 @@
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UInt16" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<DataAccessor Bounds="920 280 40 15" DataItem="791" Id="793" Label="795" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1220 385 40 15" DataItem="791" Id="793" Label="795" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="793" Bounds="965 280 94 14" Id="795" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="793" Bounds="1265 385 94 14" Id="795" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>lost samples_out</p.Text>
 			</NodeLabel>
 			<Wire Id="796" Joints="N(786:output) N(793:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="797" Joints="N(748:output) N(788:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="270 240 40 15" DataItem="800" Id="798" Label="799" xmlns="http://www.ni.com/MocCommon">
+			<Wire Id="797" Joints="N(748:output) h(5) v(105) N(788:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="270 345 40 15" DataItem="800" Id="798" Label="799" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="798" Bounds="237 240 28 14" Id="799" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="798" Bounds="237 345 28 14" Id="799" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>reset</p.Text>
 			</NodeLabel>
-			<Wire Id="802" Joints="N(798:Value) h(480) B(1) v(-60) h(20) N(788:T0) B(1) v(30) h(20) N(790:T0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="802" Joints="N(798:Value) h(780) B(1) v(-60) h(20) N(788:T0) B(1) v(30) h(20) N(790:T0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<MethodCall Bounds="335 70 40 20" DomainName="NI.MocCommon" Id="804" Target="u32_to_2\.14_cfx\.gcdl" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -205,8 +201,7 @@
 				<Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
 			<Wire Id="806" Joints="N(572:Value) N(804:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="807" Joints="N(804:R0) N(773:input)" xmlns="http://www.ni.com/PlatformFramework" />
-			<MethodCall Bounds="790 55 40 40" DomainName="NI.MocCommon" Id="808" Target="\2\.14\ cfx\ to\ u32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="1090 55 40 40" DomainName="NI.MocCommon" Id="808" Target="\2\.14\ cfx\ to\ u32\.gcdl" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L0" Desc="output" />
@@ -229,7 +224,59 @@
 				<Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
 			<Wire Id="814" Joints="N(39:Value) N(813:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="815" Joints="N(813:R0) N(260:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputMultiply Bounds="585 170 36 55" Id="817" PipeliningStages="5" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(4.12)" DesiredType="FXP(4.12)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x*y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputMultiply>
+			<ComplexToRealImaginary Bounds="505 190 30 30" Id="822" />
+			<Wire Id="824" Joints="N(260:x - iy) N(448:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="829" Joints="N(804:R0) N(773:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputMultiply Bounds="585 245 36 55" Id="830" PipeliningStages="5" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(4.12)" DesiredType="FXP(4.12)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x*y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputMultiply>
+			<Wire Id="831" Joints="N(822:y) h(10) v(35) h(35) v(10) B(4) N(830:x) B(4) v(15) N(830:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="833" Joints="N(822:x) h(40) B(1) N(817:y) B(1) v(-15) N(817:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputAdd Bounds="695 180 36 55" Id="839" RegisterOutputs="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(5.12)" DesiredType="FXP(5.12)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x+y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputAdd>
+			<Wire Id="840" Joints="N(817:x*y) N(839:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="841" Joints="N(830:x*y) h(44) v(-60) N(839:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="846" Joints="N(817:output valid) h(10) v(10) N(839:input valid)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="683 226 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="847" Label="848" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>True</p.Data>
+				<BooleanBehavior />
+				<DockedConstantFacade UndockedSize="26 15" />
+			</Literal>
+			<NodeLabel AttachedTo="847" Bounds="683 226 0 0" Id="848" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>ready for output</p.Text>
+			</NodeLabel>
+			<Wire Facade="WireInvisibleFacade" Id="849" Joints="N(847:Out) h(5) v(-1) N(839:ready for output)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputDivide Bounds="830 -5 36 55" Id="850" RegisterOutputs="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(5.14)" DesiredType="FXP(5.14)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x/y" LimitStrategy="MaximizeRange" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:TruncateToZero" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputDivide>
+			<ComplexToRealImaginary Bounds="690 70 30 30" Id="851" />
+			<Wire Id="853" Joints="N(851:x) h(5) v(-70) N(850:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputDivide Bounds="830 70 36 55" Id="855" RegisterOutputs="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(5.14)" DesiredType="FXP(5.14)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x/y" LimitStrategy="MaximizeRange" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:TruncateToZero" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputDivide>
+			<Wire Id="856" Joints="N(851:y) h(10) v(-10) N(855:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<RealAndImaginaryToComplex Bounds="890 70 30 30" Id="858" />
+			<Wire Id="859" Joints="N(850:x/y) h(19) v(60) N(858:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="860" Joints="N(855:x/y) N(858:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="865" Joints="N(813:R0) N(260:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="869" Joints="N(858:x + iy) N(733:number)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="872" Joints="N(839:x+y) h(64) v(-105) B(2) N(855:y) B(2) v(-75) N(850:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="875" Joints="N(725:ready for input) h(24) v(270) N(778:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="876" Joints="N(855:ready for input) N(763:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="877" Joints="N(855:output valid) h(10) v(-5) N(292:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<LogicalAnd Bounds="755 100 25 20" Id="878" Terminals="o=884, c0t0v=899, c1t0v=882" />
+			<Wire Id="882" Joints="N(839:output valid) h(17) v(-105) N(878:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="884" Joints="N(878:o) h(35) B(1) N(855:input valid) B(1) v(-75) N(850:input valid)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="889" Joints="N(725:x*y) N(893:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="890" Joints="N(893:output) N(851:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FeedbackNode ArrowDirection="Right" Bounds="645 75 30 20" EnableTerminalVisible="False" Id="893" />
+			<FeedbackNode ArrowDirection="Right" Bounds="640 95 30 20" EnableTerminalVisible="False" Id="895" />
+			<Wire Id="898" Joints="N(725:output valid) N(895:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="899" Joints="N(895:output) N(878:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
 		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="Boolean" Id="34" Name="rx_pilot_valid" xmlns="http://www.ni.com/MocCommon">
