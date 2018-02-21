@@ -10,7 +10,7 @@ Notes:
 Ideally the transceiver is tried out using a cable between the most left TX and the most right RX port with a 30dB-attenuator and with a fixed 37 dB receiver gain setting. The transceiver only creates packets if data is created at the host side. After the transceiver runs over the cable, antennas can be used.
 
 Known Bugs:
-- Tha AGC is prone to oscillate. The workaround is to fix the reciever gain to a fixed value.
+- The AGC is prone to oscillate. The workaround is to fix the reciever gain to a fixed value.
 
 The transceiver project is still in development and a improved version of the receiver will be uploaded.
 
