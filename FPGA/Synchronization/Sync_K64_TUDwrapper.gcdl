@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="7593AAF69D713789F06D2C4382131E67" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="426A275FC8E8961AE97DE692C17A0232" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
@@ -158,7 +158,7 @@
 						<Parameter Id="R12" Desc="signalEnergy" />
 					</MethodDeclaration>
 				</p.MethodDeclaration>
-				<Terminal DataType="UInt32" Direction="Input" Hotspot="0 35" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="CFXP(4.12)" Direction="Input" Hotspot="0 35" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="0 50" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="UFXP(2.16)" Direction="Input" Hotspot="0 65" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="CFXP(4.12)[64]" Direction="Input" Hotspot="0 170" Id="L8" xmlns="http://www.ni.com/PlatformFramework" />
@@ -190,19 +190,6 @@
 				<Terminal DataType="UFXP(4.15)" Direction="Output" Hotspot="215 440" Id="R12" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
 			<Wire Id="16" Joints="N(29:Value) N(15:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="17" Joints="N(238:Value) N(18:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
-			<ComplexToRealImaginary Bounds="310 110 30 30" Id="18" />
-			<ReinterpretNumber Bounds="360 110 30 15" Id="19" RestrictToSameWordLength="True" />
-			<Wire Id="20" Joints="N(18:x) N(19:data in)" xmlns="http://www.ni.com/PlatformFramework" />
-			<ReinterpretNumber Bounds="360 125 30 15" Id="21" RestrictToSameWordLength="True" />
-			<Wire Id="22" Joints="N(18:y) N(21:data in)" xmlns="http://www.ni.com/PlatformFramework" />
-			<JoinNumbers Bounds="452 110 30 30" Id="23" />
-			<Comment Bounds="342 85 126 15" Id="24" xmlns="http://www.ni.com/MocCommon">
-				<p.Text>CFX &lt;4.12&gt; to U32</p.Text>
-			</Comment>
-			<Wire Id="25" Joints="N(23:x) h(173) v(20) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="26" Joints="N(21:data out) h(32) v(-15) N(23:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="27" Joints="N(19:data out) h(17) v(25) h(30) v(-10) N(23:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="120 155 40 15" DataItem="68" Id="29" Label="54" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
@@ -351,7 +338,7 @@
 			</NodeLabel>
 			<Wire Id="216" Joints="N(15:R3) h(25) v(15) N(149:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="-150 325 40 15" DataItem="231" Id="232" Label="235" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@867e81b8e325468f8ce12d15152d8687" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@89e338d199d0481791361f0d71c627c9" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="232" Bounds="-303 325 148 14" Id="235" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Sync Configuration Cluster</p.Text>
@@ -362,7 +349,7 @@
 			<NodeLabel AttachedTo="238" Bounds="79 120 36 14" Id="240" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>dataIn</p.Text>
 			</NodeLabel>
-			<PropertyNode Bounds="-95 280 215 140" HasErrorTerminals="False" Id="241" InstanceDataType="@867e81b8e325468f8ce12d15152d8687" Mode="InstanceProperties" Template="List">
+			<PropertyNode Bounds="-95 280 215 140" HasErrorTerminals="False" Id="241" InstanceDataType="@89e338d199d0481791361f0d71c627c9" Mode="InstanceProperties" Template="List">
 				<PropertyItemTerminal DataType="UFXP(2.16)" Hotspot="215 15" Id="c0t0v" Path="Metric peak threshold" Usage="Optional" />
 				<PropertyItemTerminal DataType="CFXP(4.12)[64]" Hotspot="215 30" Id="c1t0v" Path="halfPreambleVectorIn" Usage="Optional" />
 				<PropertyItemTerminal DataType="Boolean" Hotspot="215 45" Id="c2t0v" Path="Metric peak threshold mode" Usage="Optional" />
@@ -402,35 +389,36 @@
 				<p.Text>SymbolValidCount</p.Text>
 			</NodeLabel>
 			<Wire Id="493" Joints="N(15:R13) N(491:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="519" Joints="N(238:Value) h(495) v(20) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
-			<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@867e81b8e325468f8ce12d15152d8687" Height="[float]430" Id="460" Label="[UIModel]480" Left="[float]198" Top="[float]131" Value="{DataItemBinding Id=231}" Width="[float]262" p4:ControlDefinitionChecksum="A/ClaenVwDQzur6t5dOZmA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+			<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@89e338d199d0481791361f0d71c627c9" Height="[float]430" Id="494" Label="[UIModel]514" Left="[float]198" Top="[float]131" Value="{DataItemBinding Id=231}" Width="[float]262" p4:ControlDefinitionChecksum="poVgoVLBWI/PqK10NgrlTw==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Sync\ Configuration\ Cluster\.gtype:ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="461" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x0CCDp-16" Label="[UIModel]469" Left="[float]12" Maximum="[Number]0x1p+1" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]193" Value="{ClusterBinding FieldName=Metric\ peak\ threshold}" ValueFormatter="[string]LVFXP:UFXP_2_16:G2" ValueType="[Type]UFXP(2.16)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<p4:ArrayViewer ArrayElement="[UIModel]479" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]64" Height="[float]36" Id="462" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]True" Label="[UIModel]470" Left="[float]12" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]29" Value="{ClusterBinding FieldName=halfPreambleVectorIn}" Width="[float]130">
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="495" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x0CCDp-16" Label="[UIModel]503" Left="[float]12" Maximum="[Number]0x1p+1" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]193" Value="{ClusterBinding FieldName=Metric\ peak\ threshold}" ValueFormatter="[string]LVFXP:UFXP_2_16:G2" ValueType="[Type]UFXP(2.16)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:ArrayViewer ArrayElement="[UIModel]513" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]64" Height="[float]36" Id="496" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]True" Label="[UIModel]504" Left="[float]12" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]29" Value="{ClusterBinding FieldName=halfPreambleVectorIn}" Width="[float]130">
 					<p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
-					<NumericText BaseName="[string]Numeric" Height="[float]22" Id="479" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ComplexNumber]0x1p-12;0x1p-12" Left="[float]53" MinHeight="[float]22" Name="[string]Child" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexNumber]0x0;0x0" ValueFormatter="[string]LVFXP:CFXP_4_12&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]CFXP(4.12)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<NumericText BaseName="[string]Numeric" Height="[float]22" Id="513" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ComplexNumber]0x1p-12;0x1p-12" Left="[float]53" MinHeight="[float]22" Name="[string]Child" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexNumber]0x0;0x0" ValueFormatter="[string]LVFXP:CFXP_4_12&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]CFXP(4.12)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				</p4:ArrayViewer>
-				<Switch BaseName="[string]Switch" FalseContent="[string]Fixed" Height="[float]50" Id="463" IsReadOnly="[bool]False" Label="[UIModel]471" Left="[float]15" MinHeight="[float]36" MinWidth="[float]64.4033356" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]108" TrueContent="[string]Adaptive" Value="{ClusterBinding FieldName=Metric\ peak\ threshold\ mode}" Width="[float]65" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="464" IsReadOnly="[bool]False" Label="[UIModel]472" Left="[float]21" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]298" TrueContent="[string]On" Value="{ClusterBinding FieldName=CFO\ removal}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="465" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]473" Left="[float]112" MinHeight="[float]22" Top="[float]322" Value="{ClusterBinding FieldName=ffoPiControlCte}" ValueFormatter="[string]LVFXP:FXP_2_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(2.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="466" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[short]1" Label="[UIModel]474" Left="[float]511" MinHeight="[float]22" Top="[float]109" Value="{ClusterBinding FieldName=Sync_scaleThreshold}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="467" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-16" Label="[UIModel]475" Left="[float]152" MinHeight="[float]22" Top="[float]127" Value="{ClusterBinding FieldName=min_threshold}" ValueFormatter="[string]LVFXP:UFXP_2_16&gt;&gt;Decimal, Uppercase, Unsigned:G6" ValueType="[Type]UFXP(2.16)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="468" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-15" Label="[UIModel]476" Left="[float]11" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]247" UnitAnnotation="[string]" Value="{ClusterBinding FieldName=autocorrelation_energythreshold}" ValueFormatter="[string]LVFXP:UFXP_8_15:G6" ValueType="[Type]UFXP(8.15)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<p4:Label Height="[float]16" Id="469" LabelOwner="[UIModel]461" Left="[float]12" Text="[string]Metric peak threshold" Top="[float]170" Width="[float]116" />
-				<p4:Label Height="[float]16" Id="470" LabelOwner="[UIModel]462" Left="[float]12" Text="[string]halfPreambleVectorIn" Top="[float]6" Width="[float]114" />
-				<p4:Label Height="[float]16" Id="471" LabelOwner="[UIModel]463" Left="[float]15" Text="[string]Metric peak threshold mode" Top="[float]85" Width="[float]150" />
-				<p4:Label Height="[float]16" Id="472" LabelOwner="[UIModel]464" Left="[float]21" Text="[string]CFO removal" Top="[float]275" Width="[float]69" />
-				<p4:Label Height="[float]16" Id="473" LabelOwner="[UIModel]465" Left="[float]112" Text="[string]ffoPiControlCte" Top="[float]299" Width="[float]82" />
-				<p4:Label Height="[float]16" Id="474" LabelOwner="[UIModel]466" Left="[float]511" Text="[string]Sync_scaleThreshold" Top="[float]86" Width="[float]108" />
-				<p4:Label Height="[float]16" Id="475" LabelOwner="[UIModel]467" Left="[float]152" Text="[string]min_threshold" Top="[float]104" Width="[float]76" />
-				<p4:Label Height="[float]16" Id="476" LabelOwner="[UIModel]468" Left="[float]11" Text="[string]autocorrelation_energythreshold" Top="[float]224" Width="[float]173" />
-				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="477" Interval="[short]1" Label="[UIModel]478" Left="[float]21" MinHeight="[float]22" Top="[float]383" Value="{ClusterBinding FieldName=shift_threshold}" ValueType="[Type]Int16" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-				<p4:Label Height="[float]16" Id="478" LabelOwner="[UIModel]477" Left="[float]21" Text="[string]shift_threshold" Top="[float]360" Width="[float]78" />
+				<Switch BaseName="[string]Switch" FalseContent="[string]Fixed" Height="[float]50" Id="497" IsReadOnly="[bool]False" Label="[UIModel]505" Left="[float]15" MinHeight="[float]36" MinWidth="[float]64.4033356" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]108" TrueContent="[string]Adaptive" Value="{ClusterBinding FieldName=Metric\ peak\ threshold\ mode}" Width="[float]65" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="498" IsReadOnly="[bool]False" Label="[UIModel]506" Left="[float]21" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]298" TrueContent="[string]On" Value="{ClusterBinding FieldName=CFO\ removal}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="499" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]507" Left="[float]112" MinHeight="[float]22" Top="[float]322" Value="{ClusterBinding FieldName=ffoPiControlCte}" ValueFormatter="[string]LVFXP:FXP_2_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(2.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="500" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[short]1" Label="[UIModel]508" Left="[float]511" MinHeight="[float]22" Top="[float]109" Value="{ClusterBinding FieldName=Sync_scaleThreshold}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="501" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-16" Label="[UIModel]509" Left="[float]152" MinHeight="[float]22" Top="[float]127" Value="{ClusterBinding FieldName=min_threshold}" ValueFormatter="[string]LVFXP:UFXP_2_16&gt;&gt;Decimal, Uppercase, Unsigned:G6" ValueType="[Type]UFXP(2.16)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="502" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-15" Label="[UIModel]510" Left="[float]11" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]247" UnitAnnotation="[string]" Value="{ClusterBinding FieldName=autocorrelation_energythreshold}" ValueFormatter="[string]LVFXP:UFXP_8_15:G6" ValueType="[Type]UFXP(8.15)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="503" LabelOwner="[UIModel]495" Left="[float]12" Text="[string]Metric peak threshold" Top="[float]170" Width="[float]116" />
+				<p4:Label Height="[float]16" Id="504" LabelOwner="[UIModel]496" Left="[float]12" Text="[string]halfPreambleVectorIn" Top="[float]6" Width="[float]114" />
+				<p4:Label Height="[float]16" Id="505" LabelOwner="[UIModel]497" Left="[float]15" Text="[string]Metric peak threshold mode" Top="[float]85" Width="[float]150" />
+				<p4:Label Height="[float]16" Id="506" LabelOwner="[UIModel]498" Left="[float]21" Text="[string]CFO removal" Top="[float]275" Width="[float]69" />
+				<p4:Label Height="[float]16" Id="507" LabelOwner="[UIModel]499" Left="[float]112" Text="[string]ffoPiControlCte" Top="[float]299" Width="[float]82" />
+				<p4:Label Height="[float]16" Id="508" LabelOwner="[UIModel]500" Left="[float]511" Text="[string]Sync_scaleThreshold" Top="[float]86" Width="[float]108" />
+				<p4:Label Height="[float]16" Id="509" LabelOwner="[UIModel]501" Left="[float]152" Text="[string]min_threshold" Top="[float]104" Width="[float]76" />
+				<p4:Label Height="[float]16" Id="510" LabelOwner="[UIModel]502" Left="[float]11" Text="[string]autocorrelation_energythreshold" Top="[float]224" Width="[float]173" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="511" Interval="[short]1" Label="[UIModel]512" Left="[float]21" MinHeight="[float]22" Top="[float]383" Value="{ClusterBinding FieldName=shift_threshold}" ValueType="[Type]Int16" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="512" LabelOwner="[UIModel]511" Left="[float]21" Text="[string]shift_threshold" Top="[float]360" Width="[float]78" />
 			</Cluster>
-			<Label Height="[float]16" Id="480" LabelOwner="[UIModel]460" Left="[float]198" Text="[string]Sync Configuration Cluster" Top="[float]108" Width="[float]141" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="514" LabelOwner="[UIModel]494" Left="[float]198" Text="[string]Sync Configuration Cluster" Top="[float]108" Width="[float]141" xmlns="http://www.ni.com/PanelCommon" />
 		</CPFrontPanel>
 		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="2" DataType="Boolean" Id="68" Name="validIn" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>False</p.DefaultValue>
@@ -477,7 +465,7 @@
 		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="11" DataType="UFXP(2.16)" Id="199" Name="MetricThreshold" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0x0</p.DefaultValue>
 		</DataItem>
-		<DataItem CallDirection="Input" CallIndex="0" DataType="@867e81b8e325468f8ce12d15152d8687" Id="231" Name="Sync Configuration Cluster" xmlns="http://www.ni.com/MocCommon">
+		<DataItem CallDirection="Input" CallIndex="0" DataType="@89e338d199d0481791361f0d71c627c9" Id="231" Name="Sync Configuration Cluster" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>
 				<Cluster>
 					<Field1>0x0</Field1>
@@ -602,7 +590,7 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="867e81b8e325468f8ce12d15152d8687">
+		<p.TypeReference TypeId="89e338d199d0481791361f0d71c627c9">
 			<Typedef TypedefName="Sync Configuration Cluster.gtype" UnderlyingType="@09114cd07b994f98ba1f8a89ea46e507" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="09114cd07b994f98ba1f8a89ea46e507">

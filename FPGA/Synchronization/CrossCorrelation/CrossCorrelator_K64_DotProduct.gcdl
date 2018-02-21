@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="70066784A71CFC3CB3F58946A07961DA" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="B907E5DEDA998CAD66171E01D6FF00ED" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -76,23 +76,23 @@
 			<NodeLabel AttachedTo="16" Bounds="269 -175 36 14" Id="19" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>dataIn</p.Text>
 			</NodeLabel>
-			<DataAccessor Bounds="1845 -160 40 15" DataItem="36" Id="32" Label="34" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="2070 -160 40 15" DataItem="36" Id="32" Label="34" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<DataAccessor Bounds="1845 -180 40 15" DataItem="37" Id="33" Label="35" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="2070 -180 40 15" DataItem="37" Id="33" Label="35" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="FXP(4.12)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="32" Bounds="1890 -160 106 14" Id="34" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="32" Bounds="2115 -160 106 14" Id="34" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>magnitudeValidOut</p.Text>
 			</NodeLabel>
-			<NodeLabel AttachedTo="33" Bounds="1890 -180 79 14" Id="35" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="33" Bounds="2115 -180 79 14" Id="35" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>magnitudeOut</p.Text>
 			</NodeLabel>
 			<Wire Id="42" Joints="N(16:Value) N(1461:796)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="794" Joints="N(1470:796) N(33:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="795" Joints="N(1473:796) N(32:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-			<CaseStructure Bounds="415 -415 1375 660" Default="797" Id="796" Selected="798" UserSelectorBounds="644 0 88 17">
-				<CaseStructure.Case Bounds="5 5 1365 650" Id="797" Pattern="False">
+			<CaseStructure Bounds="415 -415 1580 660" Default="797" Id="796" Selected="798" UserSelectorBounds="746 0 88 17">
+				<CaseStructure.Case Bounds="5 5 1570 650" Id="797" Pattern="False">
 					<Literal Bounds="1320 230 39.5 16" DataType="FXP(4.12)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1509" xmlns="http://www.ni.com/MocCommon">
 						<p.Data>0x0</p.Data>
 						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_4_12:G6" />
@@ -104,7 +104,7 @@
 					</Literal>
 					<Wire Id="1512" Joints="N(1511:Out) N(1473:797)" xmlns="http://www.ni.com/PlatformFramework" />
 				</CaseStructure.Case>
-				<CaseStructure.Case Bounds="5 5 1365 650" Id="798" Pattern="True">
+				<CaseStructure.Case Bounds="5 5 1570 650" Id="798" Pattern="True">
 					<DotProduct Bounds="470 155 46 65" Id="41" Label="1538" VectorSize="64" xmlns="http://www.ni.com/LabVIEW.FPGA">
 						<ConfigurableDataTypeTerminal DataType="CFXP(9.12)" DesiredType="FXP(9.12)" Direction="Output" GuardBits="12" Hotspot="46 15" Id="dot product" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
 					</DotProduct>
@@ -118,7 +118,6 @@
 					<HighThroughputAdd Bounds="1275 215 36 55" Id="790" RegisterOutputs="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
 						<ConfigurableDataTypeTerminal DataType="FXP(4.12)" DesiredType="FXP(4.12)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x+y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
 					</HighThroughputAdd>
-					<Wire Id="1469" Joints="N(790:x+y) N(1470:798)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="1472" Joints="N(790:output valid) N(1473:798)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="791" Joints="N(51:x*y) h(24) v(50) N(790:x)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="793" Joints="N(71:output valid) h(39) v(-40) N(790:input valid)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -253,11 +252,12 @@
 					<Wire Id="2962" Joints="N(2266:x - iy) h(115) v(-335) N(41:y)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="2964" Joints="N(2941:798) N(2955:array)" xmlns="http://www.ni.com/PlatformFramework" />
 					<Wire Id="2965" Joints="N(2955:reversed array) N(2266:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="2975" Joints="N(790:x+y) N(1470:798)" xmlns="http://www.ni.com/PlatformFramework" />
 				</CaseStructure.Case>
 				<CaseStructure.Selector Bounds="-4 280 13 10" Docking="Left" Id="799" Terminals="796=1478, 797, 798=1477" />
 				<CaseStructure.Tunnel Bounds="-4 240 13 10" Docking="Left" Id="1461" Terminals="796=42, 797, 798=1504" />
-				<CaseStructure.Tunnel Bounds="1366 235 13 10" Docking="Right" Id="1470" Terminals="796=794, 797=1510, 798=1469" />
-				<CaseStructure.Tunnel Bounds="1366 255 13 10" Docking="Right" Id="1473" Terminals="796=795, 797=1512, 798=1472" />
+				<CaseStructure.Tunnel Bounds="1571 235 13 10" Docking="Right" Id="1470" Terminals="796=794, 797=1510, 798=2975" />
+				<CaseStructure.Tunnel Bounds="1571 255 13 10" Docking="Right" Id="1473" Terminals="796=795, 797=1512, 798=1472" />
 				<CaseStructure.Tunnel Bounds="-4 525 13 10" Docking="Left" Id="2941" Terminals="796=2952, 797, 798=2964" />
 			</CaseStructure>
 			<Wire Id="1478" Joints="N(15:Value) N(799:796)" xmlns="http://www.ni.com/PlatformFramework" />

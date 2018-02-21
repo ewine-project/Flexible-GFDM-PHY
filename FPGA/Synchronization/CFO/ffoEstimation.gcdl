@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="4CB19BABC60B10A34991411A115DBD53" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="F5E3F0E323A254635DD2E170CA9BE2AD" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -93,21 +93,20 @@
 			<FeedbackNode Bounds="770 320 30 20" EnableTerminalVisible="False" Id="48" />
 			<Wire Id="49" Joints="N(48:output) h(-20) v(-35) N(47:f)" xmlns="http://www.ni.com/PlatformFramework" />
 			<FeedbackNode ArrowDirection="Right" Bounds="540 355 30 20" DelayCount="64" EnableTerminalVisible="False" Id="52" />
-			<LogicalAnd Bounds="645 275 25 20" Id="57" Terminals="o=62, c0t0v=334, c1t0v=122" />
+			<LogicalAnd Bounds="645 275 25 20" Id="57" Terminals="o=62, c0t0v=334, c1t0v=979" />
 			<Wire Id="62" Joints="N(57:o) h(35) v(-5) N(47:s)" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="945 325 40 15" DataItem="65" Id="63" Label="64" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1025 325 40 15" DataItem="65" Id="63" Label="64" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="FXP(2.17)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="63" Bounds="990 325 92 14" Id="64" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="63" Bounds="1070 325 92 14" Id="64" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>estimatedFfoOut</p.Text>
 			</NodeLabel>
-			<DataAccessor Bounds="945 360 40 15" DataItem="69" Id="67" Label="68" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1025 360 40 15" DataItem="69" Id="67" Label="68" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="67" Bounds="990 360 119 14" Id="68" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="67" Bounds="1070 360 119 14" Id="68" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>estimatedFfoValidOut</p.Text>
 			</NodeLabel>
-			<Wire Id="122" Joints="N(52:output) h(25) B(1) N(67:Value) B(1) v(-75) N(57:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Comment Bounds="835 285 118 28" Id="171" xmlns="http://www.ni.com/MocCommon">
 				<p.Text>"freqOffset: -1 to 1\r\n(one subcarrier)"</p.Text>
 			</Comment>
@@ -130,7 +129,6 @@
 			<Wire Id="331" Joints="N(35:y) h(20) B(1) N(28:y) B(1) N(962:352)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="332" Joints="N(24:Value) h(120) B(1) N(28:input valid) B(1) N(965:352)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="334" Joints="N(28:output valid) N(57:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="350" Joints="N(47:s? t:f) h(15) v(50) B(2) N(48:input) B(2) h(90) B(4) N(63:Value) B(4) N(968:352)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="351" Joints="N(28:phase) N(47:t)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DisableStructure Bounds="300 -180 1060 345" Id="352" Selected="354" UserSelectorBounds="476 0 107 17">
 				<DisableStructure.DisableDiagram Bounds="5 5 1050 335" Id="353" Pattern="Enabled" />
@@ -203,8 +201,14 @@
 				<DisableStructure.Tunnel Bounds="160 336 10 13" DefaultIfUnwired="True" Docking="Bottom" Id="959" Terminals="352=330, 353, 354=958" />
 				<DisableStructure.Tunnel Bounds="170 336 10 13" DefaultIfUnwired="True" Docking="Bottom" Id="962" Terminals="352=331, 353, 354=961" />
 				<DisableStructure.Tunnel Bounds="180 336 10 13" DefaultIfUnwired="True" Docking="Bottom" Id="965" Terminals="352=332, 353, 354=964" />
-				<DisableStructure.Tunnel Bounds="605 336 10 13" DefaultIfUnwired="True" Docking="Bottom" Id="968" Terminals="352=350, 353, 354=967" />
+				<DisableStructure.Tunnel Bounds="605 336 10 13" DefaultIfUnwired="True" Docking="Bottom" Id="968" Terminals="352=975, 353, 354=967" />
 			</DisableStructure>
+			<FeedbackNode ArrowDirection="Right" Bounds="980 360 30 20" EnableTerminalVisible="False" Id="970" />
+			<FeedbackNode ArrowDirection="Right" Bounds="985 300 30 20" EnableTerminalVisible="False" Id="972" />
+			<Wire Id="975" Joints="N(47:s? t:f) h(15) v(50) B(2) N(48:input) B(2) h(90) B(4) h(45) v(-20) N(972:input) B(4) N(968:352)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="976" Joints="N(972:output) h(5) v(20) N(63:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="979" Joints="N(52:output) h(25) B(1) h(375) v(5) N(970:input) B(1) v(-75) N(57:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="980" Joints="N(970:output) h(5) v(-5) N(67:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
 		<DataItem CallDirection="Input" CallIndex="0" DataType="CFXP(4.15)" Id="19" Name="dataIn" xmlns="http://www.ni.com/MocCommon">
