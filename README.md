@@ -14,3 +14,9 @@ Known Bugs:
 - Tha AGC is prone to oscillate. The workaround is to fix the reciever gain to a fixed value.
 
 The transceiver project is still in development and a improved version of the receiver will be uploaded.
+
+Update Synchronization - recommended parameters:
+shift_threshold = -2;
+min_threshold = 0,001;
+preamble scale = 7;
+CFO removal = false;
