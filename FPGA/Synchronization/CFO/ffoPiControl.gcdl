@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="5E3F1E6667E930240FA61EEE4D1F0469" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="271E1F210C6E21C46DFE44D80C2DB4BF" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
@@ -52,13 +53,11 @@
 			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="55" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Left="[float]0" MinHeight="[float]22" Name="[string]piControlCte" Top="[float]0" Value="{DataItemBinding Id=52}" ValueFormatter="[string]LVFXP:FXP_2_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(2.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 		</FrontPanelUnplacedItems>
 		<BlockDiagram Id="13">
-			<Wire Id="16" Joints="N(32:Value) h(40) B(1) N(24:enable?) B(1) v(75) h(185) B(4) N(48:Value) B(4) v(-20) N(23:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="17" Joints="N(36:Value) N(24:input)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Add Bounds="570 320 30 30" Id="18" Terminals="o=69, c0t0v=20, c1t0v=21">
 				<ConfigurableDataTypeTerminal DataType="FXP(1.17)" DesiredType="FXP(1.17)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="o" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
 			</Add>
-			<Multiply Bounds="510 295 30 30" Id="19" Terminals="o=20, c0t0v=58, c1t0v=50" />
-			<Wire Id="20" Joints="N(19:o) h(15) v(15) N(18:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="20" Joints="N(71:x*y) h(14) v(5) h(5) v(15) N(18:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="21" Joints="N(23:output) h(-15) v(-30) N(18:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<FeedbackNode Bounds="570 360 30 30" Id="23" />
 			<FeedbackNode ArrowDirection="Right" Bounds="450 305 30 30" Id="24" />
@@ -92,14 +91,14 @@
 			<NodeLabel AttachedTo="48" Bounds="815 400 72 14" Id="49" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>dataValidOut</p.Text>
 			</NodeLabel>
-			<Wire Id="50" Joints="N(24:output) N(19:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="50" Joints="N(24:output) h(5) v(-5) N(71:y)" xmlns="http://www.ni.com/PlatformFramework" />
 			<DataAccessor Bounds="350 280 40 15" DataItem="52" Id="54" Label="56" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="FXP(2.17)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
 			<NodeLabel AttachedTo="54" Bounds="276 280 69 14" Id="56" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>piControlCte</p.Text>
 			</NodeLabel>
-			<Wire Id="58" Joints="N(54:Value) h(105) v(15) N(19:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="58" Joints="N(54:Value) h(95) v(10) N(71:x)" xmlns="http://www.ni.com/PlatformFramework" />
 			<WireComment AttachedTo="69" Bounds="620 327 88 16" Id="59" xmlns="http://www.ni.com/PlatformFramework">
 				<p.ExpandedWidth>88</p.ExpandedWidth>
 				<p.Point>664 335</p.Point>
@@ -108,6 +107,13 @@
 			<Negate Bounds="725 320 30 30" Id="68" />
 			<Wire Id="69" Joints="N(18:o) h(15) B(1) N(68:x) B(1) v(35) N(23:input)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="70" Joints="N(68:-x) N(42:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<HighThroughputMultiply Bounds="500 285 36 55" Id="71" PipeliningStages="1" RegisterInputs="True" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<ConfigurableDataTypeTerminal DataType="FXP(2.17)" DesiredType="FXP(2.17)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x*y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+			</HighThroughputMultiply>
+			<Wire Id="77" Joints="N(78:output) h(5) v(-20) N(71:input valid)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FeedbackNode ArrowDirection="Right" Bounds="455 335 30 20" EnableTerminalVisible="False" Id="78" />
+			<Wire Id="81" Joints="N(71:output valid) h(10) v(80) h(69) B(3) N(48:Value) B(3) v(-20) N(23:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="82" Joints="N(32:Value) h(40) B(1) N(24:enable?) B(1) v(15) N(78:input)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
 		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Boolean" Id="30" Name="dataValidIn" xmlns="http://www.ni.com/MocCommon">

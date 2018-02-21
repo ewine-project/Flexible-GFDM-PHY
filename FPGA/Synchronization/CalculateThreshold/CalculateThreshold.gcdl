@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="089D27A29051DA5853FB9D16FA62AABC" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="81D7D6F3C7841F40C86AB71A8E886E7A" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
@@ -106,10 +106,10 @@
 				<p.Text>initial value</p.Text>
 			</NodeLabel>
 			<Wire Facade="WireInvisibleFacade" Id="573" Joints="N(571:Out) h(5) v(2) h(-22) N(551:initial value)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="310 105 40 15" DataItem="592" Id="590" Label="591" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="310 65 40 15" DataItem="592" Id="590" Label="591" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="FXP(4.12)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="590" Bounds="243 105 62 14" Id="591" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="590" Bounds="243 65 62 14" Id="591" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Crosscor in</p.Text>
 			</NodeLabel>
 			<DataAccessor Bounds="1955 65 40 15" DataItem="603" Id="601" Label="602" xmlns="http://www.ni.com/MocCommon">
@@ -118,18 +118,17 @@
 			<NodeLabel AttachedTo="601" Bounds="2000 65 69 14" Id="602" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Croscorr out</p.Text>
 			</NodeLabel>
-			<Wire Id="605" Joints="N(590:Value) h(5) v(-40) N(601:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="605" Joints="N(590:Value) N(601:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 			<ScaleByPowerOf2 Bounds="1460 350 30 30" Id="1033" />
-			<Wire Id="1035" Joints="N(1079:Value) v(15) N(1033:n)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Select Bounds="1915 375 40 40" Id="1043" />
 			<Wire Id="1044" Joints="N(1053:x &gt; y?) N(1043:s)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="1052" Joints="N(1043:s? t:f) h(15) v(-30) N(363:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 			<IsGreater Bounds="1850 380 30 30" Id="1053" />
 			<Wire Id="1056" Joints="N(1033:x*2^n) h(265) B(1) h(80) B(2) h(73) v(15) N(1043:t) B(2) v(20) N(1053:x) B(1) v(-130) N(253:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<DataAccessor Bounds="1415 335 40 15" DataItem="1081" Id="1079" Label="1080" xmlns="http://www.ni.com/MocCommon">
+			<DataAccessor Bounds="1380 320 40 15" DataItem="1081" Id="1079" Label="1080" xmlns="http://www.ni.com/MocCommon">
 				<Terminal DataType="Int16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 			</DataAccessor>
-			<NodeLabel AttachedTo="1079" Bounds="1323 335 87 14" Id="1080" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="1079" Bounds="1288 320 87 14" Id="1080" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>scale_threshold</p.Text>
 			</NodeLabel>
 			<DataAccessor Bounds="1750 425 40 15" DataItem="1091" Id="1089" Label="1090" xmlns="http://www.ni.com/MocCommon">
@@ -142,6 +141,14 @@
 			<Wire Id="1118" Joints="N(1089:Value) h(45) B(1) h(75) v(-20) N(1043:f) B(1) v(-30) N(1053:y)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="1120" Joints="N(74:Value) h(390) B(1) h(490) v(-220) B(3) h(-25) v(-35) N(551:enable?) B(3) N(92:Value) B(1) v(-415) N(1124:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
 			<FeedbackNode ArrowDirection="Right" Bounds="735 240 30 30" DelayCount="64" Id="1124" />
+			<Literal Bounds="1405 345 39.5 16" DataType="Int16" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1127" Label="1128" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>-1</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<NodeLabel AttachedTo="1127" Bounds="1405 345 0 0" Id="1128" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>n</p.Text>
+			</NodeLabel>
+			<Wire Id="1129" Joints="N(1127:Out) h(5) v(5) N(1033:n)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
 			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=231}" Height="[float]239" Id="233" Label="[UIModel]251" Left="[float]148" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]120" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
