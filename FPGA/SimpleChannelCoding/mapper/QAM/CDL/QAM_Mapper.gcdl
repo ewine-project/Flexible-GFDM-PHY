@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="263C6E70BC0B7B1FF20F3547E0D41143" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="5 29 26 15" ListViewIconCropStyle="Custom" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]50" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]QAM_Mapper" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]44" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="50" Id="10" ListViewHeight="100" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="19" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="207" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="36" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="296" />
+			<ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 80" Parameter="329" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 50" />
+			<ConnectorPaneTerminal Hotspot="25 50" />
+			<ConnectorPaneTerminal Hotspot="0 45" ListViewHotspot="0 80" Parameter="319" />
+			<ConnectorPaneTerminal Hotspot="40 45" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0">
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="39" IsReadOnly="[bool]False" Left="[float]0" MinHeight="[float]36" MinWidth="[float]34" Name="[string]Gray_map?" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=36}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText Height="[float]22" Id="209" Interval="[byte]1" Left="[float]0" MinHeight="[float]22" Name="[string]bits" Top="[float]0" Value="{DataItemBinding Id=207}" ValueType="[Type]UInt8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="299" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ComplexNumber]0x1p-14;0x1p-14" Left="[float]0" MinHeight="[float]22" Name="[string]QAM-symbol" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]0" Value="{DataItemBinding Id=296}" ValueFormatter="[string]LVFXP:CFXP_2_14&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]CFXP(2.14)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="320" IsReadOnly="[bool]False" Left="[float]0" MinHeight="[float]36" MinWidth="[float]34" Name="[string]input valid" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=319}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="332" IsReadOnly="[bool]True" Left="[float]0" MinHeight="[float]16" MinWidth="[float]16" Name="[string]output valid" Shape="[LEDShape]Square" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=329}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="13">
+			<CaseStructure Bounds="20 140 385 150" DataType="@ede6a1b96ff744d0b20801f8f29e0a38" Default="16" Id="15" Selected="16" UserSelectorBounds="115 0 155 17">
+				<CaseStructure.Case Bounds="5 5 375 140" Id="16" Pattern="&quot;4-QAM&quot;, Default">
+					<IPIntegrationNode Bounds="125 85 50 50" DomainName="NI.LabVIEW.FPGA" EnableRatioCheck="True" Id="27" OverriddenGenericStrings="n|integer|4|" OverriddenPorts="clk:ClockReference:StdLogic:Input:Clock:1;reset:Boolean:StdLogic:Input:Reset:1;enable:Boolean:StdLogic:Input:Control:1;index:Boolean[2]:StdLogicVector(1 downto 0):Input:Data:2;gray_code:Boolean:StdLogic:Input:Data:1;i_cmp:FXP(2.0):StdLogicVector(1 downto 0):Output:Data:2;q_cmp:FXP(2.0):StdLogicVector(1 downto 0):Output:Data:2" Target="\4QAM_map\.eip" xmlns="http://www.ni.com/LabVIEW.FPGA">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="enable" Desc="enable" />
+								<Parameter Id="index" Desc="index" />
+								<Parameter Id="gray_code" Desc="gray_code" />
+								<Parameter Id="i_cmp" Desc="i_cmp" />
+								<Parameter Id="q_cmp" Desc="q_cmp" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Id="enable" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean[2]" DesiredType="Boolean" Direction="Input" Hotspot="0 15" Id="index" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Hotspot="0 25" Id="gray_code" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(2.0)" DesiredType="FXP(2.0)" Direction="Output" Hotspot="50 5" Id="i_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(2.0)" DesiredType="FXP(2.0)" Direction="Output" Hotspot="50 15" Id="q_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					</IPIntegrationNode>
+					<ToFixedPoint Bounds="205 95 50 10" Id="82" />
+					<ReinterpretNumber Bounds="290 95 30 15" Id="83" RestrictToSameWordLength="True" />
+					<ToFixedPoint Bounds="205 65 50 10" Id="84" />
+					<ReinterpretNumber Bounds="290 65 30 15" Id="85" RestrictToSameWordLength="True" />
+					<Wire Facade="WireInvisibleFacade" Id="87" Joints="N(100:Out) v(7) N(82:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="310 83 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="88" Label="95" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="89" Joints="N(88:Out) v(7) N(83:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="225 53 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="90" Label="96" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="91" Joints="N(90:Out) v(7) N(84:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="310 53 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="92" Label="97" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="93" Joints="N(92:Out) v(7) N(85:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="88" Bounds="310 83 0 0" Id="95" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="90" Bounds="225 53 0 0" Id="96" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="92" Bounds="310 53 0 0" Id="97" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<Wire Id="98" Joints="N(27:i_cmp) h(15) v(-20) N(84:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="99" Joints="N(27:q_cmp) N(82:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="225 83 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="100" Label="101" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<NodeLabel AttachedTo="100" Bounds="225 83 0 0" Id="101" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<Wire Id="103" Joints="N(84:fixed-point) N(85:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="104" Joints="N(82:fixed-point) N(83:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="105" Joints="N(85:data out) N(80:16)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="106" Joints="N(83:data out) N(77:16)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="201" Joints="N(199:16) N(27:enable)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="202" Joints="N(42:16) N(27:gray_code)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ArraySubset Bounds="40 15 40 40" Id="215" Terminals="array=216, subarray=223, index0=219, length0=222" />
+					<Wire Id="216" Joints="N(267:16) v(-30) N(215:array)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="28 35 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="217" Label="218" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="219" Joints="N(217:Out) N(215:index0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="217" Bounds="28 35 0 0" Id="218" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>index</p.Text>
+					</NodeLabel>
+					<Literal Bounds="28 45 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="220" Label="221" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>2</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="222" Joints="N(220:Out) N(215:length0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="220" Bounds="28 45 0 0" Id="221" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>length(rest)</p.Text>
+					</NodeLabel>
+					<Wire Id="223" Joints="N(215:subarray) h(25) v(80) N(27:index)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 375 140" Id="17" Pattern="&quot;16-QAM&quot;">
+					<IPIntegrationNode Bounds="125 85 50 50" DomainName="NI.LabVIEW.FPGA" EnableRatioCheck="True" Id="31" OverriddenGenericStrings="n|integer|16|" OverriddenPorts="clk:ClockReference:StdLogic:Input:Clock:1;reset:Boolean:StdLogic:Input:Reset:1;enable:Boolean:StdLogic:Input:Control:1;index:Boolean[4]:StdLogicVector(3 downto 0):Input:Data:4;gray_code:Boolean:StdLogic:Input:Data:1;i_cmp:FXP(3.0):StdLogicVector(2 downto 0):Output:Data:3;q_cmp:FXP(3.0):StdLogicVector(2 downto 0):Output:Data:3" Target="\16QAM_map\.eip" xmlns="http://www.ni.com/LabVIEW.FPGA">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="enable" Desc="enable" />
+								<Parameter Id="index" Desc="index" />
+								<Parameter Id="gray_code" Desc="gray_code" />
+								<Parameter Id="i_cmp" Desc="i_cmp" />
+								<Parameter Id="q_cmp" Desc="q_cmp" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Id="enable" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean[4]" DesiredType="Boolean" Direction="Input" Hotspot="0 15" Id="index" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Hotspot="0 25" Id="gray_code" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(3.0)" DesiredType="FXP(3.0)" Direction="Output" Hotspot="50 5" Id="i_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(3.0)" DesiredType="FXP(3.0)" Direction="Output" Hotspot="50 15" Id="q_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					</IPIntegrationNode>
+					<ToFixedPoint Bounds="200 95 50 10" Id="107" />
+					<ReinterpretNumber Bounds="285 95 30 15" Id="108" RestrictToSameWordLength="True" />
+					<ToFixedPoint Bounds="200 65 50 10" Id="109" />
+					<ReinterpretNumber Bounds="285 65 30 15" Id="110" RestrictToSameWordLength="True" />
+					<Wire Facade="WireInvisibleFacade" Id="112" Joints="N(129:Out) v(7) N(107:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="305 83 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="113" Label="120" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="114" Joints="N(113:Out) v(7) N(108:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="220 53 12 10" DataType="FXP(3.13)" Facade="DockedConstantFacade" Id="115" Label="121" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_3_13:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="116" Joints="N(115:Out) v(7) N(109:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="305 53 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="117" Label="122" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="118" Joints="N(117:Out) v(7) N(110:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="113" Bounds="305 83 0 0" Id="120" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="115" Bounds="220 53 0 0" Id="121" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="117" Bounds="305 53 0 0" Id="122" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<Wire Id="123" Joints="N(110:data out) N(80:17)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="124" Joints="N(108:data out) N(77:17)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="125" Joints="N(109:fixed-point) N(110:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="126" Joints="N(107:fixed-point) N(108:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="127" Joints="N(31:i_cmp) h(15) v(-20) N(109:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="128" Joints="N(31:q_cmp) N(107:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="220 83 12 10" DataType="FXP(3.13)" Facade="DockedConstantFacade" Id="129" Label="130" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_3_13:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<NodeLabel AttachedTo="129" Bounds="220 83 0 0" Id="130" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<Wire Id="203" Joints="N(199:17) N(31:enable)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="204" Joints="N(42:17) N(31:gray_code)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ArraySubset Bounds="40 15 40 40" Id="269" Terminals="array=276, subarray=277, index0=271, length0=273" />
+					<Literal Bounds="28 35 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="270" Label="274" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="271" Joints="N(270:Out) N(269:index0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="28 45 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="272" Label="275" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>4</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="273" Joints="N(272:Out) N(269:length0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="270" Bounds="28 35 0 0" Id="274" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>index</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="272" Bounds="28 45 0 0" Id="275" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>length(rest)</p.Text>
+					</NodeLabel>
+					<Wire Id="276" Joints="N(267:17) v(-30) N(269:array)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="277" Joints="N(269:subarray) h(25) v(80) N(31:index)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 375 140" Id="25" Pattern="&quot;64-QAM&quot;">
+					<IPIntegrationNode Bounds="125 85 50 50" DomainName="NI.LabVIEW.FPGA" EnableRatioCheck="True" Id="32" OverriddenGenericStrings="n|integer|64|" OverriddenPorts="clk:ClockReference:StdLogic:Input:Clock:1;reset:Boolean:StdLogic:Input:Reset:1;enable:Boolean:StdLogic:Input:Control:1;index:Boolean[6]:StdLogicVector(5 downto 0):Input:Data:6;gray_code:Boolean:StdLogic:Input:Data:1;i_cmp:FXP(4.0):StdLogicVector(3 downto 0):Output:Data:4;q_cmp:FXP(4.0):StdLogicVector(3 downto 0):Output:Data:4" Target="\64QAM_map\.eip" xmlns="http://www.ni.com/LabVIEW.FPGA">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="enable" Desc="enable" />
+								<Parameter Id="index" Desc="index" />
+								<Parameter Id="gray_code" Desc="gray_code" />
+								<Parameter Id="i_cmp" Desc="i_cmp" />
+								<Parameter Id="q_cmp" Desc="q_cmp" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Id="enable" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean[6]" DesiredType="Boolean" Direction="Input" Hotspot="0 15" Id="index" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Hotspot="0 25" Id="gray_code" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(4.0)" DesiredType="FXP(4.0)" Direction="Output" Hotspot="50 5" Id="i_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(4.0)" DesiredType="FXP(4.0)" Direction="Output" Hotspot="50 15" Id="q_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					</IPIntegrationNode>
+					<ToFixedPoint Bounds="200 95 50 10" Id="132" />
+					<ReinterpretNumber Bounds="285 95 30 15" Id="133" RestrictToSameWordLength="True" />
+					<ToFixedPoint Bounds="200 65 50 10" Id="134" />
+					<ReinterpretNumber Bounds="285 65 30 15" Id="135" RestrictToSameWordLength="True" />
+					<Literal Bounds="220 83 12 10" DataType="FXP(4.12)" Facade="DockedConstantFacade" Id="136" Label="144" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_4_12:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="137" Joints="N(136:Out) v(7) N(132:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="305 83 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="138" Label="145" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="139" Joints="N(138:Out) v(7) N(133:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="220 53 12 10" DataType="FXP(4.12)" Facade="DockedConstantFacade" Id="140" Label="146" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_4_12:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="141" Joints="N(140:Out) v(7) N(134:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="305 53 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="142" Label="147" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="143" Joints="N(142:Out) v(7) N(135:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="136" Bounds="220 83 0 0" Id="144" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="138" Bounds="305 83 0 0" Id="145" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="140" Bounds="220 53 0 0" Id="146" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="142" Bounds="305 53 0 0" Id="147" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<Wire Id="148" Joints="N(135:data out) N(80:25)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="149" Joints="N(133:data out) N(77:25)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="150" Joints="N(134:fixed-point) N(135:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="151" Joints="N(132:fixed-point) N(133:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="152" Joints="N(32:i_cmp) h(15) v(-20) N(134:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="153" Joints="N(32:q_cmp) N(132:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="205" Joints="N(199:25) N(32:enable)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="206" Joints="N(42:25) N(32:gray_code)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ArraySubset Bounds="40 15 40 40" Id="278" Terminals="array=285, subarray=286, index0=280, length0=282" />
+					<Literal Bounds="28 35 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="279" Label="283" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="280" Joints="N(279:Out) N(278:index0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="28 45 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="281" Label="284" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>6</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="282" Joints="N(281:Out) N(278:length0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="279" Bounds="28 35 0 0" Id="283" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>index</p.Text>
+					</NodeLabel>
+					<NodeLabel AttachedTo="281" Bounds="28 45 0 0" Id="284" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>length(rest)</p.Text>
+					</NodeLabel>
+					<Wire Id="285" Joints="N(267:25) v(-30) N(278:array)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="286" Joints="N(278:subarray) h(25) v(80) N(32:index)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 375 140" Id="26" Pattern="&quot;256-QAM&quot;">
+					<IPIntegrationNode Bounds="40 85 50 50" DomainName="NI.LabVIEW.FPGA" EnableRatioCheck="True" Id="30" OverriddenGenericStrings="n|integer|256|" OverriddenPorts="clk:ClockReference:StdLogic:Input:Clock:1;reset:Boolean:StdLogic:Input:Reset:1;enable:Boolean:StdLogic:Input:Control:1;index:Boolean[8]:StdLogicVector(7 downto 0):Input:Data:8;gray_code:Boolean:StdLogic:Input:Data:1;i_cmp:FXP(5.0):StdLogicVector(4 downto 0):Output:Data:5;q_cmp:FXP(5.0):StdLogicVector(4 downto 0):Output:Data:5" Target="\256QAM_map\.eip" xmlns="http://www.ni.com/LabVIEW.FPGA">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="enable" Desc="enable" />
+								<Parameter Id="index" Desc="index" />
+								<Parameter Id="gray_code" Desc="gray_code" />
+								<Parameter Id="i_cmp" Desc="i_cmp" />
+								<Parameter Id="q_cmp" Desc="q_cmp" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Id="enable" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean[8]" DesiredType="Boolean" Direction="Input" Hotspot="0 15" Id="index" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="Boolean" DesiredType="Boolean" Direction="Input" Hotspot="0 25" Id="gray_code" TypeOverrideKind="Exact" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(5.0)" DesiredType="FXP(5.0)" Direction="Output" Hotspot="50 5" Id="i_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+						<ConfigurableDataTypeTerminal DataType="FXP(5.0)" DesiredType="FXP(5.0)" Direction="Output" Hotspot="50 15" Id="q_cmp" TypeOverrideKind="Exact" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					</IPIntegrationNode>
+					<Wire Id="35" Joints="N(199:26) N(30:enable)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="41" Joints="N(42:26) N(30:gray_code)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="47" Joints="N(30:i_cmp) h(15) v(-20) N(62:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ToFixedPoint Bounds="115 95 50 10" Id="51" />
+					<Literal Bounds="135 83 12 10" DataType="FXP(5.11)" Facade="DockedConstantFacade" Id="53" Label="54" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_5_11:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<NodeLabel AttachedTo="53" Bounds="135 83 0 0" Id="54" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<Wire Id="56" Joints="N(30:q_cmp) N(51:number)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ReinterpretNumber Bounds="285 95 30 15" Id="57" RestrictToSameWordLength="True" />
+					<Wire Id="58" Joints="N(51:fixed-point) N(57:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="305 83 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="59" Label="60" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<Wire Facade="WireInvisibleFacade" Id="61" Joints="N(59:Out) v(7) N(57:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<NodeLabel AttachedTo="59" Bounds="305 83 0 0" Id="60" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<ToFixedPoint Bounds="115 65 50 10" Id="62" />
+					<ReinterpretNumber Bounds="210 65 30 15" Id="65" RestrictToSameWordLength="True" />
+					<Wire Id="66" Joints="N(62:fixed-point) N(65:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="230 53 12 10" DataType="FXP(2.14)" Facade="DockedConstantFacade" Id="67" Label="68" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_2_14:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<NodeLabel AttachedTo="67" Bounds="230 53 0 0" Id="68" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>type</p.Text>
+					</NodeLabel>
+					<Wire Facade="WireInvisibleFacade" Id="69" Joints="N(67:Out) v(7) N(65:type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Facade="WireInvisibleFacade" Id="70" Joints="N(53:Out) v(7) N(51:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Facade="WireInvisibleFacade" Id="71" Joints="N(72:Out) v(7) N(62:fixed-point type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Literal Bounds="135 53 12 10" DataType="FXP(5.11)" Facade="DockedConstantFacade" Id="72" Label="73" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x0</p.Data>
+						<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_5_11:G6" />
+						<DockedConstantFacade UndockedSize="39.5 16" />
+					</Literal>
+					<NodeLabel AttachedTo="72" Bounds="135 53 0 0" Id="73" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>fixed-point type</p.Text>
+					</NodeLabel>
+					<Wire Id="78" Joints="N(57:data out) N(77:26)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="81" Joints="N(65:data out) N(80:26)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="295" Joints="N(267:26) h(11) v(50) N(30:index)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="18" Terminals="15=24, 16, 17, 25, 26" />
+				<CaseStructure.Tunnel Bounds="-4 110 13 10" Docking="Left" Id="42" Terminals="15=43, 16=202, 17=204, 25=206, 26=41" />
+				<CaseStructure.Tunnel Bounds="376 100 13 10" Docking="Right" Id="77" Terminals="15=76, 16=106, 17=124, 25=149, 26=78" />
+				<CaseStructure.Tunnel Bounds="376 70 13 10" Docking="Right" Id="80" Terminals="15=79, 16=105, 17=123, 25=148, 26=81" />
+				<CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="199" Terminals="15=198, 16=201, 17=203, 25=205, 26=35" />
+				<CaseStructure.Tunnel Bounds="-4 50 13 10" Docking="Left" Id="267" Terminals="15=266, 16=216, 17=276, 25=285, 26=295" />
+			</CaseStructure>
+			<DataAccessor Bounds="-145 105 40 15" DataItem="19" Id="20" Label="22" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@ede6a1b96ff744d0b20801f8f29e0a38" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="20" Bounds="-180 105 30 14" Id="22" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>order</p.Text>
+			</NodeLabel>
+			<Wire Id="24" Joints="N(20:Value) h(115) v(55) N(18:15)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-140 250 40 15" DataItem="36" Id="38" Label="40" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="38" Bounds="-209 250 64 14" Id="40" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Gray_map?</p.Text>
+			</NodeLabel>
+			<Wire Id="43" Joints="N(38:Value) N(42:15)" xmlns="http://www.ni.com/PlatformFramework" />
+			<RealAndImaginaryToComplex Bounds="480 220 30 30" Id="75" />
+			<Wire Id="76" Joints="N(77:15) h(11) v(-20) N(75:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="79" Joints="N(80:15) h(36) v(25) N(75:y)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-145 230 40 15" DataItem="157" Id="159" Label="161" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="159" Bounds="-187 230 37 14" Id="161" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>enable</p.Text>
+			</NodeLabel>
+			<Wire Id="198" Joints="N(159:Value) N(199:15)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-155 190 40 15" DataItem="207" Id="208" Label="210" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="208" Bounds="-180 190 20 14" Id="210" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>bits</p.Text>
+			</NodeLabel>
+			<Wire Id="214" Joints="N(208:Value) N(211:number)" xmlns="http://www.ni.com/PlatformFramework" />
+			<NumberToBooleanArray Bounds="-80 190 30 10" Id="211" />
+			<Wire Id="266" Joints="N(211:Boolean array) N(267:15)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="615 230 40 15" DataItem="296" Id="298" Label="300" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="CFXP(2.14)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="298" Bounds="660 230 70 14" Id="300" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>QAM-symbol</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-140 345 40 15" DataItem="319" Id="317" Label="318" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="317" Bounds="-204 345 59 14" Id="318" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>input valid</p.Text>
+			</NodeLabel>
+			<Wire Id="326" Joints="N(75:x + iy) N(298:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FeedbackNode ArrowDirection="Right" Bounds="555 340 30 20" EnableTerminalVisible="False" Id="327" />
+			<Wire Id="328" Joints="N(317:Value) N(327:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="630 345 40 15" DataItem="329" Id="331" Label="333" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="331" Bounds="675 345 66 14" Id="333" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>output valid</p.Text>
+			</NodeLabel>
+			<Wire Id="334" Joints="N(327:output) N(331:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Comment Bounds="455 90 180 35" Id="335" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"Latency: 1 \r\nInserted for pipelining "</p.Text>
+			</Comment>
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="21" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]23" Left="[float]343" Top="[float]278" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]100" p4:ControlDefinitionChecksum="TG5I2IsVpMe5QwEi+Us4mw==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="QAM\-Order\.gtype:ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<EnumSelectorInfo DisplayValue="[string]4-QAM" Id="34" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]16-QAM" IsEnabled="[bool]True" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]64-QAM" IsEnabled="[bool]True" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]256-QAM" IsEnabled="[bool]True" Value="[ushort]3" ValueType="[Type]UInt16" />
+			</EnumSelector>
+			<Label Height="[float]16" Id="23" LabelOwner="[UIModel]21" Left="[float]343" Text="[string]order" Top="[float]255" Width="[float]29" xmlns="http://www.ni.com/PanelCommon" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="160" IsReadOnly="[bool]False" Label="[UIModel]336" Left="[float]495" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]264" TrueContent="[string]On" Value="{DataItemBinding Id=157}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="336" LabelOwner="[UIModel]160" Left="[float]495" Text="[string]enable" Top="[float]241" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+		</CPFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="0" DataType="@ede6a1b96ff744d0b20801f8f29e0a38" Id="19" Name="order" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="QAM\-Order\.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="Boolean" Id="36" Name="Gray_map?" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallIndex="2" DataType="Boolean" Id="157" Name="enable" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>True</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="UInt8" Id="207" Name="bits" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="CFXP(2.14)" Id="296" Name="QAM-symbol" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0;0x0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="4" DataType="Boolean" Id="319" Name="input valid" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="Boolean" Id="329" Name="output valid" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="\4QAM_map\.eip">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]4qam_map 1.0" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="\16QAM_map\.eip">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]16qam_map 1.0" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="\64QAM_map\.eip">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]64qam_map 1.0" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="\256QAM_map\.eip">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]256qam_map 1.0" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+		</IconTable>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="ede6a1b96ff744d0b20801f8f29e0a38">
+			<Typedef TypedefName="QAM-Order.gtype" UnderlyingType="@3200ad292f184cdb9ed5185de9ed1c75" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="3200ad292f184cdb9ed5185de9ed1c75">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="4-QAM" />
+					<EnumerationMember Value="1" Name="16-QAM" />
+					<EnumerationMember Value="2" Name="64-QAM" />
+					<EnumerationMember Value="3" Name="256-QAM" />
+				</Members>
+				<DataType>
+					<UInt16 />
+				</DataType>
+			</Enumeration>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

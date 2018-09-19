@@ -1,0 +1,3524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="ED4D8F4D7962E085A369FB60C0EA595D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 30 30" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]30" Id="3" Left="[float]0" Top="[float]0" Width="[float]30">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="32" Left="[float]0" TemplateName="GreenNoText" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ffa9af91" Id="33" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffeef8cd" Id="34" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" Top="[float]0" />
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]24" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]24">
+					<Path Data="[PathGeometry]M 0,4.451613 L 11.54902,4.451613 L 11.54902,0 L 19,8.903226 L 11.54902,18 L 11.54902,13.54839 L 0,13.54839 L 0,4.451613 Z" EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#00ffffff" Height="[float]20" Id="35" Left="[float]3" MinHeight="[float]1" MinWidth="[float]1" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]3" Width="[float]20" />
+				</Canvas>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="30" Id="10" ListViewHeight="70" ListViewWidth="150" Width="30" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 35" Parameter="129" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="30 5" />
+			<ConnectorPaneTerminal Hotspot="30 15" ListViewHotspot="150 50" Parameter="248" />
+			<ConnectorPaneTerminal Hotspot="30 25" />
+			<ConnectorPaneTerminal Hotspot="15 30" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+			<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]26" Id="132" Left="[float]0" Name="[string]ref in" RefnumType="[Type]@6ae1451a4a1c4e708d772d959476aa53" Top="[float]0" Value="{DataItemBinding Id=129}" Width="[float]20" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]26" Id="251" Left="[float]0" Name="[string]FPGA.Interface" RefnumType="[Type]@c333aeaa9dad48ed9260e7733edddb85" Top="[float]0" Value="{DataItemBinding Id=248}" Width="[float]20" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="13">
+			<DynamicFpgaInterfaceCast Bounds="-135 375 30 15" Id="15" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<OpaqueRefnumLiteral Bounds="-180 340 40 15" DataType="@c333aeaa9dad48ed9260e7733edddb85" Facade="NationalInstruments.MocCommon.SourceModel.IOpaqueRefnumLiteralBehavior" Id="18" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0</p.Data>
+				<OpaqueRefnumLiteralBehavior />
+			</OpaqueRefnumLiteral>
+			<DataAccessor Bounds="-215 375 40 15" DataItem="129" Id="131" Label="133" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@6ae1451a4a1c4e708d772d959476aa53" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="131" Bounds="-249 375 29 14" Id="133" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>ref in</p.Text>
+			</NodeLabel>
+			<Wire Id="141" Joints="N(131:Value) N(15:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="143" Joints="N(18:Out) h(20) N(15:type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-80 375 40 15" DataItem="248" Id="250" Label="252" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@c333aeaa9dad48ed9260e7733edddb85" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="250" Bounds="-35 375 83 14" Id="252" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>FPGA.Interface</p.Text>
+			</NodeLabel>
+			<Wire Id="253" Joints="N(15:reference out) N(250:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+		<DataItem CallDirection="Input" CallIndex="0" DataType="@6ae1451a4a1c4e708d772d959476aa53" Id="129" Name="ref in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="0" DataType="@c333aeaa9dad48ed9260e7733edddb85" Id="248" Name="FPGA.Interface" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="6ae1451a4a1c4e708d772d959476aa53">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Composite Id="1" Name="IFPGAReferenceDataType" ReferenceClass="" Interface="" GenericTypeDefinition="Void" BaseType="Void" />
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Interface" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="c333aeaa9dad48ed9260e7733edddb85">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Composite Id="1" Name="Capture Circuit" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="2" Name="Capture Circuit" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="2" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Capture Circuit">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Enumeration>
+										<Members>
+											<EnumerationMember Value="0" Name="Mapper" />
+											<EnumerationMember Value="1" Name="Resource Mapper" />
+											<EnumerationMember Value="2" Name="Modulator" />
+											<EnumerationMember Value="3" Name="ConvEnc" />
+											<EnumerationMember Value="4" Name="BBP" />
+										</Members>
+										<DataType>
+											<UInt16 />
+										</DataType>
+									</Enumeration>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Capture Circuit">
+										<DataType>
+											<Enumeration>
+												<Members>
+													<EnumerationMember Value="0" Name="Mapper" />
+													<EnumerationMember Value="1" Name="Resource Mapper" />
+													<EnumerationMember Value="2" Name="Modulator" />
+													<EnumerationMember Value="3" Name="ConvEnc" />
+													<EnumerationMember Value="4" Name="BBP" />
+												</Members>
+												<DataType>
+													<UInt16 />
+												</DataType>
+											</Enumeration>
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="3" Name="clusterBBP.Fifo.Monitor" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="4" Name="clusterBBP.Fifo.Monitor" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="4" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="clusterBBP.Fifo.Monitor">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="5" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="BBP.Fifo.CountFull" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="BBP.Fifo.MaxUsed" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="BBP.Fifo.used" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="clusterBBP.Fifo.Monitor">
+										<DataType>
+											<Composite RefId="5" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="6" Name="Coding Rate" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="7" Name="Coding Rate" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="7" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Coding Rate">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Enumeration>
+										<Members>
+											<EnumerationMember Value="0" Name="1/2" />
+											<EnumerationMember Value="1" Name="2/3" />
+											<EnumerationMember Value="2" Name="3/4" />
+											<EnumerationMember Value="3" Name="5/6" />
+										</Members>
+										<DataType>
+											<UInt16 />
+										</DataType>
+									</Enumeration>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Coding Rate">
+										<DataType>
+											<Enumeration>
+												<Members>
+													<EnumerationMember Value="0" Name="1/2" />
+													<EnumerationMember Value="1" Name="2/3" />
+													<EnumerationMember Value="2" Name="3/4" />
+													<EnumerationMember Value="3" Name="5/6" />
+												</Members>
+												<DataType>
+													<UInt16 />
+												</DataType>
+											</Enumeration>
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="8" Name="CpCsWind.conf" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="9" Name="CpCsWind.conf" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="9" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="CpCsWind.conf">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="10" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nWind" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nCp" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nCs" DataType="UInt16" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="CpCsWind.conf">
+										<DataType>
+											<Composite RefId="10" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="11" Name="DUC.debug.after" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="12" Name="DUC.debug.after" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="12" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="DUC.debug.after">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="DUC.debug.after" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="13" Name="duc.number.overflows.A1" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="14" Name="duc.number.overflows.A1" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="14" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.number.overflows.A1">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt64 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.number.overflows.A1" DataType="UInt64" />
+								</Members>
+							</Composite>
+							<Composite Id="15" Name="duc.number.overflows.A2" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="16" Name="duc.number.overflows.A2" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="16" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.number.overflows.A2">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt64 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.number.overflows.A2" DataType="UInt64" />
+								</Members>
+							</Composite>
+							<Composite Id="17" Name="duc.Only Valid Samples?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="18" Name="duc.Only Valid Samples?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="18" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.Only Valid Samples?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.Only Valid Samples?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="19" Name="duc.ParametersRF0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="20" Name="duc.ParametersRF0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="20" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.ParametersRF0">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="21" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="frequency shift">
+												<DataType>
+													<FXP Right="48" Left="0" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="impairments">
+												<DataType>
+													<Composite Id="22" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+														<Members>
+															<Field FieldAccessPolicy="ReadWrite" Name="inline gain I">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="inline gain Q">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="cross gain I">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="cross gain Q">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="pre-gain offset I">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="pre-gain offset Q">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="post-gain offset I">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="post-gain offset Q">
+																<DataType>
+																	<FXP Right="17" Left="1" />
+																</DataType>
+															</Field>
+														</Members>
+													</Composite>
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="phase">
+												<DataType>
+													<FXP Right="21" Left="0" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="input sample rate">
+												<DataType>
+													<UFXP Right="47" Left="1" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="gain">
+												<DataType>
+													<Composite Id="23" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+														<Members>
+															<Field FieldAccessPolicy="ReadWrite" Name="gain I">
+																<DataType>
+																	<FXP Right="21" Left="3" />
+																</DataType>
+															</Field>
+															<Field FieldAccessPolicy="ReadWrite" Name="gain Q">
+																<DataType>
+																	<FXP Right="21" Left="3" />
+																</DataType>
+															</Field>
+														</Members>
+													</Composite>
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="delay">
+												<DataType>
+													<FXP Right="18" Left="0" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.ParametersRF0">
+										<DataType>
+											<Composite RefId="21" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="24" Name="duc.ParametersRF1" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="25" Name="duc.ParametersRF1" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="25" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.ParametersRF1">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite RefId="21" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.ParametersRF1">
+										<DataType>
+											<Composite RefId="21" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="26" Name="duc.reset" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="27" Name="duc.reset" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="27" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.reset">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.reset" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="28" Name="duc.trigger on start?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="29" Name="duc.trigger on start?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="29" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.trigger on start?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="duc.trigger on start?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="30" Name="EnableCodCOnv" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="31" Name="EnableCodCOnv" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="31" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="EnableCodCOnv">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="EnableCodCOnv" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="32" Name="FIFO.DUC.debug" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="33" Name="FIFO.DUC.debug" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="33" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FIFO.DUC.debug">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="34" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.fifo.count.empty" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.fifo.count.full" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.fifo.used" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="duc.fifo.max" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FIFO.DUC.debug">
+										<DataType>
+											<Composite RefId="34" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="35" Name="FM.Config" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="36" Name="FM.Config" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="36" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FM.Config">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="37" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_Nt_SS" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_Nt_CES" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nCEblockPerFrame" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nSymbolperCEBlock" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_nTXAntennas" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="i_SSBothAntennas" DataType="Boolean" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FM.Config">
+										<DataType>
+											<Composite RefId="37" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="38" Name="FM.debug.what" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="39" Name="FM.debug.what" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="39" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FM.debug.what">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Enumeration>
+										<Members>
+											<EnumerationMember Value="0" Name="GFDM" />
+											<EnumerationMember Value="1" Name="SS" />
+											<EnumerationMember Value="2" Name="CES" />
+										</Members>
+										<DataType>
+											<UInt16 />
+										</DataType>
+									</Enumeration>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FM.debug.what">
+										<DataType>
+											<Enumeration>
+												<Members>
+													<EnumerationMember Value="0" Name="GFDM" />
+													<EnumerationMember Value="1" Name="SS" />
+													<EnumerationMember Value="2" Name="CES" />
+												</Members>
+												<DataType>
+													<UInt16 />
+												</DataType>
+											</Enumeration>
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="40" Name="FM.freeElements.notEqual" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="41" Name="FM.freeElements.notEqual" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="41" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FM.freeElements.notEqual">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FM.freeElements.notEqual" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="42" Name="FM.STC.CpCsWind.Only Valid Samples?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="43" Name="FM.STC.CpCsWind.Only Valid Samples?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="43" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FM.STC.CpCsWind.Only Valid Samples?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FM.STC.CpCsWind.Only Valid Samples?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="44" Name="FM.STC.CpCsWind.trigger on start?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="45" Name="FM.STC.CpCsWind.trigger on start?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="45" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="FM.STC.CpCsWind.trigger on start?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="FM.STC.CpCsWind.trigger on start?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="46" Name="Frame structure?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="47" Name="Frame structure?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="47" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Frame structure?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Frame structure?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="48" Name="GPS.LED" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="49" Name="GPS.LED" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="49" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="GPS.LED">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt8 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="GPS.LED" DataType="UInt8" />
+								</Members>
+							</Composite>
+							<Composite Id="50" Name="IFPGAReferenceDataType" ReferenceClass="" Interface="" GenericTypeDefinition="Void" BaseType="Void" />
+							<Composite Id="51" Name="i_BBPLength_Kl" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="52" Name="i_BBPLength_Kl" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="52" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_BBPLength_Kl">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt16 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_BBPLength_Kl" DataType="UInt16" />
+								</Members>
+							</Composite>
+							<Composite Id="53" Name="i_BBPPerFrame_Nfec" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="54" Name="i_BBPPerFrame_Nfec" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="54" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_BBPPerFrame_Nfec">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt8 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_BBPPerFrame_Nfec" DataType="UInt8" />
+								</Members>
+							</Composite>
+							<Composite Id="55" Name="i_DataMode" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="56" Name="i_DataMode" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="56" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_DataMode">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UFXP Right="0" Left="2" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_DataMode">
+										<DataType>
+											<UFXP Right="0" Left="2" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="57" Name="i_EnableRandBypass" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="58" Name="i_EnableRandBypass" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="58" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_EnableRandBypass">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_EnableRandBypass" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="59" Name="i_N" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="60" Name="i_N" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="60" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_N">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt16 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_N" DataType="UInt16" />
+								</Members>
+							</Composite>
+							<Composite Id="61" Name="i_Non" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="62" Name="i_Non" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="62" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_Non">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt16 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_Non" DataType="UInt16" />
+								</Members>
+							</Composite>
+							<Composite Id="63" Name="i_Reset_RM" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="64" Name="i_Reset_RM" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="64" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_Reset_RM">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_Reset_RM" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="65" Name="i_StartBBPCode" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="66" Name="i_StartBBPCode" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="66" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="i_StartBBPCode">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt8 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="i_StartBBPCode" DataType="UInt8" />
+								</Members>
+							</Composite>
+							<Composite Id="67" Name="Map.RM.Mod.Only Valid Samples?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="68" Name="Map.RM.Mod.Only Valid Samples?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="68" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Map.RM.Mod.Only Valid Samples?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Map.RM.Mod.Only Valid Samples?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="69" Name="Map.RM.Mod.trigger on start?" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="70" Name="Map.RM.Mod.trigger on start?" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="70" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Map.RM.Mod.trigger on start?">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Map.RM.Mod.trigger on start?" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="71" Name="Mod.configure!" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="72" Name="Mod.configure!" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="72" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.configure!">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Mod.configure!" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="73" Name="mod.fifo.in.debug" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="74" Name="mod.fifo.in.debug" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="74" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="mod.fifo.in.debug">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="75" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.in.max" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.in.used" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.in.count.full" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="mod.fifo.in.debug">
+										<DataType>
+											<Composite RefId="75" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="76" Name="mod.fifo.out.debug" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="77" Name="mod.fifo.out.debug" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="77" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="mod.fifo.out.debug">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="78" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.out.free" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.out.count.full" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.out.count.empty" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.fifo.out.mimfree" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="mod.fifo.out.debug">
+										<DataType>
+											<Composite RefId="78" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="79" Name="Mod.max.out.fifo" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="80" Name="Mod.max.out.fifo" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="80" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.max.out.fifo">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt32 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Mod.max.out.fifo" DataType="UInt32" />
+								</Members>
+							</Composite>
+							<Composite Id="81" Name="Mod.reset!" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="82" Name="Mod.reset!" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="82" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Mod.reset!">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Mod.reset!" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="83" Name="Modem configuration_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="84" Name="Modem configuration_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="84" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Modem configuration_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="85" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="K-1" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="M-1" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="N-1" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="N" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Npreamble+CP+CS" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Npreamble" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Nw" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Modulator MUX config">
+												<DataType>
+													<SizedArray LowerBound="16" UpperBound="16" DereferenceType="UInt64" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="K" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="fft_size_log2(K)" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="inverse_fft" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Start with preamble" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Burstmode" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Ncs" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Ncp" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="N-Ncp" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="N+Ncp" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="N+Ncp+Ncs" DataType="UInt16" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Demodulator MUX config">
+												<DataType>
+													<SizedArray LowerBound="16" UpperBound="16" DereferenceType="UInt64" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="M" DataType="UInt8" />
+											<Field FieldAccessPolicy="ReadWrite" Name="DFT SIZE">
+												<DataType>
+													<FXP Right="0" Left="6" />
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="Frame length" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Super frame length" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Ns_all_GFDM_blocks" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="Ns_all_preambles" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Modem configuration_in">
+										<DataType>
+											<Composite RefId="85" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="86" Name="Modulation" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="87" Name="Modulation" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="87" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Modulation">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Enumeration>
+										<Members>
+											<EnumerationMember Value="0" Name="BPSK" />
+											<EnumerationMember Value="1" Name="QPSK" />
+											<EnumerationMember Value="2" Name="16-QAM" />
+											<EnumerationMember Value="3" Name="64-QAM" />
+											<EnumerationMember Value="4" Name="256-QAM" />
+										</Members>
+										<DataType>
+											<UInt16 />
+										</DataType>
+									</Enumeration>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="Modulation">
+										<DataType>
+											<Enumeration>
+												<Members>
+													<EnumerationMember Value="0" Name="BPSK" />
+													<EnumerationMember Value="1" Name="QPSK" />
+													<EnumerationMember Value="2" Name="16-QAM" />
+													<EnumerationMember Value="3" Name="64-QAM" />
+													<EnumerationMember Value="4" Name="256-QAM" />
+												</Members>
+												<DataType>
+													<UInt16 />
+												</DataType>
+											</Enumeration>
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="88" Name="o_RateMeter" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="89" Name="o_RateMeter" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="89" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="o_RateMeter">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<UInt32 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="o_RateMeter" DataType="UInt32" />
+								</Members>
+							</Composite>
+							<Composite Id="90" Name="reg.host read.data 0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="91" Name="reg.host read.data 0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="91" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reg.host read.data 0">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="92" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="go" DataType="Boolean" />
+											<Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="reg.host read.data 0">
+										<DataType>
+											<Composite RefId="92" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="93" Name="reg.host read.go rcvd 0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="94" Name="reg.host read.go rcvd 0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="94" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reg.host read.go rcvd 0">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="reg.host read.go rcvd 0" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="95" Name="reg.notify host.go 0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="96" Name="reg.notify host.go 0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="96" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reg.notify host.go 0">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="reg.notify host.go 0" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="97" Name="reg.notify host.go rcvd 0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="98" Name="reg.notify host.go rcvd 0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="98" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="reg.notify host.go rcvd 0">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="reg.notify host.go rcvd 0" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="99" Name="RF 0/Rx/Enable" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="100" Name="RF 0/Rx/Enable" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="100" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RF 0/Rx/Enable">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RF 0/Rx/Enable" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="101" Name="RF 0/Tx/Enable" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="102" Name="RF 0/Tx/Enable" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="102" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RF 0/Tx/Enable">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RF 0/Tx/Enable" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="103" Name="RF 1/Rx/Enable" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="104" Name="RF 1/Rx/Enable" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="104" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RF 1/Rx/Enable">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RF 1/Rx/Enable" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="105" Name="RF 1/Tx/Enable" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="106" Name="RF 1/Tx/Enable" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="106" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RF 1/Tx/Enable">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RF 1/Tx/Enable" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="107" Name="RM.fifo.in.debug" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="108" Name="RM.fifo.in.debug" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="108" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RM.fifo.in.debug">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="109" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RM.fifo.in.used" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="RM.fifo.in.count.full" DataType="UInt32" />
+											<Field FieldAccessPolicy="ReadWrite" Name="RM.fifo.in.max" DataType="UInt32" />
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RM.fifo.in.debug">
+										<DataType>
+											<Composite RefId="109" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="110" Name="RM_ConfigDone" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="111" Name="RM_ConfigDone" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="111" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RM_ConfigDone">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RM_ConfigDone" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="112" Name="RST.FifoMonitor" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="113" Name="RST.FifoMonitor" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="113" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="RST.FifoMonitor">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="RST.FifoMonitor" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="114" Name="SAI.STC.CpCsWind.FM.debug.what" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="115" Name="SAI.STC.CpCsWind.FM.debug.what" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="115" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="SAI.STC.CpCsWind.FM.debug.what">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Enumeration>
+										<Members>
+											<EnumerationMember Value="0" Name="FM" />
+											<EnumerationMember Value="1" Name="STC" />
+											<EnumerationMember Value="2" Name="CpCsWInd" />
+											<EnumerationMember Value="3" Name="SAI" />
+										</Members>
+										<DataType>
+											<UInt16 />
+										</DataType>
+									</Enumeration>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="SAI.STC.CpCsWind.FM.debug.what">
+										<DataType>
+											<Enumeration>
+												<Members>
+													<EnumerationMember Value="0" Name="FM" />
+													<EnumerationMember Value="1" Name="STC" />
+													<EnumerationMember Value="2" Name="CpCsWInd" />
+													<EnumerationMember Value="3" Name="SAI" />
+												</Members>
+												<DataType>
+													<UInt16 />
+												</DataType>
+											</Enumeration>
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="116" Name="tx.GlobalReset" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="117" Name="tx.GlobalReset" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="117" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="tx.GlobalReset">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="tx.GlobalReset" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="118" Name="TX.modem.bitshift_in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="119" Name="TX.modem.bitshift_in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="119" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.bitshift_in">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Int16 />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.bitshift_in" DataType="Int16" />
+								</Members>
+							</Composite>
+							<Composite Id="120" Name="TX.modem.config done_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="121" Name="TX.modem.config done_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="121" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.config done_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Boolean />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.config done_out" DataType="Boolean" />
+								</Members>
+							</Composite>
+							<Composite Id="122" Name="TX.modem.configuration_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="123" Name="TX.modem.configuration_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="123" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.configuration_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite RefId="85" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.configuration_out">
+										<DataType>
+											<Composite RefId="85" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="124" Name="TX.modem.DEBUG.cluster_out" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="125" Name="TX.modem.DEBUG.cluster_out" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="125" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.DEBUG.cluster_out">
+												<DataType>
+													<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<Composite Id="126" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+										<Members>
+											<Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+												<DataType>
+													<Composite Id="127" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+														<Members>
+															<Field FieldAccessPolicy="ReadWrite" Name="packets in_out" DataType="UInt16" />
+															<Field FieldAccessPolicy="ReadWrite" Name="samples in_out" DataType="UInt16" />
+															<Field FieldAccessPolicy="ReadWrite" Name="packets out_out" DataType="UInt16" />
+															<Field FieldAccessPolicy="ReadWrite" Name="samples out_out" DataType="UInt16" />
+															<Field FieldAccessPolicy="ReadWrite" Name="number of invalid samples" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="mod first samples out" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="mod last samples out" DataType="UInt64" />
+														</Members>
+													</Composite>
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+												<DataType>
+													<Composite Id="128" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+														<Members>
+															<Field FieldAccessPolicy="ReadWrite" Name="FFT misalignment" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="FFT halt" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="FFT last sample" DataType="UInt64" />
+														</Members>
+													</Composite>
+												</DataType>
+											</Field>
+											<Field FieldAccessPolicy="ReadWrite" Name="Element 3">
+												<DataType>
+													<Composite Id="129" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+														<Members>
+															<Field FieldAccessPolicy="ReadWrite" Name="number of invalid samples" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="first samples out" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="last samples out" DataType="UInt64" />
+															<Field FieldAccessPolicy="ReadWrite" Name="number of cycles" DataType="UInt64" />
+														</Members>
+													</Composite>
+												</DataType>
+											</Field>
+										</Members>
+									</Composite>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="TX.modem.DEBUG.cluster_out">
+										<DataType>
+											<Composite RefId="126" />
+										</DataType>
+									</Field>
+								</Members>
+							</Composite>
+							<Composite Id="130" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="131" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="131" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="132" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="131" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="133" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="131" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="134" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="131" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="135" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="131" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="Boolean" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="136" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="130" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="137" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="130" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="138" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="130" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="139" IsStatic="False" IsConstructor="False" Name="USRP Resources RMapper.grsc\FIFO_H2T_MapperConfig.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="130" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="Boolean" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="140" Name="Resources_TX.grsc\mod_pulse shape in" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="141" Name="Resources_TX.grsc\mod_pulse shape in" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="141" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="142" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="141" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="143" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="141" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="144" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="141" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="145" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="141" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="146" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="140" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="147" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="140" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="148" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="140" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="149" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\mod_pulse shape in.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="140" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="150" Name="Resources_TX.grsc\FIFO_H2T_Data" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="151" Name="Resources_TX.grsc\FIFO_H2T_Data" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="151" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="152" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="151" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="153" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="151" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="154" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="151" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="155" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="151" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt8" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="156" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="150" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="157" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="150" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="158" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="150" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="159" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\FIFO_H2T_Data.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="150" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt8" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="160" Name="Resources_FrameMultiplex.grsc\H2T_Preamble" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="161" Name="Resources_FrameMultiplex.grsc\H2T_Preamble" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="161" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="162" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="161" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="163" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="161" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="164" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="161" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="165" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="161" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt32" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="166" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="160" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="167" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="160" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="168" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="160" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="169" IsStatic="False" IsConstructor="False" Name="Resources_FrameMultiplex.grsc\H2T_Preamble.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="160" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt32" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="170" Name="Resources_CpCsWindowing.grsc\Window_FIFO" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="171" Name="Resources_CpCsWindowing.grsc\Window_FIFO" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="171" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="172" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="171" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="173" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="171" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="174" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="171" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="175" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="171" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray>
+										<DereferenceType>
+											<FXP Right="15" Left="1" />
+										</DereferenceType>
+									</VariableArray>
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="176" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="170" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="177" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="170" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="178" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="170" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="179" IsStatic="False" IsConstructor="False" Name="Resources_CpCsWindowing.grsc\Window_FIFO.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="170" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray>
+														<DereferenceType>
+															<FXP Right="15" Left="1" />
+														</DereferenceType>
+													</VariableArray>
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="180" Name="Resources_TX.grsc\Map.RM.Mod.debug" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="181" Name="Resources_TX.grsc\Map.RM.Mod.debug" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="181" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="182" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="181" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="183" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="181" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="184" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="181" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="185" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="181" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="186" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="180" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="187" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="180" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="188" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="180" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="189" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\Map.RM.Mod.debug.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="180" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="190" Name="Resources_TX.grsc\fifo.debug.duc.A1" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="191" Name="Resources_TX.grsc\fifo.debug.duc.A1" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="191" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="192" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="191" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="193" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="191" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="194" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="191" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="195" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="191" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="196" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="190" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="197" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="190" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="198" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="190" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="199" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A1.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="190" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="200" Name="Resources_TX.grsc\fifo.debug.duc.A2" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="201" Name="Resources_TX.grsc\fifo.debug.duc.A2" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="201" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="202" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="201" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="203" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="201" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="204" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="201" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="205" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="201" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="206" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="200" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="207" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="200" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="208" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="200" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="209" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\fifo.debug.duc.A2.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="200" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="210" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="211" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="211" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="212" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="211" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="213" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="211" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="214" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="211" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="215" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="211" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="216" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="210" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="217" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="210" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="218" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="210" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="219" IsStatic="False" IsConstructor="False" Name="niInstr Register Bus v0.grsc\reg.host instruction fifo 0.Write" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="210" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Empty Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="220" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="221" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="221" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="222" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="221" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="223" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="221" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="224" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="221" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="225" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="221" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="226" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="220" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="227" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="220" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="228" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="220" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="229" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A2.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="220" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+							<Composite Id="230" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1" ReferenceClass="" Interface="">
+								<GenericTypeDefinition>
+									<Composite Id="231" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Composite RefId="231" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="232" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Configure" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="231" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="233" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="231" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+														<DataType>
+															<Typedef TypedefName="T" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="234" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Start" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="231" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+											<Function Id="235" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Stop" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="231" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+											</Function>
+										</Members>
+									</Composite>
+								</GenericTypeDefinition>
+								<ClosedGenericParameters>
+									<VariableArray DereferenceType="UInt64" />
+								</ClosedGenericParameters>
+								<BaseType>
+									<Void />
+								</BaseType>
+								<Members>
+									<Function Id="236" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Configure" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="230" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Requested Depth" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Actual Depth" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="237" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Read" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="230" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+										<Parameters>
+											<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="Number of Elements" DataType="UInt32" />
+											<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="Timeout (ms)" DataType="Int32" />
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Required" Name="Data">
+												<DataType>
+													<VariableArray DereferenceType="UInt64" />
+												</DataType>
+											</Parameter>
+											<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="Elements Remaining" DataType="UInt32" />
+										</Parameters>
+									</Function>
+									<Function Id="238" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Start" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="230" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+									<Function Id="239" IsStatic="False" IsConstructor="False" Name="Resources_TX.grsc\SAI.STC.CP.FM.debug.A1.Stop" ReturnType="Void">
+										<DeclaringType>
+											<Composite RefId="230" />
+										</DeclaringType>
+										<GenericTypeDefinition>
+											<Void />
+										</GenericTypeDefinition>
+									</Function>
+								</Members>
+							</Composite>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Interface" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="925e7625a0874ce68843f019a6e36348">
+			<Generic />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

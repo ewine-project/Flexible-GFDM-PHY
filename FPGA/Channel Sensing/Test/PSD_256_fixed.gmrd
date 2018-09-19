@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="502C101F909402DF7D255F08B06B349E" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Multirate Diagram" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.DspDiagram" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<DspDiagramModel DesignClockFrequencyHertz="200000000" ForcedBufferDepths="" Id="1" Identifier="Unused" OptimizationLevel="ThreePipelineStages" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.DspDiagram">
+		<Icon Id="4" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="5" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="6" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="7" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="8" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="9" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]PSD_256_fixed" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="10" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="11" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="12" ListViewHeight="70" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="119" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="168" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<SimulationOptions Id="13" Mode="ConsumeAllData" />
+		<DspDiagram Id="14">
+			<XilinxFFT Bounds="95 285 40 40" CyclicPrefixLength="6" CyclicPrefixMode="None" Forward="True" Id="20" TargetThroughput="80" TransformLength="256" />
+			<Comment Bounds="285 255 81 15" Id="24" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"Fixed N_fft "</p.Text>
+			</Comment>
+			<ReinterpretNumber Bounds="480 295 30 15" Id="80" RestrictToSameWordLength="True" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Literal Bounds="330 210 39.5 16" DataType="UFXP(12.38)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="83" Label="84" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_12_38:G6" />
+			</Literal>
+			<NodeLabel AttachedTo="83" Bounds="330 210 0 0" Id="84" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>type</p.Text>
+			</NodeLabel>
+			<Wire Id="85" Joints="N(83:Out) h(125.5) N(80:type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Comment Bounds="30 175 125 25" Id="92" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"C1.15  input \r\n"</p.Text>
+			</Comment>
+			<Comment Bounds="650 195 125 25" Id="93" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"U0.32  psd\r\n"</p.Text>
+			</Comment>
+			<DataPort AdaptToWiredType="False" Bounds="-95 285 40 15" CallDirection="Input" DataType="CFXP(1.15)" Id="119" Label="121" Name="Input" PortTokenCount="256">
+				<DataInitialization Data="0 + 0i" DataType="CFXP(1.15)" Id="120" Size="1" />
+			</DataPort>
+			<NodeLabel AttachedTo="119" Bounds="-130 285 30 14" Id="121" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Input</p.Text>
+			</NodeLabel>
+			<ComplexToRealImaginary Bounds="280 275 30 30" Id="141" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="144" Joints="N(20:output 0) N(141:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Square Bounds="345 265 30 30" Id="146" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="148" Joints="N(141:x) N(146:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Square Bounds="345 300 30 30" Id="149" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="151" Joints="N(141:y) h(5) v(20) N(149:x)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Add Bounds="425 285 30 30" Id="152" Terminals="o=204, c0t0v=154, c1t0v=155" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="154" Joints="N(146:x^2) h(45) v(10) N(152:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="155" Joints="N(149:x^2) h(35) v(-10) N(152:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataPort AdaptToWiredType="False" Bounds="710 295 40 15" CallDirection="Output" DataType="UFXP(1.31)" Direction="Output" Id="168" Label="170" Name="Output" PortTokenCount="256">
+				<DataInitialization DataType="UFXP(1.31)" Id="169" Size="1" />
+			</DataPort>
+			<NodeLabel AttachedTo="168" Bounds="755 295 39 14" Id="170" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Output</p.Text>
+			</NodeLabel>
+			<ToFixedPoint Bounds="560 295 50 10" Id="189" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="191" Joints="N(80:data out) N(189:number)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="500 135 39.5 16" DataType="UFXP(12.20)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="192" Label="193" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_12_20:G6" />
+			</Literal>
+			<NodeLabel AttachedTo="192" Bounds="500 135 0 0" Id="193" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>fixed-point type</p.Text>
+			</NodeLabel>
+			<Wire Id="194" Joints="N(192:Out) h(35.5) N(189:fixed-point type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<ReinterpretNumber Bounds="660 295 30 15" Id="196" RestrictToSameWordLength="True" xmlns="http://www.ni.com/LabVIEW.VI" />
+			<Wire Id="198" Joints="N(189:fixed-point) N(196:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="635 240 39.5 16" DataType="UFXP(1.31)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="199" Label="200" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_31:G6" />
+			</Literal>
+			<NodeLabel AttachedTo="199" Bounds="635 240 0 0" Id="200" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>type</p.Text>
+			</NodeLabel>
+			<Wire Id="201" Joints="N(199:Out) h(5) v(30) h(-4.5) N(196:type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="203" Joints="N(196:data out) N(168:value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="204" Joints="N(152:o) N(80:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="205" Joints="N(119:value) N(20:input 0)" xmlns="http://www.ni.com/PlatformFramework" />
+		</DspDiagram>
+		<StepOutDebugProxy Id="2" NodeId="1" SubpartId="0" />
+		<StepOutDebugProxy Id="3" NodeId="1" SubpartId="1" />
+		<DebugProxy Id="63" NodeId="20" />
+		<DebugProxy Id="81" NodeId="80" />
+		<DebugProxy Id="86" NodeId="83" />
+		<DebugProxy Id="123" NodeId="119" />
+		<DebugProxy Id="142" NodeId="141" />
+		<DebugProxy Id="147" NodeId="146" />
+		<DebugProxy Id="150" NodeId="149" />
+		<DebugProxy Id="153" NodeId="152" />
+		<DebugProxy Id="172" NodeId="168" />
+		<DebugProxy Id="190" NodeId="189" />
+		<DebugProxy Id="195" NodeId="192" />
+		<DebugProxy Id="197" NodeId="196" />
+		<DebugProxy Id="202" NodeId="199" />
+	</DspDiagramModel>
+</SourceFile>

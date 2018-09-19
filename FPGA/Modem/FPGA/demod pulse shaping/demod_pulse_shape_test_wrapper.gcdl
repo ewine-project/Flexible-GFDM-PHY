@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="E43586A60FAF684A07852FFB2C860840" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51088" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51088" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51088" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51088" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51088" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51088" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 50 80" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]80" Id="3" Left="[float]0" Top="[float]0" Width="[float]50">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]demod_pulse_shape_test_wrapper" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+						<FontSetting FontSize="6" Id="120" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]74" Id="8" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="80" Id="9" ListViewHeight="150" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="26" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 65" Parameter="32" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 80" Parameter="38" />
+			<ConnectorPaneTerminal Hotspot="0 45" ListViewHotspot="0 95" Parameter="44" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="35 0" />
+			<ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 35" Parameter="80" />
+			<ConnectorPaneTerminal Hotspot="50 15" ListViewHotspot="150 50" Parameter="74" />
+			<ConnectorPaneTerminal Hotspot="50 25" />
+			<ConnectorPaneTerminal Hotspot="50 35" />
+			<ConnectorPaneTerminal Hotspot="50 45" ListViewHotspot="150 95" Parameter="68" />
+			<ConnectorPaneTerminal Hotspot="15 80" />
+			<ConnectorPaneTerminal Hotspot="25 80" />
+			<ConnectorPaneTerminal Hotspot="35 80" />
+			<ConnectorPaneTerminal Hotspot="0 55" ListViewHotspot="0 110" Parameter="50" />
+			<ConnectorPaneTerminal Hotspot="0 65" ListViewHotspot="0 125" Parameter="56" />
+			<ConnectorPaneTerminal Hotspot="0 75" ListViewHotspot="0 140" Parameter="62" />
+			<ConnectorPaneTerminal Hotspot="50 55" />
+			<ConnectorPaneTerminal Hotspot="50 65" />
+			<ConnectorPaneTerminal Hotspot="50 75" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0">
+			<ArrayViewer ArrayElement="[UIModel]20" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]16" Id="23" IsFixedSize="[bool]True" Left="[float]0" Name="[string]input" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]0" Value="{DataItemBinding Id=17}" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="20" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]0" MinHeight="[float]22" Name="[string]Child" Top="[float]0" ValueType="[Type]UInt32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="29" IsReadOnly="[bool]False" Left="[float]0" Name="[string]valid_in" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=26}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="35" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]0" MinHeight="[float]22" Name="[string]k" Top="[float]0" Value="{DataItemBinding Id=32}" ValueType="[Type]UInt32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="41" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]0" MinHeight="[float]22" Name="[string]filter in" Top="[float]0" Value="{DataItemBinding Id=38}" ValueType="[Type]UInt64" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="47" IsReadOnly="[bool]False" Left="[float]0" Name="[string]filter valid" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=44}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="53" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]0" MinHeight="[float]22" Name="[string]K-1" Top="[float]0" Value="{DataItemBinding Id=50}" ValueType="[Type]UInt16" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="59" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]0" MinHeight="[float]22" Name="[string]M-1" Top="[float]0" Value="{DataItemBinding Id=56}" ValueType="[Type]UInt8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="65" IsReadOnly="[bool]False" Left="[float]0" Name="[string]reset" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=62}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="71" IsReadOnly="[bool]True" Left="[float]0" MinHeight="[float]16" MinWidth="[float]16" Name="[string]last sample" Shape="[LEDShape]Square" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=68}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="77" IsReadOnly="[bool]True" Left="[float]0" MinHeight="[float]16" MinWidth="[float]16" Name="[string]valid out" Shape="[LEDShape]Square" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=74}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ArrayViewer ArrayElement="[UIModel]83" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]16" Id="86" IsFixedSize="[bool]True" Left="[float]0" Name="[string]output" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]0" Value="{DataItemBinding Id=80}" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="83" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]0" MinHeight="[float]22" Name="[string]Child" Top="[float]0" ValueType="[Type]UInt64" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="12">
+			<MethodCall Bounds="680 155 191 100" DomainName="NI.MocCommon" Id="14" Target="demod_pulse_shaping_block\.gcdl" Template="List" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L3" Desc="Memories" />
+						<Parameter Id="L1" Desc="valid_in" />
+						<Parameter Id="L2" Desc="k" />
+						<Parameter Id="L0" Desc="array input" />
+						<Parameter Id="R0" Desc="output" />
+						<Parameter Id="R1" Desc="valid out" />
+						<Parameter Id="R2" Desc="filter output" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="@cb1fba3ae2a24c32a52df82bd719eb55" Direction="Input" Hotspot="0 80" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="0 50" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt32" Direction="Input" Hotspot="0 65" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt32[16]" Direction="Input" Hotspot="0 35" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt64[16]" Direction="Output" Hotspot="191 35" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="191 50" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt64[16]" Direction="Output" Hotspot="191 95" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<MethodCall Bounds="440 250 195 115" DomainName="NI.MocCommon" Id="15" Target="demod\ serial\ data\ to\ M\ memories\ 64\ bit\.gcdl" Template="List" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L0" Desc="Input" />
+						<Parameter Id="L1" Desc="valid in" />
+						<Parameter Id="L3" Desc="M-1" />
+						<Parameter Id="L2" Desc="K-1" />
+						<Parameter Id="L4" Desc="reset" />
+						<Parameter Id="R1" Desc="last sample" />
+						<Parameter Id="R0" Desc="Memories" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="UInt64" Direction="Input" Hotspot="0 35" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="0 50" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt8" Direction="Input" Hotspot="0 80" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="UInt16" Direction="Input" Hotspot="0 65" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="0 95" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="195 50" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@cb1fba3ae2a24c32a52df82bd719eb55" Direction="Output" Hotspot="195 35" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<Wire Id="16" Joints="N(15:R0) h(5) v(-50) N(14:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 185 40 15" DataItem="17" Id="22" Label="24" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32[16]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="25" Joints="N(22:Value) N(14:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 200 40 15" DataItem="26" Id="28" Label="30" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="31" Joints="N(28:Value) N(14:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 215 40 15" DataItem="32" Id="34" Label="36" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="37" Joints="N(34:Value) N(14:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 280 40 15" DataItem="38" Id="40" Label="42" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt64" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="43" Joints="N(40:Value) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 295 40 15" DataItem="44" Id="46" Label="48" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="49" Joints="N(46:Value) N(15:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 310 40 15" DataItem="50" Id="52" Label="54" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="55" Joints="N(52:Value) N(15:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 325 40 15" DataItem="56" Id="58" Label="60" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="61" Joints="N(58:Value) N(15:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="375 340 40 15" DataItem="62" Id="64" Label="66" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="67" Joints="N(64:Value) N(15:L4)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="880 295 40 15" DataItem="68" Id="70" Label="72" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="73" Joints="N(15:R1) N(70:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="880 200 40 15" DataItem="74" Id="76" Label="78" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="79" Joints="N(14:R1) N(76:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="880 185 40 15" DataItem="80" Id="85" Label="87" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt64[16]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="88" Joints="N(14:R0) N(85:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<NodeLabel AttachedTo="22" Bounds="341 185 29 14" Id="24" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>input</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="28" Bounds="327 200 43 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>valid_in</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="34" Bounds="360 215 10 14" Id="36" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>k</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="40" Bounds="330 280 40 14" Id="42" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>filter in</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="46" Bounds="314 295 56 14" Id="48" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>filter valid</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="52" Bounds="350 310 20 14" Id="54" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>K-1</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="58" Bounds="348 325 22 14" Id="60" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>M-1</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="64" Bounds="342 340 28 14" Id="66" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>reset</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="70" Bounds="925 295 64 14" Id="72" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>last sample</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="76" Bounds="925 200 48 14" Id="78" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>valid out</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="85" Bounds="925 185 37 14" Id="87" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>output</p.Text>
+			</NodeLabel>
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000" />
+		<DataItem CallDirection="Input" CallIndex="0" DataType="UInt32[16]" Id="17" Name="input" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" DataType="Boolean" Id="26" Name="valid_in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="UInt32" Id="32" Name="k" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" DataType="UInt64" Id="38" Name="filter in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="4" DataType="Boolean" Id="44" Name="filter valid" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="5" DataType="UInt16" Id="50" Name="K-1" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="6" DataType="UInt8" Id="56" Name="M-1" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="7" DataType="Boolean" Id="62" Name="reset" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="Boolean" Id="68" Name="last sample" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="Boolean" Id="74" Name="valid out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="2" DataType="UInt64[16]" Id="80" Name="output" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="demod_pulse_shaping_block\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 80">
+							<IconPanel Height="[float]80" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]demod_pulse_shaping_block" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]74" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="demod\ serial\ data\ to\ M\ memories\ 64\ bit\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 50 50">
+							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" HorizontalAlignment="[HorizontalAlignment]Left" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]demod serial data to M memories 64 bit" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top">
+										<FontSetting FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]44" Left="[float]0" Margin="[SMThickness]3,3,3,3" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+		</IconTable>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="cb1fba3ae2a24c32a52df82bd719eb55">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="MemoryReadInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Attributed>
+																<AttributedType>
+																	<Composite Id="3" Name="MemoryReadInterface" ReferenceClass="" Interface="">
+																		<GenericTypeDefinition>
+																			<Composite RefId="3" />
+																		</GenericTypeDefinition>
+																		<GenericParameters>
+																			<Typedef TypedefName="Element" UnderlyingType="@2f65a0c4cdf54c99828129aa57d4c5fa" />
+																		</GenericParameters>
+																		<BaseType>
+																			<Void />
+																		</BaseType>
+																		<Members>
+																			<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																				<DeclaringType>
+																					<Composite RefId="3" />
+																				</DeclaringType>
+																				<GenericTypeDefinition>
+																					<Void />
+																				</GenericTypeDefinition>
+																				<Parameters>
+																					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="address" DataType="UInt32" />
+																					<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																						<DataType>
+																							<Typedef TypedefName="Element" UnderlyingType="@2f65a0c4cdf54c99828129aa57d4c5fa" />
+																						</DataType>
+																					</Parameter>
+																				</Parameters>
+																			</Function>
+																		</Members>
+																	</Composite>
+																</AttributedType>
+																<AttributeValues>
+																	<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+																	<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+																	<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+																</AttributeValues>
+															</Attributed>
+														</GenericTypeDefinition>
+														<ClosedGenericParameters>
+															<UInt64 />
+														</ClosedGenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="address" DataType="UInt32" />
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt64" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="6" Name="MemoryWriteBInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Attributed>
+																<AttributedType>
+																	<Composite Id="7" Name="MemoryWriteBInterface" ReferenceClass="" Interface="">
+																		<GenericTypeDefinition>
+																			<Composite RefId="7" />
+																		</GenericTypeDefinition>
+																		<GenericParameters>
+																			<Typedef TypedefName="Element" UnderlyingType="@2f65a0c4cdf54c99828129aa57d4c5fa" />
+																		</GenericParameters>
+																		<BaseType>
+																			<Void />
+																		</BaseType>
+																		<Members>
+																			<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																				<DeclaringType>
+																					<Composite RefId="7" />
+																				</DeclaringType>
+																				<GenericTypeDefinition>
+																					<Void />
+																				</GenericTypeDefinition>
+																				<Parameters>
+																					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="address" DataType="UInt32" />
+																					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																						<DataType>
+																							<Typedef TypedefName="Element" UnderlyingType="@2f65a0c4cdf54c99828129aa57d4c5fa" />
+																						</DataType>
+																					</Parameter>
+																				</Parameters>
+																			</Function>
+																		</Members>
+																	</Composite>
+																</AttributedType>
+																<AttributeValues>
+																	<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+																	<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+																	<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+																</AttributeValues>
+															</Attributed>
+														</GenericTypeDefinition>
+														<ClosedGenericParameters>
+															<UInt64 />
+														</ClosedGenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="9" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="6" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="address" DataType="UInt32" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt64" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 3">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 4">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 5">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 6">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 7">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 8">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 9">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 10">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 11">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 12">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 13">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 14">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 15">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 16">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Generic>
+										<Constraints>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="2" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="6" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</Constraints>
+									</Generic>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Memory" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="2f65a0c4cdf54c99828129aa57d4c5fa">
+			<Generic />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

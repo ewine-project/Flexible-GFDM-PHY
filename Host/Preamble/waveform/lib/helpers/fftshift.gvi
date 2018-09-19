@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.2" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.13501" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.0" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.15460" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.14849" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 20" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]20" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Green">
+                    <Rectangle Fill="[SMSolidColorBrush]#ffa9af91" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffeef8cd" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#ffffffff" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,9," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]fftshift" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="20" Id="9" ListViewHeight="45" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="35" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 35" Parameter="34" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="15 20" />
+            <ConnectorPaneTerminal Hotspot="25 20" />
+            <ConnectorPaneTerminal Hotspot="35 20" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=34}" Height="[float]168" Id="36" Label="[UIModel]56" Left="[float]504" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" ThemeColorPaletteName="[string]Flat Blue" Top="[float]724" Width="[float]1010" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitExactly" Id="37" Label="[string]sample_index" MajorDivisions="[UIModel]48" MajorGridLines="[UIModel]49" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 271, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="48" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                    <GridLines Id="49" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitExactly" Id="38" Label="[string]amplitude" MajorDivisions="[UIModel]50" MajorGridLines="[UIModel]51" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.15942218516115103, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="50" />
+                    <GridLines Id="51" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]37" Id="39" Label="[string]TX signal real" VerticalScale="[UIModel]38">
+                    <PlotRenderer Id="52" LineStroke="[SMSolidColorBrush]#ffee1c25" LineThickness="[double]1" PointFill="[SMSolidColorBrush]#ffee1c25" PointShape="[PointShape]Rectangle" />
+                </Plot>
+                <PlotRenderer Id="40" LineStroke="[SMSolidColorBrush]#ff962428" />
+                <PlotRenderer Id="41" LineStroke="[SMSolidColorBrush]#ff008ee4" />
+                <PlotRenderer Id="42" LineStroke="[SMSolidColorBrush]#ffe2b683" />
+                <PlotRenderer Id="43" LineStroke="[SMSolidColorBrush]#ffb7ac1f" />
+                <PlotRenderer Id="44" LineStroke="[SMSolidColorBrush]#ffaedcef" />
+                <PlotRenderer Id="45" LineStroke="[SMSolidColorBrush]#ffa08bb0" />
+                <PlotRenderer Id="46" LineStroke="[SMSolidColorBrush]#ff7f7f7f" />
+                <PlotRenderer Id="47" LineStroke="[SMSolidColorBrush]#ff91685c" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]36" Height="[float]52" Id="53" Left="[float]1521" ThemeColorPaletteName="[string]Flat Blue" Top="[float]724" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]36" Height="[float]102" Id="54" Left="[float]509" ThemeColorPaletteName="[string]Flat Blue" Top="[float]921" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]36" Id="55" Left="[float]509" ThemeColorPaletteName="[string]Flat Blue" Top="[float]899" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="56" LabelAlignment="[PartAlignment]LeftTop" LabelOwner="[UIModel]36" Left="[float]442" Locked="[bool]True" Text="[string]vector_out" ThemeColorPaletteName="[string]Flat Blue" Top="[float]724" Visible="[bool]False" />
+            <ArrayViewer ArrayElement="[UIModel]58" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="57" IsFixedSize="[bool]False" Name="[string]vector_in" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=35}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="58" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueFormatter="[string]LV:G6" ValueType="[Type]ComplexDouble" Width="[float]69" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <Rotate1DArray Bounds="2365 600 40 30" Id="14" />
+            <Wire Id="15" Joints="N(30:Value) h(41) B(1) N(14:array) B(1) v(35) N(17:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="16" Joints="N(14:array (last n elements first\)) N(29:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArraySize Bounds="2150 635 40 20" Id="17" />
+            <Literal Bounds="2200 660 40 15" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="18" Label="31" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x4000000000000000</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="19" Joints="N(18:Out) N(25:y)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ToDoublePrecisionFloat Bounds="2200 645 30 10" Id="20" />
+            <Wire Id="21" Joints="N(20:double precision float) N(25:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="22" Joints="N(17:size(s\)) N(20:number)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ToLongInteger Bounds="2320 655 30 10" Id="23" />
+            <Wire Id="24" Joints="N(23:32bit integer) h(10) v(-35) N(14:n)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Divide Bounds="2250 645 30 30" Id="25" />
+            <Wire Id="26" Joints="N(25:x/y) N(28:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="27" Joints="N(28:floor(x\): largest int &lt;= x) N(23:number)" xmlns="http://www.ni.com/PlatformFramework" />
+            <RoundTowardNegativeInfinity Bounds="2285 645 30 30" Id="28" />
+            <DataAccessor Bounds="2440 600 40 15" DataItem="34" Id="29" Label="32">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="2059 600 40 15" DataItem="35" Id="30" Label="33">
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="18" Bounds="2200 660 0 0" Id="31" Text="y" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="29" Bounds="2485 600 56 16" Id="32" Text="vector_out" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="30" Bounds="2006 600 48 16" Id="33" Text="vector_in" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="34" Name="vector_out">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="0" DataType="ComplexDouble[]" Id="35" Name="vector_in" />
+    </VirtualInstrument>
+</SourceFile>

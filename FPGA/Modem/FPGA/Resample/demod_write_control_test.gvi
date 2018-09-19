@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="3.0.0.49153" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]demod_write_control_test" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="30" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11" />
+        <BlockDiagram Id="12">
+            <WhileLoop Bounds="382 170 796 300" DiagramId="16" Id="15">
+                <WhileLoop.Iteration Bounds="5 270 15 15" Id="17" />
+                <WhileLoop.Condition Bounds="743 270 15 15" Id="18" />
+                <SclRemoteCall Bounds="293 55 180 80" DomainName="NI.LabVIEW.FPGA" Id="14" Target=":Project:USRP:demod_write_control\.gcdl" xmlns="http://www.ni.com/LabVIEW.FPGA">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="valid in" />
+                            <Parameter Id="L1" Desc="K-1" />
+                            <Parameter Id="L2" Desc="M-1" />
+                            <Parameter Id="L3" Desc="reset" />
+                            <Parameter Id="R1" Desc="address" />
+                            <Parameter Id="R2" Desc="write_enable" />
+                            <Parameter Id="R4" Desc="last sample" />
+                            <Parameter Id="R3" Desc="write block" />
+                            <Parameter Id="R0" Desc="valid out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt16" Direction="Input" Hotspot="0 35" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 45" Id="L2" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Input" Hotspot="0 55" Id="L3" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt16" Direction="Output" Hotspot="180 35" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean[16]" Direction="Output" Hotspot="180 45" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="180 65" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="180 55" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="180 25" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </SclRemoteCall>
+                <DataAccessor Bounds="118 85 40 15" DataItem="19" Id="21" Label="23">
+                    <Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <Wire Id="24" Joints="N(21:Value) N(14:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="21" Bounds="94 85 19 16" Id="23" Text="K-1" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="118 100 40 15" DataItem="25" Id="27" Label="29">
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <Wire Id="30" Joints="N(27:Value) h(50) v(-5) N(14:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="27" Bounds="90 100 23 16" Id="29" Text="M-1" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="118 115 40 15" DataItem="31" Id="33" Label="35">
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="33" Bounds="87 115 26 16" Id="35" Text="reset" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="118 70 40 15" DataItem="37" Id="39" Label="41">
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="39" Bounds="22 70 91 16" Id="41" Text="pulse shape valid" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="693 270 40 15" DataItem="214" Id="216" Label="218">
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <Wire Id="219" Joints="N(216:Value) N(18:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="216" Bounds="664 270 24 16" Id="218" Text="stop" xmlns="http://www.ni.com/PlatformFramework" />
+                <WaitMs Bounds="83 10 30 30" Id="227" />
+                <Literal Bounds="24 20 44 15" DataType="UInt32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="228" Label="229" xmlns="http://www.ni.com/MocCommon">
+                    <p.Data>500</p.Data>
+                    <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                </Literal>
+                <Wire Id="230" Joints="N(228:Out) N(227:msToWait)" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="228" Bounds="24 20 0 0" Id="229" Text="milliseconds to wait" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="628 115 40 15" DataItem="43" Id="44" Label="54">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="44" Bounds="673 115 27 16" Id="54" Text="write" xmlns="http://www.ni.com/PlatformFramework" />
+                <BooleanToInteger Bounds="568 115 30 10" Id="232" />
+                <Wire Id="234" Joints="N(232:0, 1) N(44:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <BooleanToInteger Bounds="568 125 30 10" Id="235" />
+                <BooleanToInteger Bounds="568 135 30 10" Id="237" />
+                <BooleanToInteger Bounds="568 145 30 10" Id="238" />
+                <BooleanToInteger Bounds="568 190 30 10" Id="240" />
+                <DataAccessor Bounds="628 190 40 15" DataItem="207" Id="208" Label="209">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="208" Bounds="673 190 64 16" Id="209" Text="config done" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="242" Joints="N(240:0, 1) N(208:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="628 130 40 15" DataItem="123" Id="124" Label="125">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="124" Bounds="673 130 38 16" Id="125" Text="write_2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="243" Joints="N(235:0, 1) h(25) v(5) N(124:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="628 145 40 15" DataItem="144" Id="145" Label="146">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="145" Bounds="673 145 38 16" Id="146" Text="write_3" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="244" Joints="N(237:0, 1) h(17) v(10) N(145:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="628 160 40 15" DataItem="165" Id="166" Label="167">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="166" Bounds="673 160 38 16" Id="167" Text="write_4" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="245" Joints="N(238:0, 1) h(12) v(15) N(166:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="118 55 40 15" DataItem="258" Id="256" Label="257">
+                    <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="256" Bounds="10 55 103 16" Id="257" Text="pulse shape valid_2" xmlns="http://www.ni.com/PlatformFramework" />
+                <LogicalOr Bounds="213 55 25 20" Id="261" Terminals="o=295, c0t0v=262, c1t0v=263" />
+                <Wire Id="262" Joints="N(256:Value) h(12) B(1) N(261:c0t0v) B(1) v(200) N(360:f)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="263" Joints="N(39:Value) h(50) v(-5) N(261:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                <IsFirstCall Bounds="178 130 15 15" Id="277" />
+                <LogicalOr Bounds="213 115 25 20" Id="278" Terminals="o=279, c0t0v=280, c1t0v=281" />
+                <Wire Id="279" Joints="N(278:o) h(50) v(-15) N(14:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="280" Joints="N(33:Value) N(278:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="281" Joints="N(277:First Call?: T/F) h(10) B(1) v(-5) N(278:c1t0v) B(1) v(25) N(298:Input)" xmlns="http://www.ni.com/PlatformFramework" />
+                <LogicalAnd Bounds="258 60 25 20" Id="294" InvertedTerminals="001" Terminals="o=296, c0t0v=295, c1t0v=300" />
+                <Wire Id="295" Joints="N(261:o) N(294:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="296" Joints="N(294:o) h(5) v(10) N(14:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <FeedbackNode ArrowDirection="Right" Bounds="208 150 30 20" EnableTerminalVisible="False" Id="298" />
+                <Wire Id="300" Joints="N(298:Output) h(15) v(-85) N(294:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Literal Bounds="228 138 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="301" Label="302" xmlns="http://www.ni.com/MocCommon">
+                    <p.Data>True</p.Data>
+                    <BooleanBehavior />
+                    <DockedConstantFacade UndockedBounds="155 150 26 15" />
+                </Literal>
+                <Wire Facade="WireInvisibleFacade" Id="303" Joints="N(301:Out) h(5) v(-10) h(-22) N(298:Initializer)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="301" Bounds="228 138 0 0" Id="302" Text="initial value" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                <BooleanToInteger Bounds="568 175 30 10" Id="322" />
+                <DataAccessor Bounds="628 175 40 15" DataItem="326" Id="324" Label="325">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="324" Bounds="673 175 82 16" Id="325" Text="config ongoing" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="345" Joints="N(322:0, 1) N(324:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Select Bounds="583 225 40 40" Id="360" />
+                <DataAccessor Bounds="628 240 40 15" DataItem="258" Id="362" Label="363">
+                    <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="362" Bounds="673 240 103 16" Id="363" Text="pulse shape valid_2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="364" Joints="N(360:s? t:f) N(362:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Literal Bounds="571 225 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="366" Label="367" xmlns="http://www.ni.com/MocCommon">
+                    <p.Data>False</p.Data>
+                    <BooleanBehavior />
+                    <DockedConstantFacade UndockedBounds="523 320 26 15" />
+                </Literal>
+                <Wire Facade="WireInvisibleFacade" Id="368" Joints="N(366:Out) N(360:t)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="366" Bounds="571 225 0 0" Id="367" Text="true case" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                <DataAccessor Bounds="628 85 40 15" DataItem="382" Id="380" Label="381">
+                    <Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <TextNode AttachedTo="380" Bounds="673 85 6 16" Id="381" Text="k" xmlns="http://www.ni.com/PlatformFramework" />
+                <ArrayIndex Bounds="513 95 40 60" Id="458" Terminals="array=501, c0t0v, c0t1v=460, c1t0v, c1t1v=461, c2t0v, c2t1v=462, c3t0v, c3t1v=463" VerticalChunkCount="4" />
+                <Wire Id="460" Joints="N(458:c0t1v) N(232:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="461" Joints="N(458:c1t1v) N(235:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="462" Joints="N(458:c2t1v) N(237:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="463" Joints="N(458:c3t1v) N(238:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="501" Joints="N(14:R2) N(458:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="502" Joints="N(14:R3) h(25) v(70) N(322:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="503" Joints="N(14:R4) h(10) v(75) B(2) N(240:Boolean) B(2) v(50) N(360:s)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="505" Joints="N(14:R1) N(380:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <BooleanToInteger Bounds="568 70 30 10" Id="506" />
+                <DataAccessor Bounds="628 70 40 15" DataItem="510" Id="507" Label="509">
+                    <Terminal DataType="Int16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                </DataAccessor>
+                <Wire Id="508" Joints="N(506:0, 1) N(507:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                <TextNode AttachedTo="507" Bounds="673 70 46 16" Id="509" Text="valid out" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="529" Joints="N(14:R0) h(5) v(-5) N(506:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+            </WhileLoop>
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <PlotLegend Graph="[UIModel]55" Height="[float]28" Id="50" Left="[float]1340" Top="[float]37" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]55" Height="[float]102" Id="51" Left="[float]366" Top="[float]154" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]55" Id="52" Left="[float]366" Top="[float]132" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="53" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]55" Left="[float]361" Locked="[bool]True" Text="[string]write" Top="[float]14" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=43}" Height="[float]88" Id="55" Label="[UIModel]53" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]37" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="56" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="57" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="58" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="59" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="60" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="61" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="62" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="63" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="46" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]49" MajorGridLines="[UIModel]532" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double" Visibility="[SMVisibility]Visible">
+                    <RangeLabeledDivisions Id="49" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="532" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="47" Label="[string]Amplitude" MajorDivisions="[UIModel]530" MajorGridLines="[UIModel]531" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="530" />
+                    <GridLines Id="531" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]46" Id="48" Label="[string]Plot" VerticalScale="[UIModel]47" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="567" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]6 1" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=123}" Height="[float]88" Id="105" Label="[UIModel]122" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]149" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="106" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="107" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="108" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="109" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="110" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="111" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="112" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="113" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="114" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]118" MajorGridLines="[UIModel]535" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="118" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="535" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="115" Label="[string]Amplitude" MajorDivisions="[UIModel]533" MajorGridLines="[UIModel]534" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="533" />
+                    <GridLines Id="534" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]114" Id="116" Label="[string]Plot" VerticalScale="[UIModel]115" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="568" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]1 0" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <PlotLegend Graph="[UIModel]105" Height="[float]28" Id="119" Left="[float]1340" Top="[float]149" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]105" Height="[float]102" Id="120" Left="[float]366" Top="[float]266" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]105" Id="121" Left="[float]366" Top="[float]244" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="122" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]105" Left="[float]361" Locked="[bool]True" Text="[string]write_2" Top="[float]126" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=144}" Height="[float]84" Id="126" Label="[UIModel]143" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]266" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="127" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="128" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="129" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="130" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="131" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="132" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="133" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="134" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="135" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]139" MajorGridLines="[UIModel]538" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="139" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="538" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="136" Label="[string]Amplitude" MajorDivisions="[UIModel]536" MajorGridLines="[UIModel]537" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="536" />
+                    <GridLines Id="537" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]135" Id="137" Label="[string]Plot" VerticalScale="[UIModel]136" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="569" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]20 1" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <PlotLegend Graph="[UIModel]126" Height="[float]28" Id="140" Left="[float]1340" Top="[float]266" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]126" Height="[float]102" Id="141" Left="[float]366" Top="[float]379" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]126" Id="142" Left="[float]366" Top="[float]357" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="143" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]126" Left="[float]361" Locked="[bool]True" Text="[string]write_3" Top="[float]243" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=165}" Height="[float]88" Id="147" Label="[UIModel]164" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]379" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="148" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="149" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="150" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="151" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="152" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="153" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="154" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="155" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="156" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]160" MajorGridLines="[UIModel]541" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="160" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="541" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="157" Label="[string]Amplitude" MajorDivisions="[UIModel]539" MajorGridLines="[UIModel]540" Orientation="[SMOrientation]Vertical" Range="[IRange]-1, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="539" />
+                    <GridLines Id="540" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]156" Id="158" Label="[string]Plot" VerticalScale="[UIModel]157" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="570" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]1 0" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <PlotLegend Graph="[UIModel]147" Height="[float]28" Id="161" Left="[float]1340" Top="[float]379" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]147" Height="[float]102" Id="162" Left="[float]366" Top="[float]382" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]147" Id="163" Left="[float]366" Top="[float]474" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="164" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]147" Left="[float]361" Locked="[bool]True" Text="[string]write_4" Top="[float]356" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=207}" Height="[float]83" Id="189" Label="[UIModel]206" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]496" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="190" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="191" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="192" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="193" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="194" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="195" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="196" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="197" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="198" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]202" MajorGridLines="[UIModel]544" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="202" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="544" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="199" Label="[string]Amplitude" MajorDivisions="[UIModel]542" MajorGridLines="[UIModel]543" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="542" />
+                    <GridLines Id="543" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]198" Id="200" Label="[string]Plot" VerticalScale="[UIModel]199" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="571" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]20 1" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <PlotLegend Graph="[UIModel]189" Height="[float]28" Id="203" Left="[float]1340" Top="[float]496" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]189" Height="[float]102" Id="204" Left="[float]366" Top="[float]608" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]189" Id="205" Left="[float]366" Top="[float]586" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="206" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]189" Left="[float]361" Locked="[bool]True" Text="[string]config done" Top="[float]473" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="22" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]210" Left="[float]249" Minimum="[ushort]1" Top="[float]37" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt16" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="210" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]22" Left="[float]249" Locked="[bool]True" Text="[string]K-1" Top="[float]14" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="28" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]211" Left="[float]249" Minimum="[byte]1" Top="[float]86" Value="{DataItemBinding Id=25}" ValueType="[Type]UInt8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="211" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]28" Left="[float]249" Locked="[bool]True" Text="[string]M-1" Top="[float]63" />
+            <Switch BaseName="[string]Switch" ClickMode="[ClickMode]Press" FalseContent="[string]Off" Height="[float]50" Id="40" IsMomentary="[bool]False" IsReadOnly="[bool]False" Label="[UIModel]212" Left="[float]258" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]141" TrueContent="[string]On" Value="{DataItemBinding Id=37}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="212" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]40" Left="[float]258" Locked="[bool]True" Text="[string]pulse shape valid" Top="[float]118" />
+            <Switch BaseName="[string]Switch" ClickMode="[ClickMode]Press" FalseContent="[string]Off" Height="[float]50" Id="34" IsMomentary="[bool]False" IsReadOnly="[bool]False" Label="[UIModel]213" Left="[float]258" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]227" TrueContent="[string]On" Value="{DataItemBinding Id=31}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="213" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]34" Left="[float]258" Locked="[bool]True" Text="[string]reset" Top="[float]204" />
+            <Button BaseName="[string]Button" Content="[string]Stop" Foreground="[SMColor]#ffff0000" Height="[float]30" Id="217" IncludeInCapture="[bool]False" IsMomentary="[bool]False" Label="[UIModel]220" Latch="[bool]True" Left="[float]246" Shape="[ButtonShape]Square" Top="[float]305" Value="{DataItemBinding Id=214}" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="220" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]217" Left="[float]246" Locked="[bool]True" Text="[string]stop" Top="[float]282" />
+            <Switch BaseName="[string]Switch" ClickMode="[ClickMode]Press" FalseContent="[string]Off" Height="[float]50" Id="259" IsMomentary="[bool]False" IsReadOnly="[bool]False" Label="[UIModel]260" Left="[float]145" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]141" TrueContent="[string]On" Value="{DataItemBinding Id=258}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="260" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]259" Left="[float]145" Locked="[bool]True" Text="[string]pulse shape valid_2" Top="[float]118" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=326}" Height="[float]83" Id="327" Label="[UIModel]344" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]608" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="328" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="329" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="330" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="331" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="332" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="333" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="334" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="335" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="336" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]340" MajorGridLines="[UIModel]547" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="340" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="547" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="337" Label="[string]Amplitude" MajorDivisions="[UIModel]545" MajorGridLines="[UIModel]546" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="545" />
+                    <GridLines Id="546" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]336" Id="338" Label="[string]Plot" VerticalScale="[UIModel]337" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="572" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]19 1" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <Label Id="344" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]327" Left="[float]361" Locked="[bool]True" Text="[string]config ongoing" Top="[float]585" />
+            <PlotLegend Graph="[UIModel]327" Height="[float]28" Id="341" Left="[float]1340" Top="[float]608" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]327" Height="[float]102" Id="342" Left="[float]366" Top="[float]720" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]327" Id="343" Left="[float]366" Top="[float]698" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=382}" Height="[float]85" Id="383" Label="[UIModel]400" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]720" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="384" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="385" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="386" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="387" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="388" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="389" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="390" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="391" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="392" Label="[string]Time" LabelVisibility="[SMVisibility]Collapsed" MajorDivisions="[UIModel]396" MajorGridLines="[UIModel]550" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="396" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                    <GridLines Id="550" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="393" Label="[string]Amplitude" MajorDivisions="[UIModel]548" MajorGridLines="[UIModel]549" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 4, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="548" />
+                    <GridLines Id="549" />
+                </Axis>
+                <Plot HorizontalScale="[UIModel]392" Id="394" Label="[string]Plot" VerticalScale="[UIModel]393" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="573" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]20 4" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <Label Id="400" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]383" Left="[float]361" Locked="[bool]True" Text="[string]k" Top="[float]697" />
+            <PlotLegend Graph="[UIModel]383" Height="[float]28" Id="397" Left="[float]1340" Top="[float]720" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]383" Height="[float]102" Id="398" Left="[float]366" Top="[float]834" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]383" Id="399" Left="[float]366" Top="[float]812" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Chart BaseName="[string]Chart" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=510}" Height="[float]106" Id="511" Label="[UIModel]528" Left="[float]361" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]834" Width="[float]972" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <PlotRenderer Id="512" LineStroke="[SMSolidColorBrush]#ff7b161a" PointFill="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="513" LineStroke="[SMSolidColorBrush]#ff205326" PointFill="[SMSolidColorBrush]#ff205326" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="514" LineStroke="[SMSolidColorBrush]#ffe2b683" PointFill="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="515" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointFill="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="516" LineStroke="[SMSolidColorBrush]#ffaedcef" PointFill="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="517" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointFill="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="518" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointFill="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" PointSize="[SMSize]5, 5" />
+                <PlotRenderer Id="519" LineStroke="[SMSolidColorBrush]#ff3c0726" PointFill="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" PointSize="[SMSize]5, 5" />
+                <Axis Adjuster="[RangeAdjuster]ContinuousChart" Id="520" Label="[string]Time" MajorDivisions="[UIModel]524" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="524" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="521" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]520" Id="522" Label="[string]Plot" VerticalScale="[UIModel]521" />
+                <Cursor CrosshairBrush="[SMSolidColorBrush]#ffffa500" Foreground="[SMSolidColorBrush]#ff000000" HorizontalCrosshairLength="[double]Infinity" Id="574" Label="[string]Cursor1" LabelVisibility="[SMVisibility]Collapsed" SnapToData="[bool]True" TargetBrush="[SMSolidColorBrush]#ffffa500" TargetShape="[PointShape]Ellipse" Value="[string]6 1" ValueVisibility="[SMVisibility]Visible" VerticalCrosshairLength="[double]Infinity" Visibility="[SMVisibility]Visible" />
+            </Chart>
+            <Label Id="528" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]511" Left="[float]361" Locked="[bool]True" Text="[string]valid out" Top="[float]811" />
+            <PlotLegend Graph="[UIModel]511" Height="[float]28" Id="525" Left="[float]1340" Top="[float]834" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]511" Height="[float]102" Id="526" Left="[float]366" Top="[float]969" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]511" Id="527" Left="[float]366" Top="[float]947" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </CPFrontPanel>
+        <DataItem DataType="UInt16" Id="19" Name="K-1">
+            <p.DefaultValue>4</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="UInt8" Id="25" Name="M-1">
+            <p.DefaultValue>2</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Boolean" Id="31" IsLatched="True" Name="reset">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Boolean" Id="37" IsLatched="True" Name="pulse shape valid">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="43" Name="write" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="123" Name="write_2" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="144" Name="write_3" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="165" Name="write_4" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="207" Name="config done" />
+        <DataItem DataType="Boolean" Id="214" IsLatched="True" Name="stop">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Boolean" Id="258" Name="pulse shape valid_2">
+            <p.DefaultValue>False</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="326" Name="config ongoing" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="UInt16" Id="382" Name="k" />
+        <DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Int16" Id="510" Name="valid out" />
+    </VirtualInstrument>
+</SourceFile>

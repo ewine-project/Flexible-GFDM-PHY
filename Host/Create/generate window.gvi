@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="MathScript" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MScript" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.50009" FeatureSetName="Text Based Nodes" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/TextCode.Editor" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 40" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]40" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,8.25," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]generate window" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="40" Id="9" ListViewHeight="75" ListViewWidth="190" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="42" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="43" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="190 65" Parameter="525" />
+            <ConnectorPaneTerminal Hotspot="50 15" ListViewHotspot="190 50" Parameter="500" />
+            <ConnectorPaneTerminal Hotspot="15 40" />
+            <ConnectorPaneTerminal Hotspot="25 40" />
+            <ConnectorPaneTerminal Hotspot="35 40" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="503" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Nw" RadixVisibility="[SMVisibility]Collapsed" Value="{DataItemBinding Id=500}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <ArrayViewer ArrayElement="[UIModel]528" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="531" Name="[string]rising window" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=525}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="528" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <MathNode Bounds="385 150 365 210" DocumentText="&quot;[g, f] = rc( b, 2, K, 'time',  false);\r\n\r\nG=1/2*fft(fftshift(g))\r\n\r\nidx1=ceil((1-b)/2*K+1);\r\nidx2=floor(idx1+ceil(b*K));\r\n\r\nwfall=G(idx1:idx2);\r\nwrise = ones(size(wfall))-wfall;\r\n\r\nNw = numel(wfall);&quot;" Id="14" Label="34" xmlns="http://www.ni.com/MScript">
+                <MVariable Bounds="345 40 65 15" DataType="ComplexDouble[]" Direction="Output" Facade="" Hotspot="410 45" Id="1" IsTypeFixed="True" Name="wrise" Usage="Optional" />
+                <MVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Facade="" Hotspot="-25 45" Id="2" IsTypeFixed="True" Name="K" Usage="Required" />
+                <MVariable Bounds="-25 55 45 15" DataType="Double" Direction="Input" Facade="" Hotspot="-25 60" Id="3" IsTypeFixed="True" Name="b" Usage="Required" />
+                <MVariable Bounds="345 55 50 15" DataType="Double" Direction="Output" Facade="" Hotspot="395 60" Id="5" IsTypeFixed="True" Name="Nw" Usage="Optional" />
+            </MathNode>
+            <Wire Id="15" Joints="N(31:Value) N(14:2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="16" Joints="N(32:Value) N(14:3)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="280 190 40 15" DataItem="42" Id="31" Label="37">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="280 205 40 15" DataItem="43" Id="32" Label="38">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="14" Bounds="385 131 91 16" Id="34" IsReadOnly="True" Text="MathScript Node" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="31" Bounds="268 190 7 16" Id="37" Text="K" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="32" Bounds="267 205 8 16" Id="38" Text="b" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="835 205 40 15" DataItem="500" Id="502" Label="504">
+                <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="502" Bounds="880 205 18 16" Id="504" Text="Nw" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="505" Joints="N(14:5) N(502:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="835 190 40 15" DataItem="525" Id="530" Label="532">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="530" Bounds="880 190 74 16" Id="532" Text="rising window" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="533" Joints="N(14:1) N(530:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="464" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]465" Left="[float]361" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]231" Value="{DataItemBinding Id=42}" ValueFormatter="[string]LV:" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="465" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]464" Left="[float]361" Locked="[bool]True" Text="[string]K" Top="[float]208" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="466" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]467" Left="[float]361" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]284" Value="{DataItemBinding Id=43}" ValueFormatter="[string]LV:" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="467" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]466" Left="[float]361" Locked="[bool]True" Text="[string]b" Top="[float]261" />
+        </CPFrontPanel>
+        <DataItem CallDirection="Input" CallIndex="0" DataType="Double" Id="42" Name="K">
+            <p.DefaultValue>0x4059000000000000</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="Double" Id="43" Name="b">
+            <p.DefaultValue>0x3FE0000000000000</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="3" DataType="Double" Id="500" Name="Nw">
+            <p.DefaultValue>0x0</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="ComplexDouble[]" Id="525" Name="rising window" />
+    </VirtualInstrument>
+</SourceFile>

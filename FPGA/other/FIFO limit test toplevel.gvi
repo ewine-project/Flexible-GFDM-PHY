@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A2BF158FA2F5241DD191C4E385109C9A" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]FIFO limit test toplevel" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="40" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<ClockDrivenLoop Bounds="138 40 1140 3700" DiagramId="16" Id="15" xmlns="http://www.ni.com/LabVIEW.FPGA">
+				<LoopIteration Bounds="5 3670 15 15" Id="18" xmlns="http://www.ni.com/LabVIEW.VI" />
+				<LoopCondition Bounds="1076 3670 15 15" Id="19" LoopConditionMode="Infinite" xmlns="http://www.ni.com/LabVIEW.VI" />
+				<FIFORead Bounds="380 85 46 65" Id="23" />
+				<Literal Bounds="368 140 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="24" Label="25" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="26" Joints="N(24:Out) N(23:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="24" Bounds="368 140 0 0" Id="25" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<IONameConstant Bounds="110.713318 85 245.286667 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="27" Label="28" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\RX.Debug.Test data in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="29" Joints="N(27:Out) N(23:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="27" Bounds="110.713318 85 0 0" Id="28" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="380 170 46 65" Id="30" />
+				<IONameConstant Bounds="92.59 170 263.41 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="31" Label="35" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\RX.channel Coefficients in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="32" Joints="N(31:Out) N(30:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 225 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="33" Label="36" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="34" Joints="N(33:Out) N(30:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="31" Bounds="92.59 170 0 0" Id="35" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="33" Bounds="368 225 0 0" Id="36" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="380 255 46 65" Id="37" />
+				<IONameConstant Bounds="133.37 255 222.63 27" DataType="@bd0b646f83124bcfbb93a3630d8cf38c" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="38" Label="42" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\TX.pulse shape in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="39" Joints="N(38:Out) N(37:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 310 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="40" Label="43" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="41" Joints="N(40:Out) N(37:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="38" Bounds="133.37 255 0 0" Id="42" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="40" Bounds="368 310 0 0" Id="43" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="380 335 46 65" Id="44" />
+				<IONameConstant Bounds="150.833328 335 205.166672 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="45" Label="49" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\TX.Window in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="46" Joints="N(45:Out) N(44:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 390 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="47" Label="50" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="48" Joints="N(47:Out) N(44:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="45" Bounds="150.833328 335 0 0" Id="49" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="47" Bounds="368 390 0 0" Id="50" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="380 415 46 65" Id="51" />
+				<IONameConstant Bounds="132.553329 415 223.446671 27" DataType="@bd0b646f83124bcfbb93a3630d8cf38c" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="52" Label="56" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\RX.pulse shape in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="53" Joints="N(52:Out) N(51:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 470 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="54" Label="57" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="55" Joints="N(54:Out) N(51:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="52" Bounds="132.553329 415 0 0" Id="56" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="54" Bounds="368 470 0 0" Id="57" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="380 500 46 65" Id="58" />
+				<IONameConstant Bounds="145.18 500 210.82 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="59" Label="63" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\TX.Preamble in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="60" Joints="N(59:Out) N(58:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 555 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="61" Label="64" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="62" Joints="N(61:Out) N(58:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="59" Bounds="145.18 500 0 0" Id="63" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="61" Bounds="368 555 0 0" Id="64" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="385 580 46 65" Id="65" />
+				<IONameConstant Bounds="134.46666 580 226.53334 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="66" Label="70" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\TX.modem.data in"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="67" Joints="N(66:Out) N(65:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="373 635 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="68" Label="71" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="69" Joints="N(68:Out) N(65:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="66" Bounds="134.46666 580 0 0" Id="70" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="68" Bounds="373 635 0 0" Id="71" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFORead Bounds="385 675 46 65" Id="72" />
+				<IONameConstant Bounds="189.26 675 171.74 27" DataType="@c9e43d12a8294c35aaef14c0423e6610" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="73" Label="77" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\AWGN"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="74" Joints="N(73:Out) N(72:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="373 730 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="75" Label="78" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="76" Joints="N(75:Out) N(72:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="73" Bounds="189.26 675 0 0" Id="77" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="75" Bounds="373 730 0 0" Id="78" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>ready for output</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="990 95 46 65" Id="121" />
+				<IONameConstant Bounds="740.45 95 225.55 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="128" Label="129" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"USRP Resources.grsc\\Rx Stream 0"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="130" Joints="N(128:Out) N(121:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="128" Bounds="740.45 95 0 0" Id="129" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="990 180 46 65" Id="131" />
+				<IONameConstant Bounds="740.45 180 225.55 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="132" Label="138" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"USRP Resources.grsc\\Rx Stream 1"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="133" Joints="N(132:Out) N(131:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="132" Bounds="740.45 180 0 0" Id="138" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="990 255 46 65" Id="141" />
+				<IONameConstant Bounds="746.853333 255 219.146667 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="142" Label="155" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\RX.Preamble out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="143" Joints="N(142:Out) N(141:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="990 340 46 65" Id="144" />
+				<IONameConstant Bounds="785.36 340 180.64 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="145" Label="156" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\Data out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="146" Joints="N(145:Out) N(144:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="142" Bounds="746.853333 255 0 0" Id="155" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="145" Bounds="785.36 340 0 0" Id="156" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="990 420 46 65" Id="161" />
+				<IONameConstant Bounds="718.97 420 247.03 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="162" Label="188" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\TX.Debug.Encoder out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<FIFOWrite Bounds="990 505 46 65" Id="163" />
+				<IONameConstant Bounds="720.313354 505 245.686661 27" DataType="@e1848aa5501d4eebbf9e14e274c824bb" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="164" Label="189" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Resources.grsc\\TX.Debug.Modem out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="165" Joints="N(164:Out) N(163:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="990 580 46 65" Id="166" />
+				<IONameConstant Bounds="644.9 580 321.1 27" DataType="@1332f23270714a9db142c282704a7814" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="167" Label="190" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Needed Resources.grsc\\RX.Debug.Modem_32 bit samples out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="168" Joints="N(167:Out) N(166:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="990 665 46 65" Id="169" />
+				<IONameConstant Bounds="771.146667 665 194.853333 27" DataType="@97e767d9fdbf47c88d82e9428508d2e2" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="170" Label="191" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>"Resources.grsc\\RX.data out"</p.Data>
+					<IONameConstantBehavior />
+				</IONameConstant>
+				<Wire Id="171" Joints="N(170:Out) N(169:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="162" Bounds="718.97 420 0 0" Id="188" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="164" Bounds="720.313354 505 0 0" Id="189" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="167" Bounds="644.9 580 0 0" Id="190" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="170" Bounds="771.146667 665 0 0" Id="191" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>reference in</p.Text>
+				</NodeLabel>
+				<Wire Id="278" Joints="N(162:Out) N(161:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="368" Joints="N(23:data) h(5) v(65) h(549) v(-55) N(121:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="369" Joints="N(23:Control Protocol Output) h(559) v(10) N(121:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="370" Joints="N(30:data) h(5) v(-15) h(549) v(25) N(131:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="371" Joints="N(30:Control Protocol Output) h(559) v(10) N(131:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="372" Joints="N(37:data) h(5) v(-20) h(549) v(20) N(141:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="373" Joints="N(37:Control Protocol Output) N(141:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="374" Joints="N(44:data) h(5) v(-25) h(549) v(30) N(144:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="375" Joints="N(44:Control Protocol Output) h(559) v(5) N(144:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="376" Joints="N(51:data) h(5) v(-25) h(549) v(30) N(161:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="377" Joints="N(51:Control Protocol Output) h(559) v(5) N(161:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="378" Joints="N(58:data) h(5) v(-30) h(549) v(35) N(163:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="379" Joints="N(58:Control Protocol Output) h(559) v(5) N(163:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="380" Joints="N(65:data) h(10) v(20) h(539) v(-20) N(166:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="381" Joints="N(65:Control Protocol Output) N(166:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="393" Joints="N(72:Control Protocol Output) h(554) v(-10) N(169:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="394" Joints="N(72:data) h(5) v(-30) h(544) v(20) N(169:data)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="475 780 46 65" Id="402" />
+				<FIFORead Bounds="550 780 46 65" Id="403" />
+				<Wire Id="404" Joints="N(402:reference out) N(403:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="405" Joints="N(402:Control Protocol Output) N(403:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="360 755 40 40" Id="406" />
+				<Wire Id="407" Joints="N(406:reference out) h(65) v(25) N(402:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="348 756 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="408" Label="409" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<NodeLabel AttachedTo="408" Bounds="348 756 0 0" Id="409" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<Literal Bounds="348 766 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="410" Label="411" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<NodeLabel AttachedTo="410" Bounds="348 766 0 0" Id="411" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<Wire Facade="WireInvisibleFacade" Id="412" Joints="N(408:Out) h(5) v(-1) N(406:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Facade="WireInvisibleFacade" Id="413" Joints="N(410:Out) h(-5) v(-1) N(406:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="463 790 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="414" Label="415" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="416" Joints="N(414:Out) N(402:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="414" Bounds="463 790 0 0" Id="415" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<Literal Bounds="463 826 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="417" Label="418" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="419" Joints="N(417:Out) h(5) v(-1) N(402:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="417" Bounds="463 826 0 0" Id="418" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="475 870 46 65" Id="420" />
+				<FIFORead Bounds="550 870 46 65" Id="421" />
+				<Wire Id="422" Joints="N(420:reference out) N(421:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="423" Joints="N(420:Control Protocol Output) N(421:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="360 845 40 40" Id="424" />
+				<Wire Id="425" Joints="N(424:reference out) h(65) v(25) N(420:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="463 880 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="426" Label="434" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="427" Joints="N(426:Out) N(420:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="463 915 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="428" Label="435" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="429" Joints="N(428:Out) N(420:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="348 845 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="430" Label="436" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="431" Joints="N(430:Out) N(424:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="348 855 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="432" Label="437" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="433" Joints="N(432:Out) N(424:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="426" Bounds="463 880 0 0" Id="434" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="428" Bounds="463 915 0 0" Id="435" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="430" Bounds="348 845 0 0" Id="436" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="432" Bounds="348 855 0 0" Id="437" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="485 965 46 65" Id="438" />
+				<FIFORead Bounds="560 965 46 65" Id="439" />
+				<Wire Id="440" Joints="N(438:reference out) N(439:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="441" Joints="N(438:Control Protocol Output) N(439:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="370 940 40 40" Id="442" />
+				<Wire Id="443" Joints="N(442:reference out) h(65) v(25) N(438:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="485 1055 46 65" Id="444" />
+				<FIFORead Bounds="560 1055 46 65" Id="445" />
+				<Wire Id="446" Joints="N(444:reference out) N(445:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="447" Joints="N(444:Control Protocol Output) N(445:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="370 1030 40 40" Id="448" />
+				<Wire Id="449" Joints="N(448:reference out) h(65) v(25) N(444:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 975 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="450" Label="466" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="451" Joints="N(450:Out) N(438:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1010 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="452" Label="467" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="453" Joints="N(452:Out) N(438:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 940 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="454" Label="468" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="455" Joints="N(454:Out) N(442:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 950 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="456" Label="469" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="457" Joints="N(456:Out) N(442:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1065 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="458" Label="470" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="459" Joints="N(458:Out) N(444:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1100 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="460" Label="471" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="461" Joints="N(460:Out) N(444:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1030 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="462" Label="472" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="463" Joints="N(462:Out) N(448:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1040 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="464" Label="473" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="465" Joints="N(464:Out) N(448:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="450" Bounds="473 975 0 0" Id="466" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="452" Bounds="473 1010 0 0" Id="467" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="454" Bounds="358 940 0 0" Id="468" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="456" Bounds="358 950 0 0" Id="469" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="458" Bounds="473 1065 0 0" Id="470" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="460" Bounds="473 1100 0 0" Id="471" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="462" Bounds="358 1030 0 0" Id="472" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="464" Bounds="358 1040 0 0" Id="473" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="480 1145 46 65" Id="474" />
+				<FIFORead Bounds="555 1145 46 65" Id="475" />
+				<Wire Id="476" Joints="N(474:reference out) N(475:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="477" Joints="N(474:Control Protocol Output) N(475:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="365 1120 40 40" Id="478" />
+				<Wire Id="479" Joints="N(478:reference out) h(65) v(25) N(474:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="480 1235 46 65" Id="480" />
+				<FIFORead Bounds="555 1235 46 65" Id="481" />
+				<Wire Id="482" Joints="N(480:reference out) N(481:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="483" Joints="N(480:Control Protocol Output) N(481:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="365 1210 40 40" Id="484" />
+				<Wire Id="485" Joints="N(484:reference out) h(65) v(25) N(480:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="490 1330 46 65" Id="486" />
+				<FIFORead Bounds="565 1330 46 65" Id="487" />
+				<Wire Id="488" Joints="N(486:reference out) N(487:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="489" Joints="N(486:Control Protocol Output) N(487:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="375 1305 40 40" Id="490" />
+				<Wire Id="491" Joints="N(490:reference out) h(65) v(25) N(486:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="490 1415 46 65" Id="492" />
+				<FIFORead Bounds="565 1415 46 65" Id="493" />
+				<Wire Id="494" Joints="N(492:reference out) N(493:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="495" Joints="N(492:Control Protocol Output) N(493:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="375 1395 40 40" Id="496" />
+				<Wire Id="497" Joints="N(496:reference out) h(65) v(20) N(492:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1155 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="498" Label="530" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="499" Joints="N(498:Out) N(474:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1190 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="500" Label="531" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="501" Joints="N(500:Out) N(474:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1120 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="502" Label="532" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="503" Joints="N(502:Out) N(478:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1130 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="504" Label="533" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="505" Joints="N(504:Out) N(478:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1245 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="506" Label="534" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="507" Joints="N(506:Out) N(480:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1280 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="508" Label="535" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="509" Joints="N(508:Out) N(480:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1210 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="510" Label="536" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="511" Joints="N(510:Out) N(484:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1220 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="512" Label="537" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="513" Joints="N(512:Out) N(484:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1340 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="514" Label="538" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="515" Joints="N(514:Out) N(486:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1375 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="516" Label="539" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="517" Joints="N(516:Out) N(486:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1305 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="518" Label="540" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="519" Joints="N(518:Out) N(490:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1315 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="520" Label="541" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="521" Joints="N(520:Out) N(490:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1425 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="522" Label="542" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="523" Joints="N(522:Out) N(492:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1460 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="524" Label="543" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="525" Joints="N(524:Out) N(492:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1395 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="526" Label="544" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="527" Joints="N(526:Out) N(496:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1405 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="528" Label="545" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="529" Joints="N(528:Out) N(496:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="498" Bounds="468 1155 0 0" Id="530" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="500" Bounds="468 1190 0 0" Id="531" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="502" Bounds="353 1120 0 0" Id="532" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="504" Bounds="353 1130 0 0" Id="533" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="506" Bounds="468 1245 0 0" Id="534" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="508" Bounds="468 1280 0 0" Id="535" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="510" Bounds="353 1210 0 0" Id="536" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="512" Bounds="353 1220 0 0" Id="537" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="514" Bounds="478 1340 0 0" Id="538" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="516" Bounds="478 1375 0 0" Id="539" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="518" Bounds="363 1305 0 0" Id="540" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="520" Bounds="363 1315 0 0" Id="541" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="522" Bounds="478 1425 0 0" Id="542" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="524" Bounds="478 1460 0 0" Id="543" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="526" Bounds="363 1395 0 0" Id="544" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="528" Bounds="363 1405 0 0" Id="545" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="480 1510 46 65" Id="546" />
+				<FIFORead Bounds="555 1510 46 65" Id="547" />
+				<Wire Id="548" Joints="N(546:reference out) N(547:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="549" Joints="N(546:Control Protocol Output) N(547:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="365 1485 40 40" Id="550" />
+				<Wire Id="551" Joints="N(550:reference out) h(65) v(25) N(546:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="480 1600 46 65" Id="552" />
+				<FIFORead Bounds="555 1600 46 65" Id="553" />
+				<Wire Id="554" Joints="N(552:reference out) N(553:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="555" Joints="N(552:Control Protocol Output) N(553:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="365 1575 40 40" Id="556" />
+				<Wire Id="557" Joints="N(556:reference out) h(65) v(25) N(552:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="490 1695 46 65" Id="558" />
+				<FIFORead Bounds="565 1695 46 65" Id="559" />
+				<Wire Id="560" Joints="N(558:reference out) N(559:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="561" Joints="N(558:Control Protocol Output) N(559:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="375 1670 40 40" Id="562" />
+				<Wire Id="563" Joints="N(562:reference out) h(65) v(25) N(558:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="490 1785 46 65" Id="564" />
+				<FIFORead Bounds="565 1785 46 65" Id="565" />
+				<Wire Id="566" Joints="N(564:reference out) N(565:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="567" Joints="N(564:Control Protocol Output) N(565:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="375 1760 40 40" Id="568" />
+				<Wire Id="569" Joints="N(568:reference out) h(65) v(25) N(564:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="485 1875 46 65" Id="570" />
+				<FIFORead Bounds="560 1875 46 65" Id="571" />
+				<Wire Id="572" Joints="N(570:reference out) N(571:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="573" Joints="N(570:Control Protocol Output) N(571:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="370 1850 40 40" Id="574" />
+				<Wire Id="575" Joints="N(574:reference out) h(65) v(25) N(570:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="485 1965 46 65" Id="576" />
+				<FIFORead Bounds="560 1965 46 65" Id="577" />
+				<Wire Id="578" Joints="N(576:reference out) N(577:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="579" Joints="N(576:Control Protocol Output) N(577:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="370 1940 40 40" Id="580" />
+				<Wire Id="581" Joints="N(580:reference out) h(65) v(25) N(576:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="495 2060 46 65" Id="582" />
+				<FIFORead Bounds="570 2060 46 65" Id="583" />
+				<Wire Id="584" Joints="N(582:reference out) N(583:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="585" Joints="N(582:Control Protocol Output) N(583:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="380 2035 40 40" Id="586" />
+				<Wire Id="587" Joints="N(586:reference out) h(65) v(25) N(582:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="495 2145 46 65" Id="588" />
+				<FIFORead Bounds="570 2145 46 65" Id="589" />
+				<Wire Id="590" Joints="N(588:reference out) N(589:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="591" Joints="N(588:Control Protocol Output) N(589:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="380 2125 40 40" Id="592" />
+				<Wire Id="593" Joints="N(592:reference out) h(65) v(20) N(588:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1520 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="594" Label="658" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="595" Joints="N(594:Out) N(546:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1555 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="596" Label="659" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="597" Joints="N(596:Out) N(546:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1485 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="598" Label="660" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="599" Joints="N(598:Out) N(550:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1495 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="600" Label="661" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="601" Joints="N(600:Out) N(550:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1610 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="602" Label="662" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="603" Joints="N(602:Out) N(552:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="468 1645 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="604" Label="663" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="605" Joints="N(604:Out) N(552:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1575 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="606" Label="664" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="607" Joints="N(606:Out) N(556:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="353 1585 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="608" Label="665" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="609" Joints="N(608:Out) N(556:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1705 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="610" Label="666" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="611" Joints="N(610:Out) N(558:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1740 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="612" Label="667" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="613" Joints="N(612:Out) N(558:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1670 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="614" Label="668" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="615" Joints="N(614:Out) N(562:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1680 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="616" Label="669" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="617" Joints="N(616:Out) N(562:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1795 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="618" Label="670" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="619" Joints="N(618:Out) N(564:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="478 1830 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="620" Label="671" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="621" Joints="N(620:Out) N(564:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1760 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="622" Label="672" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="623" Joints="N(622:Out) N(568:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="363 1770 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="624" Label="673" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="625" Joints="N(624:Out) N(568:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1885 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="626" Label="674" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="627" Joints="N(626:Out) N(570:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1920 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="628" Label="675" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="629" Joints="N(628:Out) N(570:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1850 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="630" Label="676" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="631" Joints="N(630:Out) N(574:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1860 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="632" Label="677" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="633" Joints="N(632:Out) N(574:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 1975 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="634" Label="678" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="635" Joints="N(634:Out) N(576:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="473 2010 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="636" Label="679" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="637" Joints="N(636:Out) N(576:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1940 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="638" Label="680" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="639" Joints="N(638:Out) N(580:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="358 1950 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="640" Label="681" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="641" Joints="N(640:Out) N(580:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="483 2070 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="642" Label="682" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="643" Joints="N(642:Out) N(582:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="483 2105 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="644" Label="683" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="645" Joints="N(644:Out) N(582:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 2035 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="646" Label="684" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="647" Joints="N(646:Out) N(586:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 2045 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="648" Label="685" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="649" Joints="N(648:Out) N(586:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="483 2155 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="650" Label="686" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="651" Joints="N(650:Out) N(588:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="483 2190 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="652" Label="687" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="653" Joints="N(652:Out) N(588:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 2125 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="654" Label="688" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="655" Joints="N(654:Out) N(592:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="368 2135 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="656" Label="689" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="657" Joints="N(656:Out) N(592:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="594" Bounds="468 1520 0 0" Id="658" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="596" Bounds="468 1555 0 0" Id="659" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="598" Bounds="353 1485 0 0" Id="660" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="600" Bounds="353 1495 0 0" Id="661" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="602" Bounds="468 1610 0 0" Id="662" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="604" Bounds="468 1645 0 0" Id="663" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="606" Bounds="353 1575 0 0" Id="664" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="608" Bounds="353 1585 0 0" Id="665" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="610" Bounds="478 1705 0 0" Id="666" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="612" Bounds="478 1740 0 0" Id="667" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="614" Bounds="363 1670 0 0" Id="668" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="616" Bounds="363 1680 0 0" Id="669" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="618" Bounds="478 1795 0 0" Id="670" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="620" Bounds="478 1830 0 0" Id="671" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="622" Bounds="363 1760 0 0" Id="672" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="624" Bounds="363 1770 0 0" Id="673" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="626" Bounds="473 1885 0 0" Id="674" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="628" Bounds="473 1920 0 0" Id="675" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="630" Bounds="358 1850 0 0" Id="676" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="632" Bounds="358 1860 0 0" Id="677" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="634" Bounds="473 1975 0 0" Id="678" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="636" Bounds="473 2010 0 0" Id="679" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="638" Bounds="358 1940 0 0" Id="680" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="640" Bounds="358 1950 0 0" Id="681" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="642" Bounds="483 2070 0 0" Id="682" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="644" Bounds="483 2105 0 0" Id="683" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="646" Bounds="368 2035 0 0" Id="684" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="648" Bounds="368 2045 0 0" Id="685" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="650" Bounds="483 2155 0 0" Id="686" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="652" Bounds="483 2190 0 0" Id="687" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="654" Bounds="368 2125 0 0" Id="688" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="656" Bounds="368 2135 0 0" Id="689" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<FIFOWrite Bounds="510 2250 46 65" Id="690" />
+				<FIFORead Bounds="585 2250 46 65" Id="691" />
+				<Wire Id="692" Joints="N(690:reference out) N(691:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="693" Joints="N(690:Control Protocol Output) N(691:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="395 2225 40 40" Id="694" />
+				<Wire Id="695" Joints="N(694:reference out) h(65) v(25) N(690:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="510 2340 46 65" Id="696" />
+				<FIFORead Bounds="585 2340 46 65" Id="697" />
+				<Wire Id="698" Joints="N(696:reference out) N(697:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="699" Joints="N(696:Control Protocol Output) N(697:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="395 2315 40 40" Id="700" />
+				<Wire Id="701" Joints="N(700:reference out) h(65) v(25) N(696:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="520 2435 46 65" Id="702" />
+				<FIFORead Bounds="595 2435 46 65" Id="703" />
+				<Wire Id="704" Joints="N(702:reference out) N(703:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="705" Joints="N(702:Control Protocol Output) N(703:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="405 2410 40 40" Id="706" />
+				<Wire Id="707" Joints="N(706:reference out) h(65) v(25) N(702:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="520 2525 46 65" Id="708" />
+				<FIFORead Bounds="595 2525 46 65" Id="709" />
+				<Wire Id="710" Joints="N(708:reference out) N(709:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="711" Joints="N(708:Control Protocol Output) N(709:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="405 2500 40 40" Id="712" />
+				<Wire Id="713" Joints="N(712:reference out) h(65) v(25) N(708:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="515 2615 46 65" Id="714" />
+				<FIFORead Bounds="590 2615 46 65" Id="715" />
+				<Wire Id="716" Joints="N(714:reference out) N(715:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="717" Joints="N(714:Control Protocol Output) N(715:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="400 2590 40 40" Id="718" />
+				<Wire Id="719" Joints="N(718:reference out) h(65) v(25) N(714:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="515 2705 46 65" Id="720" />
+				<FIFORead Bounds="590 2705 46 65" Id="721" />
+				<Wire Id="722" Joints="N(720:reference out) N(721:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="723" Joints="N(720:Control Protocol Output) N(721:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="400 2680 40 40" Id="724" />
+				<Wire Id="725" Joints="N(724:reference out) h(65) v(25) N(720:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="525 2800 46 65" Id="726" />
+				<FIFORead Bounds="600 2800 46 65" Id="727" />
+				<Wire Id="728" Joints="N(726:reference out) N(727:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="729" Joints="N(726:Control Protocol Output) N(727:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="410 2775 40 40" Id="730" />
+				<Wire Id="731" Joints="N(730:reference out) h(65) v(25) N(726:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="525 2885 46 65" Id="732" />
+				<FIFORead Bounds="600 2885 46 65" Id="733" />
+				<Wire Id="734" Joints="N(732:reference out) N(733:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="735" Joints="N(732:Control Protocol Output) N(733:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="410 2865 40 40" Id="736" />
+				<Wire Id="737" Joints="N(736:reference out) h(65) v(20) N(732:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="515 2980 46 65" Id="738" />
+				<FIFORead Bounds="590 2980 46 65" Id="739" />
+				<Wire Id="740" Joints="N(738:reference out) N(739:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="741" Joints="N(738:Control Protocol Output) N(739:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="400 2955 40 40" Id="742" />
+				<Wire Id="743" Joints="N(742:reference out) h(65) v(25) N(738:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="515 3070 46 65" Id="744" />
+				<FIFORead Bounds="590 3070 46 65" Id="745" />
+				<Wire Id="746" Joints="N(744:reference out) N(745:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="747" Joints="N(744:Control Protocol Output) N(745:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="400 3045 40 40" Id="748" />
+				<Wire Id="749" Joints="N(748:reference out) h(65) v(25) N(744:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="525 3165 46 65" Id="750" />
+				<FIFORead Bounds="600 3165 46 65" Id="751" />
+				<Wire Id="752" Joints="N(750:reference out) N(751:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="753" Joints="N(750:Control Protocol Output) N(751:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="410 3140 40 40" Id="754" />
+				<Wire Id="755" Joints="N(754:reference out) h(65) v(25) N(750:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="525 3255 46 65" Id="756" />
+				<FIFORead Bounds="600 3255 46 65" Id="757" />
+				<Wire Id="758" Joints="N(756:reference out) N(757:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="759" Joints="N(756:Control Protocol Output) N(757:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="410 3230 40 40" Id="760" />
+				<Wire Id="761" Joints="N(760:reference out) h(65) v(25) N(756:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="520 3345 46 65" Id="762" />
+				<FIFORead Bounds="595 3345 46 65" Id="763" />
+				<Wire Id="764" Joints="N(762:reference out) N(763:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="765" Joints="N(762:Control Protocol Output) N(763:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="405 3320 40 40" Id="766" />
+				<Wire Id="767" Joints="N(766:reference out) h(65) v(25) N(762:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="520 3435 46 65" Id="768" />
+				<FIFORead Bounds="595 3435 46 65" Id="769" />
+				<Wire Id="770" Joints="N(768:reference out) N(769:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="771" Joints="N(768:Control Protocol Output) N(769:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="405 3410 40 40" Id="772" />
+				<Wire Id="773" Joints="N(772:reference out) h(65) v(25) N(768:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="530 3530 46 65" Id="774" />
+				<FIFORead Bounds="605 3530 46 65" Id="775" />
+				<Wire Id="776" Joints="N(774:reference out) N(775:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="777" Joints="N(774:Control Protocol Output) N(775:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="415 3505 40 40" Id="778" />
+				<Wire Id="779" Joints="N(778:reference out) h(65) v(25) N(774:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOWrite Bounds="530 3615 46 65" Id="780" />
+				<FIFORead Bounds="605 3615 46 65" Id="781" />
+				<Wire Id="782" Joints="N(780:reference out) N(781:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="783" Joints="N(780:Control Protocol Output) N(781:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<FIFOCreate Bounds="415 3595 40 40" Id="784" />
+				<Wire Id="785" Joints="N(784:reference out) h(65) v(20) N(780:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="498 2260 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="786" Label="914" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="787" Joints="N(786:Out) N(690:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="498 2295 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="788" Label="915" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="789" Joints="N(788:Out) N(690:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="383 2225 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="790" Label="916" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="791" Joints="N(790:Out) N(694:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="383 2235 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="792" Label="917" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="793" Joints="N(792:Out) N(694:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="498 2350 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="794" Label="918" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="795" Joints="N(794:Out) N(696:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="498 2385 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="796" Label="919" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="797" Joints="N(796:Out) N(696:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="383 2315 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="798" Label="920" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="799" Joints="N(798:Out) N(700:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="383 2325 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="800" Label="921" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="801" Joints="N(800:Out) N(700:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 2445 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="802" Label="922" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="803" Joints="N(802:Out) N(702:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 2480 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="804" Label="923" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="805" Joints="N(804:Out) N(702:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 2410 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="806" Label="924" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="807" Joints="N(806:Out) N(706:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 2420 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="808" Label="925" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="809" Joints="N(808:Out) N(706:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 2535 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="810" Label="926" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="811" Joints="N(810:Out) N(708:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 2570 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="812" Label="927" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="813" Joints="N(812:Out) N(708:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 2500 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="814" Label="928" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="815" Joints="N(814:Out) N(712:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 2510 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="816" Label="929" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="817" Joints="N(816:Out) N(712:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 2625 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="818" Label="930" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="819" Joints="N(818:Out) N(714:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 2660 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="820" Label="931" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="821" Joints="N(820:Out) N(714:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2590 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="822" Label="932" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="823" Joints="N(822:Out) N(718:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2600 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="824" Label="933" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="825" Joints="N(824:Out) N(718:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 2715 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="826" Label="934" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="827" Joints="N(826:Out) N(720:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 2750 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="828" Label="935" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="829" Joints="N(828:Out) N(720:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2680 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="830" Label="936" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="831" Joints="N(830:Out) N(724:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2690 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="832" Label="937" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="833" Joints="N(832:Out) N(724:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 2810 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="834" Label="938" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="835" Joints="N(834:Out) N(726:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 2845 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="836" Label="939" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="837" Joints="N(836:Out) N(726:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 2775 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="838" Label="940" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="839" Joints="N(838:Out) N(730:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 2785 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="840" Label="941" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="841" Joints="N(840:Out) N(730:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 2895 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="842" Label="942" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="843" Joints="N(842:Out) N(732:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 2930 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="844" Label="943" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="845" Joints="N(844:Out) N(732:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 2865 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="846" Label="944" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="847" Joints="N(846:Out) N(736:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 2875 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="848" Label="945" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="849" Joints="N(848:Out) N(736:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 2990 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="850" Label="946" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="851" Joints="N(850:Out) N(738:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 3025 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="852" Label="947" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="853" Joints="N(852:Out) N(738:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2955 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="854" Label="948" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="855" Joints="N(854:Out) N(742:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 2965 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="856" Label="949" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="857" Joints="N(856:Out) N(742:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 3080 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="858" Label="950" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="859" Joints="N(858:Out) N(744:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="503 3115 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="860" Label="951" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="861" Joints="N(860:Out) N(744:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 3045 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="862" Label="952" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="863" Joints="N(862:Out) N(748:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="388 3055 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="864" Label="953" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="865" Joints="N(864:Out) N(748:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 3175 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="866" Label="954" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="867" Joints="N(866:Out) N(750:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 3210 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="868" Label="955" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="869" Joints="N(868:Out) N(750:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 3140 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="870" Label="956" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="871" Joints="N(870:Out) N(754:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 3150 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="872" Label="957" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="873" Joints="N(872:Out) N(754:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 3265 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="874" Label="958" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="875" Joints="N(874:Out) N(756:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="513 3300 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="876" Label="959" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="877" Joints="N(876:Out) N(756:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 3230 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="878" Label="960" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="879" Joints="N(878:Out) N(760:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="398 3240 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="880" Label="961" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="881" Joints="N(880:Out) N(760:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 3355 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="882" Label="962" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="883" Joints="N(882:Out) N(762:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 3390 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="884" Label="963" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="885" Joints="N(884:Out) N(762:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 3320 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="886" Label="964" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="887" Joints="N(886:Out) N(766:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 3330 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="888" Label="965" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="889" Joints="N(888:Out) N(766:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 3445 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="890" Label="966" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="891" Joints="N(890:Out) N(768:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="508 3480 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="892" Label="967" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="893" Joints="N(892:Out) N(768:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 3410 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="894" Label="968" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="895" Joints="N(894:Out) N(772:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="393 3420 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="896" Label="969" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="897" Joints="N(896:Out) N(772:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="518 3540 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="898" Label="970" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="899" Joints="N(898:Out) N(774:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="518 3575 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="900" Label="971" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="901" Joints="N(900:Out) N(774:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="403 3505 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="902" Label="972" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="903" Joints="N(902:Out) N(778:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="403 3515 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="904" Label="973" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="905" Joints="N(904:Out) N(778:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="518 3625 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="906" Label="974" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="907" Joints="N(906:Out) N(780:data)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="518 3660 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="908" Label="975" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>True</p.Data>
+					<BooleanBehavior />
+					<DockedConstantFacade UndockedSize="26 15" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="909" Joints="N(908:Out) N(780:Control Protocol Input)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="403 3595 12 10" DataType="Int32" Facade="DockedConstantFacade" Id="910" Label="976" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="39.5 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="911" Joints="N(910:Out) N(784:data type)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="403 3605 12 10" DataType="UInt32" Facade="DockedConstantFacade" Id="912" Label="977" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>2049</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+					<DockedConstantFacade UndockedSize="49 16" />
+				</Literal>
+				<Wire Facade="WireInvisibleFacade" Id="913" Joints="N(912:Out) N(784:depth)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+				<NodeLabel AttachedTo="786" Bounds="498 2260 0 0" Id="914" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="788" Bounds="498 2295 0 0" Id="915" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="790" Bounds="383 2225 0 0" Id="916" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="792" Bounds="383 2235 0 0" Id="917" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="794" Bounds="498 2350 0 0" Id="918" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="796" Bounds="498 2385 0 0" Id="919" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="798" Bounds="383 2315 0 0" Id="920" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="800" Bounds="383 2325 0 0" Id="921" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="802" Bounds="508 2445 0 0" Id="922" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="804" Bounds="508 2480 0 0" Id="923" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="806" Bounds="393 2410 0 0" Id="924" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="808" Bounds="393 2420 0 0" Id="925" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="810" Bounds="508 2535 0 0" Id="926" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="812" Bounds="508 2570 0 0" Id="927" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="814" Bounds="393 2500 0 0" Id="928" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="816" Bounds="393 2510 0 0" Id="929" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="818" Bounds="503 2625 0 0" Id="930" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="820" Bounds="503 2660 0 0" Id="931" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="822" Bounds="388 2590 0 0" Id="932" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="824" Bounds="388 2600 0 0" Id="933" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="826" Bounds="503 2715 0 0" Id="934" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="828" Bounds="503 2750 0 0" Id="935" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="830" Bounds="388 2680 0 0" Id="936" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="832" Bounds="388 2690 0 0" Id="937" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="834" Bounds="513 2810 0 0" Id="938" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="836" Bounds="513 2845 0 0" Id="939" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="838" Bounds="398 2775 0 0" Id="940" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="840" Bounds="398 2785 0 0" Id="941" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="842" Bounds="513 2895 0 0" Id="942" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="844" Bounds="513 2930 0 0" Id="943" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="846" Bounds="398 2865 0 0" Id="944" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="848" Bounds="398 2875 0 0" Id="945" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="850" Bounds="503 2990 0 0" Id="946" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="852" Bounds="503 3025 0 0" Id="947" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="854" Bounds="388 2955 0 0" Id="948" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="856" Bounds="388 2965 0 0" Id="949" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="858" Bounds="503 3080 0 0" Id="950" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="860" Bounds="503 3115 0 0" Id="951" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="862" Bounds="388 3045 0 0" Id="952" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="864" Bounds="388 3055 0 0" Id="953" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="866" Bounds="513 3175 0 0" Id="954" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="868" Bounds="513 3210 0 0" Id="955" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="870" Bounds="398 3140 0 0" Id="956" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="872" Bounds="398 3150 0 0" Id="957" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="874" Bounds="513 3265 0 0" Id="958" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="876" Bounds="513 3300 0 0" Id="959" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="878" Bounds="398 3230 0 0" Id="960" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="880" Bounds="398 3240 0 0" Id="961" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="882" Bounds="508 3355 0 0" Id="962" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="884" Bounds="508 3390 0 0" Id="963" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="886" Bounds="393 3320 0 0" Id="964" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="888" Bounds="393 3330 0 0" Id="965" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="890" Bounds="508 3445 0 0" Id="966" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="892" Bounds="508 3480 0 0" Id="967" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="894" Bounds="393 3410 0 0" Id="968" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="896" Bounds="393 3420 0 0" Id="969" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="898" Bounds="518 3540 0 0" Id="970" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="900" Bounds="518 3575 0 0" Id="971" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="902" Bounds="403 3505 0 0" Id="972" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="904" Bounds="403 3515 0 0" Id="973" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="906" Bounds="518 3625 0 0" Id="974" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="908" Bounds="518 3660 0 0" Id="975" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input valid</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="910" Bounds="403 3595 0 0" Id="976" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data type</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="912" Bounds="403 3605 0 0" Id="977" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>depth</p.Text>
+				</NodeLabel>
+				<ClockDrivenLoop.ClockBorderNode Bounds="1 70 22 20" Docking="Left" Id="17" Terminals="15=22" />
+			</ClockDrivenLoop>
+			<IONameConstant Bounds="-61.05667 110 182.056671 27" DataType="@7e2e79bc8b214a008a9e13fd0008ce8f" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="20" Label="21" UdrClass="Clock" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>"Needed Resources.grsc\\100 MHz"</p.Data>
+				<IONameConstantBehavior />
+			</IONameConstant>
+			<NodeLabel AttachedTo="20" Bounds="-61.05667 110 0 0" Id="21" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>clock input</p.Text>
+			</NodeLabel>
+			<Wire Id="22" Joints="N(20:Out) h(5) v(5) N(17:15)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="c9e43d12a8294c35aaef14c0423e6610">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoReadInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoReadInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt32 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bd0b646f83124bcfbb93a3630d8cf38c">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoReadInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoReadInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt64 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt64" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="1332f23270714a9db142c282704a7814">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt32 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt32" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e1848aa5501d4eebbf9e14e274c824bb">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt64 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt64" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="97e767d9fdbf47c88d82e9428508d2e2">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt8 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt8" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="7e2e79bc8b214a008a9e13fd0008ce8f">
+			<Attributed>
+				<AttributedType>
+					<Composite Id="1" Name="ClockDataType" ReferenceClass="" GenericTypeDefinition="Void" BaseType="Void" />
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Clock" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="925e7625a0874ce68843f019a6e36348">
+			<Generic />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

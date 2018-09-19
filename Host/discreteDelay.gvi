@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="380C4F21B9572AA7457D816DA84C6263" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 30 20" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]20" Id="3" Left="[float]0" Top="[float]0" Width="[float]30">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="58" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="59" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="60" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]14" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]24">
+					<Text Id="61" Left="[float]7" Text="[string]D" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="9" Id="62" />
+					</Text>
+				</Canvas>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="20" Id="10" ListViewHeight="85" ListViewWidth="150" Width="30" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="26" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="20" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="30 5" ListViewHotspot="150 50" Parameter="52" />
+			<ConnectorPaneTerminal Hotspot="30 15" />
+			<ConnectorPaneTerminal Hotspot="15 20" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0">
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="23" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[int]1" Left="[float]0" MinHeight="[float]22" Name="[string]N" Top="[float]0" Value="{DataItemBinding Id=20}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="29" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[uint]1" Left="[float]0" MinHeight="[float]22" Name="[string]in" Top="[float]0" Value="{DataItemBinding Id=26}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="55" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Left="[float]0" MinHeight="[float]22" Name="[string]out" Top="[float]0" Value="{DataItemBinding Id=52}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="13">
+			<InitializeArray Bounds="420 500 40 30" Id="16" Terminals="element=19, outArray=34, c0t0v=25" />
+			<Literal Bounds="335 505 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="17" Label="18" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<NodeLabel AttachedTo="17" Bounds="335 505 0 0" Id="18" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>element</p.Text>
+			</NodeLabel>
+			<Wire Id="19" Joints="N(17:Out) h(35.5) v(-5) N(16:element)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="305 520 40 15" DataItem="20" Id="22" Label="24" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="22" Bounds="290 520 10 14" Id="24" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>N</p.Text>
+			</NodeLabel>
+			<Wire Id="25" Joints="N(22:Value) h(50) B(1) N(16:c0t0v) B(1) v(-225) N(49:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="370 260 40 15" DataItem="26" Id="28" Label="30" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="28" Bounds="355 260 10 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>in</p.Text>
+			</NodeLabel>
+			<FeedbackNode Bounds="590 455 30 20" EnableTerminalVisible="False" Id="33" />
+			<Wire Id="34" Joints="N(16:outArray) h(15) v(-55) h(130) N(33:initial value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<BuildArray Bounds="595 260 40 20" CanToggle="False" ConcatenateInputs="True" Id="44" Terminals="outArray=50, c0t0v=48, c1t0v=47" VerticalChunkCount="2" />
+			<Wire Id="47" Joints="N(33:output) h(-155) v(-190) N(44:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="48" Joints="N(28:Value) N(44:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DeleteFromArray Bounds="710 265 40 40" Id="49" Terminals="inArray=50, length (1), outArray=51, deleted=57, index0=25" />
+			<Wire Id="50" Joints="N(44:outArray) h(65) v(5) N(49:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="51" Joints="N(49:outArray) h(10) v(195) N(33:input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="900 290 40 15" DataItem="52" Id="54" Label="56" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="54" Bounds="945 290 18 14" Id="56" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>out</p.Text>
+			</NodeLabel>
+			<Wire Id="57" Joints="N(49:deleted) h(145) v(5) N(54:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Int32" Id="20" Name="N" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="UInt32" Id="26" Name="in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="UInt32" Id="52" Name="out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+</SourceFile>

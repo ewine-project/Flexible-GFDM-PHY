@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 30" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]30" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6.75," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]norm CFX-Array" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="30" Id="9" ListViewHeight="60" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="28" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 50" Parameter="27" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="15 30" />
+            <ConnectorPaneTerminal Hotspot="25 30" />
+            <ConnectorPaneTerminal Hotspot="35 30" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <ArrayViewer ArrayElement="[UIModel]30" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]2" Id="29" IsFixedSize="[bool]False" Name="[string]Output" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=27}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="30" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ComplexNumber]0x1;0x0" Maximum="[ComplexNumber]0x7FFFFFFFp-16;0x7FFFFFFFp-16" Minimum="[ComplexNumber]0xFp+15;0xFp+15" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueFormatter="[string]LVFXP:CFXP_16_16&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(16.16)" Width="[float]54" />
+            </ArrayViewer>
+            <ArrayViewer ArrayElement="[UIModel]32" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]2" Id="31" IsFixedSize="[bool]False" Name="[string]Input" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=28}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="32" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ComplexNumber]0x1;0x0" Maximum="[ComplexNumber]0x7FFFFFFFp-16;0x7FFFFFFFp-16" Minimum="[ComplexNumber]0xFp+15;0xFp+15" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" ValueFormatter="[string]LVFXP:CFXP_16_16&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(16.16)" Width="[float]69" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <AbsoluteValue Bounds="2140 110 30 30" Id="14" />
+            <ArrayMaxAndMin Bounds="2185 120 40 40" Id="15" />
+            <Wire Id="16" Joints="N(14:abs(x\)) N(15:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Reciprocal Bounds="2255 110 30 30" Id="17">
+                <ConfigurableDataTypeTerminal DataType="UFXP(16.15)" DesiredType="UFXP(16.15)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="1/x" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+            </Reciprocal>
+            <Wire Id="18" Joints="N(15:max value) N(17:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Multiply Bounds="2300 105 30 30" Id="19" Terminals="o=22, c0t0v=21, c1t0v=20">
+                <ConfigurableDataTypeTerminal DataType="CFXP(16.16)[,]" DesiredType="FXP(16.16)" Direction="Output" GuardBits="0" Hotspot="30 15" Id="o" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+            </Multiply>
+            <Wire Id="20" Joints="N(17:1/x) N(19:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="21" Joints="N(24:Value) h(25) B(1) N(14:x) B(1) v(-20) h(195) v(5) N(19:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="22" Joints="N(19:o) N(23:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="2360 115 40 15" DataItem="27" Id="23" Label="25">
+                <Terminal DataType="CFXP(16.16)[,]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="2035 120 40 15" DataItem="28" Id="24" Label="26">
+                <Terminal DataType="CFXP(16.16)[,]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="23" Bounds="2405 115 38 16" Id="25" Text="Output" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="24" Bounds="2002 120 28 16" Id="26" Text="Input" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="CFXP(16.16)[,]" Id="27" Name="Output" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="CFXP(16.16)[,]" Id="28" Name="Input" />
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 30" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]30" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,6.75," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]16 x 4 bit to 64 bit" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="30" Id="9" ListViewHeight="60" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 50" Parameter="19" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 35" Parameter="18" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="15 30" />
+            <ConnectorPaneTerminal Hotspot="25 30" />
+            <ConnectorPaneTerminal Hotspot="35 30" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <ArrayViewer ArrayElement="[UIModel]21" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Id="20" Name="[string]Variable: multiplexer_config" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=18}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="21" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]Child" ValueType="[Type]UInt64" Width="[float]54" />
+            </ArrayViewer>
+            <ArrayViewer ArrayElement="[UIModel]23" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]2" Id="22" IsFixedSize="[bool]False" Name="[string]Variable: array_input" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=19}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="23" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Child" ValueType="[Type]UInt8" Width="[float]69" />
+            </ArrayViewer>
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="950 325 40 15" DataItem="18" Id="14" Label="16">
+                <Terminal DataType="UInt64[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="370 175 40 15" DataItem="19" Id="15" Label="17">
+                <Terminal DataType="UInt8[,]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="14" Bounds="995 325 147 16" Id="16" Text="Variable: multiplexer_config" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="15" Bounds="257 175 108 16" Id="17" Text="Variable: array_input" xmlns="http://www.ni.com/PlatformFramework" />
+            <ForLoop Bounds="458 148 470 370" DiagramId="25" Id="24">
+                <ForLoop.Iteration Bounds="5 340 15 15" Id="27" />
+                <MethodCall Bounds="195 20 30 30" Id="32" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <MethodCall Bounds="195 65 30 30" Id="33" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <ArrayIndex Bounds="25 25 40 180" Id="37" Terminals="array=38, c0t0v, c0t1v=39, c1t0v, c1t1v=40, c2t0v, c2t1v=68, c3t0v, c3t1v=69, c4t0v, c4t1v=70, c5t0v, c5t1v=71, c6t0v, c6t1v=72, c7t0v, c7t1v=73, c8t0v, c8t1v=74, c9t0v, c9t1v=75, c10t0v, c10t1v=76, c11t0v, c11t1v=77, c12t0v, c12t1v=78, c13t0v, c13t1v=79, c14t0v, c14t1v=80, c15t0v, c15t1v=81" VerticalChunkCount="16" />
+                <Wire Id="38" Joints="N(29:25) N(37:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="39" Joints="N(37:c0t1v) h(115) v(-25) N(32:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="40" Joints="N(37:c1t1v) h(125) v(-15) N(32:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <JoinNumbers Bounds="250 45 30 30" Id="41" />
+                <Wire Id="42" Joints="N(32:R1) h(20) v(15) N(41:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="43" Joints="N(33:R1) h(20) v(-15) N(41:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <MethodCall Bounds="195 100 30 30" Id="44" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <MethodCall Bounds="195 145 30 30" Id="45" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <JoinNumbers Bounds="250 125 30 30" Id="46" />
+                <Wire Id="47" Joints="N(44:R1) h(20) v(15) N(46:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="48" Joints="N(45:R1) h(20) v(-15) N(46:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <MethodCall Bounds="195 180 30 30" Id="49" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <MethodCall Bounds="195 225 30 30" Id="50" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <JoinNumbers Bounds="250 205 30 30" Id="51" />
+                <Wire Id="52" Joints="N(49:R1) h(20) v(15) N(51:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="53" Joints="N(50:R1) h(20) v(-15) N(51:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <MethodCall Bounds="195 260 30 30" Id="54" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <MethodCall Bounds="195 305 30 30" Id="55" Target="\4\ bit\ join\ numbers\.gvi">
+                    <p.MethodDeclaration>
+                        <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                            <Parameter Id="L0" Desc="lower" />
+                            <Parameter Id="L2" Desc="upper" />
+                            <Parameter Id="R1" Desc="out" />
+                        </MethodDeclaration>
+                    </p.MethodDeclaration>
+                    <Terminal DataType="UInt8" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Terminal DataType="UInt8" Direction="Output" Hotspot="30 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                </MethodCall>
+                <JoinNumbers Bounds="250 285 30 30" Id="56" />
+                <Wire Id="57" Joints="N(54:R1) h(20) v(15) N(56:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="58" Joints="N(55:R1) h(20) v(-15) N(56:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <JoinNumbers Bounds="300 85 30 30" Id="59" />
+                <Wire Id="60" Joints="N(41:x) h(5) v(30) N(59:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="61" Joints="N(46:x) h(5) v(-35) N(59:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <JoinNumbers Bounds="300 245 30 30" Id="62" />
+                <Wire Id="63" Joints="N(51:x) h(5) v(30) N(62:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="64" Joints="N(56:x) h(5) v(-35) N(62:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <JoinNumbers Bounds="345 165 30 30" Id="65" />
+                <Wire Id="66" Joints="N(59:x) h(10) v(70) N(65:high(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="67" Joints="N(62:x) h(10) v(-75) N(65:low(x\))" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="68" Joints="N(37:c2t1v) N(33:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="69" Joints="N(37:c3t1v) h(125) v(10) N(33:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="70" Joints="N(37:c4t1v) h(115) v(15) N(44:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="71" Joints="N(37:c5t1v) h(105) v(25) N(44:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="72" Joints="N(37:c6t1v) h(95) v(40) N(45:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="73" Joints="N(37:c7t1v) h(85) v(50) N(45:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="74" Joints="N(37:c8t1v) h(75) v(55) N(49:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="75" Joints="N(37:c9t1v) h(65) v(65) N(49:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="76" Joints="N(37:c10t1v) h(55) v(80) N(50:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="77" Joints="N(37:c11t1v) h(45) v(90) N(50:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="78" Joints="N(37:c12t1v) h(35) v(95) N(54:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="79" Joints="N(37:c13t1v) h(25) v(105) N(54:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="80" Joints="N(37:c14t1v) h(15) v(120) N(55:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="81" Joints="N(37:c15t1v) h(5) v(130) N(55:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                <Wire Id="84" Joints="N(65:x) N(83:25)" xmlns="http://www.ni.com/PlatformFramework" />
+                <ForLoop.Count Bounds="1 1 15 15" Docking="Left" Id="26" Terminals="24, 25" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="-5 27 13 10" Docking="Left" Id="29" Terminals="24=28, 25=38" />
+                <ForLoop.Tunnel AutoIndex="True" Bounds="460 177 13 10" Docking="Right" Id="83" Terminals="24=82, 25=84" />
+            </ForLoop>
+            <Wire Id="28" Joints="N(15:Value) N(29:24)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="82" Joints="N(83:24) N(14:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="UInt64[]" Id="18" Name="Variable: multiplexer_config" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="UInt8[,]" Id="19" Name="Variable: array_input" />
+    </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A13EFE6D3D748CBC82ABE31DE653099F" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Reads data from multiple 32-bit FIFOs. This node is a wrapper around the LabVIEW FPGA FIFO Read method. This node exposes handshaking signals to control when data is read from the FIFOs.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Input Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;enabled&lt;/b&gt; specifies which streams are enabled.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;FIFO 0&lt;/b&gt; is the reference to the FIFO which contains data to be sent over channel 0.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;FIFO 1&lt;/b&gt; is the reference to the FIFO which contains data to be sent over channel 1.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;ready for output&lt;/b&gt; specifies whether the downstream node is ready for new data.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Output Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;data out&lt;/b&gt; is the data read from the FIFO and to be transmitted.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;output valid&lt;/b&gt; specifies when &amp;#39;data out&amp;#39; is valid.&lt;/p&gt;"</p.UserDescription>
+		<Icon Id="72" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]50" Id="95" Left="[float]0" Top="[float]0" Width="[float]50">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="96" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="97" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe6e6e6" Id="98" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<Rectangle Fill="[SMLinearGradientBrush]{Start: 0.5 0}, {End: 0.5 1}, {Stops: {Stop: #ffe6e6e6 0}, {Stop: #ffd9d9d9 1}}" Height="[float]6" Id="99" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,0,2,2" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2" RadiusY="[float]2" Top="[float]0" VerticalAlignment="[VerticalAlignment]Bottom" />
+					<Rectangle Fill="[SMLinearGradientBrush]{Start: 0.5 0}, {End: 0.5 1}, {Stops: {Stop: #fffafafa 0}, {Stop: #ffe6e6e6 1}}" Height="[float]6" Id="100" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]2,2,2,0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2" RadiusY="[float]2" Top="[float]0" VerticalAlignment="[VerticalAlignment]Top" />
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]50" Id="101" Left="[float]0" Top="[float]0" Width="[float]50">
+					<Path Data="[PathGeometry]M 18.588,0.637 C 17.464,0.921 16.164,1.207 15,1.181 C 13.836,1.207 12.536,0.921 11.412,0.637 C 6.908,-0.5 3.39,0.091 0,0.819 L 0.25,2.833 C 0.779,2.845 0.946,3.093 1.097,3.577 C 1.888,6.111 1.214,10.471 7.064,9.958 C 10.912,9.621 12.014,8.561 13.849,3.901 C 14.005,3.504 14.106,2.85 14.998,2.874 C 14.999,2.874 14.999,2.874 15,2.874 C 15.001,2.874 15.001,2.874 15.002,2.874 C 15.893,2.85 15.995,3.505 16.151,3.901 C 17.985,8.561 19.087,9.621 22.936,9.958 C 28.786,10.471 28.112,6.11 28.903,3.577 C 29.055,3.093 29.221,2.845 29.75,2.833 L 30,0.819 C 26.61,0.091 23.092,-0.5 18.588,0.637 Z M 1.391,2.05 C 0.968,2.05 0.626,1.962 0.626,1.854 C 0.626,1.746 0.969,1.658 1.391,1.658 C 1.813,1.658 2.156,1.746 2.156,1.854 C 2.157,1.962 1.814,2.05 1.391,2.05 Z M 12.257,4.959 C 11.438,7.387 10.155,9.149 6.859,9.238 C 3.594,9.238 2.645,8.64 2.212,4.819 C 2.212,2.255 2.045,0.754 6.887,0.763 C 10.152,1.078 13.576,1.047 12.257,4.959 Z M 27.788,4.819 C 27.355,8.64 26.406,9.238 23.141,9.238 C 19.845,9.149 18.562,7.387 17.743,4.959 C 16.424,1.047 19.848,1.078 23.113,0.763 C 27.955,0.754 27.788,2.255 27.788,4.819 Z M 28.609,2.05 C 28.187,2.05 27.844,1.962 27.844,1.854 C 27.844,1.746 28.187,1.658 28.609,1.658 C 29.031,1.658 29.374,1.746 29.374,1.854 C 29.374,1.962 29.031,2.05 28.609,2.05 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#b2000000" Id="102" Left="[float]11" MinHeight="[float]1" MinWidth="[float]1" Top="[float]8" Width="[float]30" />
+					<Path Data="[PathGeometry]M 0,15.111 L 1.801,14.222 L 12.6,19.556 L 16.2,17.778 L 18,18.667 L 18,21.334 L 12.6,24 L 0,17.778 L 0,15.111 Z M 0,2.667 L 5.4,0 L 18,6.222 L 18,8.889 L 12.6,11.556 L 0,5.333 L 0,2.667 Z M 0,8.889 L 1.801,8 L 12.6,13.333 L 16.2,11.555 L 18,12.444 L 18,15.111 L 12.6,17.778 L 0,11.556 L 0,8.889 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#b2010101" Height="[float]24" Id="103" Left="[float]8" MinHeight="[float]1" MinWidth="[float]1" Top="[float]21" Width="[float]18" />
+				</Canvas>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="50" Id="9" ListViewHeight="60" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 35" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="0 45" />
+			<ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 50" Parameter="210" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="35 0" />
+			<ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 65" Parameter="219" />
+			<ConnectorPaneTerminal Hotspot="50 15" />
+			<ConnectorPaneTerminal Hotspot="50 25" />
+			<ConnectorPaneTerminal Hotspot="50 35" />
+			<ConnectorPaneTerminal Hotspot="50 45" />
+			<ConnectorPaneTerminal Hotspot="15 50" ListViewHotspot="0 80" Parameter="44" />
+			<ConnectorPaneTerminal Hotspot="25 50" />
+			<ConnectorPaneTerminal Hotspot="35 50" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="11" Left="[float]0" Top="[float]0" Width="[float]2000">
+			<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@38095f61bcaa4d4dbd1a6389331822a2" Height="[float]27" Id="213" Left="[float]0" Name="[string]fifo ref in" SelectedResource="{DataItemBinding Id=210}" Top="[float]0" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@b03998e8240a4887bcc185a7b2c43eec" Height="[float]184" Id="220" Label="[UIModel]227" Left="[float]399" Top="[float]253" Value="{DataItemBinding Id=219}" Width="[float]88" p4:ControlDefinitionChecksum="QrxKJKaPhv5pyVurIm+vWQ==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="CE_signalsType\.gtype:ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="221" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Label="[UIModel]223" Left="[float]5" MinHeight="[float]22" Top="[float]23" Value="{ClusterBinding FieldName=data}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="222" IsReadOnly="[bool]True" Label="[UIModel]224" Left="[float]5" MinHeight="[float]36" MinWidth="[float]34" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]68" TrueContent="[string]On" Value="{ClusterBinding FieldName=valid}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="223" LabelOwner="[UIModel]221" Left="[float]5" Text="[string]data" Top="[float]0" Width="[float]24" />
+				<p4:Label Height="[float]16" Id="224" LabelOwner="[UIModel]222" Left="[float]5" Text="[string]valid" Top="[float]45" Width="[float]25" />
+				<NumericText BaseName="[string]Numeric" Height="[float]22" Id="225" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ushort]1" Label="[UIModel]226" Left="[float]3" MinHeight="[float]22" Top="[float]142" Value="{ClusterBinding FieldName=index}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="226" LabelOwner="[UIModel]225" Left="[float]3" Text="[string]index" Top="[float]119" Width="[float]29" />
+			</Cluster>
+			<Label Height="[float]16" Id="227" LabelOwner="[UIModel]220" Left="[float]399" Text="[string]data" Top="[float]230" Width="[float]22" xmlns="http://www.ni.com/PanelCommon" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="12">
+			<DataAccessor Bounds="60 160 40 15" DataItem="17" Id="18" Label="56" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean[2]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="60 280 40 15" DataItem="44" Id="45" Label="61" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<ArrayIndex Bounds="115 160 40 40" Id="62" Terminals="array=93, c0t0v, c0out=114, c1t0v, c1out=125" VerticalChunkCount="2" />
+			<LogicalAnd Bounds="245 185 25 20" Id="63" Terminals="o=89, c0t0v=115, c1t0v=91" />
+			<Wire Id="89" Joints="N(63:o) N(104:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="91" Joints="N(45:Value) h(130) v(-85) N(63:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="93" Joints="N(18:Value) N(62:array)" xmlns="http://www.ni.com/PlatformFramework" />
+			<NodeLabel AttachedTo="18" Bounds="11 160 44 14" Id="56" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>enabled</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="45" Bounds="-36 280 91 14" Id="61" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>ready for output</p.Text>
+			</NodeLabel>
+			<FIFORead Bounds="300 135 46 65" Id="104" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<LogicalOr Bounds="195 180 25 20" Id="113" Terminals="o=115, c0t0v=114, c1t0v=125" />
+			<Wire Id="114" Joints="N(62:c0out) N(113:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="115" Joints="N(113:o) N(63:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="125" Joints="N(62:c1out) N(113:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<PropertyNode Bounds="465 145 64 35" HasErrorTerminals="False" Id="171" InstanceDataType="@b03998e8240a4887bcc185a7b2c43eec" Mode="InstanceProperties" Template="List">
+				<PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 15" Id="c0t0v" Path="valid" Usage="Required" />
+			</PropertyNode>
+			<Wire Id="172" Joints="N(104:data) N(171:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<FIFOCreate Bounds="245 -130 40 40" Id="154" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<ClusterLiteral Bounds="140 -135 62.5 110" DataType="@b03998e8240a4887bcc185a7b2c43eec" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="199" Label="206" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0_False_0_</p.Data>
+				<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+					<TypeDefinitionTarget TargetName="CE_signalsType\.gtype" />
+				</p.TypeDefinitionTargets>
+				<ClusterBehavior AutoArrange="ArrangeVertically" />
+				<Literal Bounds="5 19 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="200" Label="201">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<NodeLabel AttachedTo="200" Bounds="5 2 25 14" Id="201" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>data</p.Text>
+				</NodeLabel>
+				<Literal Bounds="5 52 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="202" Label="203">
+					<p.Data>False</p.Data>
+					<BooleanBehavior />
+				</Literal>
+				<NodeLabel AttachedTo="202" Bounds="5 35 27 14" Id="203" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>valid</p.Text>
+				</NodeLabel>
+				<Literal Bounds="5 84 39.5 16" DataType="UInt16" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="204" Label="205">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<NodeLabel AttachedTo="204" Bounds="5 67 30 14" Id="205" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>index</p.Text>
+				</NodeLabel>
+			</ClusterLiteral>
+			<NodeLabel AttachedTo="199" Bounds="140 -135 0 0" Id="206" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>output</p.Text>
+			</NodeLabel>
+			<Wire Id="208" Joints="N(199:Out) h(35.5) v(5) N(154:data type)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="209" Joints="N(212:Value) h(140) v(40) N(104:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="115 95 40 15" DataItem="210" Id="212" Label="214" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@38095f61bcaa4d4dbd1a6389331822a2" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="212" Bounds="59 95 51 14" Id="214" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>fifo ref in</p.Text>
+			</NodeLabel>
+			<Wire Id="218" Joints="N(104:Control Protocol Output) h(14) v(-25) N(171:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="595 145 40 15" DataItem="219" Id="229" Label="230" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@b03998e8240a4887bcc185a7b2c43eec" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="229" Bounds="640 145 25 14" Id="230" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>data</p.Text>
+			</NodeLabel>
+			<Wire Id="231" Joints="N(171:instance out) N(229:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+			<ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]2" Height="[float]64" Id="19" IsFixedSize="[bool]True" Label="[UIModel]47" Left="[float]285" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]36" Value="{DataItemBinding Id=17}" Width="[float]110" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>False</p.DefaultElementValue>
+				<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="16" IsReadOnly="[bool]False" Left="[float]0" Name="[string]Child" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="46" IsReadOnly="[bool]False" Label="[UIModel]52" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]258" TrueContent="[string]On" Value="{DataItemBinding Id=44}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="47" LabelOwner="[UIModel]19" Left="[float]285" Text="[string]enabled" Top="[float]13" Width="[float]43" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="52" LabelOwner="[UIModel]46" Left="[float]335" Text="[string]ready for output" Top="[float]235" Width="[float]87" xmlns="http://www.ni.com/PanelCommon" />
+		</CPFrontPanel>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Boolean[2]" Id="17" Name="enabled" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="2" IsBinary="True" Compression="GZip">
+					<BinaryElements>H4sIAAAAAAAEAGNgZGBg+A8EIBoEBEAMJiDmYAQhbgAziKvZIQAAAA==</BinaryElements>
+				</Array>
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="4" DataType="Boolean" Id="44" Name="ready for output" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="0" DataType="@38095f61bcaa4d4dbd1a6389331822a2" Id="210" Name="fifo ref in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>""</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="CE_signalsType\.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="0" DataType="@b03998e8240a4887bcc185a7b2c43eec" Id="219" Name="data" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0_False_0_</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="CE_signalsType\.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="mod\ N\ counter\ U16\ with\ reset\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34">
+									<Text Left="[float]4" Text="[string]counter&#xD;&#xA;mod N&#xD;&#xA;(0..N-1)&#xD;&#xA;16bit" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]2" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="5" />
+									</Text>
+								</Canvas>
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+		</IconTable>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="38095f61bcaa4d4dbd1a6389331822a2">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="FifoReadInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="FifoReadInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="5" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="6" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="6" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+															<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="6" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+																		</DataType>
+																	</Parameter>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+											<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+											<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="5" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+														</DataType>
+													</Parameter>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="9" Name="FifoClearInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="10" Name="FifoClearInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="10" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@925e7625a0874ce68843f019a6e36348" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="11" IsStatic="False" IsConstructor="False" Name="Clear" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="10" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="start" DataType="Boolean" />
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="done" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="12" IsStatic="False" IsConstructor="False" Name="Clear" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="9" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="start" DataType="Boolean" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="done" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="b03998e8240a4887bcc185a7b2c43eec">
+			<Typedef TypedefName="CE_signalsType.gtype" UnderlyingType="@ff5ad3196d684a9b8e8b77af3833dbbc" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="925e7625a0874ce68843f019a6e36348">
+			<Generic />
+		</p.TypeReference>
+		<p.TypeReference TypeId="ff5ad3196d684a9b8e8b77af3833dbbc">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="valid" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="index" DataType="UInt16" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

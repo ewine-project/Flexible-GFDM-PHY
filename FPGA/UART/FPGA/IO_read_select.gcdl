@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="941CFDB5EE34B0A31579C73FEB054779" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]IO_read_select" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="85" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 50" Parameter="90" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="175" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 35" Parameter="36" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="41" IsReadOnly="[bool]True" Left="[float]0" MinHeight="[float]16" MinWidth="[float]16" Name="[string]data" Shape="[LEDShape]Square" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=36}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText Height="[float]22" Id="92" Interval="[sbyte]1" Left="[float]0" MinHeight="[float]22" Name="[string]Select " Top="[float]0" Value="{DataItemBinding Id=90}" ValueType="[Type]Int8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="178" IsReadOnly="[bool]False" Left="[float]0" MinHeight="[float]36" MinWidth="[float]34" Name="[string]enable? i/o" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]0" TrueContent="[string]On" Value="{DataItemBinding Id=175}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="13">
+			<CaseStructure Bounds="585 15 375 160" DataType="Int8" Default="45" Id="44" Selected="46" UserSelectorBounds="130 0 115 17">
+				<CaseStructure.Case Bounds="5 5 365 150" Id="45" Pattern="0, Default">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="53" Label="55" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 0</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="66" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="67" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="68" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<NodeLabel AttachedTo="53" Bounds="25 65 0 0" Id="55" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>reference in</p.Text>
+					</NodeLabel>
+					<IoRead Bounds="280 65 40 40" Id="15" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="16" Joints="N(15:data) N(106:45)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="20" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="21" Joints="N(168:45) v(-46) h(5) v(-20) N(20:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="23" Joints="N(20:reference out) N(15:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="94" Joints="N(53:Out) N(20:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 365 150" Id="46" Pattern="1">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="56" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 1</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="69" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="70" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="71" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<Wire Id="108" Joints="N(56:Out) N(111:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IoRead Bounds="280 65 40 40" Id="109" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="110" Joints="N(109:data) N(106:46)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="111" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="112" Joints="N(168:46) v(-66) N(111:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="113" Joints="N(111:reference out) N(109:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 365 150" Id="47" Pattern="2">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="58" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 2</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="72" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="73" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="74" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<Wire Id="118" Joints="N(58:Out) N(121:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IoRead Bounds="280 65 40 40" Id="119" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="120" Joints="N(119:data) N(106:47)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="121" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="122" Joints="N(168:47) v(-51) h(5) v(-15) N(121:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="123" Joints="N(121:reference out) N(119:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 365 150" Id="48" Pattern="3">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="60" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 3</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="75" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="76" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="77" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<Wire Id="128" Joints="N(60:Out) N(131:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IoRead Bounds="280 65 40 40" Id="129" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="130" Joints="N(129:data) N(106:48)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="131" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="132" Joints="N(168:48) v(-46) h(5) v(-20) N(131:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="133" Joints="N(131:reference out) N(129:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 365 150" Id="49" Pattern="4">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="62" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 4</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="78" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="79" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="80" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<Wire Id="138" Joints="N(62:Out) N(141:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IoRead Bounds="280 65 40 40" Id="139" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="140" Joints="N(139:data) N(106:49)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="141" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="142" Joints="N(168:49) v(-46) h(5) v(-20) N(141:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="143" Joints="N(141:reference out) N(139:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 365 150" Id="50" Pattern="5">
+					<IONameConstant Bounds="25 65 179.653336 27" DataType="@ecb2f77d18064adbbc1f2676e889c25a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="64" UdrClass="IO" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>AUX I/O 5</p.Data>
+						<IONameConstantBehavior />
+						<InstanceDataEntry Id="81" Key="InterfaceFilter" Value="Digital&#xD;&#xA;Read/Write/Enable" />
+						<InstanceDataEntry Id="82" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+						<InstanceDataEntry Id="83" Key="ElementShapeFilter" Value="Scalar" />
+					</IONameConstant>
+					<Wire Id="147" Joints="N(64:Out) N(150:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IoRead Bounds="280 65 40 40" Id="148" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="149" Joints="N(148:data) N(106:50)" xmlns="http://www.ni.com/PlatformFramework" />
+					<SetOutputEnable Bounds="220 65 40 40" Id="150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Wire Id="151" Joints="N(168:50) v(-46) h(5) v(-20) N(150:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="152" Joints="N(150:reference out) N(148:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 70 13 10" Docking="Left" Id="51" Terminals="44=85, 45, 46, 47, 48, 49, 50" />
+				<CaseStructure.Tunnel Bounds="366 80 13 10" Docking="Right" Id="106" Terminals="44=105, 45=16, 46=110, 47=120, 48=130, 49=140, 50=149" />
+				<CaseStructure.Tunnel Bounds="205 151 10 13" Docking="Bottom" Id="168" Terminals="44=167, 45=21, 46=112, 47=122, 48=132, 49=142, 50=151" />
+			</CaseStructure>
+			<DataAccessor Bounds="480 85 40 15" DataItem="90" Id="84" Label="88" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<Wire Id="85" Joints="N(84:Value) N(51:44)" xmlns="http://www.ni.com/PlatformFramework" />
+			<NodeLabel AttachedTo="84" Bounds="437 85 38 14" Id="88" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>"Select "</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1020 95 40 15" DataItem="36" Id="28" Label="32" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="28" Bounds="1065 95 25 14" Id="32" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>data</p.Text>
+			</NodeLabel>
+			<Wire Id="105" Joints="N(106:44) N(28:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="167" Joints="N(177:Value) h(9) N(168:44)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="746 215 40 15" DataItem="175" Id="177" Label="179" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="177" Bounds="679 215 62 14" Id="179" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>enable? i/o</p.Text>
+			</NodeLabel>
+		</BlockDiagram>
+		<CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="Boolean" Id="36" Name="data" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="0" DataType="Int8" Id="90" Name="&quot;Select &quot;" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Boolean" Id="175" Name="enable? i/o" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>True</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="ecb2f77d18064adbbc1f2676e889c25a">
+			<Attributed>
+				<AttributedType>
+					<Generic>
+						<Constraints>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="1" Name="DigitalIOReadInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="2" Name="DigitalIOReadInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="2" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="2" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																		</DataType>
+																	</Parameter>
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Boolean />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="1" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="5" Name="DigitalIOWriteInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="6" Name="DigitalIOWriteInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="6" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="6" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+																		</DataType>
+																	</Parameter>
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Boolean />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="5" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="9" Name="DigitalIOEnableInterface" ReferenceClass="" Interface="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="10" Name="DigitalIOEnableInterface" ReferenceClass="" Interface="">
+														<GenericTypeDefinition>
+															<Composite RefId="10" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@afa95de9248f4d0a921501886d19191e" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="11" IsStatic="False" IsConstructor="False" Name="Enable" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="10" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="enable" DataType="Boolean" />
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Boolean />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="12" IsStatic="False" IsConstructor="False" Name="Enable" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="9" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="enable" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</Constraints>
+					</Generic>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]IO" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="afa95de9248f4d0a921501886d19191e">
+			<Generic />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
