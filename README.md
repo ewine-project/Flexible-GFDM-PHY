@@ -1,4 +1,10 @@
 # Flexible-GFDM-PHY
+
+This repository is not longer maintained. Please check: https://fusionforge.zih.tu-dresden.de/projects/flexiblegfdmphy/ for the latest version. 
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
 This repository includes the FPGA implementation of a GFDM based transceiver running on National Instruments USRP using LabVIEW Communications System Design Suite 2.0
 
 A more detailed description is available in the documentation folder and on the website http://owl.ifn.et.tu-dresden.de.
